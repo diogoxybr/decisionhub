@@ -710,7 +710,7 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 630,
+        "x": 610,
         "y": 20,
         "wires": [
             []
@@ -1869,7 +1869,7 @@
         "scale": "normal",
         "minTemp": 0,
         "maxTemp": "50",
-        "x": 520,
+        "x": 540,
         "y": 520,
         "wires": []
     },
