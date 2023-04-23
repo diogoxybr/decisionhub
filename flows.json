@@ -710,7 +710,7 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 650,
+        "x": 630,
         "y": 20,
         "wires": [
             []
