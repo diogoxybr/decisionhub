@@ -3326,8 +3326,8 @@
         "format": "{{msg.payload}}",
         "layout": "row-center",
         "className": "",
-        "x": 510,
-        "y": 280,
+        "x": 410,
+        "y": 340,
         "wires": []
     },
     {
@@ -3343,8 +3343,8 @@
         "attrs": "",
         "keyValues": "true",
         "dateModified": "false",
-        "x": 700,
-        "y": 340,
+        "x": 720,
+        "y": 460,
         "wires": [
             [
                 "445812963fb3523b"
@@ -3364,8 +3364,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 710,
-        "y": 400,
+        "x": 730,
+        "y": 520,
         "wires": []
     },
     {
@@ -3381,8 +3381,8 @@
         "attrs": "",
         "keyValues": "true",
         "dateModified": "false",
-        "x": 290,
-        "y": 400,
+        "x": 310,
+        "y": 520,
         "wires": [
             [
                 "248c1f1abafec1d8"
@@ -3410,8 +3410,8 @@
         "topic": "",
         "payload": "{}",
         "payloadType": "json",
-        "x": 120,
-        "y": 400,
+        "x": 140,
+        "y": 520,
         "wires": [
             [
                 "07cb2c27e80f6b91"
@@ -3431,8 +3431,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 470,
-        "y": 400,
+        "x": 490,
+        "y": 520,
         "wires": []
     },
     {
@@ -3448,8 +3448,8 @@
         "attrs": "",
         "keyValues": "false",
         "dateModified": "false",
-        "x": 320,
-        "y": 460,
+        "x": 340,
+        "y": 580,
         "wires": [
             [
                 "7d04efd1b0dfcb01"
@@ -3477,8 +3477,8 @@
         "topic": "",
         "payload": "{}",
         "payloadType": "json",
-        "x": 130,
-        "y": 460,
+        "x": 150,
+        "y": 580,
         "wires": [
             [
                 "4d21bacea2f9269c"
@@ -3498,8 +3498,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 510,
-        "y": 460,
+        "x": 530,
+        "y": 580,
         "wires": []
     },
     {
@@ -3515,8 +3515,8 @@
         "attrs": "",
         "keyValues": "false",
         "dateModified": "false",
-        "x": 270,
-        "y": 520,
+        "x": 290,
+        "y": 640,
         "wires": [
             [
                 "faeb5780e9fde346"
@@ -3544,8 +3544,8 @@
         "topic": "",
         "payload": "{}",
         "payloadType": "json",
-        "x": 120,
-        "y": 520,
+        "x": 140,
+        "y": 640,
         "wires": [
             [
                 "04bf5d837c798a67"
@@ -3563,8 +3563,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 430,
-        "y": 520,
+        "x": 450,
+        "y": 640,
         "wires": [
             [
                 "d5c8c935f33b9eff"
@@ -3609,8 +3609,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 590,
-        "y": 520,
+        "x": 610,
+        "y": 640,
         "wires": [
             []
         ]
@@ -3631,8 +3631,8 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 270,
-        "y": 340,
+        "x": 290,
+        "y": 460,
         "wires": [
             [
                 "ced7292ff99cbb73"
@@ -3660,8 +3660,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 100,
-        "y": 340,
+        "x": 140,
+        "y": 460,
         "wires": [
             [
                 "13bc72a52a47db68"
@@ -3676,8 +3676,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 410,
-        "y": 340,
+        "x": 430,
+        "y": 460,
         "wires": [
             [
                 "23ee325a2bf72f1a"
@@ -3695,12 +3695,264 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 540,
-        "y": 340,
+        "x": 560,
+        "y": 460,
         "wires": [
             [
                 "e4e4674b660a36d5"
             ]
         ]
+    },
+    {
+        "id": "d0a7fd511fefb8bc",
+        "type": "NGSI Entity",
+        "z": "3c14bb0afdbd62e1",
+        "name": "Atualizar entidade",
+        "openapis": "9bccc41af47bb660",
+        "servicepath": "/",
+        "actionType": "upsert",
+        "entityId": "",
+        "entityType": "",
+        "attrs": "",
+        "keyValues": "true",
+        "dateModified": "false",
+        "x": 730,
+        "y": 700,
+        "wires": [
+            [
+                "e52e956ac68d8148"
+            ]
+        ]
+    },
+    {
+        "id": "e52e956ac68d8148",
+        "type": "debug",
+        "z": "3c14bb0afdbd62e1",
+        "name": "debug 41",
+        "active": false,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 730,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "ec5bf9b193dfda94",
+        "type": "function",
+        "z": "3c14bb0afdbd62e1",
+        "name": "function 5",
+        "func": "// Recebe o objeto no segundo formato\nvar objeto2 = msg.payload;\n\n// Cria um novo objeto no primeiro formato\nvar objeto1 = {\n    \"id\": \"urn:ngsi-ld:decision:4\",\n    \"type\": \"data\",\n    \"dia\": [],\n    \"preco\": []\n};\n\n// Percorre as observações do objeto2 e adiciona ao objeto1\nfor (var i = 0; i < objeto2.observations.length; i++) {\n    objeto1.dia.push(objeto2.observations[i].date);\n    objeto1.preco.push(objeto2.observations[i].value);\n}\n\n// Define o novo objeto como payload da mensagem de saída\nmsg.payload = objeto1;\n\n// Retorna a mensagem modificada\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 700,
+        "wires": [
+            [
+                "d0a7fd511fefb8bc"
+            ]
+        ]
+    },
+    {
+        "id": "5eb1c769168ad304",
+        "type": "json",
+        "z": "3c14bb0afdbd62e1",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 430,
+        "y": 700,
+        "wires": [
+            [
+                "ec5bf9b193dfda94"
+            ]
+        ]
+    },
+    {
+        "id": "45e6681decd9c62b",
+        "type": "http request",
+        "z": "3c14bb0afdbd62e1",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://api.stlouisfed.org/fred/series/observations?series_id=PMAIZMTUSDM&realtime_end=9999-12-31&api_key=3ec92f0c1d69183bea1bae4f2800f401&file_type=json",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 290,
+        "y": 700,
+        "wires": [
+            [
+                "5eb1c769168ad304"
+            ]
+        ]
+    },
+    {
+        "id": "41bd1fbafba60efb",
+        "type": "inject",
+        "z": "3c14bb0afdbd62e1",
+        "name": "Atualiza",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 700,
+        "wires": [
+            [
+                "45e6681decd9c62b"
+            ]
+        ]
+    },
+    {
+        "id": "887a0b7c8af292f3",
+        "type": "NGSI Entity",
+        "z": "3c14bb0afdbd62e1",
+        "name": "Atualizar entidade",
+        "openapis": "9bccc41af47bb660",
+        "servicepath": "/",
+        "actionType": "upsert",
+        "entityId": "",
+        "entityType": "",
+        "attrs": "",
+        "keyValues": "true",
+        "dateModified": "false",
+        "x": 710,
+        "y": 280,
+        "wires": [
+            [
+                "6a1ba0ca96b53475"
+            ]
+        ]
+    },
+    {
+        "id": "d427e62923ca607c",
+        "type": "http request",
+        "z": "3c14bb0afdbd62e1",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://api.stlouisfed.org/fred/series/observations?series_id=APU0000708111&realtime_end=9999-12-31&api_key=3ec92f0c1d69183bea1bae4f2800f401&file_type=json",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 270,
+        "y": 280,
+        "wires": [
+            [
+                "eb4cbc5d09a8ce1a"
+            ]
+        ]
+    },
+    {
+        "id": "14d7b50b1b9075f7",
+        "type": "inject",
+        "z": "3c14bb0afdbd62e1",
+        "name": "Atualizar",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 280,
+        "wires": [
+            [
+                "d427e62923ca607c"
+            ]
+        ]
+    },
+    {
+        "id": "eb4cbc5d09a8ce1a",
+        "type": "json",
+        "z": "3c14bb0afdbd62e1",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 410,
+        "y": 280,
+        "wires": [
+            [
+                "5160d850098202d0"
+            ]
+        ]
+    },
+    {
+        "id": "5160d850098202d0",
+        "type": "function",
+        "z": "3c14bb0afdbd62e1",
+        "name": "function 6",
+        "func": "// Recebe o objeto no segundo formato\nvar objeto2 = msg.payload;\n\n// Cria um novo objeto no primeiro formato\nvar objeto1 = {\n    \"id\": \"urn:ngsi-ld:decision:3\",\n    \"type\": \"data\",\n    \"dia\": [],\n    \"preco\": []\n};\n\n// Percorre as observações do objeto2 e adiciona ao objeto1\nfor (var i = 0; i < objeto2.observations.length; i++) {\n    objeto1.dia.push(objeto2.observations[i].date);\n    objeto1.preco.push(objeto2.observations[i].value);\n}\n\n// Define o novo objeto como payload da mensagem de saída\nmsg.payload = objeto1;\n\n// Retorna a mensagem modificada\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 280,
+        "wires": [
+            [
+                "887a0b7c8af292f3"
+            ]
+        ]
+    },
+    {
+        "id": "6a1ba0ca96b53475",
+        "type": "debug",
+        "z": "3c14bb0afdbd62e1",
+        "name": "debug 42",
+        "active": false,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 710,
+        "y": 340,
+        "wires": []
     }
 ]
