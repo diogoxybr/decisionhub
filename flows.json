@@ -131,7 +131,7 @@
             "name": "DECISION HUB - Seu HUB de informações úteis para avicultura",
             "hideToolbar": "false",
             "allowSwipe": "false",
-            "lockMenu": "false",
+            "lockMenu": "true",
             "allowTempTheme": "true",
             "dateFormat": "DD/MM/YY",
             "sizes": {
@@ -151,7 +151,7 @@
         "type": "ui_tab",
         "name": "Início",
         "icon": "home",
-        "order": 1,
+        "order": 2,
         "disabled": false,
         "hidden": false
     },
@@ -162,7 +162,7 @@
         "tab": "95a56cd306c01399",
         "order": 1,
         "disp": true,
-        "width": "16",
+        "width": 21,
         "collapse": false,
         "className": ""
     },
@@ -182,7 +182,7 @@
         "type": "ui_tab",
         "name": "Seleção de ovos",
         "icon": "dashboard",
-        "order": 2,
+        "order": 1,
         "disabled": false,
         "hidden": false
     },
@@ -215,7 +215,7 @@
         "tab": "1026f58dc258542c",
         "order": 1,
         "disp": true,
-        "width": 8,
+        "width": 7,
         "collapse": false,
         "className": ""
     },
@@ -232,40 +232,29 @@
     {
         "id": "d06c7024e6938db6",
         "type": "ui_tab",
-        "name": "Temp e Umid",
+        "name": "FSA Temp e Umid",
         "icon": "show_chart",
-        "order": 5,
+        "order": 4,
         "disabled": false,
         "hidden": false
-    },
-    {
-        "id": "4aad0bd0b75bb4a8",
-        "type": "ui_group",
-        "name": "Termômetro de coluna",
-        "tab": "95a56cd306c01399",
-        "order": 2,
-        "disp": true,
-        "width": "6",
-        "collapse": false,
-        "className": ""
     },
     {
         "id": "5c3af32dfbbc6bd9",
         "type": "ui_group",
         "name": "Gráfico da produção",
         "tab": "1026f58dc258542c",
-        "order": 4,
+        "order": 5,
         "disp": true,
-        "width": 22,
+        "width": 14,
         "collapse": false,
         "className": ""
     },
     {
         "id": "a7d23cd996ba7867",
         "type": "ui_tab",
-        "name": "Histórico 2",
+        "name": "FSA Produção",
         "icon": "show_chart",
-        "order": 6,
+        "order": 3,
         "disabled": false,
         "hidden": false
     },
@@ -281,35 +270,15 @@
         "className": ""
     },
     {
-        "id": "2e08ac261278ed52",
-        "type": "ui_spacer",
-        "z": "148c173e8eacbf9a",
-        "name": "spacer",
-        "group": "cad099844726e2c2",
-        "order": 1,
-        "width": 8,
-        "height": 1
-    },
-    {
         "id": "23aada1698d2eb9f",
         "type": "ui_group",
         "name": "Previsões",
         "tab": "95a56cd306c01399",
         "order": 3,
         "disp": true,
-        "width": "22",
+        "width": 21,
         "collapse": true,
         "className": ""
-    },
-    {
-        "id": "e07eeea7391daac4",
-        "type": "ui_spacer",
-        "z": "148c173e8eacbf9a",
-        "name": "spacer",
-        "group": "23aada1698d2eb9f",
-        "order": 4,
-        "width": 1,
-        "height": 1
     },
     {
         "id": "25146704fdff4c17",
@@ -356,14 +325,14 @@
         "type": "ui_tab",
         "name": "Nacional",
         "icon": "show_chart",
-        "order": 3,
+        "order": 5,
         "disabled": false,
         "hidden": false
     },
     {
         "id": "c8f1f291b85d76d5",
         "type": "ui_group",
-        "name": "Group´1",
+        "name": "Group 1",
         "tab": "43174ed033fbc86e",
         "order": 1,
         "disp": false,
@@ -376,7 +345,7 @@
         "type": "ui_tab",
         "name": "Internacional",
         "icon": "show_chart",
-        "order": 4,
+        "order": 6,
         "disabled": false,
         "hidden": false
     },
@@ -390,6 +359,37 @@
         "width": 23,
         "collapse": false,
         "className": ""
+    },
+    {
+        "id": "547d3f27046b447f",
+        "type": "ui_spacer",
+        "z": "148c173e8eacbf9a",
+        "name": "spacer",
+        "group": "23aada1698d2eb9f",
+        "order": 4,
+        "width": 11,
+        "height": 1
+    },
+    {
+        "id": "cc81aa1c1fd12965",
+        "type": "ui_group",
+        "name": "Cadastro de produção",
+        "tab": "1026f58dc258542c",
+        "order": 4,
+        "disp": true,
+        "width": "7",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9120c9f0e563c951",
+        "type": "ui_spacer",
+        "z": "5a4975ebcc568c40",
+        "name": "spacer",
+        "group": "cad099844726e2c2",
+        "order": 1,
+        "width": 7,
+        "height": 1
     },
     {
         "id": "d13ff7ba584766ad",
@@ -926,36 +926,6 @@
         "wires": []
     },
     {
-        "id": "4146a402102ef11c",
-        "type": "inject",
-        "z": "5a4975ebcc568c40",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "0.5",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 110,
-        "y": 260,
-        "wires": [
-            [
-                "09d9d28149060341",
-                "299dd746a3d73120"
-            ]
-        ]
-    },
-    {
         "id": "9bb4846fcdc0c53e",
         "type": "ui_gauge",
         "z": "5a4975ebcc568c40",
@@ -979,150 +949,9 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 770,
-        "y": 260,
+        "x": 750,
+        "y": 100,
         "wires": []
-    },
-    {
-        "id": "09d9d28149060341",
-        "type": "random",
-        "z": "5a4975ebcc568c40",
-        "name": "",
-        "low": "0",
-        "high": "100",
-        "inte": "true",
-        "property": "payload",
-        "x": 120,
-        "y": 200,
-        "wires": [
-            [
-                "107ac0e110812f10"
-            ]
-        ]
-    },
-    {
-        "id": "e3fe612ebb0e5a9f",
-        "type": "switch",
-        "z": "5a4975ebcc568c40",
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "lt",
-                "v": "15",
-                "vt": "str"
-            },
-            {
-                "t": "gte",
-                "v": "15",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 350,
-        "y": 260,
-        "wires": [
-            [
-                "200a276efa3f7dec"
-            ],
-            [
-                "03567ed33d3c9401"
-            ]
-        ]
-    },
-    {
-        "id": "03567ed33d3c9401",
-        "type": "function",
-        "z": "5a4975ebcc568c40",
-        "name": "Ovos bons",
-        "func": "var boas=flow.get(\"boas\")||0\nboas+=1\nflow.set(\"boas\",boas);\nmsg.boas = flow.get(\"boas\")\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 490,
-        "y": 300,
-        "wires": [
-            [
-                "ddf4e2ed36b1e975",
-                "6a63c4aa5cf46339"
-            ]
-        ]
-    },
-    {
-        "id": "200a276efa3f7dec",
-        "type": "function",
-        "z": "5a4975ebcc568c40",
-        "name": "Ovos ruins",
-        "func": "var ruins = flow.get(\"ruins\") || 0\nruins+=1\nflow.set(\"ruins\",ruins);\nmsg.ruins = flow.get(\"ruins\")\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 490,
-        "y": 220,
-        "wires": [
-            [
-                "b7b501af8d966eae",
-                "6a63c4aa5cf46339"
-            ]
-        ]
-    },
-    {
-        "id": "408a8ed0accd5bce",
-        "type": "function",
-        "z": "5a4975ebcc568c40",
-        "name": "reset contadores",
-        "func": "flow.set(\"boas\",0);\nflow.set(\"ruins\",0);\nflow.set(\"total\", 0);\nmsg.boas = flow.get(\"boas\")\nmsg.ruins = flow.get(\"ruins\")\nmsg.ruins = flow.get(\"total\")\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 470,
-        "y": 380,
-        "wires": [
-            [
-                "9bb4846fcdc0c53e",
-                "9834b9ff599c3e33",
-                "b7b501af8d966eae",
-                "ddf4e2ed36b1e975"
-            ]
-        ]
-    },
-    {
-        "id": "299dd746a3d73120",
-        "type": "ui_button",
-        "z": "5a4975ebcc568c40",
-        "name": "",
-        "group": "cad099844726e2c2",
-        "order": 5,
-        "width": 8,
-        "height": 1,
-        "passthru": false,
-        "label": "Zerar contagem",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 260,
-        "y": 380,
-        "wires": [
-            [
-                "408a8ed0accd5bce",
-                "7430fe791a44df24"
-            ]
-        ]
     },
     {
         "id": "2550832b6db8a2ae",
@@ -1134,33 +963,12 @@
         "height": 0,
         "name": "",
         "label": "Total de ovos produzidos",
-        "format": "{{msg.total}}",
+        "format": "{{value}}",
         "layout": "row-spread",
         "className": "",
-        "x": 550,
-        "y": 120,
+        "x": 750,
+        "y": 280,
         "wires": []
-    },
-    {
-        "id": "107ac0e110812f10",
-        "type": "function",
-        "z": "5a4975ebcc568c40",
-        "name": "Ovos total",
-        "func": "var total = flow.get(\"total\") || 0\ntotal+=1\nflow.set(\"total\", total);\nmsg.total = flow.get(\"total\")\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 260,
-        "y": 200,
-        "wires": [
-            [
-                "e3fe612ebb0e5a9f",
-                "2550832b6db8a2ae",
-                "b451f75c589f3afb"
-            ]
-        ]
     },
     {
         "id": "9834b9ff599c3e33",
@@ -1186,8 +994,8 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 770,
-        "y": 340,
+        "x": 750,
+        "y": 40,
         "wires": []
     },
     {
@@ -1200,11 +1008,11 @@
         "height": 0,
         "name": "",
         "label": "Total de ovos ruins",
-        "format": "{{msg.ruins}}",
+        "format": "{{value}}",
         "layout": "row-spread",
         "className": "",
         "x": 750,
-        "y": 420,
+        "y": 220,
         "wires": []
     },
     {
@@ -1217,11 +1025,11 @@
         "height": 0,
         "name": "",
         "label": "Total de ovos bons",
-        "format": "{{msg.boas}}",
+        "format": "{{value}}",
         "layout": "row-spread",
         "className": "",
         "x": 750,
-        "y": 480,
+        "y": 160,
         "wires": []
     },
     {
@@ -1229,14 +1037,14 @@
         "type": "function",
         "z": "5a4975ebcc568c40",
         "name": "% ovos",
-        "func": "//porcentagem ruins\nvar ruins_pc = flow.get(\"ruins\") || 0;\nruins_pc = (flow.get(\"ruins\") / flow.get(\"total\")) * 100;\nmsg.ruins_pc = Math.round(ruins_pc);\n\n//porcentagem boas\nvar boas_pc = flow.get(\"boas\") || 0;\nboas_pc = (flow.get(\"boas\") / flow.get(\"total\")) * 100;\nmsg.boas_pc = Math.round(boas_pc);\n\nreturn msg;",
+        "func": "if (msg.payload.bons && msg.payload.ruins) {\n    var valor1 = parseInt(msg.payload.bons);\n    var valor2 = parseInt(msg.payload.ruins);\n\n    if (!isNaN(valor1) && !isNaN(valor2)) {\n        var soma = valor1 + valor2;\n    }\n}\n\n//porcentagem ruins\nvar ruins_pc = msg.valor2 || 0;\nruins_pc = (valor2 / soma) * 100;\nmsg.ruins_pc = Math.round(ruins_pc);\n\n//porcentagem boas\nvar boas_pc = valor1 || 0;\nboas_pc = (valor1 / soma) * 100;\nmsg.boas_pc = Math.round(boas_pc);\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 680,
-        "y": 180,
+        "x": 420,
+        "y": 40,
         "wires": [
             [
                 "9bb4846fcdc0c53e",
@@ -1245,56 +1053,196 @@
         ]
     },
     {
-        "id": "b451f75c589f3afb",
-        "type": "change",
+        "id": "d73ba755a72e7b99",
+        "type": "ui_form",
         "z": "5a4975ebcc568c40",
         "name": "",
-        "rules": [
+        "label": "",
+        "group": "cc81aa1c1fd12965",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "options": [
             {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "msg.total",
-                "tot": "msg"
+                "label": "Data",
+                "value": "labels",
+                "type": "date",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Bons",
+                "value": "bons",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Ruins",
+                "value": "ruins",
+                "type": "text",
+                "required": true,
+                "rows": null
             }
         ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 420,
-        "y": 60,
+        "formValue": {
+            "labels": "",
+            "bons": "",
+            "ruins": ""
+        },
+        "payload": "",
+        "submit": "Enviar",
+        "cancel": "Cancelar",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": false,
+        "className": "",
+        "x": 90,
+        "y": 100,
         "wires": [
             [
-                "8f9fb0916a5e8197"
+                "8f53db27102d1f8c",
+                "6a63c4aa5cf46339",
+                "bf1f338b2a287084",
+                "0f22692b6b038ee8",
+                "6e1a832de52f8a75"
             ]
         ]
     },
     {
-        "id": "8f9fb0916a5e8197",
+        "id": "bf1f338b2a287084",
+        "type": "function",
+        "z": "5a4975ebcc568c40",
+        "name": "function 8",
+        "func": "// Define uma variável global para armazenar o valor acumulado\ncontext.global.valorAcumulado = context.global.valorAcumulado || 0;\n\n// Converte o payload (string) em um número inteiro e adiciona ao valor acumulado\nvar valor = parseInt(msg.payload.bons);\nif (!isNaN(valor)) {\n    context.global.valorAcumulado += valor;\n}\n\n// Retorna a mensagem com o valor acumulado como payload\nmsg.payload = context.global.valorAcumulado.toString();\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 100,
+        "wires": [
+            [
+                "ddf4e2ed36b1e975"
+            ]
+        ]
+    },
+    {
+        "id": "0f22692b6b038ee8",
+        "type": "function",
+        "z": "5a4975ebcc568c40",
+        "name": "function 9",
+        "func": "// Define uma variável global para armazenar o valor acumulado\ncontext.global.valorAcumulado2 = context.global.valorAcumulado2 || 0;\n\n// Converte o payload (string) em um número inteiro e adiciona ao valor acumulado\nvar valor = parseInt(msg.payload.ruins);\nif (!isNaN(valor)) {\n    context.global.valorAcumulado2 += valor;\n}\n\n// Retorna a mensagem com o valor acumulado como payload\nmsg.payload = context.global.valorAcumulado2.toString();\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 160,
+        "wires": [
+            [
+                "b7b501af8d966eae"
+            ]
+        ]
+    },
+    {
+        "id": "8f53db27102d1f8c",
+        "type": "function",
+        "z": "5a4975ebcc568c40",
+        "name": "function 10",
+        "func": "if (msg.payload.bons && msg.payload.ruins) {\n    var valor1 = parseInt(msg.payload.bons);\n    var valor2 = parseInt(msg.payload.ruins);\n\n    if (!isNaN(valor1) && !isNaN(valor2)) {\n        var soma = valor1 + valor2;\n        msg.payload = soma.toString();\n        return msg;\n    }\n}\n\n// Se um dos payloads não estiver presente ou não for um número válido, retorna a mensagem original sem fazer nada.\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 220,
+        "wires": [
+            [
+                "2550832b6db8a2ae",
+                "6e1a832de52f8a75"
+            ]
+        ]
+    },
+    {
+        "id": "b4d22c818e03bc6b",
+        "type": "ui_button",
+        "z": "5a4975ebcc568c40",
+        "name": "",
+        "group": "cad099844726e2c2",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "RESETAR",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 170,
+        "y": 320,
+        "wires": [
+            [
+                "55701599c0ad4992"
+            ]
+        ]
+    },
+    {
+        "id": "55701599c0ad4992",
+        "type": "function",
+        "z": "5a4975ebcc568c40",
+        "name": "function 11",
+        "func": "context.global.valorAcumulado2 =  0;\ncontext.global.valorAcumulado = 0;\nmsg.payload.bons = 0;\nmsg.payload.ruins = 0;\n\n// Retorna a mensagem com o valor acumulado como payload\nmsg.payload = context.global.valorAcumulado2.toString();\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 320,
+        "wires": [
+            [
+                "ddf4e2ed36b1e975",
+                "b7b501af8d966eae",
+                "2550832b6db8a2ae",
+                "6e1a832de52f8a75",
+                "9834b9ff599c3e33",
+                "9bb4846fcdc0c53e"
+            ]
+        ]
+    },
+    {
+        "id": "6e1a832de52f8a75",
         "type": "ui_chart",
         "z": "5a4975ebcc568c40",
         "name": "",
         "group": "5c3af32dfbbc6bd9",
         "order": 1,
-        "width": 22,
-        "height": 5,
+        "width": 0,
+        "height": 0,
         "label": "",
         "chartType": "line",
         "legend": "false",
-        "xformat": "D/M",
-        "interpolate": "bezier",
+        "xformat": "auto",
+        "interpolate": "linear",
         "nodata": "",
         "dot": true,
         "ymin": "",
         "ymax": "",
-        "removeOlder": "7",
+        "removeOlder": 1,
         "removeOlderPoints": "",
-        "removeOlderUnit": "86400",
+        "removeOlderUnit": "3600",
         "cutout": 0,
         "useOneColor": false,
-        "useUTC": true,
+        "useUTC": false,
         "colors": [
             "#1f77b4",
             "#aec7e8",
@@ -1309,49 +1257,11 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 610,
-        "y": 60,
+        "x": 730,
+        "y": 340,
         "wires": [
             []
         ]
-    },
-    {
-        "id": "7430fe791a44df24",
-        "type": "template",
-        "z": "5a4975ebcc568c40",
-        "name": "",
-        "field": "payload",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "Produção zerada !",
-        "output": "str",
-        "x": 320,
-        "y": 480,
-        "wires": [
-            [
-                "1fb43ce15c5df41a"
-            ]
-        ]
-    },
-    {
-        "id": "1fb43ce15c5df41a",
-        "type": "ui_toast",
-        "z": "5a4975ebcc568c40",
-        "position": "top right",
-        "displayTime": "5",
-        "highlight": "",
-        "sendall": true,
-        "outputs": 0,
-        "ok": "OK",
-        "cancel": "",
-        "raw": false,
-        "className": "",
-        "topic": "",
-        "name": "",
-        "x": 490,
-        "y": 480,
-        "wires": []
     },
     {
         "id": "e34f2a194c1d6242",
@@ -1359,9 +1269,9 @@
         "z": "148c173e8eacbf9a",
         "name": "",
         "group": "f8d2be63eb19876e",
-        "order": 2,
-        "width": 8,
-        "height": "5",
+        "order": 3,
+        "width": 7,
+        "height": 4,
         "gtype": "gage",
         "title": "Temperatura atual",
         "label": "°C",
@@ -1511,7 +1421,8 @@
             [
                 "2709ef4b62f184ae",
                 "92055da4bf90bf02",
-                "5ff4dad65b2d73c0"
+                "5ff4dad65b2d73c0",
+                "2d027a28860ab2c0"
             ]
         ]
     },
@@ -1541,28 +1452,6 @@
                 "e9260fc7f8852e75"
             ]
         ]
-    },
-    {
-        "id": "08b0efc718d74b5c",
-        "type": "ui_widget_thermometer",
-        "z": "148c173e8eacbf9a",
-        "group": "4aad0bd0b75bb4a8",
-        "order": 1,
-        "width": 6,
-        "height": 7,
-        "name": "Termômetro Sta Rita",
-        "title": " ",
-        "numColor": 3,
-        "colorTop": "#2196f3",
-        "colorMiddle": "#8bc34a",
-        "colorBottom": "#f44336",
-        "unit": "°C",
-        "scale": "normal",
-        "minTemp": 0,
-        "maxTemp": "50",
-        "x": 640,
-        "y": 480,
-        "wires": []
     },
     {
         "id": "5ff4dad65b2d73c0",
@@ -1606,9 +1495,9 @@
         "z": "148c173e8eacbf9a",
         "name": "",
         "group": "f8d2be63eb19876e",
-        "order": 3,
-        "width": 8,
-        "height": "5",
+        "order": 4,
+        "width": 7,
+        "height": 4,
         "gtype": "gage",
         "title": "Umidade atual",
         "label": "%",
@@ -1670,27 +1559,9 @@
         "y": 400,
         "wires": [
             [
-                "e34f2a194c1d6242",
-                "c57b5f16ca988d0b",
-                "08b0efc718d74b5c"
+                "e34f2a194c1d6242"
             ]
         ]
-    },
-    {
-        "id": "c57b5f16ca988d0b",
-        "type": "debug",
-        "z": "148c173e8eacbf9a",
-        "name": "debug 28",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 780,
-        "y": 440,
-        "wires": []
     },
     {
         "id": "90bb6fd43975f930",
@@ -1732,7 +1603,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 640,
+        "x": 540,
         "y": 540,
         "wires": [
             [
@@ -1746,14 +1617,14 @@
         "z": "148c173e8eacbf9a",
         "group": "f8d2be63eb19876e",
         "order": 1,
-        "width": 16,
+        "width": 21,
         "height": 1,
         "name": "",
         "label": "Situação:  ",
         "format": " {{value}}",
         "layout": "row-center",
         "className": "",
-        "x": 820,
+        "x": 720,
         "y": 540,
         "wires": []
     },
@@ -1771,7 +1642,7 @@
         "skipForwarding": "false",
         "forcedUpdate": "false",
         "flowControl": "false",
-        "x": 440,
+        "x": 340,
         "y": 540,
         "wires": [
             [
@@ -1786,7 +1657,7 @@
         "group": "23aada1698d2eb9f",
         "name": "7 dias",
         "order": 1,
-        "width": 22,
+        "width": 21,
         "height": 3,
         "format": "<div id=\"cont_76580c94eeb521be002306d636151909\">\n    <script type=\"text/javascript\" async src=\"https://www.tempo.com/wid_loader/76580c94eeb521be002306d636151909\">\n    </script>\n</div>",
         "storeOutMessages": true,
@@ -1808,7 +1679,7 @@
         "name": "Video sudeste",
         "order": 2,
         "width": 10,
-        "height": "8",
+        "height": 8,
         "format": "<iframe scrolling=\"no\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\" style=\"margin:0;padding:0;border:0;\" width=\"420\"\n    height=\"315\" src=\"https://www.climatempo.com.br/tempo-no-seu-site/videos/selo/sudeste/420x315\"></iframe>",
         "storeOutMessages": true,
         "fwdInMessages": true,
@@ -1828,8 +1699,8 @@
         "group": "23aada1698d2eb9f",
         "name": "Mapa",
         "order": 3,
-        "width": 12,
-        "height": "7",
+        "width": 11,
+        "height": 7,
         "format": "<iframe\n    src=\"https://www.meteoblue.com/pt/tempo/mapas/widget/santa-rita-do-passa-quatro_brasil_3449851?windAnimation=0&windAnimation=1&gust=0&gust=1&satellite=0&satellite=1&cloudsAndPrecipitation=0&cloudsAndPrecipitation=1&temperature=0&temperature=1&sunshine=0&sunshine=1&extremeForecastIndex=0&extremeForecastIndex=1&geoloc=fixed&tempunit=C&windunit=km%252Fh&lengthunit=metric&zoom=10&autowidth=auto\"\n    frameborder=\"0\" scrolling=\"NO\" allowtransparency=\"true\"\n    sandbox=\"allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox\"\n    style=\"width: 100%; height: 420px\"></iframe>",
         "storeOutMessages": true,
         "fwdInMessages": true,
@@ -1848,7 +1719,7 @@
         "z": "148c173e8eacbf9a",
         "name": "",
         "group": "f8d2be63eb19876e",
-        "order": 3,
+        "order": 5,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -1938,6 +1809,80 @@
                 "06680ea47a342933"
             ]
         ]
+    },
+    {
+        "id": "2d027a28860ab2c0",
+        "type": "change",
+        "z": "148c173e8eacbf9a",
+        "name": "Ler temperatura",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.feels_like",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 640,
+        "y": 460,
+        "wires": [
+            [
+                "cc29ceff723b721b"
+            ]
+        ]
+    },
+    {
+        "id": "cc29ceff723b721b",
+        "type": "function",
+        "z": "148c173e8eacbf9a",
+        "name": "function 7",
+        "func": "let celsius = (msg.payload - 273.15);\nmsg.payload = Math.floor(celsius);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 460,
+        "wires": [
+            [
+                "53c192a9efb5478e"
+            ]
+        ]
+    },
+    {
+        "id": "53c192a9efb5478e",
+        "type": "ui_gauge",
+        "z": "148c173e8eacbf9a",
+        "name": "",
+        "group": "f8d2be63eb19876e",
+        "order": 2,
+        "width": 7,
+        "height": 4,
+        "gtype": "gage",
+        "title": "Sensação térmica",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#1f77b4",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1050,
+        "y": 460,
+        "wires": []
     },
     {
         "id": "08acb9ef9b9a196b",
@@ -2772,7 +2717,7 @@
         "z": "d768a6d29d0e02d4",
         "name": "",
         "group": "c8f1f291b85d76d5",
-        "order": 2,
+        "order": 1,
         "width": 23,
         "height": 5,
         "label": "",
@@ -2928,7 +2873,7 @@
         "type": "ui_text",
         "z": "d768a6d29d0e02d4",
         "group": "c8f1f291b85d76d5",
-        "order": 4,
+        "order": 3,
         "width": 0,
         "height": 0,
         "name": "",
