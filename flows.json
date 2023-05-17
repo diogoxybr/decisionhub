@@ -151,18 +151,18 @@
         "type": "ui_tab",
         "name": "Início",
         "icon": "home",
-        "order": 2,
+        "order": 1,
         "disabled": false,
         "hidden": false
     },
     {
         "id": "f8d2be63eb19876e",
         "type": "ui_group",
-        "name": "Temperatura atual: Santa Rita do Passa Quatro, SP, BR",
+        "name": "Tempo real: Santa Rita do Passa Quatro, SP, BR",
         "tab": "95a56cd306c01399",
         "order": 1,
         "disp": true,
-        "width": 21,
+        "width": "21",
         "collapse": false,
         "className": ""
     },
@@ -182,7 +182,7 @@
         "type": "ui_tab",
         "name": "Seleção de ovos",
         "icon": "dashboard",
-        "order": 1,
+        "order": 2,
         "disabled": false,
         "hidden": false
     },
@@ -270,17 +270,6 @@
         "className": ""
     },
     {
-        "id": "23aada1698d2eb9f",
-        "type": "ui_group",
-        "name": "Previsões",
-        "tab": "95a56cd306c01399",
-        "order": 3,
-        "disp": true,
-        "width": 21,
-        "collapse": true,
-        "className": ""
-    },
-    {
         "id": "25146704fdff4c17",
         "type": "ui_tab",
         "name": "Sobre",
@@ -361,16 +350,6 @@
         "className": ""
     },
     {
-        "id": "547d3f27046b447f",
-        "type": "ui_spacer",
-        "z": "148c173e8eacbf9a",
-        "name": "spacer",
-        "group": "23aada1698d2eb9f",
-        "order": 4,
-        "width": 11,
-        "height": 1
-    },
-    {
         "id": "cc81aa1c1fd12965",
         "type": "ui_group",
         "name": "Cadastro de produção",
@@ -389,6 +368,16 @@
         "group": "cad099844726e2c2",
         "order": 1,
         "width": 7,
+        "height": 1
+    },
+    {
+        "id": "bcf2672e7ac076f5",
+        "type": "ui_spacer",
+        "z": "148c173e8eacbf9a",
+        "name": "spacer",
+        "group": "f8d2be63eb19876e",
+        "order": 10,
+        "width": 21,
         "height": 1
     },
     {
@@ -1101,7 +1090,6 @@
         "y": 100,
         "wires": [
             [
-                "8f53db27102d1f8c",
                 "6a63c4aa5cf46339",
                 "bf1f338b2a287084",
                 "0f22692b6b038ee8",
@@ -1124,7 +1112,9 @@
         "y": 100,
         "wires": [
             [
-                "ddf4e2ed36b1e975"
+                "ddf4e2ed36b1e975",
+                "7211cedbf4bab244",
+                "e986d9b266f8ccbd"
             ]
         ]
     },
@@ -1143,7 +1133,9 @@
         "y": 160,
         "wires": [
             [
-                "b7b501af8d966eae"
+                "b7b501af8d966eae",
+                "8f53db27102d1f8c",
+                "7211cedbf4bab244"
             ]
         ]
     },
@@ -1152,18 +1144,17 @@
         "type": "function",
         "z": "5a4975ebcc568c40",
         "name": "function 10",
-        "func": "if (msg.payload.bons && msg.payload.ruins) {\n    var valor1 = parseInt(msg.payload.bons);\n    var valor2 = parseInt(msg.payload.ruins);\n\n    if (!isNaN(valor1) && !isNaN(valor2)) {\n        var soma = valor1 + valor2;\n        msg.payload = soma.toString();\n        return msg;\n    }\n}\n\n// Se um dos payloads não estiver presente ou não for um número válido, retorna a mensagem original sem fazer nada.\nreturn msg;\n",
+        "func": "msg.payload = parseFloat(msg.payload);\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 410,
+        "x": 270,
         "y": 220,
         "wires": [
             [
-                "2550832b6db8a2ae",
-                "6e1a832de52f8a75"
+                "702778c720fac655"
             ]
         ]
     },
@@ -1257,10 +1248,65 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 730,
+        "x": 750,
         "y": 340,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "7211cedbf4bab244",
+        "type": "debug",
+        "z": "5a4975ebcc568c40",
+        "name": "debug 44",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "e986d9b266f8ccbd",
+        "type": "function",
+        "z": "5a4975ebcc568c40",
+        "name": "function 14",
+        "func": "msg.payload = parseFloat(msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 270,
+        "y": 260,
+        "wires": [
+            [
+                "702778c720fac655"
+            ]
+        ]
+    },
+    {
+        "id": "702778c720fac655",
+        "type": "function",
+        "z": "5a4975ebcc568c40",
+        "name": "function 15",
+        "func": "msg.payload = 900;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 420,
+        "wires": [
+            [
+                "2550832b6db8a2ae",
+                "7211cedbf4bab244"
+            ]
         ]
     },
     {
@@ -1269,7 +1315,7 @@
         "z": "148c173e8eacbf9a",
         "name": "",
         "group": "f8d2be63eb19876e",
-        "order": 3,
+        "order": 4,
         "width": 7,
         "height": 4,
         "gtype": "gage",
@@ -1465,7 +1511,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 800,
+        "x": 760,
         "y": 340,
         "wires": []
     },
@@ -1495,7 +1541,7 @@
         "z": "148c173e8eacbf9a",
         "name": "",
         "group": "f8d2be63eb19876e",
-        "order": 4,
+        "order": 6,
         "width": 7,
         "height": 4,
         "gtype": "gage",
@@ -1540,7 +1586,9 @@
         "y": 280,
         "wires": [
             [
-                "e36b639f8b3640f7"
+                "e36b639f8b3640f7",
+                "b750c3131d4d942b",
+                "9b0f1c469a172a83"
             ]
         ]
     },
@@ -1616,7 +1664,7 @@
         "type": "ui_text",
         "z": "148c173e8eacbf9a",
         "group": "f8d2be63eb19876e",
-        "order": 1,
+        "order": 2,
         "width": 21,
         "height": 1,
         "name": "",
@@ -1651,75 +1699,12 @@
         ]
     },
     {
-        "id": "7391873bcc70fbb0",
-        "type": "ui_template",
-        "z": "148c173e8eacbf9a",
-        "group": "23aada1698d2eb9f",
-        "name": "7 dias",
-        "order": 1,
-        "width": 21,
-        "height": 3,
-        "format": "<div id=\"cont_76580c94eeb521be002306d636151909\">\n    <script type=\"text/javascript\" async src=\"https://www.tempo.com/wid_loader/76580c94eeb521be002306d636151909\">\n    </script>\n</div>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 110,
-        "y": 600,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "506a67d43700ae58",
-        "type": "ui_template",
-        "z": "148c173e8eacbf9a",
-        "group": "23aada1698d2eb9f",
-        "name": "Video sudeste",
-        "order": 2,
-        "width": 10,
-        "height": 8,
-        "format": "<iframe scrolling=\"no\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\" style=\"margin:0;padding:0;border:0;\" width=\"420\"\n    height=\"315\" src=\"https://www.climatempo.com.br/tempo-no-seu-site/videos/selo/sudeste/420x315\"></iframe>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 280,
-        "y": 600,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "4ee52d4f0a967bd5",
-        "type": "ui_template",
-        "z": "148c173e8eacbf9a",
-        "group": "23aada1698d2eb9f",
-        "name": "Mapa",
-        "order": 3,
-        "width": 11,
-        "height": 7,
-        "format": "<iframe\n    src=\"https://www.meteoblue.com/pt/tempo/mapas/widget/santa-rita-do-passa-quatro_brasil_3449851?windAnimation=0&windAnimation=1&gust=0&gust=1&satellite=0&satellite=1&cloudsAndPrecipitation=0&cloudsAndPrecipitation=1&temperature=0&temperature=1&sunshine=0&sunshine=1&extremeForecastIndex=0&extremeForecastIndex=1&geoloc=fixed&tempunit=C&windunit=km%252Fh&lengthunit=metric&zoom=10&autowidth=auto\"\n    frameborder=\"0\" scrolling=\"NO\" allowtransparency=\"true\"\n    sandbox=\"allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox\"\n    style=\"width: 100%; height: 420px\"></iframe>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 450,
-        "y": 600,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "b54633cc1236bacb",
         "type": "ui_button",
         "z": "148c173e8eacbf9a",
         "name": "",
         "group": "f8d2be63eb19876e",
-        "order": 5,
+        "order": 11,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -1833,7 +1818,8 @@
         "y": 460,
         "wires": [
             [
-                "cc29ceff723b721b"
+                "cc29ceff723b721b",
+                "30b5c97656ed3ee8"
             ]
         ]
     },
@@ -1862,7 +1848,7 @@
         "z": "148c173e8eacbf9a",
         "name": "",
         "group": "f8d2be63eb19876e",
-        "order": 2,
+        "order": 5,
         "width": 7,
         "height": 4,
         "gtype": "gage",
@@ -1880,9 +1866,130 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 1050,
+        "x": 1030,
         "y": 460,
         "wires": []
+    },
+    {
+        "id": "b750c3131d4d942b",
+        "type": "function",
+        "z": "148c173e8eacbf9a",
+        "name": "function 12",
+        "func": "if (msg.payload > 80) {\n    msg.payload = \" Ar muito úmido! Cuidado com o a ploriferação de fungos e bactérias ! \";\n} else if (msg.payload < 30) {\n    msg.payload = \"Ar muito seco! Cuidado a desidatração dos animais, a qualidade do ovo será afetada !\";\n} else {\n    msg.payload = \"Umidade dentro da faixa ideal.\";\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 240,
+        "wires": [
+            [
+                "ce71a82dea1fb97f"
+            ]
+        ]
+    },
+    {
+        "id": "9b0f1c469a172a83",
+        "type": "debug",
+        "z": "148c173e8eacbf9a",
+        "name": "debug 43",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "30b5c97656ed3ee8",
+        "type": "function",
+        "z": "148c173e8eacbf9a",
+        "name": "function 13",
+        "func": "if (msg.payload > 26) {\n    msg.payload = \" Fora da zona de conforto térmico ! Aves podem se estressar e aumentar da ingestão de água, redução no consumo de ração. \";\n} else if (msg.payload < 20) {\n    msg.payload = \" Fora da zona de conforto térmico ! afeta o metabolismo dos animais e aumenta o consumo de alimentos.\";\n} else {\n    msg.payload = \"Zona de conforto térmico a temperatura está dentro da faixa ideal.\";\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 970,
+        "y": 420,
+        "wires": [
+            [
+                "e6fed37f1b9fc07d"
+            ]
+        ]
+    },
+    {
+        "id": "1cadf120a2204d30",
+        "type": "ui_toast",
+        "z": "148c173e8eacbf9a",
+        "position": "dialog",
+        "displayTime": "5",
+        "highlight": "",
+        "sendall": false,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 1270,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e6fed37f1b9fc07d",
+        "type": "delay",
+        "z": "148c173e8eacbf9a",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1120,
+        "y": 420,
+        "wires": [
+            [
+                "1cadf120a2204d30"
+            ]
+        ]
+    },
+    {
+        "id": "ce71a82dea1fb97f",
+        "type": "ui_toast",
+        "z": "148c173e8eacbf9a",
+        "position": "dialog",
+        "displayTime": "5",
+        "highlight": "",
+        "sendall": false,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 1090,
+        "y": 240,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "08acb9ef9b9a196b",
@@ -2162,8 +2269,8 @@
         "type": "ui_chart",
         "z": "ea538592da2e51e2",
         "name": "",
-        "group": "8bcb2804d0691f25",
-        "order": 1,
+        "group": "8e1d1b289722c345",
+        "order": 2,
         "width": 23,
         "height": 5,
         "label": "",
@@ -2207,7 +2314,7 @@
         "z": "ea538592da2e51e2",
         "name": "",
         "group": "8e1d1b289722c345",
-        "order": 3,
+        "order": 5,
         "width": 23,
         "height": 5,
         "label": "",
@@ -2226,7 +2333,7 @@
         "useOneColor": false,
         "useUTC": false,
         "colors": [
-            "#d62728",
+            "#1f77b4",
             "#2ca02c",
             "#ff7f0e",
             "#a4c1c9",
@@ -2294,7 +2401,7 @@
         "type": "ui_chart",
         "z": "ea538592da2e51e2",
         "name": "",
-        "group": "8bcb2804d0691f25",
+        "group": "8e1d1b289722c345",
         "order": 3,
         "width": 23,
         "height": 5,
@@ -2395,7 +2502,7 @@
         "type": "ui_text",
         "z": "ea538592da2e51e2",
         "group": "8bcb2804d0691f25",
-        "order": 4,
+        "order": 1,
         "width": 0,
         "height": 0,
         "name": "",
@@ -2412,7 +2519,7 @@
         "type": "ui_text",
         "z": "ea538592da2e51e2",
         "group": "8e1d1b289722c345",
-        "order": 2,
+        "order": 4,
         "width": "0",
         "height": "0",
         "name": "",
@@ -2429,7 +2536,7 @@
         "type": "ui_text",
         "z": "ea538592da2e51e2",
         "group": "8e1d1b289722c345",
-        "order": 4,
+        "order": 6,
         "width": 0,
         "height": 0,
         "name": "",
