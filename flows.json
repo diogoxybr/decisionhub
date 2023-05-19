@@ -156,6 +156,60 @@
         "hidden": false
     },
     {
+        "id": "1026f58dc258542c",
+        "type": "ui_tab",
+        "name": "Seleção de ovos",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "d06c7024e6938db6",
+        "type": "ui_tab",
+        "name": "FSA Temp e Umid",
+        "icon": "show_chart",
+        "order": 4,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "a7d23cd996ba7867",
+        "type": "ui_tab",
+        "name": "FSA Produção",
+        "icon": "show_chart",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "25146704fdff4c17",
+        "type": "ui_tab",
+        "name": "Sobre",
+        "icon": "feedback",
+        "order": 7,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "43174ed033fbc86e",
+        "type": "ui_tab",
+        "name": "Nacional",
+        "icon": "show_chart",
+        "order": 5,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "c43e1d3993da57ea",
+        "type": "ui_tab",
+        "name": "Internacional",
+        "icon": "show_chart",
+        "order": 6,
+        "disabled": false,
+        "hidden": false
+    },
+    {
         "id": "f8d2be63eb19876e",
         "type": "ui_group",
         "name": "Tempo real: Santa Rita do Passa Quatro, SP, BR",
@@ -176,15 +230,6 @@
         "width": "23",
         "collapse": false,
         "className": ""
-    },
-    {
-        "id": "1026f58dc258542c",
-        "type": "ui_tab",
-        "name": "Seleção de ovos",
-        "icon": "dashboard",
-        "order": 2,
-        "disabled": false,
-        "hidden": false
     },
     {
         "id": "a36d8b353b5ac62a",
@@ -220,25 +265,6 @@
         "className": ""
     },
     {
-        "id": "9bccc41af47bb660",
-        "type": "Open APIs",
-        "name": "Helix",
-        "geType": "orion",
-        "apiEndpoint": "http://46.17.108.89:1026/",
-        "service": "helixiot",
-        "idmEndpoint": "",
-        "idmType": "none"
-    },
-    {
-        "id": "d06c7024e6938db6",
-        "type": "ui_tab",
-        "name": "FSA Temp e Umid",
-        "icon": "show_chart",
-        "order": 4,
-        "disabled": false,
-        "hidden": false
-    },
-    {
         "id": "5c3af32dfbbc6bd9",
         "type": "ui_group",
         "name": "Gráfico da produção",
@@ -248,15 +274,6 @@
         "width": 14,
         "collapse": false,
         "className": ""
-    },
-    {
-        "id": "a7d23cd996ba7867",
-        "type": "ui_tab",
-        "name": "FSA Produção",
-        "icon": "show_chart",
-        "order": 3,
-        "disabled": false,
-        "hidden": false
     },
     {
         "id": "8e1d1b289722c345",
@@ -270,20 +287,44 @@
         "className": ""
     },
     {
-        "id": "25146704fdff4c17",
-        "type": "ui_tab",
-        "name": "Sobre",
-        "icon": "feedback",
-        "order": 7,
-        "disabled": false,
-        "hidden": false
-    },
-    {
         "id": "ce464e0166efc6ec",
         "type": "ui_group",
         "name": "Trabalho de conclusão de curso",
         "tab": "25146704fdff4c17",
         "order": 1,
+        "disp": true,
+        "width": "7",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "c8f1f291b85d76d5",
+        "type": "ui_group",
+        "name": "Group 1",
+        "tab": "43174ed033fbc86e",
+        "order": 1,
+        "disp": false,
+        "width": "23",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "5e1547b4c5b09615",
+        "type": "ui_group",
+        "name": "Group 1",
+        "tab": "c43e1d3993da57ea",
+        "order": 1,
+        "disp": false,
+        "width": 23,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "cc81aa1c1fd12965",
+        "type": "ui_group",
+        "name": "Cadastro de produção",
+        "tab": "1026f58dc258542c",
+        "order": 4,
         "disp": true,
         "width": "7",
         "collapse": false,
@@ -310,57 +351,6 @@
         "height": 1
     },
     {
-        "id": "43174ed033fbc86e",
-        "type": "ui_tab",
-        "name": "Nacional",
-        "icon": "show_chart",
-        "order": 5,
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "c8f1f291b85d76d5",
-        "type": "ui_group",
-        "name": "Group 1",
-        "tab": "43174ed033fbc86e",
-        "order": 1,
-        "disp": false,
-        "width": "23",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "c43e1d3993da57ea",
-        "type": "ui_tab",
-        "name": "Internacional",
-        "icon": "show_chart",
-        "order": 6,
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "5e1547b4c5b09615",
-        "type": "ui_group",
-        "name": "Group 1",
-        "tab": "c43e1d3993da57ea",
-        "order": 1,
-        "disp": false,
-        "width": 23,
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "cc81aa1c1fd12965",
-        "type": "ui_group",
-        "name": "Cadastro de produção",
-        "tab": "1026f58dc258542c",
-        "order": 4,
-        "disp": true,
-        "width": "7",
-        "collapse": false,
-        "className": ""
-    },
-    {
         "id": "9120c9f0e563c951",
         "type": "ui_spacer",
         "z": "5a4975ebcc568c40",
@@ -381,18 +371,14 @@
         "height": 1
     },
     {
-        "id": "d13ff7ba584766ad",
-        "type": "FIWARE version",
-        "z": "3c27d32a0074e6b2",
-        "name": "",
-        "openapis": "9bccc41af47bb660",
-        "x": 300,
-        "y": 40,
-        "wires": [
-            [
-                "2bd12c432ba89bed"
-            ]
-        ]
+        "id": "9bccc41af47bb660",
+        "type": "Open APIs",
+        "name": "Helix",
+        "geType": "orion",
+        "apiEndpoint": "http://46.17.108.89:1026/",
+        "service": "helixiot",
+        "idmEndpoint": "",
+        "idmType": "none"
     },
     {
         "id": "2cc2d89279b19382",
@@ -441,27 +427,6 @@
         "wires": []
     },
     {
-        "id": "fc30cffa238e8e1b",
-        "type": "NGSI Entity",
-        "z": "3c27d32a0074e6b2",
-        "name": "Criar entidade",
-        "openapis": "9bccc41af47bb660",
-        "servicepath": "/",
-        "actionType": "create",
-        "entityId": "",
-        "entityType": "",
-        "attrs": "",
-        "keyValues": "false",
-        "dateModified": "false",
-        "x": 300,
-        "y": 100,
-        "wires": [
-            [
-                "c87af5ac09123664"
-            ]
-        ]
-    },
-    {
         "id": "06255b12958273f3",
         "type": "inject",
         "z": "3c27d32a0074e6b2",
@@ -508,27 +473,6 @@
         "wires": []
     },
     {
-        "id": "f18a1294788f3491",
-        "type": "NGSI Entity",
-        "z": "3c27d32a0074e6b2",
-        "name": "Ler entidade",
-        "openapis": "9bccc41af47bb660",
-        "servicepath": "/",
-        "actionType": "read",
-        "entityId": "urn:ngsi-ld:entity:001",
-        "entityType": "iot",
-        "attrs": "",
-        "keyValues": "false",
-        "dateModified": "false",
-        "x": 290,
-        "y": 160,
-        "wires": [
-            [
-                "7ba35e812154abd9"
-            ]
-        ]
-    },
-    {
         "id": "526a4255dce2df39",
         "type": "inject",
         "z": "3c27d32a0074e6b2",
@@ -573,27 +517,6 @@
         "x": 650,
         "y": 160,
         "wires": []
-    },
-    {
-        "id": "39149dcb9ec0743d",
-        "type": "NGSI Entity",
-        "z": "3c27d32a0074e6b2",
-        "name": "Excluir entidade",
-        "openapis": "9bccc41af47bb660",
-        "servicepath": "/",
-        "actionType": "delete",
-        "entityId": "",
-        "entityType": "iot",
-        "attrs": "",
-        "keyValues": "false",
-        "dateModified": "false",
-        "x": 300,
-        "y": 220,
-        "wires": [
-            [
-                "86c307735986c38f"
-            ]
-        ]
     },
     {
         "id": "1a8ac891a28d633b",
@@ -688,28 +611,6 @@
         "wires": []
     },
     {
-        "id": "2c2e1aabea6674f6",
-        "type": "NGSI Attributes",
-        "z": "3c27d32a0074e6b2",
-        "name": "Atualizar entidade",
-        "openapis": "9bccc41af47bb660",
-        "servicepath": "/",
-        "actionType": "update",
-        "entityId": "urn:ngsi-ld:entity:001",
-        "entityType": "iot",
-        "keyValues": "false",
-        "overrideMetadata": "false",
-        "forcedUpdate": "false",
-        "flowControl": "false",
-        "x": 310,
-        "y": 280,
-        "wires": [
-            [
-                "bb771975c7c01820"
-            ]
-        ]
-    },
-    {
         "id": "cd23d68815e799ad",
         "type": "inject",
         "z": "3c27d32a0074e6b2",
@@ -754,30 +655,6 @@
         "x": 650,
         "y": 340,
         "wires": []
-    },
-    {
-        "id": "493d776fbb65c0b2",
-        "type": "NGSI Attribute",
-        "z": "3c27d32a0074e6b2",
-        "name": "Atualizar atributo",
-        "openapis": "9bccc41af47bb660",
-        "servicepath": "/",
-        "actionType": "update",
-        "entityId": "urn:ngsi-ld:entity:001",
-        "entityType": "iot",
-        "attrName": "temperature",
-        "metadata": "",
-        "skipForwarding": "false",
-        "overrideMetadata": "false",
-        "forcedUpdate": "false",
-        "flowControl": "false",
-        "x": 310,
-        "y": 340,
-        "wires": [
-            [
-                "e22bf8bc4dd4eb89"
-            ]
-        ]
     },
     {
         "id": "86f2bc2210a3a5db",
@@ -826,49 +703,6 @@
         "wires": []
     },
     {
-        "id": "1f18837a26d4103c",
-        "type": "NGSI Attribute value",
-        "z": "3c27d32a0074e6b2",
-        "name": "Atualizar valor atrib",
-        "openapis": "9bccc41af47bb660",
-        "servicepath": "/",
-        "actionType": "update",
-        "entityId": "urn:ngsi-ld:entity:001",
-        "entityType": "iot",
-        "attrName": "temperature",
-        "skipForwarding": "false",
-        "forcedUpdate": "false",
-        "flowControl": "false",
-        "x": 310,
-        "y": 400,
-        "wires": [
-            [
-                "d081d67b9bce00c6"
-            ]
-        ]
-    },
-    {
-        "id": "c7cab7f5f37eaa80",
-        "type": "NGSI Entity",
-        "z": "3c27d32a0074e6b2",
-        "name": "Excluir entidade",
-        "openapis": "9bccc41af47bb660",
-        "servicepath": "/",
-        "actionType": "delete",
-        "entityId": "urn:ngsi-ld:OpenWeatherMapWeather:3449851",
-        "entityType": "OpenWeatherMapWeather",
-        "attrs": "",
-        "keyValues": "false",
-        "dateModified": "false",
-        "x": 460,
-        "y": 460,
-        "wires": [
-            [
-                "6997e13a0b3f82f8"
-            ]
-        ]
-    },
-    {
         "id": "6de0ae6b2d5ff539",
         "type": "inject",
         "z": "3c27d32a0074e6b2",
@@ -915,111 +749,170 @@
         "wires": []
     },
     {
-        "id": "9bb4846fcdc0c53e",
-        "type": "ui_gauge",
-        "z": "5a4975ebcc568c40",
-        "name": "",
-        "group": "847566bf4ea81b9a",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "gtype": "gage",
-        "title": "% Ovos ruins",
-        "label": "%",
-        "format": "{{ruins_pc}}",
-        "min": 0,
-        "max": "100",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "diff": false,
-        "className": "",
-        "x": 750,
+        "id": "fc30cffa238e8e1b",
+        "type": "NGSI Entity",
+        "z": "3c27d32a0074e6b2",
+        "name": "Criar entidade",
+        "openapis": "9bccc41af47bb660",
+        "servicepath": "/",
+        "actionType": "create",
+        "entityId": "",
+        "entityType": "",
+        "attrs": "",
+        "keyValues": "false",
+        "dateModified": "false",
+        "x": 300,
         "y": 100,
-        "wires": []
+        "wires": [
+            [
+                "c87af5ac09123664"
+            ]
+        ]
     },
     {
-        "id": "2550832b6db8a2ae",
-        "type": "ui_text",
-        "z": "5a4975ebcc568c40",
-        "group": "cad099844726e2c2",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Total de ovos produzidos",
-        "format": "{{value}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 750,
-        "y": 280,
-        "wires": []
-    },
-    {
-        "id": "9834b9ff599c3e33",
-        "type": "ui_gauge",
-        "z": "5a4975ebcc568c40",
-        "name": "",
-        "group": "a36d8b353b5ac62a",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "gtype": "gage",
-        "title": "% Ovos bons",
-        "label": "%",
-        "format": "{{boas_pc}}",
-        "min": 0,
-        "max": "100",
-        "colors": [
-            "#ca3838",
-            "#e6e600",
-            "#00b500"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "diff": false,
-        "className": "",
-        "x": 750,
-        "y": 40,
-        "wires": []
-    },
-    {
-        "id": "b7b501af8d966eae",
-        "type": "ui_text",
-        "z": "5a4975ebcc568c40",
-        "group": "cad099844726e2c2",
-        "order": 4,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Total de ovos ruins",
-        "format": "{{value}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 750,
-        "y": 220,
-        "wires": []
-    },
-    {
-        "id": "ddf4e2ed36b1e975",
-        "type": "ui_text",
-        "z": "5a4975ebcc568c40",
-        "group": "cad099844726e2c2",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Total de ovos bons",
-        "format": "{{value}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 750,
+        "id": "f18a1294788f3491",
+        "type": "NGSI Entity",
+        "z": "3c27d32a0074e6b2",
+        "name": "Ler entidade",
+        "openapis": "9bccc41af47bb660",
+        "servicepath": "/",
+        "actionType": "read",
+        "entityId": "urn:ngsi-ld:entity:001",
+        "entityType": "iot",
+        "attrs": "",
+        "keyValues": "false",
+        "dateModified": "false",
+        "x": 290,
         "y": 160,
-        "wires": []
+        "wires": [
+            [
+                "7ba35e812154abd9"
+            ]
+        ]
+    },
+    {
+        "id": "39149dcb9ec0743d",
+        "type": "NGSI Entity",
+        "z": "3c27d32a0074e6b2",
+        "name": "Excluir entidade",
+        "openapis": "9bccc41af47bb660",
+        "servicepath": "/",
+        "actionType": "delete",
+        "entityId": "",
+        "entityType": "iot",
+        "attrs": "",
+        "keyValues": "false",
+        "dateModified": "false",
+        "x": 300,
+        "y": 220,
+        "wires": [
+            [
+                "86c307735986c38f"
+            ]
+        ]
+    },
+    {
+        "id": "c7cab7f5f37eaa80",
+        "type": "NGSI Entity",
+        "z": "3c27d32a0074e6b2",
+        "name": "Excluir entidade",
+        "openapis": "9bccc41af47bb660",
+        "servicepath": "/",
+        "actionType": "delete",
+        "entityId": "urn:ngsi-ld:OpenWeatherMapWeather:3449851",
+        "entityType": "OpenWeatherMapWeather",
+        "attrs": "",
+        "keyValues": "false",
+        "dateModified": "false",
+        "x": 460,
+        "y": 460,
+        "wires": [
+            [
+                "6997e13a0b3f82f8"
+            ]
+        ]
+    },
+    {
+        "id": "2c2e1aabea6674f6",
+        "type": "NGSI Attributes",
+        "z": "3c27d32a0074e6b2",
+        "name": "Atualizar entidade",
+        "openapis": "9bccc41af47bb660",
+        "servicepath": "/",
+        "actionType": "update",
+        "entityId": "urn:ngsi-ld:entity:001",
+        "entityType": "iot",
+        "keyValues": "false",
+        "overrideMetadata": "false",
+        "forcedUpdate": "false",
+        "flowControl": "false",
+        "x": 310,
+        "y": 280,
+        "wires": [
+            [
+                "bb771975c7c01820"
+            ]
+        ]
+    },
+    {
+        "id": "493d776fbb65c0b2",
+        "type": "NGSI Attribute",
+        "z": "3c27d32a0074e6b2",
+        "name": "Atualizar atributo",
+        "openapis": "9bccc41af47bb660",
+        "servicepath": "/",
+        "actionType": "update",
+        "entityId": "urn:ngsi-ld:entity:001",
+        "entityType": "iot",
+        "attrName": "temperature",
+        "metadata": "",
+        "skipForwarding": "false",
+        "overrideMetadata": "false",
+        "forcedUpdate": "false",
+        "flowControl": "false",
+        "x": 310,
+        "y": 340,
+        "wires": [
+            [
+                "e22bf8bc4dd4eb89"
+            ]
+        ]
+    },
+    {
+        "id": "1f18837a26d4103c",
+        "type": "NGSI Attribute value",
+        "z": "3c27d32a0074e6b2",
+        "name": "Atualizar valor atrib",
+        "openapis": "9bccc41af47bb660",
+        "servicepath": "/",
+        "actionType": "update",
+        "entityId": "urn:ngsi-ld:entity:001",
+        "entityType": "iot",
+        "attrName": "temperature",
+        "skipForwarding": "false",
+        "forcedUpdate": "false",
+        "flowControl": "false",
+        "x": 310,
+        "y": 400,
+        "wires": [
+            [
+                "d081d67b9bce00c6"
+            ]
+        ]
+    },
+    {
+        "id": "d13ff7ba584766ad",
+        "type": "FIWARE version",
+        "z": "3c27d32a0074e6b2",
+        "name": "",
+        "openapis": "9bccc41af47bb660",
+        "x": 300,
+        "y": 40,
+        "wires": [
+            [
+                "2bd12c432ba89bed"
+            ]
+        ]
     },
     {
         "id": "6a63c4aa5cf46339",
@@ -1038,62 +931,6 @@
             [
                 "9bb4846fcdc0c53e",
                 "9834b9ff599c3e33"
-            ]
-        ]
-    },
-    {
-        "id": "d73ba755a72e7b99",
-        "type": "ui_form",
-        "z": "5a4975ebcc568c40",
-        "name": "",
-        "label": "",
-        "group": "cc81aa1c1fd12965",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "options": [
-            {
-                "label": "Data",
-                "value": "labels",
-                "type": "date",
-                "required": true,
-                "rows": null
-            },
-            {
-                "label": "Bons",
-                "value": "bons",
-                "type": "text",
-                "required": true,
-                "rows": null
-            },
-            {
-                "label": "Ruins",
-                "value": "ruins",
-                "type": "text",
-                "required": true,
-                "rows": null
-            }
-        ],
-        "formValue": {
-            "labels": "",
-            "bons": "",
-            "ruins": ""
-        },
-        "payload": "",
-        "submit": "Enviar",
-        "cancel": "Cancelar",
-        "topic": "topic",
-        "topicType": "msg",
-        "splitLayout": false,
-        "className": "",
-        "x": 90,
-        "y": 100,
-        "wires": [
-            [
-                "6a63c4aa5cf46339",
-                "bf1f338b2a287084",
-                "0f22692b6b038ee8",
-                "6e1a832de52f8a75"
             ]
         ]
     },
@@ -1159,34 +996,6 @@
         ]
     },
     {
-        "id": "b4d22c818e03bc6b",
-        "type": "ui_button",
-        "z": "5a4975ebcc568c40",
-        "name": "",
-        "group": "cad099844726e2c2",
-        "order": 5,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "RESETAR",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 170,
-        "y": 320,
-        "wires": [
-            [
-                "55701599c0ad4992"
-            ]
-        ]
-    },
-    {
         "id": "55701599c0ad4992",
         "type": "function",
         "z": "5a4975ebcc568c40",
@@ -1208,50 +1017,6 @@
                 "9834b9ff599c3e33",
                 "9bb4846fcdc0c53e"
             ]
-        ]
-    },
-    {
-        "id": "6e1a832de52f8a75",
-        "type": "ui_chart",
-        "z": "5a4975ebcc568c40",
-        "name": "",
-        "group": "5c3af32dfbbc6bd9",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "label": "",
-        "chartType": "line",
-        "legend": "false",
-        "xformat": "auto",
-        "interpolate": "linear",
-        "nodata": "",
-        "dot": true,
-        "ymin": "",
-        "ymax": "",
-        "removeOlder": 1,
-        "removeOlderPoints": "",
-        "removeOlderUnit": "3600",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#1f77b4",
-            "#aec7e8",
-            "#ff7f0e",
-            "#2ca02c",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "useDifferentColor": false,
-        "className": "",
-        "x": 750,
-        "y": 340,
-        "wires": [
-            []
         ]
     },
     {
@@ -1310,22 +1075,106 @@
         ]
     },
     {
-        "id": "e34f2a194c1d6242",
-        "type": "ui_gauge",
-        "z": "148c173e8eacbf9a",
+        "id": "b4d22c818e03bc6b",
+        "type": "ui_button",
+        "z": "5a4975ebcc568c40",
         "name": "",
-        "group": "f8d2be63eb19876e",
-        "order": 4,
-        "width": 7,
-        "height": 4,
+        "group": "cad099844726e2c2",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "RESETAR",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 170,
+        "y": 320,
+        "wires": [
+            [
+                "55701599c0ad4992"
+            ]
+        ]
+    },
+    {
+        "id": "d73ba755a72e7b99",
+        "type": "ui_form",
+        "z": "5a4975ebcc568c40",
+        "name": "",
+        "label": "",
+        "group": "cc81aa1c1fd12965",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Data",
+                "value": "labels",
+                "type": "date",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Bons",
+                "value": "bons",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Ruins",
+                "value": "ruins",
+                "type": "text",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "labels": "",
+            "bons": "",
+            "ruins": ""
+        },
+        "payload": "",
+        "submit": "Enviar",
+        "cancel": "Cancelar",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": false,
+        "className": "",
+        "x": 90,
+        "y": 100,
+        "wires": [
+            [
+                "6a63c4aa5cf46339",
+                "bf1f338b2a287084",
+                "0f22692b6b038ee8",
+                "6e1a832de52f8a75"
+            ]
+        ]
+    },
+    {
+        "id": "9bb4846fcdc0c53e",
+        "type": "ui_gauge",
+        "z": "5a4975ebcc568c40",
+        "name": "",
+        "group": "847566bf4ea81b9a",
+        "order": 1,
+        "width": 0,
+        "height": 0,
         "gtype": "gage",
-        "title": "Temperatura atual",
-        "label": "°C",
-        "format": "{{value}}",
+        "title": "% Ovos ruins",
+        "label": "%",
+        "format": "{{ruins_pc}}",
         "min": 0,
-        "max": "50",
+        "max": "100",
         "colors": [
-            "#1f77b4",
+            "#00b500",
             "#e6e600",
             "#ca3838"
         ],
@@ -1333,63 +1182,132 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 790,
-        "y": 400,
+        "x": 750,
+        "y": 100,
         "wires": []
     },
     {
-        "id": "d21a459c713ecc78",
-        "type": "openweathermap",
-        "z": "148c173e8eacbf9a",
+        "id": "9834b9ff599c3e33",
+        "type": "ui_gauge",
+        "z": "5a4975ebcc568c40",
         "name": "",
-        "wtype": "current",
-        "lon": "",
-        "lat": "",
-        "city": "Santa Rita do Passa Quatro",
-        "country": "Brasil",
-        "language": "pt",
-        "x": 260,
-        "y": 140,
+        "group": "a36d8b353b5ac62a",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "% Ovos bons",
+        "label": "%",
+        "format": "{{boas_pc}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#ca3838",
+            "#e6e600",
+            "#00b500"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 750,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "6e1a832de52f8a75",
+        "type": "ui_chart",
+        "z": "5a4975ebcc568c40",
+        "name": "",
+        "group": "5c3af32dfbbc6bd9",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "auto",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": true,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 750,
+        "y": 340,
         "wires": [
-            [
-                "c71215b7ac67e683"
-            ]
+            []
         ]
     },
     {
-        "id": "c71215b7ac67e683",
-        "type": "OpenWeatherMap to NGSI",
-        "z": "148c173e8eacbf9a",
-        "name": "WeatherToNGSI",
-        "x": 480,
-        "y": 80,
-        "wires": [
-            [
-                "768e66eeecc658cd",
-                "f4377ba4dfbfde65"
-            ]
-        ]
+        "id": "2550832b6db8a2ae",
+        "type": "ui_text",
+        "z": "5a4975ebcc568c40",
+        "group": "cad099844726e2c2",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Total de ovos produzidos",
+        "format": "{{value}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 750,
+        "y": 280,
+        "wires": []
     },
     {
-        "id": "768e66eeecc658cd",
-        "type": "NGSI Entity",
-        "z": "148c173e8eacbf9a",
-        "name": "Criar entidade",
-        "openapis": "9bccc41af47bb660",
-        "servicepath": "/",
-        "actionType": "upsert",
-        "entityId": "",
-        "entityType": "",
-        "attrs": "",
-        "keyValues": "false",
-        "dateModified": "false",
-        "x": 720,
-        "y": 80,
-        "wires": [
-            [
-                "f5f7d401e39b7f55"
-            ]
-        ]
+        "id": "b7b501af8d966eae",
+        "type": "ui_text",
+        "z": "5a4975ebcc568c40",
+        "group": "cad099844726e2c2",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Total de ovos ruins",
+        "format": "{{value}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 750,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "ddf4e2ed36b1e975",
+        "type": "ui_text",
+        "z": "5a4975ebcc568c40",
+        "group": "cad099844726e2c2",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Total de ovos bons",
+        "format": "{{value}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 750,
+        "y": 160,
+        "wires": []
     },
     {
         "id": "f4377ba4dfbfde65",
@@ -1424,53 +1342,6 @@
         "x": 730,
         "y": 140,
         "wires": []
-    },
-    {
-        "id": "06680ea47a342933",
-        "type": "NGSI Entity",
-        "z": "148c173e8eacbf9a",
-        "name": "",
-        "openapis": "9bccc41af47bb660",
-        "servicepath": "/",
-        "actionType": "read",
-        "entityId": "urn:ngsi-ld:OpenWeatherMapWeather:3449851",
-        "entityType": "OpenWeatherMapWeather",
-        "attrs": "main",
-        "keyValues": "false",
-        "dateModified": "false",
-        "x": 310,
-        "y": 340,
-        "wires": [
-            [
-                "9713cc4c8866a808",
-                "7e1094f102f884d6"
-            ]
-        ]
-    },
-    {
-        "id": "9713cc4c8866a808",
-        "type": "NGSI Attribute value",
-        "z": "148c173e8eacbf9a",
-        "name": "",
-        "openapis": "9bccc41af47bb660",
-        "servicepath": "/",
-        "actionType": "read",
-        "entityId": "",
-        "entityType": "",
-        "attrName": "main",
-        "skipForwarding": "false",
-        "forcedUpdate": "false",
-        "flowControl": "false",
-        "x": 540,
-        "y": 340,
-        "wires": [
-            [
-                "2709ef4b62f184ae",
-                "92055da4bf90bf02",
-                "5ff4dad65b2d73c0",
-                "2d027a28860ab2c0"
-            ]
-        ]
     },
     {
         "id": "2709ef4b62f184ae",
@@ -1536,34 +1407,6 @@
         "wires": []
     },
     {
-        "id": "e36b639f8b3640f7",
-        "type": "ui_gauge",
-        "z": "148c173e8eacbf9a",
-        "name": "",
-        "group": "f8d2be63eb19876e",
-        "order": 6,
-        "width": 7,
-        "height": 4,
-        "gtype": "gage",
-        "title": "Umidade atual",
-        "label": "%",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "100",
-        "colors": [
-            "#ca3838",
-            "#00b500",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "diff": false,
-        "className": "",
-        "x": 800,
-        "y": 280,
-        "wires": []
-    },
-    {
         "id": "92055da4bf90bf02",
         "type": "change",
         "z": "148c173e8eacbf9a",
@@ -1612,27 +1455,6 @@
         ]
     },
     {
-        "id": "90bb6fd43975f930",
-        "type": "NGSI Entity",
-        "z": "148c173e8eacbf9a",
-        "name": "",
-        "openapis": "9bccc41af47bb660",
-        "servicepath": "/",
-        "actionType": "read",
-        "entityId": "urn:ngsi-ld:OpenWeatherMapWeather:3449851",
-        "entityType": "OpenWeatherMapWeather",
-        "attrs": "weather",
-        "keyValues": "false",
-        "dateModified": "false",
-        "x": 130,
-        "y": 540,
-        "wires": [
-            [
-                "ceb7022157ec4ace"
-            ]
-        ]
-    },
-    {
         "id": "b264cb08ede71671",
         "type": "change",
         "z": "148c173e8eacbf9a",
@@ -1658,94 +1480,6 @@
                 "a92e42061438ea16"
             ]
         ]
-    },
-    {
-        "id": "a92e42061438ea16",
-        "type": "ui_text",
-        "z": "148c173e8eacbf9a",
-        "group": "f8d2be63eb19876e",
-        "order": 2,
-        "width": 21,
-        "height": 1,
-        "name": "",
-        "label": "Situação:  ",
-        "format": " {{value}}",
-        "layout": "row-center",
-        "className": "",
-        "x": 720,
-        "y": 540,
-        "wires": []
-    },
-    {
-        "id": "ceb7022157ec4ace",
-        "type": "NGSI Attribute value",
-        "z": "148c173e8eacbf9a",
-        "name": "",
-        "openapis": "9bccc41af47bb660",
-        "servicepath": "/",
-        "actionType": "read",
-        "entityId": "",
-        "entityType": "",
-        "attrName": "weather",
-        "skipForwarding": "false",
-        "forcedUpdate": "false",
-        "flowControl": "false",
-        "x": 340,
-        "y": 540,
-        "wires": [
-            [
-                "b264cb08ede71671"
-            ]
-        ]
-    },
-    {
-        "id": "b54633cc1236bacb",
-        "type": "ui_button",
-        "z": "148c173e8eacbf9a",
-        "name": "",
-        "group": "f8d2be63eb19876e",
-        "order": 11,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "Atualizar dados",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "update",
-        "payload": "{}",
-        "payloadType": "json",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 100,
-        "y": 340,
-        "wires": [
-            [
-                "06680ea47a342933",
-                "90bb6fd43975f930",
-                "d21a459c713ecc78"
-            ]
-        ]
-    },
-    {
-        "id": "57a9ed03e5c6a883",
-        "type": "ui_toast",
-        "z": "148c173e8eacbf9a",
-        "position": "top right",
-        "displayTime": "5",
-        "highlight": "",
-        "sendall": true,
-        "outputs": 0,
-        "ok": "OK",
-        "cancel": "",
-        "raw": false,
-        "className": "",
-        "topic": "",
-        "name": "",
-        "x": 410,
-        "y": 480,
-        "wires": []
     },
     {
         "id": "7e1094f102f884d6",
@@ -1843,34 +1577,6 @@
         ]
     },
     {
-        "id": "53c192a9efb5478e",
-        "type": "ui_gauge",
-        "z": "148c173e8eacbf9a",
-        "name": "",
-        "group": "f8d2be63eb19876e",
-        "order": 5,
-        "width": 7,
-        "height": 4,
-        "gtype": "gage",
-        "title": "Sensação térmica",
-        "label": "°C",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "50",
-        "colors": [
-            "#1f77b4",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "diff": false,
-        "className": "",
-        "x": 1030,
-        "y": 460,
-        "wires": []
-    },
-    {
         "id": "b750c3131d4d942b",
         "type": "function",
         "z": "148c173e8eacbf9a",
@@ -1925,27 +1631,6 @@
         ]
     },
     {
-        "id": "1cadf120a2204d30",
-        "type": "ui_toast",
-        "z": "148c173e8eacbf9a",
-        "position": "dialog",
-        "displayTime": "5",
-        "highlight": "",
-        "sendall": false,
-        "outputs": 1,
-        "ok": "OK",
-        "cancel": "",
-        "raw": false,
-        "className": "",
-        "topic": "",
-        "name": "",
-        "x": 1270,
-        "y": 420,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "e6fed37f1b9fc07d",
         "type": "delay",
         "z": "148c173e8eacbf9a",
@@ -1971,6 +1656,160 @@
         ]
     },
     {
+        "id": "b54633cc1236bacb",
+        "type": "ui_button",
+        "z": "148c173e8eacbf9a",
+        "name": "",
+        "group": "f8d2be63eb19876e",
+        "order": 11,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Atualizar dados",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "update",
+        "payload": "{}",
+        "payloadType": "json",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 100,
+        "y": 340,
+        "wires": [
+            [
+                "06680ea47a342933",
+                "90bb6fd43975f930",
+                "d21a459c713ecc78"
+            ]
+        ]
+    },
+    {
+        "id": "e34f2a194c1d6242",
+        "type": "ui_gauge",
+        "z": "148c173e8eacbf9a",
+        "name": "",
+        "group": "f8d2be63eb19876e",
+        "order": 4,
+        "width": 7,
+        "height": 4,
+        "gtype": "gage",
+        "title": "Temperatura atual",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#1f77b4",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 790,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "e36b639f8b3640f7",
+        "type": "ui_gauge",
+        "z": "148c173e8eacbf9a",
+        "name": "",
+        "group": "f8d2be63eb19876e",
+        "order": 6,
+        "width": 7,
+        "height": 4,
+        "gtype": "gage",
+        "title": "Umidade atual",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#ca3838",
+            "#00b500",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 800,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "53c192a9efb5478e",
+        "type": "ui_gauge",
+        "z": "148c173e8eacbf9a",
+        "name": "",
+        "group": "f8d2be63eb19876e",
+        "order": 5,
+        "width": 7,
+        "height": 4,
+        "gtype": "gage",
+        "title": "Sensação térmica",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#1f77b4",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1030,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "57a9ed03e5c6a883",
+        "type": "ui_toast",
+        "z": "148c173e8eacbf9a",
+        "position": "top right",
+        "displayTime": "5",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 410,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "1cadf120a2204d30",
+        "type": "ui_toast",
+        "z": "148c173e8eacbf9a",
+        "position": "dialog",
+        "displayTime": "5",
+        "highlight": "",
+        "sendall": false,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 1270,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
         "id": "ce71a82dea1fb97f",
         "type": "ui_toast",
         "z": "148c173e8eacbf9a",
@@ -1992,23 +1831,163 @@
         ]
     },
     {
-        "id": "08acb9ef9b9a196b",
+        "id": "a92e42061438ea16",
+        "type": "ui_text",
+        "z": "148c173e8eacbf9a",
+        "group": "f8d2be63eb19876e",
+        "order": 2,
+        "width": 21,
+        "height": 1,
+        "name": "",
+        "label": "Situação:  ",
+        "format": " {{value}}",
+        "layout": "row-center",
+        "className": "",
+        "x": 720,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "d21a459c713ecc78",
+        "type": "openweathermap",
+        "z": "148c173e8eacbf9a",
+        "name": "",
+        "wtype": "current",
+        "lon": "",
+        "lat": "",
+        "city": "Santa Rita do Passa Quatro",
+        "country": "Brasil",
+        "language": "pt",
+        "x": 260,
+        "y": 140,
+        "wires": [
+            [
+                "c71215b7ac67e683"
+            ]
+        ]
+    },
+    {
+        "id": "768e66eeecc658cd",
         "type": "NGSI Entity",
-        "z": "ea538592da2e51e2",
+        "z": "148c173e8eacbf9a",
         "name": "Criar entidade",
         "openapis": "9bccc41af47bb660",
         "servicepath": "/",
-        "actionType": "create",
+        "actionType": "upsert",
         "entityId": "",
         "entityType": "",
         "attrs": "",
-        "keyValues": "true",
+        "keyValues": "false",
         "dateModified": "false",
-        "x": 380,
-        "y": 60,
+        "x": 720,
+        "y": 80,
         "wires": [
             [
-                "31e2c2c9f2bff06a"
+                "f5f7d401e39b7f55"
+            ]
+        ]
+    },
+    {
+        "id": "06680ea47a342933",
+        "type": "NGSI Entity",
+        "z": "148c173e8eacbf9a",
+        "name": "",
+        "openapis": "9bccc41af47bb660",
+        "servicepath": "/",
+        "actionType": "read",
+        "entityId": "urn:ngsi-ld:OpenWeatherMapWeather:3449851",
+        "entityType": "OpenWeatherMapWeather",
+        "attrs": "main",
+        "keyValues": "false",
+        "dateModified": "false",
+        "x": 310,
+        "y": 340,
+        "wires": [
+            [
+                "9713cc4c8866a808",
+                "7e1094f102f884d6"
+            ]
+        ]
+    },
+    {
+        "id": "90bb6fd43975f930",
+        "type": "NGSI Entity",
+        "z": "148c173e8eacbf9a",
+        "name": "",
+        "openapis": "9bccc41af47bb660",
+        "servicepath": "/",
+        "actionType": "read",
+        "entityId": "urn:ngsi-ld:OpenWeatherMapWeather:3449851",
+        "entityType": "OpenWeatherMapWeather",
+        "attrs": "weather",
+        "keyValues": "false",
+        "dateModified": "false",
+        "x": 130,
+        "y": 540,
+        "wires": [
+            [
+                "ceb7022157ec4ace"
+            ]
+        ]
+    },
+    {
+        "id": "9713cc4c8866a808",
+        "type": "NGSI Attribute value",
+        "z": "148c173e8eacbf9a",
+        "name": "",
+        "openapis": "9bccc41af47bb660",
+        "servicepath": "/",
+        "actionType": "read",
+        "entityId": "",
+        "entityType": "",
+        "attrName": "main",
+        "skipForwarding": "false",
+        "forcedUpdate": "false",
+        "flowControl": "false",
+        "x": 540,
+        "y": 340,
+        "wires": [
+            [
+                "2709ef4b62f184ae",
+                "92055da4bf90bf02",
+                "5ff4dad65b2d73c0",
+                "2d027a28860ab2c0"
+            ]
+        ]
+    },
+    {
+        "id": "ceb7022157ec4ace",
+        "type": "NGSI Attribute value",
+        "z": "148c173e8eacbf9a",
+        "name": "",
+        "openapis": "9bccc41af47bb660",
+        "servicepath": "/",
+        "actionType": "read",
+        "entityId": "",
+        "entityType": "",
+        "attrName": "weather",
+        "skipForwarding": "false",
+        "forcedUpdate": "false",
+        "flowControl": "false",
+        "x": 340,
+        "y": 540,
+        "wires": [
+            [
+                "b264cb08ede71671"
+            ]
+        ]
+    },
+    {
+        "id": "c71215b7ac67e683",
+        "type": "OpenWeatherMap to NGSI",
+        "z": "148c173e8eacbf9a",
+        "name": "WeatherToNGSI",
+        "x": 480,
+        "y": 80,
+        "wires": [
+            [
+                "768e66eeecc658cd",
+                "f4377ba4dfbfde65"
             ]
         ]
     },
@@ -2059,27 +2038,6 @@
         "wires": []
     },
     {
-        "id": "09edde87b1151caa",
-        "type": "NGSI Entity",
-        "z": "ea538592da2e51e2",
-        "name": "Ler entidade",
-        "openapis": "9bccc41af47bb660",
-        "servicepath": "/",
-        "actionType": "read",
-        "entityId": "urn:ngsi-ld:decision:1",
-        "entityType": "data",
-        "attrs": "",
-        "keyValues": "true",
-        "dateModified": "false",
-        "x": 390,
-        "y": 120,
-        "wires": [
-            [
-                "3b8edefc28c4b4b9"
-            ]
-        ]
-    },
-    {
         "id": "2b9d1c447b319764",
         "type": "inject",
         "z": "ea538592da2e51e2",
@@ -2124,27 +2082,6 @@
         "x": 590,
         "y": 120,
         "wires": []
-    },
-    {
-        "id": "dc1fa2f61edf8dcf",
-        "type": "NGSI Entity",
-        "z": "ea538592da2e51e2",
-        "name": "Excluir entidade",
-        "openapis": "9bccc41af47bb660",
-        "servicepath": "/",
-        "actionType": "delete",
-        "entityId": "urn:ngsi-ld:decision:1",
-        "entityType": "data",
-        "attrs": "",
-        "keyValues": "false",
-        "dateModified": "false",
-        "x": 420,
-        "y": 180,
-        "wires": [
-            [
-                "3221bff9bd14abea"
-            ]
-        ]
     },
     {
         "id": "8a417641ccdad007",
@@ -2193,30 +2130,6 @@
         "wires": []
     },
     {
-        "id": "509a19c86427a95d",
-        "type": "NGSI Entity",
-        "z": "ea538592da2e51e2",
-        "name": "",
-        "openapis": "9bccc41af47bb660",
-        "servicepath": "/",
-        "actionType": "read",
-        "entityId": "urn:ngsi-ld:decision:1",
-        "entityType": "data",
-        "attrs": "",
-        "keyValues": "false",
-        "dateModified": "false",
-        "x": 350,
-        "y": 380,
-        "wires": [
-            [
-                "03613652237fdf8d",
-                "4eda1b612198c8dc",
-                "689701499a0a962b",
-                "21fc1e4f402a5d85"
-            ]
-        ]
-    },
-    {
         "id": "3b2f49372141d86a",
         "type": "inject",
         "z": "ea538592da2e51e2",
@@ -2262,182 +2175,6 @@
             [
                 "b0459ef3cfd438e4"
             ]
-        ]
-    },
-    {
-        "id": "b0459ef3cfd438e4",
-        "type": "ui_chart",
-        "z": "ea538592da2e51e2",
-        "name": "",
-        "group": "8e1d1b289722c345",
-        "order": 2,
-        "width": 23,
-        "height": 5,
-        "label": "",
-        "chartType": "line",
-        "legend": "true",
-        "xformat": "l",
-        "interpolate": "bezier",
-        "nodata": "no data",
-        "dot": true,
-        "ymin": "",
-        "ymax": "",
-        "removeOlder": 1,
-        "removeOlderPoints": "",
-        "removeOlderUnit": "86400",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#1f77b4",
-            "#2ca02c",
-            "#ff7f0e",
-            "#a4c1c9",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "useDifferentColor": false,
-        "className": "",
-        "x": 690,
-        "y": 280,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "433a3070b8e931dd",
-        "type": "ui_chart",
-        "z": "ea538592da2e51e2",
-        "name": "",
-        "group": "8e1d1b289722c345",
-        "order": 5,
-        "width": 23,
-        "height": 5,
-        "label": "",
-        "chartType": "line",
-        "legend": "true",
-        "xformat": "l",
-        "interpolate": "bezier",
-        "nodata": "no data",
-        "dot": true,
-        "ymin": "",
-        "ymax": "",
-        "removeOlder": 1,
-        "removeOlderPoints": "",
-        "removeOlderUnit": "86400",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#1f77b4",
-            "#2ca02c",
-            "#ff7f0e",
-            "#a4c1c9",
-            "#98df8a",
-            "#1f77b4",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "useDifferentColor": false,
-        "className": "",
-        "x": 690,
-        "y": 480,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "6d58b88fafd4f876",
-        "type": "ui_chart",
-        "z": "ea538592da2e51e2",
-        "name": "",
-        "group": "8e1d1b289722c345",
-        "order": 1,
-        "width": 23,
-        "height": 5,
-        "label": "",
-        "chartType": "line",
-        "legend": "true",
-        "xformat": "l",
-        "interpolate": "bezier",
-        "nodata": "no data",
-        "dot": true,
-        "ymin": "",
-        "ymax": "",
-        "removeOlder": 1,
-        "removeOlderPoints": "",
-        "removeOlderUnit": "86400",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#2c8c2c",
-            "#1f77b4",
-            "#ff7f0e",
-            "#a4c1c9",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "useDifferentColor": false,
-        "className": "",
-        "x": 690,
-        "y": 420,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "5df3657aae8cfd7b",
-        "type": "ui_chart",
-        "z": "ea538592da2e51e2",
-        "name": "",
-        "group": "8e1d1b289722c345",
-        "order": 3,
-        "width": 23,
-        "height": 5,
-        "label": "",
-        "chartType": "line",
-        "legend": "true",
-        "xformat": "l",
-        "interpolate": "bezier",
-        "nodata": "no data",
-        "dot": true,
-        "ymin": "",
-        "ymax": "",
-        "removeOlder": 1,
-        "removeOlderPoints": "",
-        "removeOlderUnit": "86400",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#ff7f0e",
-            "#2ca02c",
-            "#ff7f0e",
-            "#a4c1c9",
-            "#98df8a",
-            "#1f77b4",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "useDifferentColor": false,
-        "className": "",
-        "x": 690,
-        "y": 340,
-        "wires": [
-            []
         ]
     },
     {
@@ -2498,6 +2235,182 @@
         ]
     },
     {
+        "id": "b0459ef3cfd438e4",
+        "type": "ui_chart",
+        "z": "ea538592da2e51e2",
+        "name": "",
+        "group": "8bcb2804d0691f25",
+        "order": 2,
+        "width": 23,
+        "height": 5,
+        "label": "",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "l",
+        "interpolate": "bezier",
+        "nodata": "no data",
+        "dot": true,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#2ca02c",
+            "#ff7f0e",
+            "#a4c1c9",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 690,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "433a3070b8e931dd",
+        "type": "ui_chart",
+        "z": "ea538592da2e51e2",
+        "name": "",
+        "group": "8e1d1b289722c345",
+        "order": 3,
+        "width": 23,
+        "height": 5,
+        "label": "",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "l",
+        "interpolate": "bezier",
+        "nodata": "no data",
+        "dot": true,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#2ca02c",
+            "#ff7f0e",
+            "#a4c1c9",
+            "#98df8a",
+            "#1f77b4",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 690,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6d58b88fafd4f876",
+        "type": "ui_chart",
+        "z": "ea538592da2e51e2",
+        "name": "",
+        "group": "8bcb2804d0691f25",
+        "order": 3,
+        "width": 23,
+        "height": 5,
+        "label": "",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "l",
+        "interpolate": "bezier",
+        "nodata": "no data",
+        "dot": true,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#2c8c2c",
+            "#1f77b4",
+            "#ff7f0e",
+            "#a4c1c9",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 690,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5df3657aae8cfd7b",
+        "type": "ui_chart",
+        "z": "ea538592da2e51e2",
+        "name": "",
+        "group": "8e1d1b289722c345",
+        "order": 1,
+        "width": 23,
+        "height": 5,
+        "label": "",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "l",
+        "interpolate": "bezier",
+        "nodata": "no data",
+        "dot": true,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#ff7f0e",
+            "#2ca02c",
+            "#ff7f0e",
+            "#a4c1c9",
+            "#98df8a",
+            "#1f77b4",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 690,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
         "id": "65e2c204b755460f",
         "type": "ui_text",
         "z": "ea538592da2e51e2",
@@ -2519,7 +2432,7 @@
         "type": "ui_text",
         "z": "ea538592da2e51e2",
         "group": "8e1d1b289722c345",
-        "order": 4,
+        "order": 2,
         "width": "0",
         "height": "0",
         "name": "",
@@ -2536,7 +2449,7 @@
         "type": "ui_text",
         "z": "ea538592da2e51e2",
         "group": "8e1d1b289722c345",
-        "order": 6,
+        "order": 4,
         "width": 0,
         "height": 0,
         "name": "",
@@ -2549,9 +2462,9 @@
         "wires": []
     },
     {
-        "id": "950a192473a84e9a",
+        "id": "08acb9ef9b9a196b",
         "type": "NGSI Entity",
-        "z": "d768a6d29d0e02d4",
+        "z": "ea538592da2e51e2",
         "name": "Criar entidade",
         "openapis": "9bccc41af47bb660",
         "servicepath": "/",
@@ -2561,11 +2474,77 @@
         "attrs": "",
         "keyValues": "true",
         "dateModified": "false",
-        "x": 360,
+        "x": 380,
         "y": 60,
         "wires": [
             [
-                "410b3762bb9d366d"
+                "31e2c2c9f2bff06a"
+            ]
+        ]
+    },
+    {
+        "id": "09edde87b1151caa",
+        "type": "NGSI Entity",
+        "z": "ea538592da2e51e2",
+        "name": "Ler entidade",
+        "openapis": "9bccc41af47bb660",
+        "servicepath": "/",
+        "actionType": "read",
+        "entityId": "urn:ngsi-ld:decision:1",
+        "entityType": "data",
+        "attrs": "",
+        "keyValues": "true",
+        "dateModified": "false",
+        "x": 390,
+        "y": 120,
+        "wires": [
+            [
+                "3b8edefc28c4b4b9"
+            ]
+        ]
+    },
+    {
+        "id": "dc1fa2f61edf8dcf",
+        "type": "NGSI Entity",
+        "z": "ea538592da2e51e2",
+        "name": "Excluir entidade",
+        "openapis": "9bccc41af47bb660",
+        "servicepath": "/",
+        "actionType": "delete",
+        "entityId": "urn:ngsi-ld:decision:1",
+        "entityType": "data",
+        "attrs": "",
+        "keyValues": "false",
+        "dateModified": "false",
+        "x": 420,
+        "y": 180,
+        "wires": [
+            [
+                "3221bff9bd14abea"
+            ]
+        ]
+    },
+    {
+        "id": "509a19c86427a95d",
+        "type": "NGSI Entity",
+        "z": "ea538592da2e51e2",
+        "name": "",
+        "openapis": "9bccc41af47bb660",
+        "servicepath": "/",
+        "actionType": "read",
+        "entityId": "urn:ngsi-ld:decision:1",
+        "entityType": "data",
+        "attrs": "",
+        "keyValues": "false",
+        "dateModified": "false",
+        "x": 350,
+        "y": 380,
+        "wires": [
+            [
+                "03613652237fdf8d",
+                "4eda1b612198c8dc",
+                "689701499a0a962b",
+                "21fc1e4f402a5d85"
             ]
         ]
     },
@@ -2616,27 +2595,6 @@
         "wires": []
     },
     {
-        "id": "46e04cd185b831ef",
-        "type": "NGSI Entity",
-        "z": "d768a6d29d0e02d4",
-        "name": "Ler entidade",
-        "openapis": "9bccc41af47bb660",
-        "servicepath": "/",
-        "actionType": "read",
-        "entityId": "urn:ngsi-ld:decision:2",
-        "entityType": "data",
-        "attrs": "",
-        "keyValues": "true",
-        "dateModified": "false",
-        "x": 370,
-        "y": 120,
-        "wires": [
-            [
-                "d6e52932640eda57"
-            ]
-        ]
-    },
-    {
         "id": "83315a7055b132ec",
         "type": "inject",
         "z": "d768a6d29d0e02d4",
@@ -2683,27 +2641,6 @@
         "wires": []
     },
     {
-        "id": "d1dd8b2f7389ca3a",
-        "type": "NGSI Entity",
-        "z": "d768a6d29d0e02d4",
-        "name": "Excluir entidade",
-        "openapis": "9bccc41af47bb660",
-        "servicepath": "/",
-        "actionType": "delete",
-        "entityId": "urn:ngsi-ld:decision:2",
-        "entityType": "data",
-        "attrs": "",
-        "keyValues": "false",
-        "dateModified": "false",
-        "x": 400,
-        "y": 180,
-        "wires": [
-            [
-                "2834f8e2c85a3be0"
-            ]
-        ]
-    },
-    {
         "id": "a40b7215f22fda03",
         "type": "inject",
         "z": "d768a6d29d0e02d4",
@@ -2748,27 +2685,6 @@
         "x": 590,
         "y": 180,
         "wires": []
-    },
-    {
-        "id": "cfd59c7a0530ff55",
-        "type": "NGSI Entity",
-        "z": "d768a6d29d0e02d4",
-        "name": "",
-        "openapis": "9bccc41af47bb660",
-        "servicepath": "/",
-        "actionType": "read",
-        "entityId": "urn:ngsi-ld:decision:2",
-        "entityType": "data",
-        "attrs": "",
-        "keyValues": "false",
-        "dateModified": "false",
-        "x": 330,
-        "y": 280,
-        "wires": [
-            [
-                "60dae11e85c7c285"
-            ]
-        ]
     },
     {
         "id": "db34282adcfe837b",
@@ -2819,71 +2735,6 @@
         ]
     },
     {
-        "id": "2388144b08922586",
-        "type": "ui_chart",
-        "z": "d768a6d29d0e02d4",
-        "name": "",
-        "group": "c8f1f291b85d76d5",
-        "order": 1,
-        "width": 23,
-        "height": 5,
-        "label": "",
-        "chartType": "line",
-        "legend": "true",
-        "xformat": "l",
-        "interpolate": "bezier",
-        "nodata": "no data",
-        "dot": false,
-        "ymin": "",
-        "ymax": "",
-        "removeOlder": 1,
-        "removeOlderPoints": "",
-        "removeOlderUnit": "86400",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#d62728",
-            "#2ca02c",
-            "#ff7f0e",
-            "#a4c1c9",
-            "#98df8a",
-            "#1f77b4",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "useDifferentColor": false,
-        "className": "",
-        "x": 650,
-        "y": 280,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "bdda6a11a170a891",
-        "type": "NGSI Entity",
-        "z": "d768a6d29d0e02d4",
-        "name": "",
-        "openapis": "9bccc41af47bb660",
-        "servicepath": "/",
-        "actionType": "read",
-        "entityId": "urn:ngsi-ld:decision:2",
-        "entityType": "data",
-        "attrs": "",
-        "keyValues": "false",
-        "dateModified": "false",
-        "x": 330,
-        "y": 340,
-        "wires": [
-            [
-                "a94ca33dcc2fb401"
-            ]
-        ]
-    },
-    {
         "id": "b48cfea2f9aa807a",
         "type": "inject",
         "z": "d768a6d29d0e02d4",
@@ -2929,6 +2780,50 @@
             [
                 "4c83d7ee49268878"
             ]
+        ]
+    },
+    {
+        "id": "2388144b08922586",
+        "type": "ui_chart",
+        "z": "d768a6d29d0e02d4",
+        "name": "",
+        "group": "c8f1f291b85d76d5",
+        "order": 1,
+        "width": 23,
+        "height": 5,
+        "label": "",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "l",
+        "interpolate": "bezier",
+        "nodata": "no data",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#d62728",
+            "#2ca02c",
+            "#ff7f0e",
+            "#a4c1c9",
+            "#98df8a",
+            "#1f77b4",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 650,
+        "y": 280,
+        "wires": [
+            []
         ]
     },
     {
@@ -2993,9 +2888,9 @@
         "wires": []
     },
     {
-        "id": "62d67deefc46bc53",
+        "id": "950a192473a84e9a",
         "type": "NGSI Entity",
-        "z": "3c14bb0afdbd62e1",
+        "z": "d768a6d29d0e02d4",
         "name": "Criar entidade",
         "openapis": "9bccc41af47bb660",
         "servicepath": "/",
@@ -3005,11 +2900,95 @@
         "attrs": "",
         "keyValues": "true",
         "dateModified": "false",
-        "x": 700,
-        "y": 40,
+        "x": 360,
+        "y": 60,
         "wires": [
             [
-                "c4885aa5242b3aa6"
+                "410b3762bb9d366d"
+            ]
+        ]
+    },
+    {
+        "id": "46e04cd185b831ef",
+        "type": "NGSI Entity",
+        "z": "d768a6d29d0e02d4",
+        "name": "Ler entidade",
+        "openapis": "9bccc41af47bb660",
+        "servicepath": "/",
+        "actionType": "read",
+        "entityId": "urn:ngsi-ld:decision:2",
+        "entityType": "data",
+        "attrs": "",
+        "keyValues": "true",
+        "dateModified": "false",
+        "x": 370,
+        "y": 120,
+        "wires": [
+            [
+                "d6e52932640eda57"
+            ]
+        ]
+    },
+    {
+        "id": "d1dd8b2f7389ca3a",
+        "type": "NGSI Entity",
+        "z": "d768a6d29d0e02d4",
+        "name": "Excluir entidade",
+        "openapis": "9bccc41af47bb660",
+        "servicepath": "/",
+        "actionType": "delete",
+        "entityId": "urn:ngsi-ld:decision:2",
+        "entityType": "data",
+        "attrs": "",
+        "keyValues": "false",
+        "dateModified": "false",
+        "x": 400,
+        "y": 180,
+        "wires": [
+            [
+                "2834f8e2c85a3be0"
+            ]
+        ]
+    },
+    {
+        "id": "cfd59c7a0530ff55",
+        "type": "NGSI Entity",
+        "z": "d768a6d29d0e02d4",
+        "name": "",
+        "openapis": "9bccc41af47bb660",
+        "servicepath": "/",
+        "actionType": "read",
+        "entityId": "urn:ngsi-ld:decision:2",
+        "entityType": "data",
+        "attrs": "",
+        "keyValues": "false",
+        "dateModified": "false",
+        "x": 330,
+        "y": 280,
+        "wires": [
+            [
+                "60dae11e85c7c285"
+            ]
+        ]
+    },
+    {
+        "id": "bdda6a11a170a891",
+        "type": "NGSI Entity",
+        "z": "d768a6d29d0e02d4",
+        "name": "",
+        "openapis": "9bccc41af47bb660",
+        "servicepath": "/",
+        "actionType": "read",
+        "entityId": "urn:ngsi-ld:decision:2",
+        "entityType": "data",
+        "attrs": "",
+        "keyValues": "false",
+        "dateModified": "false",
+        "x": 330,
+        "y": 340,
+        "wires": [
+            [
+                "a94ca33dcc2fb401"
             ]
         ]
     },
@@ -3029,27 +3008,6 @@
         "x": 710,
         "y": 100,
         "wires": []
-    },
-    {
-        "id": "6c3ca0f6a4ec6dda",
-        "type": "NGSI Entity",
-        "z": "3c14bb0afdbd62e1",
-        "name": "Ler entidade",
-        "openapis": "9bccc41af47bb660",
-        "servicepath": "/",
-        "actionType": "read",
-        "entityId": "urn:ngsi-ld:decision:3",
-        "entityType": "data",
-        "attrs": "",
-        "keyValues": "true",
-        "dateModified": "false",
-        "x": 290,
-        "y": 100,
-        "wires": [
-            [
-                "ad0c0d931a09fcb4"
-            ]
-        ]
     },
     {
         "id": "6f4e3263210c92be",
@@ -3098,27 +3056,6 @@
         "wires": []
     },
     {
-        "id": "847132b59e61fcde",
-        "type": "NGSI Entity",
-        "z": "3c14bb0afdbd62e1",
-        "name": "Excluir entidade",
-        "openapis": "9bccc41af47bb660",
-        "servicepath": "/",
-        "actionType": "delete",
-        "entityId": "urn:ngsi-ld:decision:3",
-        "entityType": "data",
-        "attrs": "",
-        "keyValues": "false",
-        "dateModified": "false",
-        "x": 320,
-        "y": 160,
-        "wires": [
-            [
-                "1d8cb06fe4b8ea45"
-            ]
-        ]
-    },
-    {
         "id": "73e60e851a28cac7",
         "type": "inject",
         "z": "3c14bb0afdbd62e1",
@@ -3160,30 +3097,9 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 510,
+        "x": 530,
         "y": 160,
         "wires": []
-    },
-    {
-        "id": "ecd34c2213b27a82",
-        "type": "NGSI Entity",
-        "z": "3c14bb0afdbd62e1",
-        "name": "",
-        "openapis": "9bccc41af47bb660",
-        "servicepath": "/",
-        "actionType": "read",
-        "entityId": "urn:ngsi-ld:decision:3",
-        "entityType": "data",
-        "attrs": "",
-        "keyValues": "false",
-        "dateModified": "false",
-        "x": 270,
-        "y": 220,
-        "wires": [
-            [
-                "5a35f18cbf2f21f7"
-            ]
-        ]
     },
     {
         "id": "3da48e82f7d9eda7",
@@ -3231,50 +3147,6 @@
             [
                 "e043ce6c3e151604"
             ]
-        ]
-    },
-    {
-        "id": "e043ce6c3e151604",
-        "type": "ui_chart",
-        "z": "3c14bb0afdbd62e1",
-        "name": "",
-        "group": "5e1547b4c5b09615",
-        "order": 1,
-        "width": 23,
-        "height": 5,
-        "label": "",
-        "chartType": "line",
-        "legend": "true",
-        "xformat": "l",
-        "interpolate": "bezier",
-        "nodata": "no data",
-        "dot": false,
-        "ymin": "",
-        "ymax": "",
-        "removeOlder": 1,
-        "removeOlderPoints": "",
-        "removeOlderUnit": "86400",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#d62728",
-            "#2ca02c",
-            "#ff7f0e",
-            "#a4c1c9",
-            "#98df8a",
-            "#1f77b4",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "useDifferentColor": false,
-        "className": "",
-        "x": 590,
-        "y": 220,
-        "wires": [
-            []
         ]
     },
     {
@@ -3366,44 +3238,6 @@
         ]
     },
     {
-        "id": "a7c168d462b78202",
-        "type": "ui_text",
-        "z": "3c14bb0afdbd62e1",
-        "group": "5e1547b4c5b09615",
-        "order": 4,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Fonte: https://fred.stlouisfed.org/",
-        "format": "{{msg.payload}}",
-        "layout": "row-center",
-        "className": "",
-        "x": 410,
-        "y": 340,
-        "wires": []
-    },
-    {
-        "id": "e4e4674b660a36d5",
-        "type": "NGSI Entity",
-        "z": "3c14bb0afdbd62e1",
-        "name": "Criar entidade",
-        "openapis": "9bccc41af47bb660",
-        "servicepath": "/",
-        "actionType": "create",
-        "entityId": "",
-        "entityType": "",
-        "attrs": "",
-        "keyValues": "true",
-        "dateModified": "false",
-        "x": 720,
-        "y": 460,
-        "wires": [
-            [
-                "445812963fb3523b"
-            ]
-        ]
-    },
-    {
         "id": "445812963fb3523b",
         "type": "debug",
         "z": "3c14bb0afdbd62e1",
@@ -3419,27 +3253,6 @@
         "x": 730,
         "y": 520,
         "wires": []
-    },
-    {
-        "id": "07cb2c27e80f6b91",
-        "type": "NGSI Entity",
-        "z": "3c14bb0afdbd62e1",
-        "name": "Ler entidade",
-        "openapis": "9bccc41af47bb660",
-        "servicepath": "/",
-        "actionType": "read",
-        "entityId": "urn:ngsi-ld:decision:4",
-        "entityType": "data",
-        "attrs": "",
-        "keyValues": "true",
-        "dateModified": "false",
-        "x": 310,
-        "y": 520,
-        "wires": [
-            [
-                "248c1f1abafec1d8"
-            ]
-        ]
     },
     {
         "id": "a7eaafb0a1a9adf6",
@@ -3488,27 +3301,6 @@
         "wires": []
     },
     {
-        "id": "4d21bacea2f9269c",
-        "type": "NGSI Entity",
-        "z": "3c14bb0afdbd62e1",
-        "name": "Excluir entidade",
-        "openapis": "9bccc41af47bb660",
-        "servicepath": "/",
-        "actionType": "delete",
-        "entityId": "urn:ngsi-ld:decision:4",
-        "entityType": "data",
-        "attrs": "",
-        "keyValues": "false",
-        "dateModified": "false",
-        "x": 340,
-        "y": 580,
-        "wires": [
-            [
-                "7d04efd1b0dfcb01"
-            ]
-        ]
-    },
-    {
         "id": "8eba515c639af985",
         "type": "inject",
         "z": "3c14bb0afdbd62e1",
@@ -3553,27 +3345,6 @@
         "x": 530,
         "y": 580,
         "wires": []
-    },
-    {
-        "id": "04bf5d837c798a67",
-        "type": "NGSI Entity",
-        "z": "3c14bb0afdbd62e1",
-        "name": "",
-        "openapis": "9bccc41af47bb660",
-        "servicepath": "/",
-        "actionType": "read",
-        "entityId": "urn:ngsi-ld:decision:4",
-        "entityType": "data",
-        "attrs": "",
-        "keyValues": "false",
-        "dateModified": "false",
-        "x": 290,
-        "y": 640,
-        "wires": [
-            [
-                "faeb5780e9fde346"
-            ]
-        ]
     },
     {
         "id": "6fd1babf9b391fec",
@@ -3621,50 +3392,6 @@
             [
                 "d5c8c935f33b9eff"
             ]
-        ]
-    },
-    {
-        "id": "d5c8c935f33b9eff",
-        "type": "ui_chart",
-        "z": "3c14bb0afdbd62e1",
-        "name": "",
-        "group": "5e1547b4c5b09615",
-        "order": 1,
-        "width": 23,
-        "height": 5,
-        "label": "",
-        "chartType": "line",
-        "legend": "true",
-        "xformat": "l",
-        "interpolate": "bezier",
-        "nodata": "no data",
-        "dot": false,
-        "ymin": "",
-        "ymax": "",
-        "removeOlder": 1,
-        "removeOlderPoints": "",
-        "removeOlderUnit": "86400",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#ff7f0e",
-            "#2ca02c",
-            "#ff7f0e",
-            "#a4c1c9",
-            "#98df8a",
-            "#1f77b4",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "useDifferentColor": false,
-        "className": "",
-        "x": 610,
-        "y": 640,
-        "wires": [
-            []
         ]
     },
     {
@@ -3752,27 +3479,6 @@
         "wires": [
             [
                 "e4e4674b660a36d5"
-            ]
-        ]
-    },
-    {
-        "id": "d0a7fd511fefb8bc",
-        "type": "NGSI Entity",
-        "z": "3c14bb0afdbd62e1",
-        "name": "Atualizar entidade",
-        "openapis": "9bccc41af47bb660",
-        "servicepath": "/",
-        "actionType": "upsert",
-        "entityId": "",
-        "entityType": "",
-        "attrs": "",
-        "keyValues": "true",
-        "dateModified": "false",
-        "x": 730,
-        "y": 700,
-        "wires": [
-            [
-                "e52e956ac68d8148"
             ]
         ]
     },
@@ -3882,27 +3588,6 @@
         ]
     },
     {
-        "id": "887a0b7c8af292f3",
-        "type": "NGSI Entity",
-        "z": "3c14bb0afdbd62e1",
-        "name": "Atualizar entidade",
-        "openapis": "9bccc41af47bb660",
-        "servicepath": "/",
-        "actionType": "upsert",
-        "entityId": "",
-        "entityType": "",
-        "attrs": "",
-        "keyValues": "true",
-        "dateModified": "false",
-        "x": 710,
-        "y": 280,
-        "wires": [
-            [
-                "6a1ba0ca96b53475"
-            ]
-        ]
-    },
-    {
         "id": "d427e62923ca607c",
         "type": "http request",
         "z": "3c14bb0afdbd62e1",
@@ -4006,5 +3691,320 @@
         "x": 710,
         "y": 340,
         "wires": []
+    },
+    {
+        "id": "e043ce6c3e151604",
+        "type": "ui_chart",
+        "z": "3c14bb0afdbd62e1",
+        "name": "",
+        "group": "5e1547b4c5b09615",
+        "order": 1,
+        "width": 23,
+        "height": 5,
+        "label": "",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "l",
+        "interpolate": "bezier",
+        "nodata": "no data",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#d62728",
+            "#2ca02c",
+            "#ff7f0e",
+            "#a4c1c9",
+            "#98df8a",
+            "#1f77b4",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 590,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d5c8c935f33b9eff",
+        "type": "ui_chart",
+        "z": "3c14bb0afdbd62e1",
+        "name": "",
+        "group": "5e1547b4c5b09615",
+        "order": 1,
+        "width": 23,
+        "height": 5,
+        "label": "",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "l",
+        "interpolate": "bezier",
+        "nodata": "no data",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#ff7f0e",
+            "#2ca02c",
+            "#ff7f0e",
+            "#a4c1c9",
+            "#98df8a",
+            "#1f77b4",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 610,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a7c168d462b78202",
+        "type": "ui_text",
+        "z": "3c14bb0afdbd62e1",
+        "group": "5e1547b4c5b09615",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Fonte: https://fred.stlouisfed.org/",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "className": "",
+        "x": 410,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "62d67deefc46bc53",
+        "type": "NGSI Entity",
+        "z": "3c14bb0afdbd62e1",
+        "name": "Criar entidade",
+        "openapis": "9bccc41af47bb660",
+        "servicepath": "/",
+        "actionType": "create",
+        "entityId": "",
+        "entityType": "",
+        "attrs": "",
+        "keyValues": "true",
+        "dateModified": "false",
+        "x": 700,
+        "y": 40,
+        "wires": [
+            [
+                "c4885aa5242b3aa6"
+            ]
+        ]
+    },
+    {
+        "id": "6c3ca0f6a4ec6dda",
+        "type": "NGSI Entity",
+        "z": "3c14bb0afdbd62e1",
+        "name": "Ler entidade",
+        "openapis": "9bccc41af47bb660",
+        "servicepath": "/",
+        "actionType": "read",
+        "entityId": "urn:ngsi-ld:decision:3",
+        "entityType": "data",
+        "attrs": "",
+        "keyValues": "true",
+        "dateModified": "false",
+        "x": 290,
+        "y": 100,
+        "wires": [
+            [
+                "ad0c0d931a09fcb4"
+            ]
+        ]
+    },
+    {
+        "id": "847132b59e61fcde",
+        "type": "NGSI Entity",
+        "z": "3c14bb0afdbd62e1",
+        "name": "Excluir entidade",
+        "openapis": "9bccc41af47bb660",
+        "servicepath": "/",
+        "actionType": "delete",
+        "entityId": "urn:ngsi-ld:decision:3",
+        "entityType": "data",
+        "attrs": "",
+        "keyValues": "false",
+        "dateModified": "false",
+        "x": 320,
+        "y": 160,
+        "wires": [
+            [
+                "1d8cb06fe4b8ea45"
+            ]
+        ]
+    },
+    {
+        "id": "ecd34c2213b27a82",
+        "type": "NGSI Entity",
+        "z": "3c14bb0afdbd62e1",
+        "name": "",
+        "openapis": "9bccc41af47bb660",
+        "servicepath": "/",
+        "actionType": "read",
+        "entityId": "urn:ngsi-ld:decision:3",
+        "entityType": "data",
+        "attrs": "",
+        "keyValues": "false",
+        "dateModified": "false",
+        "x": 270,
+        "y": 220,
+        "wires": [
+            [
+                "5a35f18cbf2f21f7"
+            ]
+        ]
+    },
+    {
+        "id": "e4e4674b660a36d5",
+        "type": "NGSI Entity",
+        "z": "3c14bb0afdbd62e1",
+        "name": "Criar entidade",
+        "openapis": "9bccc41af47bb660",
+        "servicepath": "/",
+        "actionType": "create",
+        "entityId": "",
+        "entityType": "",
+        "attrs": "",
+        "keyValues": "true",
+        "dateModified": "false",
+        "x": 720,
+        "y": 460,
+        "wires": [
+            [
+                "445812963fb3523b"
+            ]
+        ]
+    },
+    {
+        "id": "07cb2c27e80f6b91",
+        "type": "NGSI Entity",
+        "z": "3c14bb0afdbd62e1",
+        "name": "Ler entidade",
+        "openapis": "9bccc41af47bb660",
+        "servicepath": "/",
+        "actionType": "read",
+        "entityId": "urn:ngsi-ld:decision:4",
+        "entityType": "data",
+        "attrs": "",
+        "keyValues": "true",
+        "dateModified": "false",
+        "x": 310,
+        "y": 520,
+        "wires": [
+            [
+                "248c1f1abafec1d8"
+            ]
+        ]
+    },
+    {
+        "id": "4d21bacea2f9269c",
+        "type": "NGSI Entity",
+        "z": "3c14bb0afdbd62e1",
+        "name": "Excluir entidade",
+        "openapis": "9bccc41af47bb660",
+        "servicepath": "/",
+        "actionType": "delete",
+        "entityId": "urn:ngsi-ld:decision:4",
+        "entityType": "data",
+        "attrs": "",
+        "keyValues": "false",
+        "dateModified": "false",
+        "x": 340,
+        "y": 580,
+        "wires": [
+            [
+                "7d04efd1b0dfcb01"
+            ]
+        ]
+    },
+    {
+        "id": "04bf5d837c798a67",
+        "type": "NGSI Entity",
+        "z": "3c14bb0afdbd62e1",
+        "name": "",
+        "openapis": "9bccc41af47bb660",
+        "servicepath": "/",
+        "actionType": "read",
+        "entityId": "urn:ngsi-ld:decision:4",
+        "entityType": "data",
+        "attrs": "",
+        "keyValues": "false",
+        "dateModified": "false",
+        "x": 290,
+        "y": 640,
+        "wires": [
+            [
+                "faeb5780e9fde346"
+            ]
+        ]
+    },
+    {
+        "id": "d0a7fd511fefb8bc",
+        "type": "NGSI Entity",
+        "z": "3c14bb0afdbd62e1",
+        "name": "Atualizar entidade",
+        "openapis": "9bccc41af47bb660",
+        "servicepath": "/",
+        "actionType": "upsert",
+        "entityId": "",
+        "entityType": "",
+        "attrs": "",
+        "keyValues": "true",
+        "dateModified": "false",
+        "x": 730,
+        "y": 700,
+        "wires": [
+            [
+                "e52e956ac68d8148"
+            ]
+        ]
+    },
+    {
+        "id": "887a0b7c8af292f3",
+        "type": "NGSI Entity",
+        "z": "3c14bb0afdbd62e1",
+        "name": "Atualizar entidade",
+        "openapis": "9bccc41af47bb660",
+        "servicepath": "/",
+        "actionType": "upsert",
+        "entityId": "",
+        "entityType": "",
+        "attrs": "",
+        "keyValues": "true",
+        "dateModified": "false",
+        "x": 710,
+        "y": 280,
+        "wires": [
+            [
+                "6a1ba0ca96b53475"
+            ]
+        ]
     }
 ]
