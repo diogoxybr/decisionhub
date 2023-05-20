@@ -10,7 +10,7 @@
     {
         "id": "5a4975ebcc568c40",
         "type": "tab",
-        "label": "Aba seleção de ovos",
+        "label": "Seleção",
         "disabled": false,
         "info": "",
         "env": []
@@ -19,6 +19,14 @@
         "id": "148c173e8eacbf9a",
         "type": "tab",
         "label": "Tempo real",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "e9c6344b196bfe35",
+        "type": "tab",
+        "label": "Previsão",
         "disabled": false,
         "info": "",
         "env": []
@@ -361,16 +369,6 @@
         "height": 1
     },
     {
-        "id": "bcf2672e7ac076f5",
-        "type": "ui_spacer",
-        "z": "148c173e8eacbf9a",
-        "name": "spacer",
-        "group": "f8d2be63eb19876e",
-        "order": 10,
-        "width": 21,
-        "height": 1
-    },
-    {
         "id": "9bccc41af47bb660",
         "type": "Open APIs",
         "name": "Helix",
@@ -379,6 +377,117 @@
         "service": "helixiot",
         "idmEndpoint": "",
         "idmType": "none"
+    },
+    {
+        "id": "42598b0cf938942f",
+        "type": "ui_group",
+        "name": "Previsão do Tempo: Santa Rita do Passa Quatro, SP, BR",
+        "tab": "95a56cd306c01399",
+        "order": 2,
+        "disp": true,
+        "width": "21",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "6276a6f9432855b3",
+        "type": "ui_spacer",
+        "z": "e9c6344b196bfe35",
+        "name": "spacer",
+        "group": "42598b0cf938942f",
+        "order": 1,
+        "width": 21,
+        "height": 1
+    },
+    {
+        "id": "1f08252341e9164e",
+        "type": "ui_spacer",
+        "z": "e9c6344b196bfe35",
+        "name": "spacer",
+        "group": "42598b0cf938942f",
+        "order": 7,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "89003d5c3419314b",
+        "type": "ui_spacer",
+        "z": "e9c6344b196bfe35",
+        "name": "spacer",
+        "group": "42598b0cf938942f",
+        "order": 8,
+        "width": 21,
+        "height": 1
+    },
+    {
+        "id": "d1da6ae30ed23fcc",
+        "type": "ui_spacer",
+        "z": "e9c6344b196bfe35",
+        "name": "spacer",
+        "group": "42598b0cf938942f",
+        "order": 14,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "9acfd98013e3e972",
+        "type": "ui_spacer",
+        "z": "e9c6344b196bfe35",
+        "name": "spacer",
+        "group": "42598b0cf938942f",
+        "order": 15,
+        "width": 21,
+        "height": 1
+    },
+    {
+        "id": "dd586f0a6cc02490",
+        "type": "ui_spacer",
+        "z": "e9c6344b196bfe35",
+        "name": "spacer",
+        "group": "42598b0cf938942f",
+        "order": 21,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "19c8080c3c9c1ec8",
+        "type": "ui_spacer",
+        "z": "e9c6344b196bfe35",
+        "name": "spacer",
+        "group": "42598b0cf938942f",
+        "order": 22,
+        "width": 21,
+        "height": 1
+    },
+    {
+        "id": "7f8d5028c8652c39",
+        "type": "ui_spacer",
+        "z": "e9c6344b196bfe35",
+        "name": "spacer",
+        "group": "42598b0cf938942f",
+        "order": 28,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "c0d43a003c5a3726",
+        "type": "ui_spacer",
+        "z": "e9c6344b196bfe35",
+        "name": "spacer",
+        "group": "42598b0cf938942f",
+        "order": 29,
+        "width": 21,
+        "height": 1
+    },
+    {
+        "id": "e35718a8ab198498",
+        "type": "ui_spacer",
+        "z": "e9c6344b196bfe35",
+        "name": "spacer",
+        "group": "42598b0cf938942f",
+        "order": 35,
+        "width": 6,
+        "height": 1
     },
     {
         "id": "2cc2d89279b19382",
@@ -1525,7 +1634,9 @@
         "y": 280,
         "wires": [
             [
-                "06680ea47a342933"
+                "06680ea47a342933",
+                "90bb6fd43975f930",
+                "d21a459c713ecc78"
             ]
         ]
     },
@@ -1533,7 +1644,7 @@
         "id": "2d027a28860ab2c0",
         "type": "change",
         "z": "148c173e8eacbf9a",
-        "name": "Ler temperatura",
+        "name": "Ler sensação",
         "rules": [
             {
                 "t": "set",
@@ -1661,7 +1772,7 @@
         "z": "148c173e8eacbf9a",
         "name": "",
         "group": "f8d2be63eb19876e",
-        "order": 11,
+        "order": 5,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -1691,7 +1802,7 @@
         "z": "148c173e8eacbf9a",
         "name": "",
         "group": "f8d2be63eb19876e",
-        "order": 4,
+        "order": 3,
         "width": 7,
         "height": 4,
         "gtype": "gage",
@@ -1719,7 +1830,7 @@
         "z": "148c173e8eacbf9a",
         "name": "",
         "group": "f8d2be63eb19876e",
-        "order": 6,
+        "order": 4,
         "width": 7,
         "height": 4,
         "gtype": "gage",
@@ -1747,11 +1858,11 @@
         "z": "148c173e8eacbf9a",
         "name": "",
         "group": "f8d2be63eb19876e",
-        "order": 5,
+        "order": 2,
         "width": 7,
         "height": 4,
         "gtype": "gage",
-        "title": "Sensação térmica",
+        "title": "Sensação térmica atual",
         "label": "°C",
         "format": "{{value}}",
         "min": 0,
@@ -1765,7 +1876,7 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 1030,
+        "x": 1050,
         "y": 460,
         "wires": []
     },
@@ -1835,7 +1946,7 @@
         "type": "ui_text",
         "z": "148c173e8eacbf9a",
         "group": "f8d2be63eb19876e",
-        "order": 2,
+        "order": 1,
         "width": 21,
         "height": 1,
         "name": "",
@@ -1843,7 +1954,7 @@
         "format": " {{value}}",
         "layout": "row-center",
         "className": "",
-        "x": 720,
+        "x": 700,
         "y": 540,
         "wires": []
     },
@@ -1988,6 +2099,1802 @@
             [
                 "768e66eeecc658cd",
                 "f4377ba4dfbfde65"
+            ]
+        ]
+    },
+    {
+        "id": "0252f9c4489d9798",
+        "type": "change",
+        "z": "e9c6344b196bfe35",
+        "name": "Ler temperatura",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload[6].main.temp",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 700,
+        "y": 280,
+        "wires": [
+            [
+                "16afc9ebb630f056"
+            ]
+        ]
+    },
+    {
+        "id": "0d1461ad42469804",
+        "type": "comment",
+        "z": "e9c6344b196bfe35",
+        "name": "Lê a temperatura e umidade na entidade criada e envia os valores ao gauge",
+        "info": "",
+        "x": 290,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "bef85147cc338e80",
+        "type": "comment",
+        "z": "e9c6344b196bfe35",
+        "name": "Lê a temperatura de São Carlos através do openweather e cria entidade no Helix",
+        "info": "",
+        "x": 300,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "1a0a66ea7842d47f",
+        "type": "change",
+        "z": "e9c6344b196bfe35",
+        "name": "Ler umidade",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload[6].main.humidity",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 690,
+        "y": 220,
+        "wires": [
+            [
+                "b5dc477e47e6b526"
+            ]
+        ]
+    },
+    {
+        "id": "21623a29323ae2e7",
+        "type": "change",
+        "z": "e9c6344b196bfe35",
+        "name": "Ler descrição",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload[6].weather.description",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 700,
+        "y": 400,
+        "wires": [
+            [
+                "8db7413ff67d9198"
+            ]
+        ]
+    },
+    {
+        "id": "02355036c3c6d4a9",
+        "type": "inject",
+        "z": "e9c6344b196bfe35",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{}",
+        "payloadType": "json",
+        "x": 90,
+        "y": 340,
+        "wires": [
+            [
+                "730cd46dbf699057"
+            ]
+        ]
+    },
+    {
+        "id": "6be3768fae066be9",
+        "type": "change",
+        "z": "e9c6344b196bfe35",
+        "name": "Ler sensação",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload[6].main.feels_like",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 700,
+        "y": 340,
+        "wires": [
+            [
+                "bc816e89f15ae988"
+            ]
+        ]
+    },
+    {
+        "id": "74baef89a2afdeb2",
+        "type": "ui_gauge",
+        "z": "e9c6344b196bfe35",
+        "name": "",
+        "group": "42598b0cf938942f",
+        "order": 4,
+        "width": 5,
+        "height": 3,
+        "gtype": "gage",
+        "title": "Temperatura",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#1f77b4",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1030,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "b5dc477e47e6b526",
+        "type": "ui_gauge",
+        "z": "e9c6344b196bfe35",
+        "name": "",
+        "group": "42598b0cf938942f",
+        "order": 5,
+        "width": 5,
+        "height": 3,
+        "gtype": "gage",
+        "title": "Umidade",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#ca3838",
+            "#00b500",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 860,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "99bd550cacacad5f",
+        "type": "ui_gauge",
+        "z": "e9c6344b196bfe35",
+        "name": "",
+        "group": "42598b0cf938942f",
+        "order": 3,
+        "width": 5,
+        "height": 3,
+        "gtype": "gage",
+        "title": "Sensação térmica",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#1f77b4",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1050,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "8db7413ff67d9198",
+        "type": "ui_text",
+        "z": "e9c6344b196bfe35",
+        "group": "42598b0cf938942f",
+        "order": 6,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "Situação:",
+        "format": " {{value}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 860,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "72861beacd1fd44c",
+        "type": "openweathermap",
+        "z": "e9c6344b196bfe35",
+        "name": "",
+        "wtype": "forecast",
+        "lon": "",
+        "lat": "",
+        "city": "Santa Rita do Passa Quatro",
+        "country": "Brasil",
+        "language": "pt",
+        "x": 300,
+        "y": 100,
+        "wires": [
+            [
+                "3f130cce7c1bf071"
+            ]
+        ]
+    },
+    {
+        "id": "b8a4b41bb28bf192",
+        "type": "NGSI Entity",
+        "z": "e9c6344b196bfe35",
+        "name": "Criar entidade",
+        "openapis": "9bccc41af47bb660",
+        "servicepath": "/",
+        "actionType": "upsert",
+        "entityId": "",
+        "entityType": "",
+        "attrs": "",
+        "keyValues": "false",
+        "dateModified": "false",
+        "x": 740,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "730cd46dbf699057",
+        "type": "NGSI Entity",
+        "z": "e9c6344b196bfe35",
+        "name": "",
+        "openapis": "9bccc41af47bb660",
+        "servicepath": "/",
+        "actionType": "read",
+        "entityId": "urn:ngsi-ld:OpenWeatherMapForecast:undefined",
+        "entityType": "OpenWeatherMapForecast",
+        "attrs": "list",
+        "keyValues": "false",
+        "dateModified": "false",
+        "x": 250,
+        "y": 340,
+        "wires": [
+            [
+                "fab8a65c1638d405"
+            ]
+        ]
+    },
+    {
+        "id": "fab8a65c1638d405",
+        "type": "NGSI Attribute value",
+        "z": "e9c6344b196bfe35",
+        "name": "",
+        "openapis": "9bccc41af47bb660",
+        "servicepath": "/",
+        "actionType": "read",
+        "entityId": "",
+        "entityType": "",
+        "attrName": "list",
+        "skipForwarding": "false",
+        "forcedUpdate": "false",
+        "flowControl": "false",
+        "x": 460,
+        "y": 340,
+        "wires": [
+            [
+                "0252f9c4489d9798",
+                "1a0a66ea7842d47f",
+                "6be3768fae066be9",
+                "21623a29323ae2e7",
+                "bbe5baf0e74b1887",
+                "ad54b7ec5ec9efec",
+                "fc2ff41ae09993e5",
+                "652c216509b6e166",
+                "b945025135b49210",
+                "1ff090e23ae833b9",
+                "75f7d60091aa9927",
+                "5a83d1f31c5f405b",
+                "be63df0772967215",
+                "9ab7bb19cf8a0c31",
+                "5bdde805424b1c0a",
+                "62012dc0371ece13",
+                "40810f6c8e472922",
+                "48828fcdb1214146",
+                "f857482ae5d5d58d",
+                "85f30e630ba54290",
+                "688a305e045f3bfd",
+                "d8c663c7a33f58d8",
+                "8936d89aa7d7e418",
+                "f096b7e82acc76c4",
+                "c5833de581bbcba6"
+            ]
+        ]
+    },
+    {
+        "id": "3f130cce7c1bf071",
+        "type": "OpenWeatherMap to NGSI",
+        "z": "e9c6344b196bfe35",
+        "name": "WeatherToNGSI",
+        "x": 540,
+        "y": 100,
+        "wires": [
+            [
+                "b8a4b41bb28bf192"
+            ]
+        ]
+    },
+    {
+        "id": "bbe5baf0e74b1887",
+        "type": "change",
+        "z": "e9c6344b196bfe35",
+        "name": "Ler data",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload[6].dt_txt",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 680,
+        "y": 460,
+        "wires": [
+            [
+                "5fdc89fc9d748839"
+            ]
+        ]
+    },
+    {
+        "id": "80d13eab22dbc307",
+        "type": "ui_text",
+        "z": "e9c6344b196bfe35",
+        "group": "42598b0cf938942f",
+        "order": 2,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "Data:",
+        "format": " {{value}}",
+        "layout": "row-center",
+        "className": "",
+        "x": 970,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "7395d86efbcfc153",
+        "type": "inject",
+        "z": "e9c6344b196bfe35",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{}",
+        "payloadType": "json",
+        "x": 90,
+        "y": 100,
+        "wires": [
+            [
+                "72861beacd1fd44c"
+            ]
+        ]
+    },
+    {
+        "id": "c02a53c4a49a5f9a",
+        "type": "comment",
+        "z": "e9c6344b196bfe35",
+        "name": "Dia 1",
+        "info": "",
+        "x": 790,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "fc2ff41ae09993e5",
+        "type": "change",
+        "z": "e9c6344b196bfe35",
+        "name": "Ler temperatura",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload[14].main.temp",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 700,
+        "y": 640,
+        "wires": [
+            [
+                "fbb477e1a93636cc"
+            ]
+        ]
+    },
+    {
+        "id": "ad54b7ec5ec9efec",
+        "type": "change",
+        "z": "e9c6344b196bfe35",
+        "name": "Ler umidade",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload[14].main.humidity",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 690,
+        "y": 580,
+        "wires": [
+            [
+                "6d7b49c44b4506d7"
+            ]
+        ]
+    },
+    {
+        "id": "b945025135b49210",
+        "type": "change",
+        "z": "e9c6344b196bfe35",
+        "name": "Ler descrição",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload[14].weather.description",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 700,
+        "y": 760,
+        "wires": [
+            [
+                "2445819ac99b110e"
+            ]
+        ]
+    },
+    {
+        "id": "652c216509b6e166",
+        "type": "change",
+        "z": "e9c6344b196bfe35",
+        "name": "Ler sensação",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload[14].main.feels_like",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 700,
+        "y": 700,
+        "wires": [
+            [
+                "0a3e027afd2bb451"
+            ]
+        ]
+    },
+    {
+        "id": "6d7b49c44b4506d7",
+        "type": "ui_gauge",
+        "z": "e9c6344b196bfe35",
+        "name": "",
+        "group": "42598b0cf938942f",
+        "order": 12,
+        "width": 5,
+        "height": 3,
+        "gtype": "gage",
+        "title": "Umidade",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#ca3838",
+            "#00b500",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 860,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "2445819ac99b110e",
+        "type": "ui_text",
+        "z": "e9c6344b196bfe35",
+        "group": "42598b0cf938942f",
+        "order": 13,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "Situação:",
+        "format": " {{value}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 860,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "1ff090e23ae833b9",
+        "type": "change",
+        "z": "e9c6344b196bfe35",
+        "name": "Ler data",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload[14].dt_txt",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 680,
+        "y": 820,
+        "wires": [
+            [
+                "3f6414e57b6ac39d"
+            ]
+        ]
+    },
+    {
+        "id": "955e9c7b5a4c5c2b",
+        "type": "ui_text",
+        "z": "e9c6344b196bfe35",
+        "group": "42598b0cf938942f",
+        "order": 9,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "Data:",
+        "format": " {{value}}",
+        "layout": "row-center",
+        "className": "",
+        "x": 970,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "90700cde45b68eb2",
+        "type": "comment",
+        "z": "e9c6344b196bfe35",
+        "name": "Dia 2",
+        "info": "",
+        "x": 790,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "5fdc89fc9d748839",
+        "type": "function",
+        "z": "e9c6344b196bfe35",
+        "name": "function 16",
+        "func": "const formatDate = (dateTimeString) => {\n    const dateTimeParts = dateTimeString.split(\" \");\n    const dateParts = dateTimeParts[0].split(\"-\");\n    const year = dateParts[0].substring(2); // Obtém os dois últimos dígitos do ano\n    const month = dateParts[1];\n    const day = dateParts[2];\n\n    return `${day}/${month}/${year}`;\n};\n\n// Substitua msg.payload pela sua string de entrada no formato \"AAAA-MM-DD HH:MM:SS\"\nconst inputDateString = msg.payload;\nconst outputDateString = formatDate(inputDateString);\n\nreturn { payload: outputDateString };",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 830,
+        "y": 460,
+        "wires": [
+            [
+                "80d13eab22dbc307"
+            ]
+        ]
+    },
+    {
+        "id": "3f6414e57b6ac39d",
+        "type": "function",
+        "z": "e9c6344b196bfe35",
+        "name": "function 17",
+        "func": "const formatDate = (dateTimeString) => {\n    const dateTimeParts = dateTimeString.split(\" \");\n    const dateParts = dateTimeParts[0].split(\"-\");\n    const year = dateParts[0].substring(2); // Obtém os dois últimos dígitos do ano\n    const month = dateParts[1];\n    const day = dateParts[2];\n\n    return `${day}/${month}/${year}`;\n};\n\n// Substitua msg.payload pela sua string de entrada no formato \"AAAA-MM-DD HH:MM:SS\"\nconst inputDateString = msg.payload;\nconst outputDateString = formatDate(inputDateString);\n\nreturn { payload: outputDateString };",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 830,
+        "y": 820,
+        "wires": [
+            [
+                "955e9c7b5a4c5c2b"
+            ]
+        ]
+    },
+    {
+        "id": "5a83d1f31c5f405b",
+        "type": "change",
+        "z": "e9c6344b196bfe35",
+        "name": "Ler temperatura",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload[22].main.temp",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 700,
+        "y": 1000,
+        "wires": [
+            [
+                "29c651765b79bd63"
+            ]
+        ]
+    },
+    {
+        "id": "75f7d60091aa9927",
+        "type": "change",
+        "z": "e9c6344b196bfe35",
+        "name": "Ler umidade",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload[22].main.humidity",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 690,
+        "y": 940,
+        "wires": [
+            [
+                "1fe993b80fe2b76a"
+            ]
+        ]
+    },
+    {
+        "id": "9ab7bb19cf8a0c31",
+        "type": "change",
+        "z": "e9c6344b196bfe35",
+        "name": "Ler descrição",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload[22].weather.description",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 700,
+        "y": 1120,
+        "wires": [
+            [
+                "69f7b2b02defc6bc"
+            ]
+        ]
+    },
+    {
+        "id": "be63df0772967215",
+        "type": "change",
+        "z": "e9c6344b196bfe35",
+        "name": "Ler sensação",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload[22].main.feels_like",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 700,
+        "y": 1060,
+        "wires": [
+            [
+                "b277b3d88f79d83b"
+            ]
+        ]
+    },
+    {
+        "id": "6c5d11e1cedc3e0a",
+        "type": "ui_gauge",
+        "z": "e9c6344b196bfe35",
+        "name": "",
+        "group": "42598b0cf938942f",
+        "order": 18,
+        "width": 5,
+        "height": 3,
+        "gtype": "gage",
+        "title": "Temperatura",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#1f77b4",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1030,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "1fe993b80fe2b76a",
+        "type": "ui_gauge",
+        "z": "e9c6344b196bfe35",
+        "name": "",
+        "group": "42598b0cf938942f",
+        "order": 19,
+        "width": 5,
+        "height": 3,
+        "gtype": "gage",
+        "title": "Umidade",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#ca3838",
+            "#00b500",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 860,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "9b9d9bc3a62c28d0",
+        "type": "ui_gauge",
+        "z": "e9c6344b196bfe35",
+        "name": "",
+        "group": "42598b0cf938942f",
+        "order": 17,
+        "width": 5,
+        "height": 3,
+        "gtype": "gage",
+        "title": "Sensação térmica",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#1f77b4",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1050,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "69f7b2b02defc6bc",
+        "type": "ui_text",
+        "z": "e9c6344b196bfe35",
+        "group": "42598b0cf938942f",
+        "order": 20,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "Situação:",
+        "format": " {{value}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 860,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "5bdde805424b1c0a",
+        "type": "change",
+        "z": "e9c6344b196bfe35",
+        "name": "Ler data",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload[22].dt_txt",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 680,
+        "y": 1180,
+        "wires": [
+            [
+                "379a04cee07eed66"
+            ]
+        ]
+    },
+    {
+        "id": "7fbc8a2c77e467cf",
+        "type": "ui_text",
+        "z": "e9c6344b196bfe35",
+        "group": "42598b0cf938942f",
+        "order": 16,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "Data:",
+        "format": " {{value}}",
+        "layout": "row-center",
+        "className": "",
+        "x": 970,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "f617af44cce35f97",
+        "type": "comment",
+        "z": "e9c6344b196bfe35",
+        "name": "Dia 3",
+        "info": "",
+        "x": 790,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "379a04cee07eed66",
+        "type": "function",
+        "z": "e9c6344b196bfe35",
+        "name": "function 18",
+        "func": "const formatDate = (dateTimeString) => {\n    const dateTimeParts = dateTimeString.split(\" \");\n    const dateParts = dateTimeParts[0].split(\"-\");\n    const year = dateParts[0].substring(2); // Obtém os dois últimos dígitos do ano\n    const month = dateParts[1];\n    const day = dateParts[2];\n\n    return `${day}/${month}/${year}`;\n};\n\n// Substitua msg.payload pela sua string de entrada no formato \"AAAA-MM-DD HH:MM:SS\"\nconst inputDateString = msg.payload;\nconst outputDateString = formatDate(inputDateString);\n\nreturn { payload: outputDateString };",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 830,
+        "y": 1180,
+        "wires": [
+            [
+                "7fbc8a2c77e467cf"
+            ]
+        ]
+    },
+    {
+        "id": "40810f6c8e472922",
+        "type": "change",
+        "z": "e9c6344b196bfe35",
+        "name": "Ler temperatura",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload[29].main.temp",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 700,
+        "y": 1360,
+        "wires": [
+            [
+                "9c7d5908a0811621"
+            ]
+        ]
+    },
+    {
+        "id": "62012dc0371ece13",
+        "type": "change",
+        "z": "e9c6344b196bfe35",
+        "name": "Ler umidade",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload[29].main.humidity",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 690,
+        "y": 1300,
+        "wires": [
+            [
+                "15ac4cc315de3b84"
+            ]
+        ]
+    },
+    {
+        "id": "f857482ae5d5d58d",
+        "type": "change",
+        "z": "e9c6344b196bfe35",
+        "name": "Ler descrição",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload[29].weather.description",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 700,
+        "y": 1480,
+        "wires": [
+            [
+                "56b07d62081f6ce0"
+            ]
+        ]
+    },
+    {
+        "id": "48828fcdb1214146",
+        "type": "change",
+        "z": "e9c6344b196bfe35",
+        "name": "Ler sensação",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload[29].main.feels_like",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 700,
+        "y": 1420,
+        "wires": [
+            [
+                "c7143ad308fea8c3"
+            ]
+        ]
+    },
+    {
+        "id": "73735147a402a156",
+        "type": "ui_gauge",
+        "z": "e9c6344b196bfe35",
+        "name": "",
+        "group": "42598b0cf938942f",
+        "order": 25,
+        "width": 5,
+        "height": 3,
+        "gtype": "gage",
+        "title": "Temperatura",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#1f77b4",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1030,
+        "y": 1360,
+        "wires": []
+    },
+    {
+        "id": "15ac4cc315de3b84",
+        "type": "ui_gauge",
+        "z": "e9c6344b196bfe35",
+        "name": "",
+        "group": "42598b0cf938942f",
+        "order": 26,
+        "width": 5,
+        "height": 3,
+        "gtype": "gage",
+        "title": "Umidade",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#ca3838",
+            "#00b500",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 860,
+        "y": 1300,
+        "wires": []
+    },
+    {
+        "id": "c264973a9a9edc0a",
+        "type": "ui_gauge",
+        "z": "e9c6344b196bfe35",
+        "name": "",
+        "group": "42598b0cf938942f",
+        "order": 24,
+        "width": 5,
+        "height": 3,
+        "gtype": "gage",
+        "title": "Sensação térmica",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#1f77b4",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1050,
+        "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "56b07d62081f6ce0",
+        "type": "ui_text",
+        "z": "e9c6344b196bfe35",
+        "group": "42598b0cf938942f",
+        "order": 27,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "Situação:",
+        "format": " {{value}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 860,
+        "y": 1480,
+        "wires": []
+    },
+    {
+        "id": "85f30e630ba54290",
+        "type": "change",
+        "z": "e9c6344b196bfe35",
+        "name": "Ler data",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload[29].dt_txt",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 680,
+        "y": 1540,
+        "wires": [
+            [
+                "7c2f3dc7e25bfc34"
+            ]
+        ]
+    },
+    {
+        "id": "a9ae231a74d015b8",
+        "type": "ui_text",
+        "z": "e9c6344b196bfe35",
+        "group": "42598b0cf938942f",
+        "order": 23,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "Data:",
+        "format": " {{value}}",
+        "layout": "row-center",
+        "className": "",
+        "x": 970,
+        "y": 1540,
+        "wires": []
+    },
+    {
+        "id": "a798e95d226e78d1",
+        "type": "comment",
+        "z": "e9c6344b196bfe35",
+        "name": "Dia 4",
+        "info": "",
+        "x": 790,
+        "y": 1240,
+        "wires": []
+    },
+    {
+        "id": "7c2f3dc7e25bfc34",
+        "type": "function",
+        "z": "e9c6344b196bfe35",
+        "name": "function 19",
+        "func": "const formatDate = (dateTimeString) => {\n    const dateTimeParts = dateTimeString.split(\" \");\n    const dateParts = dateTimeParts[0].split(\"-\");\n    const year = dateParts[0].substring(2); // Obtém os dois últimos dígitos do ano\n    const month = dateParts[1];\n    const day = dateParts[2];\n\n    return `${day}/${month}/${year}`;\n};\n\n// Substitua msg.payload pela sua string de entrada no formato \"AAAA-MM-DD HH:MM:SS\"\nconst inputDateString = msg.payload;\nconst outputDateString = formatDate(inputDateString);\n\nreturn { payload: outputDateString };",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 830,
+        "y": 1540,
+        "wires": [
+            [
+                "a9ae231a74d015b8"
+            ]
+        ]
+    },
+    {
+        "id": "d8c663c7a33f58d8",
+        "type": "change",
+        "z": "e9c6344b196bfe35",
+        "name": "Ler temperatura",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload[37].main.temp",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 700,
+        "y": 1720,
+        "wires": [
+            [
+                "3eb3abf4cb4b1934"
+            ]
+        ]
+    },
+    {
+        "id": "688a305e045f3bfd",
+        "type": "change",
+        "z": "e9c6344b196bfe35",
+        "name": "Ler umidade",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload[37].main.humidity",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 690,
+        "y": 1660,
+        "wires": [
+            [
+                "ad1ff42007075f23"
+            ]
+        ]
+    },
+    {
+        "id": "f096b7e82acc76c4",
+        "type": "change",
+        "z": "e9c6344b196bfe35",
+        "name": "Ler descrição",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload[37].weather.description",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 700,
+        "y": 1840,
+        "wires": [
+            [
+                "a2ba4abc75e8dccf"
+            ]
+        ]
+    },
+    {
+        "id": "8936d89aa7d7e418",
+        "type": "change",
+        "z": "e9c6344b196bfe35",
+        "name": "Ler sensação",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload[37].main.feels_like",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 700,
+        "y": 1780,
+        "wires": [
+            [
+                "c7621f2fa76bf253"
+            ]
+        ]
+    },
+    {
+        "id": "dcdf58946ffd02d4",
+        "type": "ui_gauge",
+        "z": "e9c6344b196bfe35",
+        "name": "",
+        "group": "42598b0cf938942f",
+        "order": 32,
+        "width": 5,
+        "height": 3,
+        "gtype": "gage",
+        "title": "Temperatura",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#1f77b4",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1030,
+        "y": 1720,
+        "wires": []
+    },
+    {
+        "id": "ad1ff42007075f23",
+        "type": "ui_gauge",
+        "z": "e9c6344b196bfe35",
+        "name": "",
+        "group": "42598b0cf938942f",
+        "order": 33,
+        "width": 5,
+        "height": 3,
+        "gtype": "gage",
+        "title": "Umidade",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#ca3838",
+            "#00b500",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 860,
+        "y": 1660,
+        "wires": []
+    },
+    {
+        "id": "d647fc87cf42f108",
+        "type": "ui_gauge",
+        "z": "e9c6344b196bfe35",
+        "name": "",
+        "group": "42598b0cf938942f",
+        "order": 31,
+        "width": 5,
+        "height": 3,
+        "gtype": "gage",
+        "title": "Sensação térmica",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#1f77b4",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1050,
+        "y": 1780,
+        "wires": []
+    },
+    {
+        "id": "a2ba4abc75e8dccf",
+        "type": "ui_text",
+        "z": "e9c6344b196bfe35",
+        "group": "42598b0cf938942f",
+        "order": 34,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "Situação:",
+        "format": " {{value}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 860,
+        "y": 1840,
+        "wires": []
+    },
+    {
+        "id": "c5833de581bbcba6",
+        "type": "change",
+        "z": "e9c6344b196bfe35",
+        "name": "Ler data",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload[37].dt_txt",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 680,
+        "y": 1900,
+        "wires": [
+            [
+                "bae6f940485fc62c"
+            ]
+        ]
+    },
+    {
+        "id": "ac427215dd682383",
+        "type": "ui_text",
+        "z": "e9c6344b196bfe35",
+        "group": "42598b0cf938942f",
+        "order": 30,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "Data:",
+        "format": " {{value}}",
+        "layout": "row-center",
+        "className": "",
+        "x": 970,
+        "y": 1900,
+        "wires": []
+    },
+    {
+        "id": "7fab6831d078463b",
+        "type": "comment",
+        "z": "e9c6344b196bfe35",
+        "name": "Dia 5",
+        "info": "",
+        "x": 790,
+        "y": 1600,
+        "wires": []
+    },
+    {
+        "id": "bae6f940485fc62c",
+        "type": "function",
+        "z": "e9c6344b196bfe35",
+        "name": "function 20",
+        "func": "const formatDate = (dateTimeString) => {\n    const dateTimeParts = dateTimeString.split(\" \");\n    const dateParts = dateTimeParts[0].split(\"-\");\n    const year = dateParts[0].substring(2); // Obtém os dois últimos dígitos do ano\n    const month = dateParts[1];\n    const day = dateParts[2];\n\n    return `${day}/${month}/${year}`;\n};\n\n// Substitua msg.payload pela sua string de entrada no formato \"AAAA-MM-DD HH:MM:SS\"\nconst inputDateString = msg.payload;\nconst outputDateString = formatDate(inputDateString);\n\nreturn { payload: outputDateString };",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 830,
+        "y": 1900,
+        "wires": [
+            [
+                "ac427215dd682383"
+            ]
+        ]
+    },
+    {
+        "id": "16afc9ebb630f056",
+        "type": "function",
+        "z": "e9c6344b196bfe35",
+        "name": "function 21",
+        "func": "// Arredonda um número para o número inteiro mais próximo\nconst roundedNumber = Math.round(msg.payload);\n\n// Cria uma nova mensagem com o número arredondado\nconst newMsg = { payload: roundedNumber };\n\nreturn newMsg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 870,
+        "y": 280,
+        "wires": [
+            [
+                "74baef89a2afdeb2"
+            ]
+        ]
+    },
+    {
+        "id": "bc816e89f15ae988",
+        "type": "function",
+        "z": "e9c6344b196bfe35",
+        "name": "function 22",
+        "func": "// Arredonda um número para o número inteiro mais próximo\nconst roundedNumber = Math.round(msg.payload);\n\n// Cria uma nova mensagem com o número arredondado\nconst newMsg = { payload: roundedNumber };\n\nreturn newMsg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 870,
+        "y": 340,
+        "wires": [
+            [
+                "99bd550cacacad5f"
+            ]
+        ]
+    },
+    {
+        "id": "d7bcb87d76f12f58",
+        "type": "ui_gauge",
+        "z": "e9c6344b196bfe35",
+        "name": "",
+        "group": "42598b0cf938942f",
+        "order": 11,
+        "width": 5,
+        "height": 3,
+        "gtype": "gage",
+        "title": "Temperatura",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#1f77b4",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1030,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "478498243d512028",
+        "type": "ui_gauge",
+        "z": "e9c6344b196bfe35",
+        "name": "",
+        "group": "42598b0cf938942f",
+        "order": 10,
+        "width": 5,
+        "height": 3,
+        "gtype": "gage",
+        "title": "Sensação térmica",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#1f77b4",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1050,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "fbb477e1a93636cc",
+        "type": "function",
+        "z": "e9c6344b196bfe35",
+        "name": "function 23",
+        "func": "// Arredonda um número para o número inteiro mais próximo\nconst roundedNumber = Math.round(msg.payload);\n\n// Cria uma nova mensagem com o número arredondado\nconst newMsg = { payload: roundedNumber };\n\nreturn newMsg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 870,
+        "y": 640,
+        "wires": [
+            [
+                "d7bcb87d76f12f58"
+            ]
+        ]
+    },
+    {
+        "id": "0a3e027afd2bb451",
+        "type": "function",
+        "z": "e9c6344b196bfe35",
+        "name": "function 24",
+        "func": "// Arredonda um número para o número inteiro mais próximo\nconst roundedNumber = Math.round(msg.payload);\n\n// Cria uma nova mensagem com o número arredondado\nconst newMsg = { payload: roundedNumber };\n\nreturn newMsg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 870,
+        "y": 700,
+        "wires": [
+            [
+                "478498243d512028"
+            ]
+        ]
+    },
+    {
+        "id": "29c651765b79bd63",
+        "type": "function",
+        "z": "e9c6344b196bfe35",
+        "name": "function 25",
+        "func": "// Arredonda um número para o número inteiro mais próximo\nconst roundedNumber = Math.round(msg.payload);\n\n// Cria uma nova mensagem com o número arredondado\nconst newMsg = { payload: roundedNumber };\n\nreturn newMsg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 870,
+        "y": 1000,
+        "wires": [
+            [
+                "6c5d11e1cedc3e0a"
+            ]
+        ]
+    },
+    {
+        "id": "b277b3d88f79d83b",
+        "type": "function",
+        "z": "e9c6344b196bfe35",
+        "name": "function 26",
+        "func": "// Arredonda um número para o número inteiro mais próximo\nconst roundedNumber = Math.round(msg.payload);\n\n// Cria uma nova mensagem com o número arredondado\nconst newMsg = { payload: roundedNumber };\n\nreturn newMsg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 870,
+        "y": 1060,
+        "wires": [
+            [
+                "9b9d9bc3a62c28d0"
+            ]
+        ]
+    },
+    {
+        "id": "9c7d5908a0811621",
+        "type": "function",
+        "z": "e9c6344b196bfe35",
+        "name": "function 27",
+        "func": "// Arredonda um número para o número inteiro mais próximo\nconst roundedNumber = Math.round(msg.payload);\n\n// Cria uma nova mensagem com o número arredondado\nconst newMsg = { payload: roundedNumber };\n\nreturn newMsg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 870,
+        "y": 1360,
+        "wires": [
+            [
+                "73735147a402a156"
+            ]
+        ]
+    },
+    {
+        "id": "c7143ad308fea8c3",
+        "type": "function",
+        "z": "e9c6344b196bfe35",
+        "name": "function 28",
+        "func": "// Arredonda um número para o número inteiro mais próximo\nconst roundedNumber = Math.round(msg.payload);\n\n// Cria uma nova mensagem com o número arredondado\nconst newMsg = { payload: roundedNumber };\n\nreturn newMsg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 870,
+        "y": 1420,
+        "wires": [
+            [
+                "c264973a9a9edc0a"
+            ]
+        ]
+    },
+    {
+        "id": "3eb3abf4cb4b1934",
+        "type": "function",
+        "z": "e9c6344b196bfe35",
+        "name": "function 29",
+        "func": "// Arredonda um número para o número inteiro mais próximo\nconst roundedNumber = Math.round(msg.payload);\n\n// Cria uma nova mensagem com o número arredondado\nconst newMsg = { payload: roundedNumber };\n\nreturn newMsg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 870,
+        "y": 1720,
+        "wires": [
+            [
+                "dcdf58946ffd02d4"
+            ]
+        ]
+    },
+    {
+        "id": "c7621f2fa76bf253",
+        "type": "function",
+        "z": "e9c6344b196bfe35",
+        "name": "function 30",
+        "func": "// Arredonda um número para o número inteiro mais próximo\nconst roundedNumber = Math.round(msg.payload);\n\n// Cria uma nova mensagem com o número arredondado\nconst newMsg = { payload: roundedNumber };\n\nreturn newMsg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 870,
+        "y": 1780,
+        "wires": [
+            [
+                "d647fc87cf42f108"
             ]
         ]
     },
