@@ -159,7 +159,7 @@
         "type": "ui_tab",
         "name": "Início",
         "icon": "home",
-        "order": 1,
+        "order": 2,
         "disabled": false,
         "hidden": false
     },
@@ -168,7 +168,7 @@
         "type": "ui_tab",
         "name": "Seleção de ovos",
         "icon": "dashboard",
-        "order": 2,
+        "order": 1,
         "disabled": false,
         "hidden": false
     },
@@ -242,22 +242,22 @@
     {
         "id": "a36d8b353b5ac62a",
         "type": "ui_group",
-        "name": "Ovos bons",
+        "name": "Porcentagem da ultima produção cadastrada",
         "tab": "1026f58dc258542c",
-        "order": 2,
+        "order": 4,
         "disp": true,
-        "width": 7,
+        "width": "14",
         "collapse": false,
         "className": ""
     },
     {
         "id": "847566bf4ea81b9a",
         "type": "ui_group",
-        "name": "Ovos ruins",
+        "name": "Porcentagem da produção total",
         "tab": "1026f58dc258542c",
-        "order": 3,
+        "order": 2,
         "disp": true,
-        "width": 7,
+        "width": "14",
         "collapse": false,
         "className": ""
     },
@@ -279,7 +279,7 @@
         "tab": "1026f58dc258542c",
         "order": 5,
         "disp": true,
-        "width": 14,
+        "width": 21,
         "collapse": false,
         "className": ""
     },
@@ -332,7 +332,7 @@
         "type": "ui_group",
         "name": "Cadastro de produção",
         "tab": "1026f58dc258542c",
-        "order": 4,
+        "order": 3,
         "disp": true,
         "width": "7",
         "collapse": false,
@@ -356,16 +356,6 @@
         "group": "ce464e0166efc6ec",
         "order": 1,
         "width": 1,
-        "height": 1
-    },
-    {
-        "id": "9120c9f0e563c951",
-        "type": "ui_spacer",
-        "z": "5a4975ebcc568c40",
-        "name": "spacer",
-        "group": "cad099844726e2c2",
-        "order": 1,
-        "width": 7,
         "height": 1
     },
     {
@@ -487,6 +477,26 @@
         "group": "42598b0cf938942f",
         "order": 35,
         "width": 6,
+        "height": 1
+    },
+    {
+        "id": "d110dda423ae173c",
+        "type": "ui_spacer",
+        "z": "5a4975ebcc568c40",
+        "name": "spacer",
+        "group": "cad099844726e2c2",
+        "order": 1,
+        "width": 7,
+        "height": 1
+    },
+    {
+        "id": "eb06ad299f01f87a",
+        "type": "ui_spacer",
+        "z": "5a4975ebcc568c40",
+        "name": "spacer",
+        "group": "cc81aa1c1fd12965",
+        "order": 1,
+        "width": 7,
         "height": 1
     },
     {
@@ -1034,8 +1044,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 420,
-        "y": 40,
+        "x": 280,
+        "y": 60,
         "wires": [
             [
                 "9bb4846fcdc0c53e",
@@ -1048,19 +1058,18 @@
         "type": "function",
         "z": "5a4975ebcc568c40",
         "name": "function 8",
-        "func": "// Define uma variável global para armazenar o valor acumulado\ncontext.global.valorAcumulado = context.global.valorAcumulado || 0;\n\n// Converte o payload (string) em um número inteiro e adiciona ao valor acumulado\nvar valor = parseInt(msg.payload.bons);\nif (!isNaN(valor)) {\n    context.global.valorAcumulado += valor;\n}\n\n// Retorna a mensagem com o valor acumulado como payload\nmsg.payload = context.global.valorAcumulado.toString();\nreturn msg;\n",
+        "func": "// Define uma variável global para armazenar o valor acumulado\ncontext.global.valorAcumulado = context.global.valorAcumulado || 0;\n\n// Converte o payload (string) em um número inteiro e adiciona ao valor acumulado\nvar valor = parseInt(msg.payload.bons);\nif (!isNaN(valor)) {\n    context.global.valorAcumulado += valor;\n}\n\n// Retorna a mensagem com o valor acumulado como payload\nmsg.payload = context.global.valorAcumulado;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 420,
+        "x": 280,
         "y": 100,
         "wires": [
             [
                 "ddf4e2ed36b1e975",
-                "7211cedbf4bab244",
-                "e986d9b266f8ccbd"
+                "76e105bd43413266"
             ]
         ]
     },
@@ -1069,38 +1078,18 @@
         "type": "function",
         "z": "5a4975ebcc568c40",
         "name": "function 9",
-        "func": "// Define uma variável global para armazenar o valor acumulado\ncontext.global.valorAcumulado2 = context.global.valorAcumulado2 || 0;\n\n// Converte o payload (string) em um número inteiro e adiciona ao valor acumulado\nvar valor = parseInt(msg.payload.ruins);\nif (!isNaN(valor)) {\n    context.global.valorAcumulado2 += valor;\n}\n\n// Retorna a mensagem com o valor acumulado como payload\nmsg.payload = context.global.valorAcumulado2.toString();\nreturn msg;",
+        "func": "// Define uma variável global para armazenar o valor acumulado\ncontext.global.valorAcumulado2 = context.global.valorAcumulado2 || 0;\n\n// Converte o payload (string) em um número inteiro e adiciona ao valor acumulado\nvar valor = parseInt(msg.payload.ruins);\nif (!isNaN(valor)) {\n    context.global.valorAcumulado2 += valor;\n}\n\n// Retorna a mensagem com o valor acumulado como payload\nmsg.payload = context.global.valorAcumulado2;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 420,
-        "y": 160,
+        "x": 280,
+        "y": 140,
         "wires": [
             [
                 "b7b501af8d966eae",
-                "8f53db27102d1f8c",
-                "7211cedbf4bab244"
-            ]
-        ]
-    },
-    {
-        "id": "8f53db27102d1f8c",
-        "type": "function",
-        "z": "5a4975ebcc568c40",
-        "name": "function 10",
-        "func": "msg.payload = parseFloat(msg.payload);\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 270,
-        "y": 220,
-        "wires": [
-            [
-                "702778c720fac655"
+                "76e105bd43413266"
             ]
         ]
     },
@@ -1109,77 +1098,43 @@
         "type": "function",
         "z": "5a4975ebcc568c40",
         "name": "function 11",
-        "func": "context.global.valorAcumulado2 =  0;\ncontext.global.valorAcumulado = 0;\nmsg.payload.bons = 0;\nmsg.payload.ruins = 0;\n\n// Retorna a mensagem com o valor acumulado como payload\nmsg.payload = context.global.valorAcumulado2.toString();\nreturn msg;",
+        "func": "context.global.valorAcumulado3 = 0;\ncontext.global.valorAcumulado2 = 0;\ncontext.global.valorAcumulado = 0;\nmsg.payload.bons = 0;\nmsg.payload.ruins = 0;\n\n// Retorna a mensagem com o valor acumulado como payload\nmsg.payload = \"0\";\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 350,
-        "y": 320,
+        "x": 290,
+        "y": 340,
         "wires": [
             [
                 "ddf4e2ed36b1e975",
                 "b7b501af8d966eae",
                 "2550832b6db8a2ae",
-                "6e1a832de52f8a75",
                 "9834b9ff599c3e33",
-                "9bb4846fcdc0c53e"
+                "9bb4846fcdc0c53e",
+                "7508b0d2707ff2a4",
+                "883997de3548f60f",
+                "f77e83b984498625"
             ]
         ]
-    },
-    {
-        "id": "7211cedbf4bab244",
-        "type": "debug",
-        "z": "5a4975ebcc568c40",
-        "name": "debug 44",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 640,
-        "y": 420,
-        "wires": []
     },
     {
         "id": "e986d9b266f8ccbd",
         "type": "function",
         "z": "5a4975ebcc568c40",
         "name": "function 14",
-        "func": "msg.payload = parseFloat(msg.payload);\nreturn msg;",
+        "func": "// Define uma variável global para armazenar o valor acumulado\ncontext.global.valorAcumulado3 = context.global.valorAcumulado3 || 0;\n\n// Converte o payload (string) em um número inteiro e adiciona ao valor acumulado\nvar valor = parseInt(msg.payload.ruins);\nvar valor2 = parseInt(msg.payload.bons);\nvar valor3 = valor+valor2;\n\nif (!isNaN(valor)) {\n    context.global.valorAcumulado3 += valor3;\n}\n\n// Retorna a mensagem com o valor acumulado como payload\nmsg.payload = context.global.valorAcumulado3;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 270,
-        "y": 260,
+        "x": 290,
+        "y": 180,
         "wires": [
             [
-                "702778c720fac655"
-            ]
-        ]
-    },
-    {
-        "id": "702778c720fac655",
-        "type": "function",
-        "z": "5a4975ebcc568c40",
-        "name": "function 15",
-        "func": "msg.payload = 900;\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 410,
-        "y": 420,
-        "wires": [
-            [
-                "2550832b6db8a2ae",
-                "7211cedbf4bab244"
+                "2550832b6db8a2ae"
             ]
         ]
     },
@@ -1203,8 +1158,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 170,
-        "y": 320,
+        "x": 110,
+        "y": 340,
         "wires": [
             [
                 "55701599c0ad4992"
@@ -1218,9 +1173,9 @@
         "name": "",
         "label": "",
         "group": "cc81aa1c1fd12965",
-        "order": 1,
-        "width": 0,
-        "height": 0,
+        "order": 2,
+        "width": 7,
+        "height": 1,
         "options": [
             {
                 "label": "Data",
@@ -1263,7 +1218,8 @@
                 "6a63c4aa5cf46339",
                 "bf1f338b2a287084",
                 "0f22692b6b038ee8",
-                "6e1a832de52f8a75"
+                "e986d9b266f8ccbd",
+                "5e97c6d6cda2d922"
             ]
         ]
     },
@@ -1272,10 +1228,10 @@
         "type": "ui_gauge",
         "z": "5a4975ebcc568c40",
         "name": "",
-        "group": "847566bf4ea81b9a",
-        "order": 1,
-        "width": 0,
-        "height": 0,
+        "group": "a36d8b353b5ac62a",
+        "order": 2,
+        "width": 7,
+        "height": 5,
         "gtype": "gage",
         "title": "% Ovos ruins",
         "label": "%",
@@ -1291,8 +1247,8 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 750,
-        "y": 100,
+        "x": 730,
+        "y": 80,
         "wires": []
     },
     {
@@ -1302,8 +1258,8 @@
         "name": "",
         "group": "a36d8b353b5ac62a",
         "order": 1,
-        "width": 0,
-        "height": 0,
+        "width": 7,
+        "height": 5,
         "gtype": "gage",
         "title": "% Ovos bons",
         "label": "%",
@@ -1319,26 +1275,173 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 750,
+        "x": 730,
         "y": 40,
         "wires": []
     },
     {
-        "id": "6e1a832de52f8a75",
+        "id": "2550832b6db8a2ae",
+        "type": "ui_text",
+        "z": "5a4975ebcc568c40",
+        "group": "cad099844726e2c2",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Total de ovos produzidos",
+        "format": "{{value}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 770,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "b7b501af8d966eae",
+        "type": "ui_text",
+        "z": "5a4975ebcc568c40",
+        "group": "cad099844726e2c2",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Total de ovos ruins",
+        "format": "{{value}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 750,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "ddf4e2ed36b1e975",
+        "type": "ui_text",
+        "z": "5a4975ebcc568c40",
+        "group": "cad099844726e2c2",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Total de ovos bons",
+        "format": "{{value}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 750,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "883997de3548f60f",
+        "type": "ui_gauge",
+        "z": "5a4975ebcc568c40",
+        "name": "",
+        "group": "847566bf4ea81b9a",
+        "order": 2,
+        "width": 7,
+        "height": 5,
+        "gtype": "gage",
+        "title": "% Ovos bons",
+        "label": "%",
+        "format": "{{boas_pc}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#ca3838",
+            "#e6e600",
+            "#00b500"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1070,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "7508b0d2707ff2a4",
+        "type": "ui_gauge",
+        "z": "5a4975ebcc568c40",
+        "name": "",
+        "group": "847566bf4ea81b9a",
+        "order": 1,
+        "width": 7,
+        "height": 5,
+        "gtype": "gage",
+        "title": "% Ovos ruins",
+        "label": "%",
+        "format": "{{ruins_pc}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1070,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "76e105bd43413266",
+        "type": "function",
+        "z": "5a4975ebcc568c40",
+        "name": "% ovos",
+        "func": "if (context.global.valorAcumulado && context.global.valorAcumulado2) {\n    var valor1 = context.global.valorAcumulado;\n    var valor2 = context.global.valorAcumulado2;\n\n    if (!isNaN(valor1) && !isNaN(valor2)) {\n        var soma = valor1 + valor2;\n    }\n}\n\n//porcentagem ruins\nvar ruins_pc = msg.valor2 || 0;\nruins_pc = (valor2 / soma) * 100;\nmsg.ruins_pc = Math.round(ruins_pc);\n\n//porcentagem boas\nvar boas_pc = valor1 || 0;\nboas_pc = (valor1 / soma) * 100;\nmsg.boas_pc = Math.round(boas_pc);\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 900,
+        "y": 120,
+        "wires": [
+            [
+                "883997de3548f60f",
+                "7508b0d2707ff2a4"
+            ]
+        ]
+    },
+    {
+        "id": "5e97c6d6cda2d922",
+        "type": "function",
+        "z": "5a4975ebcc568c40",
+        "name": "function 31",
+        "func": "if (msg.payload.bons && msg.payload.ruins) {\n    var valor1 = parseInt(msg.payload.bons);\n    var valor2 = parseInt(msg.payload.ruins);\n\n    if (!isNaN(valor1) && !isNaN(valor2)) {\n        var soma = valor1 + valor2;\n        var mensagem = {\n            payload: Math.round(soma)\n        };\n        return mensagem;\n    }\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 210,
+        "y": 240,
+        "wires": [
+            [
+                "f77e83b984498625",
+                "8a8e0329aa2601a5"
+            ]
+        ]
+    },
+    {
+        "id": "f77e83b984498625",
         "type": "ui_chart",
         "z": "5a4975ebcc568c40",
         "name": "",
         "group": "5c3af32dfbbc6bd9",
         "order": 1,
-        "width": 0,
-        "height": 0,
-        "label": "",
+        "width": 21,
+        "height": 5,
+        "label": "Gráfico de produção cadastrada",
         "chartType": "line",
         "legend": "false",
-        "xformat": "auto",
+        "xformat": "HH:mm:ss",
         "interpolate": "linear",
-        "nodata": "",
-        "dot": true,
+        "nodata": "Sem dados",
+        "dot": false,
         "ymin": "",
         "ymax": "",
         "removeOlder": 1,
@@ -1361,61 +1464,26 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 750,
-        "y": 340,
+        "x": 450,
+        "y": 240,
         "wires": [
             []
         ]
     },
     {
-        "id": "2550832b6db8a2ae",
-        "type": "ui_text",
+        "id": "8a8e0329aa2601a5",
+        "type": "debug",
         "z": "5a4975ebcc568c40",
-        "group": "cad099844726e2c2",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Total de ovos produzidos",
-        "format": "{{value}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 750,
+        "name": "debug 44",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
         "y": 280,
-        "wires": []
-    },
-    {
-        "id": "b7b501af8d966eae",
-        "type": "ui_text",
-        "z": "5a4975ebcc568c40",
-        "group": "cad099844726e2c2",
-        "order": 4,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Total de ovos ruins",
-        "format": "{{value}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 750,
-        "y": 220,
-        "wires": []
-    },
-    {
-        "id": "ddf4e2ed36b1e975",
-        "type": "ui_text",
-        "z": "5a4975ebcc568c40",
-        "group": "cad099844726e2c2",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Total de ovos bons",
-        "format": "{{value}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 750,
-        "y": 160,
         "wires": []
     },
     {
@@ -1906,7 +1974,7 @@
         "position": "dialog",
         "displayTime": "5",
         "highlight": "",
-        "sendall": false,
+        "sendall": true,
         "outputs": 1,
         "ok": "OK",
         "cancel": "",
@@ -1927,7 +1995,7 @@
         "position": "dialog",
         "displayTime": "5",
         "highlight": "",
-        "sendall": false,
+        "sendall": true,
         "outputs": 1,
         "ok": "OK",
         "cancel": "",
@@ -4147,7 +4215,7 @@
         "z": "ea538592da2e51e2",
         "name": "",
         "group": "8bcb2804d0691f25",
-        "order": 2,
+        "order": 1,
         "width": 23,
         "height": 5,
         "label": "",
@@ -4234,8 +4302,8 @@
         "type": "ui_chart",
         "z": "ea538592da2e51e2",
         "name": "",
-        "group": "8bcb2804d0691f25",
-        "order": 3,
+        "group": "8e1d1b289722c345",
+        "order": 1,
         "width": 23,
         "height": 5,
         "label": "",
@@ -4278,8 +4346,8 @@
         "type": "ui_chart",
         "z": "ea538592da2e51e2",
         "name": "",
-        "group": "8e1d1b289722c345",
-        "order": 1,
+        "group": "8bcb2804d0691f25",
+        "order": 2,
         "width": 23,
         "height": 5,
         "label": "",
@@ -4322,7 +4390,7 @@
         "type": "ui_text",
         "z": "ea538592da2e51e2",
         "group": "8bcb2804d0691f25",
-        "order": 1,
+        "order": 3,
         "width": 0,
         "height": 0,
         "name": "",
