@@ -1038,8 +1038,7 @@
         "wires": [
             [
                 "ddf4e2ed36b1e975",
-                "76e105bd43413266",
-                "cae110f7ad3954a7"
+                "76e105bd43413266"
             ]
         ]
     },
@@ -1059,8 +1058,7 @@
         "wires": [
             [
                 "b7b501af8d966eae",
-                "76e105bd43413266",
-                "cae110f7ad3954a7"
+                "76e105bd43413266"
             ]
         ]
     },
@@ -1105,8 +1103,7 @@
         "y": 220,
         "wires": [
             [
-                "2550832b6db8a2ae",
-                "cae110f7ad3954a7"
+                "2550832b6db8a2ae"
             ]
         ]
     },
@@ -1192,7 +1189,9 @@
                 "0f22692b6b038ee8",
                 "e986d9b266f8ccbd",
                 "5e97c6d6cda2d922",
-                "277a24589cab4a5c"
+                "277a24589cab4a5c",
+                "16eb0198dc45c14b",
+                "6a145f72e48927de"
             ]
         ]
     },
@@ -1202,7 +1201,7 @@
         "z": "5a4975ebcc568c40",
         "name": "",
         "group": "a36d8b353b5ac62a",
-        "order": 2,
+        "order": 3,
         "width": 7,
         "height": 4,
         "gtype": "gage",
@@ -1230,7 +1229,7 @@
         "z": "5a4975ebcc568c40",
         "name": "",
         "group": "a36d8b353b5ac62a",
-        "order": 3,
+        "order": 2,
         "width": 7,
         "height": 4,
         "gtype": "gage",
@@ -1443,52 +1442,6 @@
         ]
     },
     {
-        "id": "00e99cae282737a7",
-        "type": "inject",
-        "z": "5a4975ebcc568c40",
-        "name": "Ler",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "{}",
-        "payloadType": "json",
-        "x": 90,
-        "y": 540,
-        "wires": [
-            [
-                "16eb0198dc45c14b"
-            ]
-        ]
-    },
-    {
-        "id": "9f0d57c65b84fcbc",
-        "type": "debug",
-        "z": "5a4975ebcc568c40",
-        "name": "debug 45",
-        "active": true,
-        "tosidebar": true,
-        "console": true,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 430,
-        "y": 540,
-        "wires": []
-    },
-    {
         "id": "0c26b6fe05404ba9",
         "type": "inject",
         "z": "5a4975ebcc568c40",
@@ -1544,14 +1497,14 @@
         "actionType": "read",
         "entityId": "urn:ngsi-ld:AgriFarm:1",
         "entityType": "AgriFarm",
-        "attrs": "",
+        "attrs": "production",
         "keyValues": "true",
         "dateModified": "false",
         "x": 250,
         "y": 540,
         "wires": [
             [
-                "9f0d57c65b84fcbc"
+                "e2e744092724b4c3"
             ]
         ]
     },
@@ -1595,7 +1548,7 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "{\"id\":\"urn:ngsi-ld:AgriFarm:1\",\"type\":\"AgriFarm\",\"name\":{\"value\":\"ETASA\"},\"description\":{\"value\":\"ESCOLA TECNICA AGROPECUARIA ENGENHEIRO SALVADOR ARENA\"},\"seeAlso\":{\"value\":[\"http://escolatecnicasalvadorarena.org.br/\"]},\"location\":{\"type\":\"geo:json\",\"value\":{\"type\":\"Point\",\"coordinates\":[-21.77970868494297,-47.55205272883555]}},\"address\":{\"type\":\"PostalAddress\",\"value\":{\"addressLocality\":\"Santa Rita do Passa Quatro, SP\",\"addressCountry\":\"BR\",\"streetAddress\":\"SP-330, KM 238, CEP 13670-000\"}},\"contactPoint\":{\"type\":\"ContactPoint\",\"value\":{\"email\":\"secretaria@escolatecnicasalvadorarena.org.br\",\"telephone\":\"55 19 3584-8980\"}},\"production\":{\"type\":\"Data\",\"value\":{}}}",
+        "payload": "{\"id\":\"urn:ngsi-ld:AgriFarm:1\",\"type\":\"AgriFarm\",\"name\":{\"value\":\"ETASA\"},\"description\":{\"value\":\"ESCOLA TECNICA AGROPECUARIA ENGENHEIRO SALVADOR ARENA\"},\"seeAlso\":{\"value\":[\"http://escolatecnicasalvadorarena.org.br/\"]},\"address\":{\"type\":\"PostalAddress\",\"value\":{\"addressLocality\":\"Santa Rita do Passa Quatro, SP\",\"addressCountry\":\"BR\",\"streetAddress\":\"SP-330, KM 238, CEP 13670-000\"}},\"contactPoint\":{\"type\":\"ContactPoint\",\"value\":{\"email\":\"secretaria@escolatecnicasalvadorarena.org.br\",\"telephone\":\"55 19 3584-8980\"}},\"production\":{\"type\":\"Data\",\"value\":{\"Data\":\"\",\"Bons\":\"\",\"Ruins\":\"\",\"Total\":\"\"}}}",
         "payloadType": "json",
         "x": 90,
         "y": 480,
@@ -1644,35 +1597,6 @@
         ]
     },
     {
-        "id": "ad534fd9a497f113",
-        "type": "inject",
-        "z": "5a4975ebcc568c40",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "{\"id\":\"urn:ngsi-ld:AgriFarm:1\",\"type\":\"AgriFarm\",\"dateCreated\":{\"type\":\"DateTime\",\"value\":\"2023-01-05\"},\"dateModified\":{\"type\":\"DateTime\",\"value\":\"2023-05-21\"},\"name\":{\"value\":\"ETASASSSS\"}}",
-        "payloadType": "json",
-        "x": 90,
-        "y": 660,
-        "wires": [
-            [
-                "5cf2eaed9888d732"
-            ]
-        ]
-    },
-    {
         "id": "ad284eadf8e6ba8f",
         "type": "debug",
         "z": "5a4975ebcc568c40",
@@ -1685,7 +1609,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 450,
+        "x": 650,
         "y": 660,
         "wires": []
     },
@@ -1702,7 +1626,7 @@
         "attrs": "",
         "keyValues": "false",
         "dateModified": "false",
-        "x": 260,
+        "x": 480,
         "y": 660,
         "wires": [
             [
@@ -1763,25 +1687,8 @@
         ],
         "outputs": 0,
         "cts": false,
-        "x": 750,
-        "y": 420,
-        "wires": []
-    },
-    {
-        "id": "cae110f7ad3954a7",
-        "type": "debug",
-        "z": "5a4975ebcc568c40",
-        "name": "debug 50",
-        "active": false,
-        "tosidebar": true,
-        "console": true,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 670,
-        "y": 360,
+        "x": 590,
+        "y": 540,
         "wires": []
     },
     {
@@ -1789,17 +1696,17 @@
         "type": "function",
         "z": "5a4975ebcc568c40",
         "name": "function 32",
-        "func": "// Função para formatar uma data no formato \"DD/MM/AAAA\"\nfunction formatarData(data) {\n    var dateObj = new Date(data);\n    var dia = dateObj.getDate();\n    var mes = dateObj.getMonth() + 1;\n    var ano = dateObj.getFullYear();\n\n    // Formata o dia e mês para sempre ter dois dígitos\n    dia = (dia < 10) ? '0' + dia : dia;\n    mes = (mes < 10) ? '0' + mes : mes;\n\n    var dataFormatada = dia + '/' + mes + '/' + ano;\n\n    return dataFormatada;\n}\n\n// Exemplo de uso da função\nvar dataInput = msg.payload.date;\nvar dataFormatada = formatarData(dataInput);\n\n// Obtém as linhas existentes da variável global ou do contexto de fluxo\nvar tableData = flow.get(\"tableData\") || [];\n\n// Cria um objeto para a nova linha\nvar newRow = {\n    \"Data\": dataFormatada,\n    \"Bons\": msg.payload.good,\n    \"Ruins\": msg.payload.bad,\n    \"Total\": parseFloat(msg.payload.bad) + parseFloat(msg.payload.good),\n    \"savedCount\": flow.get(\"savedCount\")\n};\n\n// Adiciona a nova linha ao array de dados da tabela\ntableData.push(newRow);\n\n// Armazena as linhas atualizadas na variável global ou no contexto de fluxo\nflow.set(\"tableData\", tableData);\n\n// Define o payload da mensagem como os dados atualizados da tabela\nmsg.payload = tableData;\n\nreturn msg;\n",
+        "func": "// Função para formatar uma data no formato \"DD/MM/AAAA\"\nfunction formatarData(data) {\n    var dateObj = new Date(data);\n    var dia = dateObj.getDate();\n    var mes = dateObj.getMonth() + 1;\n    var ano = dateObj.getFullYear();\n\n    // Formata o dia e mês para sempre ter dois dígitos\n    dia = (dia < 10) ? '0' + dia : dia;\n    mes = (mes < 10) ? '0' + mes : mes;\n\n    var dataFormatada = dia + '/' + mes + '/' + ano;\n\n    return dataFormatada;\n}\n\n// Exemplo de uso da função\nvar dataInput = msg.payload.date;\nvar dataFormatada = formatarData(dataInput);\n\n// Obtém as linhas existentes da variável global ou do contexto de fluxo\nvar tableData = flow.get(\"tableData\") || [];\n\n// Cria um objeto para a nova linha\nvar newRow = {\n    \"Data\": dataFormatada,\n    \"Bons\": parseFloat(msg.payload.good),\n    \"Ruins\": parseFloat(msg.payload.bad),\n    \"Total\": parseFloat(msg.payload.bad) + parseFloat(msg.payload.good)\n};\n\n// Adiciona a nova linha ao array de dados da tabela\ntableData.push(newRow);\n\n// Armazena as linhas atualizadas na variável global ou no contexto de fluxo\nflow.set(\"tableData\", tableData);\n\n// Define o payload da mensagem como os dados atualizados da tabela\nmsg.payload = tableData;\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 590,
-        "y": 420,
+        "x": 130,
+        "y": 660,
         "wires": [
             [
-                "6a145f72e48927de"
+                "30fea0eed0332fb2"
             ]
         ]
     },
@@ -1819,6 +1726,129 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "e2e744092724b4c3",
+        "type": "function",
+        "z": "5a4975ebcc568c40",
+        "name": "function 35",
+        "func": "// Função para formatar os dados recebidos no formato especificado\nfunction formatarDados(dados) {\n    // Obtém as linhas existentes da variável global ou do contexto de fluxo\n    var tableData = flow.get(\"tableData\") || [];\n\n    // Verifica se os dados já foram adicionados anteriormente\n    if (tableData.length === 0) {\n        // Percorre os dados recebidos\n        for (var i = 0; i < dados.length; i++) {\n            var dado = dados[i];\n\n            // Cria um objeto para a nova linha com os valores recebidos\n            var newRow = {\n                \"Data\": dado.Data,\n                \"Bons\": dado.Bons,\n                \"Ruins\": dado.Ruins,\n                \"Total\": dado.Total\n            };\n\n            // Adiciona a nova linha ao array de dados da tabela\n            tableData.push(newRow);\n        }\n    }\n\n    // Armazena as linhas atualizadas na variável global ou no contexto de fluxo\n    flow.set(\"tableData\", tableData);\n\n    // Define o payload da mensagem como os dados atualizados da tabela\n    msg.payload = tableData;\n\n    return msg;\n}\n\n// Obtenha os valores dos dados recebidos\nvar dadosRecebidos = msg.payload.production;\n\n// Chame a função para formatar os dados\nvar mensagemFormatada = formatarDados(dadosRecebidos);\n\nreturn mensagemFormatada;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 540,
+        "wires": [
+            [
+                "6a145f72e48927de",
+                "57810ca1d478fcf8"
+            ]
+        ]
+    },
+    {
+        "id": "30fea0eed0332fb2",
+        "type": "function",
+        "z": "5a4975ebcc568c40",
+        "name": "function 36",
+        "func": "// Função para formatar os dados no formato especificado\nfunction formatarDados(dados) {\n    var dadosFormatados = {\n        \"id\": \"urn:ngsi-ld:AgriFarm:1\",\n        \"type\": \"AgriFarm\",\n        \"production\": {\n            \"type\": \"Data\",\n            \"value\": []\n        }\n    };\n\n    for (var i = 0; i < dados.length; i++) {\n        var dado = dados[i];\n        var dadoFormatado = {\n            \"Data\": dado.Data,\n            \"Bons\": dado.Bons,\n            \"Ruins\": dado.Ruins,\n            \"Total\": dado.Total\n        };\n\n        dadosFormatados.production.value.push(dadoFormatado);\n    }\n\n    return dadosFormatados;\n}\n\n// Obtenha os valores dos dados\nvar dadosInput = msg.payload;\n\n// Chame a função para formatar os dados\nvar dadosFormatados = formatarDados(dadosInput);\n\n// Defina os dados formatados como o payload da mensagem\nmsg.payload = dadosFormatados;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 660,
+        "wires": [
+            [
+                "5cf2eaed9888d732"
+            ]
+        ]
+    },
+    {
+        "id": "57810ca1d478fcf8",
+        "type": "debug",
+        "z": "5a4975ebcc568c40",
+        "name": "debug 50",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 670,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "de8e02e3629da794",
+        "type": "NGSI Entity",
+        "z": "5a4975ebcc568c40",
+        "name": "Ler entidade",
+        "openapis": "9bccc41af47bb660",
+        "servicepath": "/",
+        "actionType": "read",
+        "entityId": "urn:ngsi-ld:AgriFarm:1",
+        "entityType": "AgriFarm",
+        "attrs": "production",
+        "keyValues": "true",
+        "dateModified": "false",
+        "x": 310,
+        "y": 720,
+        "wires": [
+            [
+                "bdd6f8f81069b3f8"
+            ]
+        ]
+    },
+    {
+        "id": "c723a0f446527c3b",
+        "type": "inject",
+        "z": "5a4975ebcc568c40",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{}",
+        "payloadType": "json",
+        "x": 130,
+        "y": 720,
+        "wires": [
+            [
+                "de8e02e3629da794"
+            ]
+        ]
+    },
+    {
+        "id": "bdd6f8f81069b3f8",
+        "type": "debug",
+        "z": "5a4975ebcc568c40",
+        "name": "debug 51",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 690,
+        "y": 720,
+        "wires": []
     },
     {
         "id": "f4377ba4dfbfde65",
