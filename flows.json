@@ -1014,124 +1014,11 @@
         "finalize": "",
         "libs": [],
         "x": 240,
-        "y": 40,
+        "y": 220,
         "wires": [
             [
                 "9bb4846fcdc0c53e",
                 "9834b9ff599c3e33"
-            ]
-        ]
-    },
-    {
-        "id": "bf1f338b2a287084",
-        "type": "function",
-        "z": "5a4975ebcc568c40",
-        "name": "function 8",
-        "func": "// Define uma variável global para armazenar o valor acumulado\ncontext.global.valorAcumulado = context.global.valorAcumulado || 0;\n\n// Converte o payload (string) em um número inteiro e adiciona ao valor acumulado\nvar valor = parseInt(msg.payload.good);\nif (!isNaN(valor)) {\n    context.global.valorAcumulado += valor;\n}\n\n// Retorna a mensagem com o valor acumulado como payload\nmsg.payload = context.global.valorAcumulado;\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 240,
-        "y": 100,
-        "wires": [
-            [
-                "ddf4e2ed36b1e975",
-                "76e105bd43413266"
-            ]
-        ]
-    },
-    {
-        "id": "0f22692b6b038ee8",
-        "type": "function",
-        "z": "5a4975ebcc568c40",
-        "name": "function 9",
-        "func": "// Define uma variável global para armazenar o valor acumulado\ncontext.global.valorAcumulado2 = context.global.valorAcumulado2 || 0;\n\n// Converte o payload (string) em um número inteiro e adiciona ao valor acumulado\nvar valor = parseInt(msg.payload.bad);\nif (!isNaN(valor)) {\n    context.global.valorAcumulado2 += valor;\n}\n\n// Retorna a mensagem com o valor acumulado como payload\nmsg.payload = context.global.valorAcumulado2;\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 240,
-        "y": 160,
-        "wires": [
-            [
-                "b7b501af8d966eae",
-                "76e105bd43413266"
-            ]
-        ]
-    },
-    {
-        "id": "55701599c0ad4992",
-        "type": "function",
-        "z": "5a4975ebcc568c40",
-        "name": "function 11",
-        "func": "context.global.valorAcumulado3 = 0;\ncontext.global.valorAcumulado2 = 0;\ncontext.global.valorAcumulado = 0;\nmsg.payload.good = 0;\nmsg.payload.bad = 0;\n\n// Retorna a mensagem com o valor acumulado como payload\nmsg.payload = \"0\";\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 250,
-        "y": 420,
-        "wires": [
-            [
-                "ddf4e2ed36b1e975",
-                "b7b501af8d966eae",
-                "2550832b6db8a2ae",
-                "9834b9ff599c3e33",
-                "9bb4846fcdc0c53e",
-                "7508b0d2707ff2a4",
-                "883997de3548f60f",
-                "f77e83b984498625"
-            ]
-        ]
-    },
-    {
-        "id": "e986d9b266f8ccbd",
-        "type": "function",
-        "z": "5a4975ebcc568c40",
-        "name": "function 14",
-        "func": "// Define uma variável global para armazenar o valor acumulado\ncontext.global.valorAcumulado3 = context.global.valorAcumulado3 || 0;\n\n// Converte o payload (string) em um número inteiro e adiciona ao valor acumulado\nvar valor = parseInt(msg.payload.bad);\nvar valor2 = parseInt(msg.payload.good);\nvar valor3 = valor+valor2;\n\nif (!isNaN(valor)) {\n    context.global.valorAcumulado3 += valor3;\n}\n\n// Retorna a mensagem com o valor acumulado como payload\nmsg.payload = context.global.valorAcumulado3;\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 250,
-        "y": 220,
-        "wires": [
-            [
-                "2550832b6db8a2ae"
-            ]
-        ]
-    },
-    {
-        "id": "b4d22c818e03bc6b",
-        "type": "ui_button",
-        "z": "5a4975ebcc568c40",
-        "name": "",
-        "group": "cad099844726e2c2",
-        "order": 6,
-        "width": 7,
-        "height": 1,
-        "passthru": false,
-        "label": "RESETAR",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 90,
-        "y": 420,
-        "wires": [
-            [
-                "55701599c0ad4992"
             ]
         ]
     },
@@ -1180,18 +1067,14 @@
         "topicType": "msg",
         "splitLayout": false,
         "className": "",
-        "x": 70,
-        "y": 100,
+        "x": 110,
+        "y": 280,
         "wires": [
             [
-                "6a63c4aa5cf46339",
-                "bf1f338b2a287084",
-                "0f22692b6b038ee8",
-                "e986d9b266f8ccbd",
-                "5e97c6d6cda2d922",
+                "6a145f72e48927de",
                 "277a24589cab4a5c",
                 "16eb0198dc45c14b",
-                "6a145f72e48927de"
+                "6a63c4aa5cf46339"
             ]
         ]
     },
@@ -1219,8 +1102,8 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 470,
-        "y": 80,
+        "x": 530,
+        "y": 200,
         "wires": []
     },
     {
@@ -1247,8 +1130,8 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 470,
-        "y": 40,
+        "x": 530,
+        "y": 240,
         "wires": []
     },
     {
@@ -1261,11 +1144,11 @@
         "height": 1,
         "name": "",
         "label": "Total de ovos produzidos",
-        "format": "{{value}}",
+        "format": "{{msg.payload.total}}",
         "layout": "row-spread",
         "className": "",
-        "x": 690,
-        "y": 320,
+        "x": 810,
+        "y": 200,
         "wires": []
     },
     {
@@ -1278,11 +1161,11 @@
         "height": 1,
         "name": "",
         "label": "Total de ovos ruins",
-        "format": "{{value}}",
+        "format": "{{msg.payload.ruins}}",
         "layout": "row-spread",
         "className": "",
-        "x": 670,
-        "y": 280,
+        "x": 790,
+        "y": 160,
         "wires": []
     },
     {
@@ -1295,11 +1178,11 @@
         "height": 1,
         "name": "",
         "label": "Total de ovos bons",
-        "format": "{{value}}",
+        "format": "{{msg.payload.bons}}",
         "layout": "row-spread",
         "className": "",
-        "x": 670,
-        "y": 240,
+        "x": 790,
+        "y": 120,
         "wires": []
     },
     {
@@ -1314,7 +1197,7 @@
         "gtype": "gage",
         "title": "% Ovos bons",
         "label": "%",
-        "format": "{{good_pc}}",
+        "format": "{{msg.payload.bons_pc}}",
         "min": 0,
         "max": "100",
         "colors": [
@@ -1326,8 +1209,8 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 630,
-        "y": 120,
+        "x": 770,
+        "y": 20,
         "wires": []
     },
     {
@@ -1342,7 +1225,7 @@
         "gtype": "gage",
         "title": "% Ovos ruins",
         "label": "%",
-        "format": "{{bad_pc}}",
+        "format": "{{msg.payload.ruins_pc}}",
         "min": 0,
         "max": "100",
         "colors": [
@@ -1354,48 +1237,9 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 630,
-        "y": 160,
+        "x": 770,
+        "y": 60,
         "wires": []
-    },
-    {
-        "id": "76e105bd43413266",
-        "type": "function",
-        "z": "5a4975ebcc568c40",
-        "name": "% ovos",
-        "func": "if (context.global.valorAcumulado && context.global.valorAcumulado2) {\n    var valor1 = context.global.valorAcumulado;\n    var valor2 = context.global.valorAcumulado2;\n\n    if (!isNaN(valor1) && !isNaN(valor2)) {\n        var soma = valor1 + valor2;\n    }\n}\n\n//porcentagem ruins\nvar bad_pc = msg.valor2 || 0;\nbad_pc = (valor2 / soma) * 100;\nmsg.bad_pc = Math.round(bad_pc);\n\n//porcentagem boas\nvar good_pc = valor1 || 0;\ngood_pc = (valor1 / soma) * 100;\nmsg.good_pc = Math.round(good_pc);\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 460,
-        "y": 120,
-        "wires": [
-            [
-                "883997de3548f60f",
-                "7508b0d2707ff2a4"
-            ]
-        ]
-    },
-    {
-        "id": "5e97c6d6cda2d922",
-        "type": "function",
-        "z": "5a4975ebcc568c40",
-        "name": "function 31",
-        "func": "if (msg.payload.good && msg.payload.bad) {\n    var valor1 = parseInt(msg.payload.good);\n    var valor2 = parseInt(msg.payload.bad);\n\n    if (!isNaN(valor1) && !isNaN(valor2)) {\n        var soma = valor1 + valor2;\n        var mensagem = {\n            payload: Math.round(soma)\n        };\n        return mensagem;\n    }\n}",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 250,
-        "y": 280,
-        "wires": [
-            [
-                "f77e83b984498625"
-            ]
-        ]
     },
     {
         "id": "f77e83b984498625",
@@ -1409,10 +1253,10 @@
         "label": "",
         "chartType": "line",
         "legend": "false",
-        "xformat": "HH:mm:ss",
-        "interpolate": "linear",
+        "xformat": "auto",
+        "interpolate": "bezier",
         "nodata": "Sem dados",
-        "dot": false,
+        "dot": true,
         "ymin": "",
         "ymax": "",
         "removeOlder": 1,
@@ -1435,8 +1279,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 90,
-        "y": 340,
+        "x": 750,
+        "y": 280,
         "wires": [
             []
         ]
@@ -1462,8 +1306,8 @@
         "topic": "",
         "payload": "{}",
         "payloadType": "json",
-        "x": 90,
-        "y": 600,
+        "x": 150,
+        "y": 500,
         "wires": [
             [
                 "d82d641b722d2202"
@@ -1483,8 +1327,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 450,
-        "y": 600,
+        "x": 510,
+        "y": 500,
         "wires": []
     },
     {
@@ -1500,11 +1344,14 @@
         "attrs": "production",
         "keyValues": "true",
         "dateModified": "false",
-        "x": 250,
-        "y": 540,
+        "x": 390,
+        "y": 340,
         "wires": [
             [
-                "e2e744092724b4c3"
+                "e2e744092724b4c3",
+                "e2a51c7e21d2e1e7",
+                "af8a4116b921c3a4",
+                "e0f46b1477d960e3"
             ]
         ]
     },
@@ -1521,8 +1368,8 @@
         "attrs": "",
         "keyValues": "false",
         "dateModified": "false",
-        "x": 260,
-        "y": 600,
+        "x": 320,
+        "y": 500,
         "wires": [
             [
                 "f6a7e44aa7832336"
@@ -1548,10 +1395,10 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "{\"id\":\"urn:ngsi-ld:AgriFarm:1\",\"type\":\"AgriFarm\",\"name\":{\"value\":\"ETASA\"},\"description\":{\"value\":\"ESCOLA TECNICA AGROPECUARIA ENGENHEIRO SALVADOR ARENA\"},\"seeAlso\":{\"value\":[\"http://escolatecnicasalvadorarena.org.br/\"]},\"address\":{\"type\":\"PostalAddress\",\"value\":{\"addressLocality\":\"Santa Rita do Passa Quatro, SP\",\"addressCountry\":\"BR\",\"streetAddress\":\"SP-330, KM 238, CEP 13670-000\"}},\"contactPoint\":{\"type\":\"ContactPoint\",\"value\":{\"email\":\"secretaria@escolatecnicasalvadorarena.org.br\",\"telephone\":\"55 19 3584-8980\"}},\"production\":{\"type\":\"Data\",\"value\":{\"Data\":\"\",\"Bons\":\"\",\"Ruins\":\"\",\"Total\":\"\"}}}",
+        "payload": "{\"id\":\"urn:ngsi-ld:AgriFarm:1\",\"type\":\"AgriFarm\",\"name\":{\"value\":\"ETASA\"},\"description\":{\"value\":\"ESCOLA TECNICA AGROPECUARIA ENGENHEIRO SALVADOR ARENA\"},\"seeAlso\":{\"value\":[\"http://escolatecnicasalvadorarena.org.br/\"]},\"address\":{\"type\":\"PostalAddress\",\"value\":{\"addressLocality\":\"Santa Rita do Passa Quatro, SP\",\"addressCountry\":\"BR\",\"streetAddress\":\"SP-330, KM 238, CEP 13670-000\"}},\"contactPoint\":{\"type\":\"ContactPoint\",\"value\":{\"email\":\"secretaria@escolatecnicasalvadorarena.org.br\",\"telephone\":\"55 19 3584-8980\"}},\"production\":{\"type\":\"Data\",\"value\":[{\"id\":\"urn:ngsi-ld:AgriFarm:1684775831025-0\",\"Data\":\"16/07/2021\",\"Bons\":549,\"Ruins\":32,\"Total\":581},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-1\",\"Data\":\"23/07/2021\",\"Bons\":711,\"Ruins\":29,\"Total\":740},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-2\",\"Data\":\"30/07/2021\",\"Bons\":670,\"Ruins\":25,\"Total\":695},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-3\",\"Data\":\"03/08/2021\",\"Bons\":672,\"Ruins\":20,\"Total\":692},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-4\",\"Data\":\"09/08/2021\",\"Bons\":730,\"Ruins\":15,\"Total\":745}]}}",
         "payloadType": "json",
-        "x": 90,
-        "y": 480,
+        "x": 150,
+        "y": 460,
         "wires": [
             [
                 "a6d8d42ee3c3501b"
@@ -1571,8 +1418,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 450,
-        "y": 480,
+        "x": 510,
+        "y": 460,
         "wires": []
     },
     {
@@ -1588,49 +1435,12 @@
         "attrs": "",
         "keyValues": "false",
         "dateModified": "false",
-        "x": 260,
-        "y": 480,
+        "x": 320,
+        "y": 460,
         "wires": [
             [
-                "3dd45a752c03f51e"
-            ]
-        ]
-    },
-    {
-        "id": "ad284eadf8e6ba8f",
-        "type": "debug",
-        "z": "5a4975ebcc568c40",
-        "name": "debug 49",
-        "active": true,
-        "tosidebar": true,
-        "console": true,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 650,
-        "y": 660,
-        "wires": []
-    },
-    {
-        "id": "5cf2eaed9888d732",
-        "type": "NGSI Entity",
-        "z": "5a4975ebcc568c40",
-        "name": "Editar entidade",
-        "openapis": "9bccc41af47bb660",
-        "servicepath": "/",
-        "actionType": "upsert",
-        "entityId": "",
-        "entityType": "",
-        "attrs": "",
-        "keyValues": "false",
-        "dateModified": "false",
-        "x": 480,
-        "y": 660,
-        "wires": [
-            [
-                "ad284eadf8e6ba8f"
+                "3dd45a752c03f51e",
+                "d73ba755a72e7b99"
             ]
         ]
     },
@@ -1640,10 +1450,20 @@
         "z": "5a4975ebcc568c40",
         "group": "3cdf104460b09eaf",
         "name": "",
-        "order": 3,
+        "order": 1,
         "width": "21",
         "height": "5",
         "columns": [
+            {
+                "field": "id",
+                "title": "Identificador",
+                "width": "",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
             {
                 "field": "Data",
                 "title": "Data",
@@ -1687,125 +1507,31 @@
         ],
         "outputs": 0,
         "cts": false,
-        "x": 590,
-        "y": 540,
+        "x": 370,
+        "y": 280,
         "wires": []
-    },
-    {
-        "id": "277a24589cab4a5c",
-        "type": "function",
-        "z": "5a4975ebcc568c40",
-        "name": "function 32",
-        "func": "// Função para formatar uma data no formato \"DD/MM/AAAA\"\nfunction formatarData(data) {\n    var dateObj = new Date(data);\n    var dia = dateObj.getDate();\n    var mes = dateObj.getMonth() + 1;\n    var ano = dateObj.getFullYear();\n\n    // Formata o dia e mês para sempre ter dois dígitos\n    dia = (dia < 10) ? '0' + dia : dia;\n    mes = (mes < 10) ? '0' + mes : mes;\n\n    var dataFormatada = dia + '/' + mes + '/' + ano;\n\n    return dataFormatada;\n}\n\n// Exemplo de uso da função\nvar dataInput = msg.payload.date;\nvar dataFormatada = formatarData(dataInput);\n\n// Obtém as linhas existentes da variável global ou do contexto de fluxo\nvar tableData = flow.get(\"tableData\") || [];\n\n// Cria um objeto para a nova linha\nvar newRow = {\n    \"Data\": dataFormatada,\n    \"Bons\": parseFloat(msg.payload.good),\n    \"Ruins\": parseFloat(msg.payload.bad),\n    \"Total\": parseFloat(msg.payload.bad) + parseFloat(msg.payload.good)\n};\n\n// Adiciona a nova linha ao array de dados da tabela\ntableData.push(newRow);\n\n// Armazena as linhas atualizadas na variável global ou no contexto de fluxo\nflow.set(\"tableData\", tableData);\n\n// Define o payload da mensagem como os dados atualizados da tabela\nmsg.payload = tableData;\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 130,
-        "y": 660,
-        "wires": [
-            [
-                "30fea0eed0332fb2"
-            ]
-        ]
-    },
-    {
-        "id": "3b08efddf475e1a3",
-        "type": "function",
-        "z": "5a4975ebcc568c40",
-        "name": "function 33",
-        "func": "// Define uma variável global para armazenar o valor acumulado\ncontext.global.valorAcumulado = context.global.valorAcumulado || 0;\n\n// Converte o payload (string) em um número inteiro e adiciona ao valor acumulado\nvar valor = parseInt(msg.payload.good);\nif (!isNaN(valor)) {\n    context.global.valorAcumulado += valor;\n}\n\n// Retorna a mensagem com o valor acumulado como payload\nmsg.payload = context.global.valorAcumulado;\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 250,
-        "y": 340,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "e2e744092724b4c3",
         "type": "function",
         "z": "5a4975ebcc568c40",
         "name": "function 35",
-        "func": "// Função para formatar os dados recebidos no formato especificado\nfunction formatarDados(dados) {\n    // Obtém as linhas existentes da variável global ou do contexto de fluxo\n    var tableData = flow.get(\"tableData\") || [];\n\n    // Verifica se os dados já foram adicionados anteriormente\n    if (tableData.length === 0) {\n        // Percorre os dados recebidos\n        for (var i = 0; i < dados.length; i++) {\n            var dado = dados[i];\n\n            // Cria um objeto para a nova linha com os valores recebidos\n            var newRow = {\n                \"Data\": dado.Data,\n                \"Bons\": dado.Bons,\n                \"Ruins\": dado.Ruins,\n                \"Total\": dado.Total\n            };\n\n            // Adiciona a nova linha ao array de dados da tabela\n            tableData.push(newRow);\n        }\n    }\n\n    // Armazena as linhas atualizadas na variável global ou no contexto de fluxo\n    flow.set(\"tableData\", tableData);\n\n    // Define o payload da mensagem como os dados atualizados da tabela\n    msg.payload = tableData;\n\n    return msg;\n}\n\n// Obtenha os valores dos dados recebidos\nvar dadosRecebidos = msg.payload.production;\n\n// Chame a função para formatar os dados\nvar mensagemFormatada = formatarDados(dadosRecebidos);\n\nreturn mensagemFormatada;\n",
+        "func": "// Função para formatar os dados recebidos no formato especificado\nfunction formatarDados(dados) {\n    // Obtém as linhas existentes da variável global ou do contexto de fluxo\n    var tableData = flow.get(\"tableData\") || [];\n\n    // Verifica se os dados já foram adicionados anteriormente\n    if (tableData.length === 0) {\n        // Percorre os dados recebidos\n        for (var i = 0; i < dados.length; i++) {\n            var dado = dados[i];\n\n            // Cria um objeto para a nova linha com os valores recebidos\n            var newRow = {\n                \"Id\": dado.id,\n                \"Data\": dado.Data,\n                \"Bons\": dado.Bons,\n                \"Ruins\": dado.Ruins,\n                \"Total\": dado.Total\n            };\n\n            // Adiciona a nova linha ao array de dados da tabela\n            tableData.push(newRow);\n        }\n    }\n\n    // Armazena as linhas atualizadas na variável global ou no contexto de fluxo\n    flow.set(\"tableData\", tableData);\n\n    // Define o payload da mensagem como os dados atualizados da tabela\n    msg.payload = tableData;\n\n    return msg;\n}\n\n// Obtenha os valores dos dados recebidos\nvar dadosRecebidos = msg.payload.production;\n\n// Chame a função para formatar os dados\nvar mensagemFormatada = formatarDados(dadosRecebidos);\n\nreturn mensagemFormatada;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 430,
-        "y": 540,
+        "x": 610,
+        "y": 340,
         "wires": [
             [
-                "6a145f72e48927de",
-                "57810ca1d478fcf8"
+                "6a145f72e48927de"
             ]
         ]
     },
     {
-        "id": "30fea0eed0332fb2",
-        "type": "function",
-        "z": "5a4975ebcc568c40",
-        "name": "function 36",
-        "func": "// Função para formatar os dados no formato especificado\nfunction formatarDados(dados) {\n    var dadosFormatados = {\n        \"id\": \"urn:ngsi-ld:AgriFarm:1\",\n        \"type\": \"AgriFarm\",\n        \"production\": {\n            \"type\": \"Data\",\n            \"value\": []\n        }\n    };\n\n    for (var i = 0; i < dados.length; i++) {\n        var dado = dados[i];\n        var dadoFormatado = {\n            \"Data\": dado.Data,\n            \"Bons\": dado.Bons,\n            \"Ruins\": dado.Ruins,\n            \"Total\": dado.Total\n        };\n\n        dadosFormatados.production.value.push(dadoFormatado);\n    }\n\n    return dadosFormatados;\n}\n\n// Obtenha os valores dos dados\nvar dadosInput = msg.payload;\n\n// Chame a função para formatar os dados\nvar dadosFormatados = formatarDados(dadosInput);\n\n// Defina os dados formatados como o payload da mensagem\nmsg.payload = dadosFormatados;\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 310,
-        "y": 660,
-        "wires": [
-            [
-                "5cf2eaed9888d732"
-            ]
-        ]
-    },
-    {
-        "id": "57810ca1d478fcf8",
-        "type": "debug",
-        "z": "5a4975ebcc568c40",
-        "name": "debug 50",
-        "active": true,
-        "tosidebar": true,
-        "console": true,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 670,
-        "y": 480,
-        "wires": []
-    },
-    {
-        "id": "de8e02e3629da794",
-        "type": "NGSI Entity",
-        "z": "5a4975ebcc568c40",
-        "name": "Ler entidade",
-        "openapis": "9bccc41af47bb660",
-        "servicepath": "/",
-        "actionType": "read",
-        "entityId": "urn:ngsi-ld:AgriFarm:1",
-        "entityType": "AgriFarm",
-        "attrs": "production",
-        "keyValues": "true",
-        "dateModified": "false",
-        "x": 310,
-        "y": 720,
-        "wires": [
-            [
-                "bdd6f8f81069b3f8"
-            ]
-        ]
-    },
-    {
-        "id": "c723a0f446527c3b",
+        "id": "ada16b2479fe6f25",
         "type": "inject",
         "z": "5a4975ebcc568c40",
         "name": "",
@@ -1818,36 +1544,169 @@
                 "vt": "str"
             }
         ],
-        "repeat": "",
+        "repeat": "1",
         "crontab": "",
         "once": true,
         "onceDelay": 0.1,
         "topic": "",
         "payload": "{}",
         "payloadType": "json",
-        "x": 130,
-        "y": 720,
+        "x": 230,
+        "y": 340,
         "wires": [
             [
-                "de8e02e3629da794"
+                "16eb0198dc45c14b"
             ]
         ]
     },
     {
-        "id": "bdd6f8f81069b3f8",
+        "id": "30fea0eed0332fb2",
+        "type": "function",
+        "z": "5a4975ebcc568c40",
+        "name": "function 36",
+        "func": "// Função para formatar os dados no formato especificado\nfunction formatarDados(dados) {\n    var dadosFormatados = {\n        \"id\": \"urn:ngsi-ld:AgriFarm:1\",\n        \"type\": \"AgriFarm\",\n        \"production\": {\n            \"type\": \"Data\",\n            \"value\": []\n        }\n    };\n\n    for (var i = 0; i < dados.length; i++) {\n        var dado = dados[i];\n\n        // Gere um ID único para cada dado inserido\n        var id = \"urn:ngsi-ld:AgriFarm:\" + (new Date()).getTime() + \"-\" + i;\n\n        var dadoFormatado = {\n            \"id\": id,\n            \"Data\": dado.Data,\n            \"Bons\": dado.Bons,\n            \"Ruins\": dado.Ruins,\n            \"Total\": dado.Total\n        };\n\n        dadosFormatados.production.value.push(dadoFormatado);\n    }\n\n    return dadosFormatados;\n}\n\n// Obtenha os valores dos dados\nvar dadosInput = msg.payload;\n\n// Chame a função para formatar os dados\nvar dadosFormatados = formatarDados(dadosInput);\n\n// Obtenha o valor atual do atributo \"production\"\nvar productionValue = flow.get(\"tableData.production.value\") || [];\n\n// Combine o valor atual com os novos dados formatados\nproductionValue = productionValue.concat(dadosFormatados.production.value);\n\n// Atualize apenas o valor do atributo \"production\"\nflow.set(\"tableData.production.value\", productionValue);\n\n// Defina os dados formatados como o payload da mensagem\nmsg.payload = dadosFormatados;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 400,
+        "wires": [
+            [
+                "c52fcc27eba9d501"
+            ]
+        ]
+    },
+    {
+        "id": "277a24589cab4a5c",
+        "type": "function",
+        "z": "5a4975ebcc568c40",
+        "name": "function 32",
+        "func": "// Função para formatar uma data no formato \"DD/MM/AAAA\"\nfunction formatarData(data) {\n    var dateObj = new Date(data);\n    var dia = dateObj.getDate();\n    var mes = dateObj.getMonth() + 1;\n    var ano = dateObj.getFullYear();\n\n    // Formata o dia e mês para sempre ter dois dígitos\n    dia = (dia < 10) ? '0' + dia : dia;\n    mes = (mes < 10) ? '0' + mes : mes;\n\n    var dataFormatada = dia + '/' + mes + '/' + ano;\n\n    return dataFormatada;\n}\n\n// Exemplo de uso da função\nvar dataInput = msg.payload.date;\nvar dataFormatada = formatarData(dataInput);\n\n// Obtém as linhas existentes da variável global ou do contexto de fluxo\nvar tableData = flow.get(\"tableData\") || [];\n\n// Cria um objeto para a nova linha\nvar newRow = {\n    \"Data\": dataFormatada,\n    \"Bons\": parseFloat(msg.payload.good),\n    \"Ruins\": parseFloat(msg.payload.bad),\n    \"Total\": parseFloat(msg.payload.bad) + parseFloat(msg.payload.good)\n};\n\n// Adiciona a nova linha ao array de dados da tabela\ntableData.push(newRow);\n\n// Armazena as linhas atualizadas na variável global ou no contexto de fluxo\nflow.set(\"tableData\", tableData);\n\n// Define o payload da mensagem como os dados atualizados da tabela\nmsg.payload = tableData;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 170,
+        "y": 400,
+        "wires": [
+            [
+                "30fea0eed0332fb2"
+            ]
+        ]
+    },
+    {
+        "id": "c52fcc27eba9d501",
+        "type": "NGSI Entity",
+        "z": "5a4975ebcc568c40",
+        "name": "",
+        "openapis": "9bccc41af47bb660",
+        "servicepath": "/",
+        "actionType": "upsert",
+        "entityId": "",
+        "entityType": "",
+        "attrs": "",
+        "keyValues": "false",
+        "dateModified": "false",
+        "x": 530,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e2a51c7e21d2e1e7",
+        "type": "function",
+        "z": "5a4975ebcc568c40",
+        "name": "function 37",
+        "func": "var input = msg.payload;\n\nvar arrData = [];\nvar arrTotal = [];\n\nfor (var i = 0; i < input.production.length; i++) {\n    var item = input.production[i];\n    arrData.push(item.Data);\n    arrTotal.push(item.Total);\n}\n\n// Função auxiliar para ordenar os dados cronologicamente\nfunction sortByDate(data, total) {\n    var sortedData = [];\n    var sortedTotal = [];\n\n    // Cria um array de objetos com os dados e o total\n    var dataWithTotal = data.map(function (value, index) {\n        var dateParts = value.split('/');\n        var day = parseInt(dateParts[0], 10);\n        var month = parseInt(dateParts[1], 10) - 1; // Subtraímos 1 para corresponder aos meses no formato Date (0-11)\n        var year = parseInt(dateParts[2], 10) + 2000; // Adicionamos 2000 para obter o ano no formato completo\n\n        return { data: new Date(year, month, day), total: total[index] };\n    });\n\n    // Ordena o array de objetos com base na propriedade \"data\"\n    dataWithTotal.sort(function (a, b) {\n        return a.data - b.data;\n    });\n\n    // Separa os dados ordenados em arrays separados\n    dataWithTotal.forEach(function (item) {\n        sortedData.push(formatarData(item.data));\n        sortedTotal.push(item.total);\n    });\n\n    return { data: sortedData, total: sortedTotal };\n}\n\n// Função auxiliar para formatar a data no formato \"DD/MM/AA\"\nfunction formatarData(data) {\n    var dia = data.getDate();\n    var mes = data.getMonth() + 1;\n    var ano = data.getFullYear().toString().substr(-2);\n\n    dia = (dia < 10) ? '0' + dia : dia;\n    mes = (mes < 10) ? '0' + mes : mes;\n\n    return dia + '/' + mes + '/' + ano;\n}\n\n// Ordena os dados cronologicamente\nvar sortedData = sortByDate(arrData, arrTotal);\n\nfunction formatData(data, total) {\n    const dataObject = [{\n        \"series\": [\"Dúzias\"],\n        \"data\": [total],\n        \"labels\": data\n    }];\n\n    return dataObject;\n}\n\nconst result = formatData(sortedData.data, sortedData.total);\nreturn { payload: result };",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 280,
+        "wires": [
+            [
+                "f77e83b984498625"
+            ]
+        ]
+    },
+    {
+        "id": "af8a4116b921c3a4",
+        "type": "function",
+        "z": "5a4975ebcc568c40",
+        "name": "function 38",
+        "func": "var bonsTotal = 0;\nvar ruinsTotal = 0;\n\n// Verifica se a propriedade 'production' existe e é um array\nif (msg.payload.production && Array.isArray(msg.payload.production)) {\n    // Percorre cada item no array 'production'\n    msg.payload.production.forEach(function (item) {\n        bonsTotal += item.Bons || 0;\n        ruinsTotal += item.Ruins || 0;\n    });\n}\n\n// Calcula as porcentagens\nvar total = bonsTotal + ruinsTotal;\nvar bonsPc = Math.floor((bonsTotal / total) * 100);\nvar ruinsPc = Math.floor((ruinsTotal / total) * 100);\n\n// Atualiza a payload com os resultados\nmsg.payload.bons = Math.floor(bonsTotal);\nmsg.payload.ruins = Math.floor(ruinsTotal);\nmsg.payload.total = Math.floor(total);\nmsg.payload.bons_pc = bonsPc;\nmsg.payload.ruins_pc = ruinsPc;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 120,
+        "wires": [
+            [
+                "883997de3548f60f",
+                "7508b0d2707ff2a4",
+                "ddf4e2ed36b1e975",
+                "b7b501af8d966eae",
+                "2550832b6db8a2ae"
+            ]
+        ]
+    },
+    {
+        "id": "7572d7a139697137",
+        "type": "ui_form",
+        "z": "5a4975ebcc568c40",
+        "name": "",
+        "label": "Excluir um registro de produção",
+        "group": "3cdf104460b09eaf",
+        "order": 2,
+        "width": "7",
+        "height": "1",
+        "options": [
+            {
+                "label": "Identificador",
+                "value": "id",
+                "type": "number",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "id": ""
+        },
+        "payload": "",
+        "submit": "Enviar",
+        "cancel": "Cancelar",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": false,
+        "className": "",
+        "x": 170,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e0f46b1477d960e3",
         "type": "debug",
         "z": "5a4975ebcc568c40",
-        "name": "debug 51",
-        "active": true,
+        "name": "debug 49",
+        "active": false,
         "tosidebar": true,
-        "console": true,
+        "console": false,
         "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
+        "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 690,
-        "y": 720,
+        "x": 740,
+        "y": 420,
         "wires": []
     },
     {
