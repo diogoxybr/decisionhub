@@ -1,13 +1,5 @@
 [
     {
-        "id": "3c27d32a0074e6b2",
-        "type": "tab",
-        "label": "FIWARE",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
         "id": "5a4975ebcc568c40",
         "type": "tab",
         "label": "Seleção",
@@ -54,6 +46,16 @@
         "disabled": false,
         "info": "",
         "env": []
+    },
+    {
+        "id": "9bccc41af47bb660",
+        "type": "Open APIs",
+        "name": "Helix Sandbox NG",
+        "geType": "orion",
+        "apiEndpoint": "http://20.197.229.43:1026/",
+        "service": "helixiot",
+        "idmEndpoint": "",
+        "idmType": "none"
     },
     {
         "id": "366409cd76c69ba2",
@@ -159,7 +161,7 @@
         "type": "ui_tab",
         "name": "Início",
         "icon": "home",
-        "order": 2,
+        "order": 1,
         "disabled": false,
         "hidden": false
     },
@@ -168,7 +170,7 @@
         "type": "ui_tab",
         "name": "Seleção de ovos",
         "icon": "dashboard",
-        "order": 1,
+        "order": 2,
         "disabled": false,
         "hidden": false
     },
@@ -317,6 +319,28 @@
         "className": ""
     },
     {
+        "id": "42598b0cf938942f",
+        "type": "ui_group",
+        "name": "Previsão do Tempo: Santa Rita do Passa Quatro, SP, BR",
+        "tab": "95a56cd306c01399",
+        "order": 2,
+        "disp": true,
+        "width": "21",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "3cdf104460b09eaf",
+        "type": "ui_group",
+        "name": "Registros de produção",
+        "tab": "1026f58dc258542c",
+        "order": 3,
+        "disp": true,
+        "width": "21",
+        "collapse": false,
+        "className": ""
+    },
+    {
         "id": "161270f121bf3a0d",
         "type": "ui_spacer",
         "z": "148c173e8eacbf9a",
@@ -335,27 +359,6 @@
         "order": 1,
         "width": 1,
         "height": 1
-    },
-    {
-        "id": "9bccc41af47bb660",
-        "type": "Open APIs",
-        "name": "Helix",
-        "geType": "orion",
-        "apiEndpoint": "http://46.17.108.89:1026/",
-        "service": "helixiot",
-        "idmEndpoint": "",
-        "idmType": "none"
-    },
-    {
-        "id": "42598b0cf938942f",
-        "type": "ui_group",
-        "name": "Previsão do Tempo: Santa Rita do Passa Quatro, SP, BR",
-        "tab": "95a56cd306c01399",
-        "order": 2,
-        "disp": true,
-        "width": "21",
-        "collapse": false,
-        "className": ""
     },
     {
         "id": "6276a6f9432855b3",
@@ -458,551 +461,6 @@
         "height": 1
     },
     {
-        "id": "3cdf104460b09eaf",
-        "type": "ui_group",
-        "name": "Registros de produção",
-        "tab": "1026f58dc258542c",
-        "order": 3,
-        "disp": true,
-        "width": "21",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "2cc2d89279b19382",
-        "type": "inject",
-        "z": "3c27d32a0074e6b2",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 100,
-        "y": 40,
-        "wires": [
-            [
-                "d13ff7ba584766ad"
-            ]
-        ]
-    },
-    {
-        "id": "2bd12c432ba89bed",
-        "type": "debug",
-        "z": "3c27d32a0074e6b2",
-        "name": "debug 1",
-        "active": true,
-        "tosidebar": true,
-        "console": true,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 650,
-        "y": 40,
-        "wires": []
-    },
-    {
-        "id": "06255b12958273f3",
-        "type": "inject",
-        "z": "3c27d32a0074e6b2",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "{\"id\":\"urn:ngsi-ld:entity:001\",\"type\":\"iot\",\"temperature\":{\"type\":\"float\",\"value\":0},\"humidity\":{\"type\":\"float\",\"value\":0},\"irrigation\":{\"type\":\"bolean\",\"value\":0},\"gerator\":{\"type\":\"bolean\",\"value\":1},\"exaustor\":{\"type\":\"bolean\",\"value\":1},\"soja\":{\"type\":\"array\",\"value\":[1451,1457,1429,1417,1428,1436]}}",
-        "payloadType": "json",
-        "x": 110,
-        "y": 100,
-        "wires": [
-            [
-                "fc30cffa238e8e1b"
-            ]
-        ]
-    },
-    {
-        "id": "c87af5ac09123664",
-        "type": "debug",
-        "z": "3c27d32a0074e6b2",
-        "name": "debug 2",
-        "active": true,
-        "tosidebar": true,
-        "console": true,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 650,
-        "y": 100,
-        "wires": []
-    },
-    {
-        "id": "526a4255dce2df39",
-        "type": "inject",
-        "z": "3c27d32a0074e6b2",
-        "name": "Ler entidade",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "{}",
-        "payloadType": "json",
-        "x": 110,
-        "y": 160,
-        "wires": [
-            [
-                "f18a1294788f3491"
-            ]
-        ]
-    },
-    {
-        "id": "7ba35e812154abd9",
-        "type": "debug",
-        "z": "3c27d32a0074e6b2",
-        "name": "debug 3",
-        "active": true,
-        "tosidebar": true,
-        "console": true,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 650,
-        "y": 160,
-        "wires": []
-    },
-    {
-        "id": "1a8ac891a28d633b",
-        "type": "inject",
-        "z": "3c27d32a0074e6b2",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "{\"id\":\"urn:ngsi-ld:entity:1\"}",
-        "payloadType": "json",
-        "x": 110,
-        "y": 220,
-        "wires": [
-            [
-                "39149dcb9ec0743d"
-            ]
-        ]
-    },
-    {
-        "id": "86c307735986c38f",
-        "type": "debug",
-        "z": "3c27d32a0074e6b2",
-        "name": "debug 4",
-        "active": true,
-        "tosidebar": true,
-        "console": true,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 650,
-        "y": 220,
-        "wires": []
-    },
-    {
-        "id": "f218d821bd39cc59",
-        "type": "inject",
-        "z": "3c27d32a0074e6b2",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "{\"temperature\":{\"type\":\"float\",\"value\":17,\"metadata\":{}}}",
-        "payloadType": "json",
-        "x": 110,
-        "y": 280,
-        "wires": [
-            [
-                "2c2e1aabea6674f6"
-            ]
-        ]
-    },
-    {
-        "id": "bb771975c7c01820",
-        "type": "debug",
-        "z": "3c27d32a0074e6b2",
-        "name": "debug 5",
-        "active": true,
-        "tosidebar": true,
-        "console": true,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 650,
-        "y": 280,
-        "wires": []
-    },
-    {
-        "id": "cd23d68815e799ad",
-        "type": "inject",
-        "z": "3c27d32a0074e6b2",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "{\"type\":\"float\",\"value\":22}",
-        "payloadType": "json",
-        "x": 110,
-        "y": 340,
-        "wires": [
-            [
-                "493d776fbb65c0b2"
-            ]
-        ]
-    },
-    {
-        "id": "e22bf8bc4dd4eb89",
-        "type": "debug",
-        "z": "3c27d32a0074e6b2",
-        "name": "debug 6",
-        "active": true,
-        "tosidebar": true,
-        "console": true,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 650,
-        "y": 340,
-        "wires": []
-    },
-    {
-        "id": "86f2bc2210a3a5db",
-        "type": "inject",
-        "z": "3c27d32a0074e6b2",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "40",
-        "payloadType": "json",
-        "x": 110,
-        "y": 400,
-        "wires": [
-            [
-                "1f18837a26d4103c"
-            ]
-        ]
-    },
-    {
-        "id": "d081d67b9bce00c6",
-        "type": "debug",
-        "z": "3c27d32a0074e6b2",
-        "name": "debug 7",
-        "active": true,
-        "tosidebar": true,
-        "console": true,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 650,
-        "y": 400,
-        "wires": []
-    },
-    {
-        "id": "6de0ae6b2d5ff539",
-        "type": "inject",
-        "z": "3c27d32a0074e6b2",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "{\"id\":\"urn:ngsi-ld:OpenWeatherMapWeather:3449851\"}",
-        "payloadType": "json",
-        "x": 310,
-        "y": 460,
-        "wires": [
-            [
-                "c7cab7f5f37eaa80"
-            ]
-        ]
-    },
-    {
-        "id": "6997e13a0b3f82f8",
-        "type": "debug",
-        "z": "3c27d32a0074e6b2",
-        "name": "debug 12",
-        "active": true,
-        "tosidebar": true,
-        "console": true,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 650,
-        "y": 460,
-        "wires": []
-    },
-    {
-        "id": "fc30cffa238e8e1b",
-        "type": "NGSI Entity",
-        "z": "3c27d32a0074e6b2",
-        "name": "Criar entidade",
-        "openapis": "9bccc41af47bb660",
-        "servicepath": "/",
-        "actionType": "create",
-        "entityId": "",
-        "entityType": "",
-        "attrs": "",
-        "keyValues": "false",
-        "dateModified": "false",
-        "x": 300,
-        "y": 100,
-        "wires": [
-            [
-                "c87af5ac09123664"
-            ]
-        ]
-    },
-    {
-        "id": "f18a1294788f3491",
-        "type": "NGSI Entity",
-        "z": "3c27d32a0074e6b2",
-        "name": "Ler entidade",
-        "openapis": "9bccc41af47bb660",
-        "servicepath": "/",
-        "actionType": "read",
-        "entityId": "urn:ngsi-ld:entity:001",
-        "entityType": "iot",
-        "attrs": "",
-        "keyValues": "false",
-        "dateModified": "false",
-        "x": 290,
-        "y": 160,
-        "wires": [
-            [
-                "7ba35e812154abd9"
-            ]
-        ]
-    },
-    {
-        "id": "39149dcb9ec0743d",
-        "type": "NGSI Entity",
-        "z": "3c27d32a0074e6b2",
-        "name": "Excluir entidade",
-        "openapis": "9bccc41af47bb660",
-        "servicepath": "/",
-        "actionType": "delete",
-        "entityId": "",
-        "entityType": "iot",
-        "attrs": "",
-        "keyValues": "false",
-        "dateModified": "false",
-        "x": 300,
-        "y": 220,
-        "wires": [
-            [
-                "86c307735986c38f"
-            ]
-        ]
-    },
-    {
-        "id": "c7cab7f5f37eaa80",
-        "type": "NGSI Entity",
-        "z": "3c27d32a0074e6b2",
-        "name": "Excluir entidade",
-        "openapis": "9bccc41af47bb660",
-        "servicepath": "/",
-        "actionType": "delete",
-        "entityId": "urn:ngsi-ld:OpenWeatherMapWeather:3449851",
-        "entityType": "OpenWeatherMapWeather",
-        "attrs": "",
-        "keyValues": "false",
-        "dateModified": "false",
-        "x": 460,
-        "y": 460,
-        "wires": [
-            [
-                "6997e13a0b3f82f8"
-            ]
-        ]
-    },
-    {
-        "id": "2c2e1aabea6674f6",
-        "type": "NGSI Attributes",
-        "z": "3c27d32a0074e6b2",
-        "name": "Atualizar entidade",
-        "openapis": "9bccc41af47bb660",
-        "servicepath": "/",
-        "actionType": "update",
-        "entityId": "urn:ngsi-ld:entity:001",
-        "entityType": "iot",
-        "keyValues": "false",
-        "overrideMetadata": "false",
-        "forcedUpdate": "false",
-        "flowControl": "false",
-        "x": 310,
-        "y": 280,
-        "wires": [
-            [
-                "bb771975c7c01820"
-            ]
-        ]
-    },
-    {
-        "id": "493d776fbb65c0b2",
-        "type": "NGSI Attribute",
-        "z": "3c27d32a0074e6b2",
-        "name": "Atualizar atributo",
-        "openapis": "9bccc41af47bb660",
-        "servicepath": "/",
-        "actionType": "update",
-        "entityId": "urn:ngsi-ld:entity:001",
-        "entityType": "iot",
-        "attrName": "temperature",
-        "metadata": "",
-        "skipForwarding": "false",
-        "overrideMetadata": "false",
-        "forcedUpdate": "false",
-        "flowControl": "false",
-        "x": 310,
-        "y": 340,
-        "wires": [
-            [
-                "e22bf8bc4dd4eb89"
-            ]
-        ]
-    },
-    {
-        "id": "1f18837a26d4103c",
-        "type": "NGSI Attribute value",
-        "z": "3c27d32a0074e6b2",
-        "name": "Atualizar valor atrib",
-        "openapis": "9bccc41af47bb660",
-        "servicepath": "/",
-        "actionType": "update",
-        "entityId": "urn:ngsi-ld:entity:001",
-        "entityType": "iot",
-        "attrName": "temperature",
-        "skipForwarding": "false",
-        "forcedUpdate": "false",
-        "flowControl": "false",
-        "x": 310,
-        "y": 400,
-        "wires": [
-            [
-                "d081d67b9bce00c6"
-            ]
-        ]
-    },
-    {
-        "id": "d13ff7ba584766ad",
-        "type": "FIWARE version",
-        "z": "3c27d32a0074e6b2",
-        "name": "",
-        "openapis": "9bccc41af47bb660",
-        "x": 300,
-        "y": 40,
-        "wires": [
-            [
-                "2bd12c432ba89bed"
-            ]
-        ]
-    },
-    {
         "id": "6a63c4aa5cf46339",
         "type": "function",
         "z": "5a4975ebcc568c40",
@@ -1020,6 +478,328 @@
                 "9bb4846fcdc0c53e",
                 "9834b9ff599c3e33"
             ]
+        ]
+    },
+    {
+        "id": "0c26b6fe05404ba9",
+        "type": "inject",
+        "z": "5a4975ebcc568c40",
+        "name": "Apagar",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{}",
+        "payloadType": "json",
+        "x": 150,
+        "y": 500,
+        "wires": [
+            [
+                "d82d641b722d2202"
+            ]
+        ]
+    },
+    {
+        "id": "f6a7e44aa7832336",
+        "type": "debug",
+        "z": "5a4975ebcc568c40",
+        "name": "debug 46",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 510,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "a58fa236741ec245",
+        "type": "inject",
+        "z": "5a4975ebcc568c40",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"id\":\"urn:ngsi-ld:AgriFarm:1\",\"type\":\"AgriFarm\",\"name\":{\"value\":\"ETASA\"},\"description\":{\"value\":\"ESCOLA TECNICA AGROPECUARIA ENGENHEIRO SALVADOR ARENA\"},\"seeAlso\":{\"value\":[\"http://escolatecnicasalvadorarena.org.br/\"]},\"address\":{\"type\":\"PostalAddress\",\"value\":{\"addressLocality\":\"Santa Rita do Passa Quatro, SP\",\"addressCountry\":\"BR\",\"streetAddress\":\"SP-330, KM 238, CEP 13670-000\"}},\"contactPoint\":{\"type\":\"ContactPoint\",\"value\":{\"email\":\"secretaria@escolatecnicasalvadorarena.org.br\",\"telephone\":\"55 19 3584-8980\"}},\"production\":{\"type\":\"Data\",\"value\":[{\"id\":\"urn:ngsi-ld:AgriFarm:1684775831025-0\",\"Data\":\"16/07/2021\",\"Bons\":549,\"Ruins\":32,\"Total\":581},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-1\",\"Data\":\"23/07/2021\",\"Bons\":711,\"Ruins\":29,\"Total\":740},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-2\",\"Data\":\"30/07/2021\",\"Bons\":670,\"Ruins\":25,\"Total\":695},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-3\",\"Data\":\"03/08/2021\",\"Bons\":672,\"Ruins\":20,\"Total\":692},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-4\",\"Data\":\"09/08/2021\",\"Bons\":730,\"Ruins\":15,\"Total\":745}]}}",
+        "payloadType": "json",
+        "x": 150,
+        "y": 460,
+        "wires": [
+            [
+                "a6d8d42ee3c3501b"
+            ]
+        ]
+    },
+    {
+        "id": "3dd45a752c03f51e",
+        "type": "debug",
+        "z": "5a4975ebcc568c40",
+        "name": "debug 48",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 510,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "e2e744092724b4c3",
+        "type": "function",
+        "z": "5a4975ebcc568c40",
+        "name": "function 35",
+        "func": "// Função para formatar os dados recebidos no formato especificado\nfunction formatarDados(dados) {\n    // Obtém as linhas existentes da variável global ou do contexto de fluxo\n    var tableData = flow.get(\"tableData\") || [];\n\n    // Verifica se os dados já foram adicionados anteriormente\n    if (tableData.length === 0) {\n        // Percorre os dados recebidos\n        for (var i = 0; i < dados.length; i++) {\n            var dado = dados[i];\n\n            // Cria um objeto para a nova linha com os valores recebidos\n            var newRow = {\n                \"Id\": dado.id,\n                \"Data\": dado.Data,\n                \"Bons\": dado.Bons,\n                \"Ruins\": dado.Ruins,\n                \"Total\": dado.Total\n            };\n\n            // Adiciona a nova linha ao array de dados da tabela\n            tableData.push(newRow);\n        }\n    }\n\n    // Armazena as linhas atualizadas na variável global ou no contexto de fluxo\n    flow.set(\"tableData\", tableData);\n\n    // Define o payload da mensagem como os dados atualizados da tabela\n    msg.payload = tableData;\n\n    return msg;\n}\n\n// Obtenha os valores dos dados recebidos\nvar dadosRecebidos = msg.payload.production;\n\n// Chame a função para formatar os dados\nvar mensagemFormatada = formatarDados(dadosRecebidos);\n\nreturn mensagemFormatada;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 340,
+        "wires": [
+            [
+                "6a145f72e48927de"
+            ]
+        ]
+    },
+    {
+        "id": "ada16b2479fe6f25",
+        "type": "inject",
+        "z": "5a4975ebcc568c40",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{}",
+        "payloadType": "json",
+        "x": 230,
+        "y": 340,
+        "wires": [
+            [
+                "16eb0198dc45c14b"
+            ]
+        ]
+    },
+    {
+        "id": "30fea0eed0332fb2",
+        "type": "function",
+        "z": "5a4975ebcc568c40",
+        "name": "function 36",
+        "func": "// Função para formatar os dados no formato especificado\nfunction formatarDados(dados) {\n    var dadosFormatados = {\n        \"id\": \"urn:ngsi-ld:AgriFarm:1\",\n        \"type\": \"AgriFarm\",\n        \"production\": {\n            \"type\": \"Data\",\n            \"value\": []\n        }\n    };\n\n    for (var i = 0; i < dados.length; i++) {\n        var dado = dados[i];\n\n        // Gere um ID único para cada dado inserido\n        var id = \"urn:ngsi-ld:AgriFarm:\" + (new Date()).getTime() + \"-\" + i;\n\n        var dadoFormatado = {\n            \"id\": id,\n            \"Data\": dado.Data,\n            \"Bons\": dado.Bons,\n            \"Ruins\": dado.Ruins,\n            \"Total\": dado.Total\n        };\n\n        dadosFormatados.production.value.push(dadoFormatado);\n    }\n\n    return dadosFormatados;\n}\n\n// Obtenha os valores dos dados\nvar dadosInput = msg.payload;\n\n// Chame a função para formatar os dados\nvar dadosFormatados = formatarDados(dadosInput);\n\n// Obtenha o valor atual do atributo \"production\"\nvar productionValue = flow.get(\"tableData.production.value\") || [];\n\n// Combine o valor atual com os novos dados formatados\nproductionValue = productionValue.concat(dadosFormatados.production.value);\n\n// Atualize apenas o valor do atributo \"production\"\nflow.set(\"tableData.production.value\", productionValue);\n\n// Defina os dados formatados como o payload da mensagem\nmsg.payload = dadosFormatados;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 400,
+        "wires": [
+            [
+                "c52fcc27eba9d501"
+            ]
+        ]
+    },
+    {
+        "id": "277a24589cab4a5c",
+        "type": "function",
+        "z": "5a4975ebcc568c40",
+        "name": "function 32",
+        "func": "// Função para formatar uma data no formato \"DD/MM/AAAA\"\nfunction formatarData(data) {\n    var dateObj = new Date(data);\n    var dia = dateObj.getDate();\n    var mes = dateObj.getMonth() + 1;\n    var ano = dateObj.getFullYear();\n\n    // Formata o dia e mês para sempre ter dois dígitos\n    dia = (dia < 10) ? '0' + dia : dia;\n    mes = (mes < 10) ? '0' + mes : mes;\n\n    var dataFormatada = dia + '/' + mes + '/' + ano;\n\n    return dataFormatada;\n}\n\n// Exemplo de uso da função\nvar dataInput = msg.payload.date;\nvar dataFormatada = formatarData(dataInput);\n\n// Obtém as linhas existentes da variável global ou do contexto de fluxo\nvar tableData = flow.get(\"tableData\") || [];\n\n// Cria um objeto para a nova linha\nvar newRow = {\n    \"Data\": dataFormatada,\n    \"Bons\": parseFloat(msg.payload.good),\n    \"Ruins\": parseFloat(msg.payload.bad),\n    \"Total\": parseFloat(msg.payload.bad) + parseFloat(msg.payload.good)\n};\n\n// Adiciona a nova linha ao array de dados da tabela\ntableData.push(newRow);\n\n// Armazena as linhas atualizadas na variável global ou no contexto de fluxo\nflow.set(\"tableData\", tableData);\n\n// Define o payload da mensagem como os dados atualizados da tabela\nmsg.payload = tableData;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 170,
+        "y": 400,
+        "wires": [
+            [
+                "30fea0eed0332fb2"
+            ]
+        ]
+    },
+    {
+        "id": "e2a51c7e21d2e1e7",
+        "type": "function",
+        "z": "5a4975ebcc568c40",
+        "name": "function 37",
+        "func": "var input = msg.payload;\n\nvar arrData = [];\nvar arrTotal = [];\n\nfor (var i = 0; i < input.production.length; i++) {\n    var item = input.production[i];\n    arrData.push(item.Data);\n    arrTotal.push(item.Total);\n}\n\n// Função auxiliar para ordenar os dados cronologicamente\nfunction sortByDate(data, total) {\n    var sortedData = [];\n    var sortedTotal = [];\n\n    // Cria um array de objetos com os dados e o total\n    var dataWithTotal = data.map(function (value, index) {\n        var dateParts = value.split('/');\n        var day = parseInt(dateParts[0], 10);\n        var month = parseInt(dateParts[1], 10) - 1; // Subtraímos 1 para corresponder aos meses no formato Date (0-11)\n        var year = parseInt(dateParts[2], 10) + 2000; // Adicionamos 2000 para obter o ano no formato completo\n\n        return { data: new Date(year, month, day), total: total[index] };\n    });\n\n    // Ordena o array de objetos com base na propriedade \"data\"\n    dataWithTotal.sort(function (a, b) {\n        return a.data - b.data;\n    });\n\n    // Separa os dados ordenados em arrays separados\n    dataWithTotal.forEach(function (item) {\n        sortedData.push(formatarData(item.data));\n        sortedTotal.push(item.total);\n    });\n\n    return { data: sortedData, total: sortedTotal };\n}\n\n// Função auxiliar para formatar a data no formato \"DD/MM/AA\"\nfunction formatarData(data) {\n    var dia = data.getDate();\n    var mes = data.getMonth() + 1;\n    var ano = data.getFullYear().toString().substr(-2);\n\n    dia = (dia < 10) ? '0' + dia : dia;\n    mes = (mes < 10) ? '0' + mes : mes;\n\n    return dia + '/' + mes + '/' + ano;\n}\n\n// Ordena os dados cronologicamente\nvar sortedData = sortByDate(arrData, arrTotal);\n\nfunction formatData(data, total) {\n    const dataObject = [{\n        \"series\": [\"Dúzias\"],\n        \"data\": [total],\n        \"labels\": data\n    }];\n\n    return dataObject;\n}\n\nconst result = formatData(sortedData.data, sortedData.total);\nreturn { payload: result };",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 280,
+        "wires": [
+            [
+                "f77e83b984498625"
+            ]
+        ]
+    },
+    {
+        "id": "af8a4116b921c3a4",
+        "type": "function",
+        "z": "5a4975ebcc568c40",
+        "name": "function 38",
+        "func": "var bonsTotal = 0;\nvar ruinsTotal = 0;\n\n// Verifica se a propriedade 'production' existe e é um array\nif (msg.payload.production && Array.isArray(msg.payload.production)) {\n    // Percorre cada item no array 'production'\n    msg.payload.production.forEach(function (item) {\n        bonsTotal += item.Bons || 0;\n        ruinsTotal += item.Ruins || 0;\n    });\n}\n\n// Calcula as porcentagens\nvar total = bonsTotal + ruinsTotal;\nvar bonsPc = Math.floor((bonsTotal / total) * 100);\nvar ruinsPc = Math.floor((ruinsTotal / total) * 100);\n\n// Atualiza a payload com os resultados\nmsg.payload.bons = Math.floor(bonsTotal);\nmsg.payload.ruins = Math.floor(ruinsTotal);\nmsg.payload.total = Math.floor(total);\nmsg.payload.bons_pc = bonsPc;\nmsg.payload.ruins_pc = ruinsPc;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 120,
+        "wires": [
+            [
+                "883997de3548f60f",
+                "7508b0d2707ff2a4",
+                "ddf4e2ed36b1e975",
+                "b7b501af8d966eae",
+                "2550832b6db8a2ae"
+            ]
+        ]
+    },
+    {
+        "id": "e0f46b1477d960e3",
+        "type": "debug",
+        "z": "5a4975ebcc568c40",
+        "name": "debug 49",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "16eb0198dc45c14b",
+        "type": "NGSI Entity",
+        "z": "5a4975ebcc568c40",
+        "name": "Ler entidade",
+        "openapis": "9bccc41af47bb660",
+        "servicepath": "/",
+        "actionType": "read",
+        "entityId": "urn:ngsi-ld:AgriFarm:1",
+        "entityType": "AgriFarm",
+        "attrs": "production",
+        "keyValues": "true",
+        "dateModified": "false",
+        "x": 390,
+        "y": 340,
+        "wires": [
+            [
+                "e2e744092724b4c3",
+                "e2a51c7e21d2e1e7",
+                "af8a4116b921c3a4",
+                "e0f46b1477d960e3"
+            ]
+        ]
+    },
+    {
+        "id": "d82d641b722d2202",
+        "type": "NGSI Entity",
+        "z": "5a4975ebcc568c40",
+        "name": "Excluir entidade",
+        "openapis": "9bccc41af47bb660",
+        "servicepath": "/",
+        "actionType": "delete",
+        "entityId": "urn:ngsi-ld:AgriFarm:1",
+        "entityType": "AgriFarm",
+        "attrs": "",
+        "keyValues": "false",
+        "dateModified": "false",
+        "x": 320,
+        "y": 500,
+        "wires": [
+            [
+                "f6a7e44aa7832336"
+            ]
+        ]
+    },
+    {
+        "id": "a6d8d42ee3c3501b",
+        "type": "NGSI Entity",
+        "z": "5a4975ebcc568c40",
+        "name": "Criar entidade",
+        "openapis": "9bccc41af47bb660",
+        "servicepath": "/",
+        "actionType": "upsert",
+        "entityId": "",
+        "entityType": "",
+        "attrs": "",
+        "keyValues": "false",
+        "dateModified": "false",
+        "x": 320,
+        "y": 460,
+        "wires": [
+            [
+                "3dd45a752c03f51e",
+                "d73ba755a72e7b99"
+            ]
+        ]
+    },
+    {
+        "id": "c52fcc27eba9d501",
+        "type": "NGSI Entity",
+        "z": "5a4975ebcc568c40",
+        "name": "",
+        "openapis": "9bccc41af47bb660",
+        "servicepath": "/",
+        "actionType": "upsert",
+        "entityId": "",
+        "entityType": "",
+        "attrs": "",
+        "keyValues": "false",
+        "dateModified": "false",
+        "x": 530,
+        "y": 400,
+        "wires": [
+            []
         ]
     },
     {
@@ -1079,6 +859,93 @@
         ]
     },
     {
+        "id": "7572d7a139697137",
+        "type": "ui_form",
+        "z": "5a4975ebcc568c40",
+        "d": true,
+        "name": "",
+        "label": "Excluir um registro de produção",
+        "group": "3cdf104460b09eaf",
+        "order": 2,
+        "width": "7",
+        "height": "1",
+        "options": [
+            {
+                "label": "Identificador",
+                "value": "id",
+                "type": "number",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "id": ""
+        },
+        "payload": "",
+        "submit": "Enviar",
+        "cancel": "Cancelar",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": false,
+        "className": "",
+        "x": 170,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2550832b6db8a2ae",
+        "type": "ui_text",
+        "z": "5a4975ebcc568c40",
+        "group": "cad099844726e2c2",
+        "order": 1,
+        "width": 7,
+        "height": 1,
+        "name": "",
+        "label": "Total de ovos produzidos",
+        "format": "{{msg.payload.total}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 810,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "b7b501af8d966eae",
+        "type": "ui_text",
+        "z": "5a4975ebcc568c40",
+        "group": "cad099844726e2c2",
+        "order": 5,
+        "width": 7,
+        "height": 1,
+        "name": "",
+        "label": "Total de ovos ruins",
+        "format": "{{msg.payload.ruins}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 790,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "ddf4e2ed36b1e975",
+        "type": "ui_text",
+        "z": "5a4975ebcc568c40",
+        "group": "cad099844726e2c2",
+        "order": 4,
+        "width": 7,
+        "height": 1,
+        "name": "",
+        "label": "Total de ovos bons",
+        "format": "{{msg.payload.bons}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 790,
+        "y": 120,
+        "wires": []
+    },
+    {
         "id": "9bb4846fcdc0c53e",
         "type": "ui_gauge",
         "z": "5a4975ebcc568c40",
@@ -1132,57 +999,6 @@
         "className": "",
         "x": 530,
         "y": 240,
-        "wires": []
-    },
-    {
-        "id": "2550832b6db8a2ae",
-        "type": "ui_text",
-        "z": "5a4975ebcc568c40",
-        "group": "cad099844726e2c2",
-        "order": 1,
-        "width": 7,
-        "height": 1,
-        "name": "",
-        "label": "Total de ovos produzidos",
-        "format": "{{msg.payload.total}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 810,
-        "y": 200,
-        "wires": []
-    },
-    {
-        "id": "b7b501af8d966eae",
-        "type": "ui_text",
-        "z": "5a4975ebcc568c40",
-        "group": "cad099844726e2c2",
-        "order": 5,
-        "width": 7,
-        "height": 1,
-        "name": "",
-        "label": "Total de ovos ruins",
-        "format": "{{msg.payload.ruins}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 790,
-        "y": 160,
-        "wires": []
-    },
-    {
-        "id": "ddf4e2ed36b1e975",
-        "type": "ui_text",
-        "z": "5a4975ebcc568c40",
-        "group": "cad099844726e2c2",
-        "order": 4,
-        "width": 7,
-        "height": 1,
-        "name": "",
-        "label": "Total de ovos bons",
-        "format": "{{msg.payload.bons}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 790,
-        "y": 120,
         "wires": []
     },
     {
@@ -1286,165 +1102,6 @@
         ]
     },
     {
-        "id": "0c26b6fe05404ba9",
-        "type": "inject",
-        "z": "5a4975ebcc568c40",
-        "name": "Apagar",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "{}",
-        "payloadType": "json",
-        "x": 150,
-        "y": 500,
-        "wires": [
-            [
-                "d82d641b722d2202"
-            ]
-        ]
-    },
-    {
-        "id": "f6a7e44aa7832336",
-        "type": "debug",
-        "z": "5a4975ebcc568c40",
-        "name": "debug 46",
-        "active": true,
-        "tosidebar": true,
-        "console": true,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 510,
-        "y": 500,
-        "wires": []
-    },
-    {
-        "id": "16eb0198dc45c14b",
-        "type": "NGSI Entity",
-        "z": "5a4975ebcc568c40",
-        "name": "Ler entidade",
-        "openapis": "9bccc41af47bb660",
-        "servicepath": "/",
-        "actionType": "read",
-        "entityId": "urn:ngsi-ld:AgriFarm:1",
-        "entityType": "AgriFarm",
-        "attrs": "production",
-        "keyValues": "true",
-        "dateModified": "false",
-        "x": 390,
-        "y": 340,
-        "wires": [
-            [
-                "e2e744092724b4c3",
-                "e2a51c7e21d2e1e7",
-                "af8a4116b921c3a4",
-                "e0f46b1477d960e3"
-            ]
-        ]
-    },
-    {
-        "id": "d82d641b722d2202",
-        "type": "NGSI Entity",
-        "z": "5a4975ebcc568c40",
-        "name": "Excluir entidade",
-        "openapis": "9bccc41af47bb660",
-        "servicepath": "/",
-        "actionType": "delete",
-        "entityId": "urn:ngsi-ld:AgriFarm:1",
-        "entityType": "AgriFarm",
-        "attrs": "",
-        "keyValues": "false",
-        "dateModified": "false",
-        "x": 320,
-        "y": 500,
-        "wires": [
-            [
-                "f6a7e44aa7832336"
-            ]
-        ]
-    },
-    {
-        "id": "a58fa236741ec245",
-        "type": "inject",
-        "z": "5a4975ebcc568c40",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "{\"id\":\"urn:ngsi-ld:AgriFarm:1\",\"type\":\"AgriFarm\",\"name\":{\"value\":\"ETASA\"},\"description\":{\"value\":\"ESCOLA TECNICA AGROPECUARIA ENGENHEIRO SALVADOR ARENA\"},\"seeAlso\":{\"value\":[\"http://escolatecnicasalvadorarena.org.br/\"]},\"address\":{\"type\":\"PostalAddress\",\"value\":{\"addressLocality\":\"Santa Rita do Passa Quatro, SP\",\"addressCountry\":\"BR\",\"streetAddress\":\"SP-330, KM 238, CEP 13670-000\"}},\"contactPoint\":{\"type\":\"ContactPoint\",\"value\":{\"email\":\"secretaria@escolatecnicasalvadorarena.org.br\",\"telephone\":\"55 19 3584-8980\"}},\"production\":{\"type\":\"Data\",\"value\":[{\"id\":\"urn:ngsi-ld:AgriFarm:1684775831025-0\",\"Data\":\"16/07/2021\",\"Bons\":549,\"Ruins\":32,\"Total\":581},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-1\",\"Data\":\"23/07/2021\",\"Bons\":711,\"Ruins\":29,\"Total\":740},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-2\",\"Data\":\"30/07/2021\",\"Bons\":670,\"Ruins\":25,\"Total\":695},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-3\",\"Data\":\"03/08/2021\",\"Bons\":672,\"Ruins\":20,\"Total\":692},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-4\",\"Data\":\"09/08/2021\",\"Bons\":730,\"Ruins\":15,\"Total\":745}]}}",
-        "payloadType": "json",
-        "x": 150,
-        "y": 460,
-        "wires": [
-            [
-                "a6d8d42ee3c3501b"
-            ]
-        ]
-    },
-    {
-        "id": "3dd45a752c03f51e",
-        "type": "debug",
-        "z": "5a4975ebcc568c40",
-        "name": "debug 48",
-        "active": true,
-        "tosidebar": true,
-        "console": true,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 510,
-        "y": 460,
-        "wires": []
-    },
-    {
-        "id": "a6d8d42ee3c3501b",
-        "type": "NGSI Entity",
-        "z": "5a4975ebcc568c40",
-        "name": "Criar entidade",
-        "openapis": "9bccc41af47bb660",
-        "servicepath": "/",
-        "actionType": "upsert",
-        "entityId": "",
-        "entityType": "",
-        "attrs": "",
-        "keyValues": "false",
-        "dateModified": "false",
-        "x": 320,
-        "y": 460,
-        "wires": [
-            [
-                "3dd45a752c03f51e",
-                "d73ba755a72e7b99"
-            ]
-        ]
-    },
-    {
         "id": "6a145f72e48927de",
         "type": "ui_table",
         "z": "5a4975ebcc568c40",
@@ -1512,26 +1169,7 @@
         "wires": []
     },
     {
-        "id": "e2e744092724b4c3",
-        "type": "function",
-        "z": "5a4975ebcc568c40",
-        "name": "function 35",
-        "func": "// Função para formatar os dados recebidos no formato especificado\nfunction formatarDados(dados) {\n    // Obtém as linhas existentes da variável global ou do contexto de fluxo\n    var tableData = flow.get(\"tableData\") || [];\n\n    // Verifica se os dados já foram adicionados anteriormente\n    if (tableData.length === 0) {\n        // Percorre os dados recebidos\n        for (var i = 0; i < dados.length; i++) {\n            var dado = dados[i];\n\n            // Cria um objeto para a nova linha com os valores recebidos\n            var newRow = {\n                \"Id\": dado.id,\n                \"Data\": dado.Data,\n                \"Bons\": dado.Bons,\n                \"Ruins\": dado.Ruins,\n                \"Total\": dado.Total\n            };\n\n            // Adiciona a nova linha ao array de dados da tabela\n            tableData.push(newRow);\n        }\n    }\n\n    // Armazena as linhas atualizadas na variável global ou no contexto de fluxo\n    flow.set(\"tableData\", tableData);\n\n    // Define o payload da mensagem como os dados atualizados da tabela\n    msg.payload = tableData;\n\n    return msg;\n}\n\n// Obtenha os valores dos dados recebidos\nvar dadosRecebidos = msg.payload.production;\n\n// Chame a função para formatar os dados\nvar mensagemFormatada = formatarDados(dadosRecebidos);\n\nreturn mensagemFormatada;\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 610,
-        "y": 340,
-        "wires": [
-            [
-                "6a145f72e48927de"
-            ]
-        ]
-    },
-    {
-        "id": "ada16b2479fe6f25",
+        "id": "f5faf96a5e36b219",
         "type": "inject",
         "z": "5a4975ebcc568c40",
         "name": "",
@@ -1544,170 +1182,51 @@
                 "vt": "str"
             }
         ],
-        "repeat": "1",
+        "repeat": "",
         "crontab": "",
-        "once": true,
+        "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "{}",
-        "payloadType": "json",
-        "x": 230,
-        "y": 340,
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 660,
         "wires": [
             [
-                "16eb0198dc45c14b"
+                "050199a148fc025c"
             ]
         ]
     },
     {
-        "id": "30fea0eed0332fb2",
-        "type": "function",
+        "id": "2de52abb8b776671",
+        "type": "debug",
         "z": "5a4975ebcc568c40",
-        "name": "function 36",
-        "func": "// Função para formatar os dados no formato especificado\nfunction formatarDados(dados) {\n    var dadosFormatados = {\n        \"id\": \"urn:ngsi-ld:AgriFarm:1\",\n        \"type\": \"AgriFarm\",\n        \"production\": {\n            \"type\": \"Data\",\n            \"value\": []\n        }\n    };\n\n    for (var i = 0; i < dados.length; i++) {\n        var dado = dados[i];\n\n        // Gere um ID único para cada dado inserido\n        var id = \"urn:ngsi-ld:AgriFarm:\" + (new Date()).getTime() + \"-\" + i;\n\n        var dadoFormatado = {\n            \"id\": id,\n            \"Data\": dado.Data,\n            \"Bons\": dado.Bons,\n            \"Ruins\": dado.Ruins,\n            \"Total\": dado.Total\n        };\n\n        dadosFormatados.production.value.push(dadoFormatado);\n    }\n\n    return dadosFormatados;\n}\n\n// Obtenha os valores dos dados\nvar dadosInput = msg.payload;\n\n// Chame a função para formatar os dados\nvar dadosFormatados = formatarDados(dadosInput);\n\n// Obtenha o valor atual do atributo \"production\"\nvar productionValue = flow.get(\"tableData.production.value\") || [];\n\n// Combine o valor atual com os novos dados formatados\nproductionValue = productionValue.concat(dadosFormatados.production.value);\n\n// Atualize apenas o valor do atributo \"production\"\nflow.set(\"tableData.production.value\", productionValue);\n\n// Defina os dados formatados como o payload da mensagem\nmsg.payload = dadosFormatados;\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 350,
-        "y": 400,
-        "wires": [
-            [
-                "c52fcc27eba9d501"
-            ]
-        ]
+        "name": "debug 51",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 670,
+        "y": 660,
+        "wires": []
     },
     {
-        "id": "277a24589cab4a5c",
-        "type": "function",
-        "z": "5a4975ebcc568c40",
-        "name": "function 32",
-        "func": "// Função para formatar uma data no formato \"DD/MM/AAAA\"\nfunction formatarData(data) {\n    var dateObj = new Date(data);\n    var dia = dateObj.getDate();\n    var mes = dateObj.getMonth() + 1;\n    var ano = dateObj.getFullYear();\n\n    // Formata o dia e mês para sempre ter dois dígitos\n    dia = (dia < 10) ? '0' + dia : dia;\n    mes = (mes < 10) ? '0' + mes : mes;\n\n    var dataFormatada = dia + '/' + mes + '/' + ano;\n\n    return dataFormatada;\n}\n\n// Exemplo de uso da função\nvar dataInput = msg.payload.date;\nvar dataFormatada = formatarData(dataInput);\n\n// Obtém as linhas existentes da variável global ou do contexto de fluxo\nvar tableData = flow.get(\"tableData\") || [];\n\n// Cria um objeto para a nova linha\nvar newRow = {\n    \"Data\": dataFormatada,\n    \"Bons\": parseFloat(msg.payload.good),\n    \"Ruins\": parseFloat(msg.payload.bad),\n    \"Total\": parseFloat(msg.payload.bad) + parseFloat(msg.payload.good)\n};\n\n// Adiciona a nova linha ao array de dados da tabela\ntableData.push(newRow);\n\n// Armazena as linhas atualizadas na variável global ou no contexto de fluxo\nflow.set(\"tableData\", tableData);\n\n// Define o payload da mensagem como os dados atualizados da tabela\nmsg.payload = tableData;\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 170,
-        "y": 400,
-        "wires": [
-            [
-                "30fea0eed0332fb2"
-            ]
-        ]
-    },
-    {
-        "id": "c52fcc27eba9d501",
-        "type": "NGSI Entity",
+        "id": "050199a148fc025c",
+        "type": "FIWARE version",
         "z": "5a4975ebcc568c40",
         "name": "",
         "openapis": "9bccc41af47bb660",
-        "servicepath": "/",
-        "actionType": "upsert",
-        "entityId": "",
-        "entityType": "",
-        "attrs": "",
-        "keyValues": "false",
-        "dateModified": "false",
-        "x": 530,
-        "y": 400,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "e2a51c7e21d2e1e7",
-        "type": "function",
-        "z": "5a4975ebcc568c40",
-        "name": "function 37",
-        "func": "var input = msg.payload;\n\nvar arrData = [];\nvar arrTotal = [];\n\nfor (var i = 0; i < input.production.length; i++) {\n    var item = input.production[i];\n    arrData.push(item.Data);\n    arrTotal.push(item.Total);\n}\n\n// Função auxiliar para ordenar os dados cronologicamente\nfunction sortByDate(data, total) {\n    var sortedData = [];\n    var sortedTotal = [];\n\n    // Cria um array de objetos com os dados e o total\n    var dataWithTotal = data.map(function (value, index) {\n        var dateParts = value.split('/');\n        var day = parseInt(dateParts[0], 10);\n        var month = parseInt(dateParts[1], 10) - 1; // Subtraímos 1 para corresponder aos meses no formato Date (0-11)\n        var year = parseInt(dateParts[2], 10) + 2000; // Adicionamos 2000 para obter o ano no formato completo\n\n        return { data: new Date(year, month, day), total: total[index] };\n    });\n\n    // Ordena o array de objetos com base na propriedade \"data\"\n    dataWithTotal.sort(function (a, b) {\n        return a.data - b.data;\n    });\n\n    // Separa os dados ordenados em arrays separados\n    dataWithTotal.forEach(function (item) {\n        sortedData.push(formatarData(item.data));\n        sortedTotal.push(item.total);\n    });\n\n    return { data: sortedData, total: sortedTotal };\n}\n\n// Função auxiliar para formatar a data no formato \"DD/MM/AA\"\nfunction formatarData(data) {\n    var dia = data.getDate();\n    var mes = data.getMonth() + 1;\n    var ano = data.getFullYear().toString().substr(-2);\n\n    dia = (dia < 10) ? '0' + dia : dia;\n    mes = (mes < 10) ? '0' + mes : mes;\n\n    return dia + '/' + mes + '/' + ano;\n}\n\n// Ordena os dados cronologicamente\nvar sortedData = sortByDate(arrData, arrTotal);\n\nfunction formatData(data, total) {\n    const dataObject = [{\n        \"series\": [\"Dúzias\"],\n        \"data\": [total],\n        \"labels\": data\n    }];\n\n    return dataObject;\n}\n\nconst result = formatData(sortedData.data, sortedData.total);\nreturn { payload: result };",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 610,
-        "y": 280,
+        "x": 320,
+        "y": 660,
         "wires": [
             [
-                "f77e83b984498625"
+                "2de52abb8b776671"
             ]
         ]
-    },
-    {
-        "id": "af8a4116b921c3a4",
-        "type": "function",
-        "z": "5a4975ebcc568c40",
-        "name": "function 38",
-        "func": "var bonsTotal = 0;\nvar ruinsTotal = 0;\n\n// Verifica se a propriedade 'production' existe e é um array\nif (msg.payload.production && Array.isArray(msg.payload.production)) {\n    // Percorre cada item no array 'production'\n    msg.payload.production.forEach(function (item) {\n        bonsTotal += item.Bons || 0;\n        ruinsTotal += item.Ruins || 0;\n    });\n}\n\n// Calcula as porcentagens\nvar total = bonsTotal + ruinsTotal;\nvar bonsPc = Math.floor((bonsTotal / total) * 100);\nvar ruinsPc = Math.floor((ruinsTotal / total) * 100);\n\n// Atualiza a payload com os resultados\nmsg.payload.bons = Math.floor(bonsTotal);\nmsg.payload.ruins = Math.floor(ruinsTotal);\nmsg.payload.total = Math.floor(total);\nmsg.payload.bons_pc = bonsPc;\nmsg.payload.ruins_pc = ruinsPc;\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 550,
-        "y": 120,
-        "wires": [
-            [
-                "883997de3548f60f",
-                "7508b0d2707ff2a4",
-                "ddf4e2ed36b1e975",
-                "b7b501af8d966eae",
-                "2550832b6db8a2ae"
-            ]
-        ]
-    },
-    {
-        "id": "7572d7a139697137",
-        "type": "ui_form",
-        "z": "5a4975ebcc568c40",
-        "name": "",
-        "label": "Excluir um registro de produção",
-        "group": "3cdf104460b09eaf",
-        "order": 2,
-        "width": "7",
-        "height": "1",
-        "options": [
-            {
-                "label": "Identificador",
-                "value": "id",
-                "type": "number",
-                "required": true,
-                "rows": null
-            }
-        ],
-        "formValue": {
-            "id": ""
-        },
-        "payload": "",
-        "submit": "Enviar",
-        "cancel": "Cancelar",
-        "topic": "topic",
-        "topicType": "msg",
-        "splitLayout": false,
-        "className": "",
-        "x": 170,
-        "y": 600,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "e0f46b1477d960e3",
-        "type": "debug",
-        "z": "5a4975ebcc568c40",
-        "name": "debug 49",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 740,
-        "y": 420,
-        "wires": []
     },
     {
         "id": "f4377ba4dfbfde65",
@@ -1731,7 +1250,7 @@
         "type": "debug",
         "z": "148c173e8eacbf9a",
         "name": "debug 19",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": true,
         "tostatus": false,
@@ -1916,7 +1435,7 @@
         ],
         "repeat": "",
         "crontab": "",
-        "once": true,
+        "once": false,
         "onceDelay": 0.1,
         "topic": "",
         "payload": "{}",
@@ -2058,6 +1577,156 @@
         ]
     },
     {
+        "id": "814f4995976e7afc",
+        "type": "delay",
+        "z": "148c173e8eacbf9a",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "3",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1080,
+        "y": 240,
+        "wires": [
+            [
+                "ce71a82dea1fb97f"
+            ]
+        ]
+    },
+    {
+        "id": "768e66eeecc658cd",
+        "type": "NGSI Entity",
+        "z": "148c173e8eacbf9a",
+        "name": "Criar entidade",
+        "openapis": "9bccc41af47bb660",
+        "servicepath": "/",
+        "actionType": "upsert",
+        "entityId": "",
+        "entityType": "",
+        "attrs": "",
+        "keyValues": "false",
+        "dateModified": "false",
+        "x": 720,
+        "y": 80,
+        "wires": [
+            [
+                "f5f7d401e39b7f55"
+            ]
+        ]
+    },
+    {
+        "id": "06680ea47a342933",
+        "type": "NGSI Entity",
+        "z": "148c173e8eacbf9a",
+        "name": "",
+        "openapis": "9bccc41af47bb660",
+        "servicepath": "/",
+        "actionType": "read",
+        "entityId": "urn:ngsi-ld:OpenWeatherMapWeather:3449851",
+        "entityType": "OpenWeatherMapWeather",
+        "attrs": "main",
+        "keyValues": "false",
+        "dateModified": "false",
+        "x": 310,
+        "y": 340,
+        "wires": [
+            [
+                "9713cc4c8866a808",
+                "7e1094f102f884d6"
+            ]
+        ]
+    },
+    {
+        "id": "90bb6fd43975f930",
+        "type": "NGSI Entity",
+        "z": "148c173e8eacbf9a",
+        "name": "",
+        "openapis": "9bccc41af47bb660",
+        "servicepath": "/",
+        "actionType": "read",
+        "entityId": "urn:ngsi-ld:OpenWeatherMapWeather:3449851",
+        "entityType": "OpenWeatherMapWeather",
+        "attrs": "weather",
+        "keyValues": "false",
+        "dateModified": "false",
+        "x": 130,
+        "y": 540,
+        "wires": [
+            [
+                "ceb7022157ec4ace"
+            ]
+        ]
+    },
+    {
+        "id": "9713cc4c8866a808",
+        "type": "NGSI Attribute value",
+        "z": "148c173e8eacbf9a",
+        "name": "",
+        "openapis": "9bccc41af47bb660",
+        "servicepath": "/",
+        "actionType": "read",
+        "entityId": "",
+        "entityType": "",
+        "attrName": "main",
+        "skipForwarding": "false",
+        "forcedUpdate": "false",
+        "flowControl": "false",
+        "x": 540,
+        "y": 340,
+        "wires": [
+            [
+                "2709ef4b62f184ae",
+                "92055da4bf90bf02",
+                "5ff4dad65b2d73c0",
+                "2d027a28860ab2c0"
+            ]
+        ]
+    },
+    {
+        "id": "ceb7022157ec4ace",
+        "type": "NGSI Attribute value",
+        "z": "148c173e8eacbf9a",
+        "name": "",
+        "openapis": "9bccc41af47bb660",
+        "servicepath": "/",
+        "actionType": "read",
+        "entityId": "",
+        "entityType": "",
+        "attrName": "weather",
+        "skipForwarding": "false",
+        "forcedUpdate": "false",
+        "flowControl": "false",
+        "x": 340,
+        "y": 540,
+        "wires": [
+            [
+                "b264cb08ede71671"
+            ]
+        ]
+    },
+    {
+        "id": "c71215b7ac67e683",
+        "type": "OpenWeatherMap to NGSI",
+        "z": "148c173e8eacbf9a",
+        "name": "WeatherToNGSI",
+        "x": 480,
+        "y": 80,
+        "wires": [
+            [
+                "768e66eeecc658cd",
+                "f4377ba4dfbfde65"
+            ]
+        ]
+    },
+    {
         "id": "b54633cc1236bacb",
         "type": "ui_button",
         "z": "148c173e8eacbf9a",
@@ -2086,6 +1755,23 @@
                 "d21a459c713ecc78"
             ]
         ]
+    },
+    {
+        "id": "a92e42061438ea16",
+        "type": "ui_text",
+        "z": "148c173e8eacbf9a",
+        "group": "f8d2be63eb19876e",
+        "order": 1,
+        "width": 21,
+        "height": 1,
+        "name": "",
+        "label": "Situação:  ",
+        "format": " {{value}}",
+        "layout": "row-center",
+        "className": "",
+        "x": 700,
+        "y": 540,
+        "wires": []
     },
     {
         "id": "e34f2a194c1d6242",
@@ -2229,23 +1915,6 @@
         "wires": []
     },
     {
-        "id": "a92e42061438ea16",
-        "type": "ui_text",
-        "z": "148c173e8eacbf9a",
-        "group": "f8d2be63eb19876e",
-        "order": 1,
-        "width": 21,
-        "height": 1,
-        "name": "",
-        "label": "Situação:  ",
-        "format": " {{value}}",
-        "layout": "row-center",
-        "className": "",
-        "x": 700,
-        "y": 540,
-        "wires": []
-    },
-    {
         "id": "d21a459c713ecc78",
         "type": "openweathermap",
         "z": "148c173e8eacbf9a",
@@ -2261,156 +1930,6 @@
         "wires": [
             [
                 "c71215b7ac67e683"
-            ]
-        ]
-    },
-    {
-        "id": "768e66eeecc658cd",
-        "type": "NGSI Entity",
-        "z": "148c173e8eacbf9a",
-        "name": "Criar entidade",
-        "openapis": "9bccc41af47bb660",
-        "servicepath": "/",
-        "actionType": "upsert",
-        "entityId": "",
-        "entityType": "",
-        "attrs": "",
-        "keyValues": "false",
-        "dateModified": "false",
-        "x": 720,
-        "y": 80,
-        "wires": [
-            [
-                "f5f7d401e39b7f55"
-            ]
-        ]
-    },
-    {
-        "id": "06680ea47a342933",
-        "type": "NGSI Entity",
-        "z": "148c173e8eacbf9a",
-        "name": "",
-        "openapis": "9bccc41af47bb660",
-        "servicepath": "/",
-        "actionType": "read",
-        "entityId": "urn:ngsi-ld:OpenWeatherMapWeather:3449851",
-        "entityType": "OpenWeatherMapWeather",
-        "attrs": "main",
-        "keyValues": "false",
-        "dateModified": "false",
-        "x": 310,
-        "y": 340,
-        "wires": [
-            [
-                "9713cc4c8866a808",
-                "7e1094f102f884d6"
-            ]
-        ]
-    },
-    {
-        "id": "90bb6fd43975f930",
-        "type": "NGSI Entity",
-        "z": "148c173e8eacbf9a",
-        "name": "",
-        "openapis": "9bccc41af47bb660",
-        "servicepath": "/",
-        "actionType": "read",
-        "entityId": "urn:ngsi-ld:OpenWeatherMapWeather:3449851",
-        "entityType": "OpenWeatherMapWeather",
-        "attrs": "weather",
-        "keyValues": "false",
-        "dateModified": "false",
-        "x": 130,
-        "y": 540,
-        "wires": [
-            [
-                "ceb7022157ec4ace"
-            ]
-        ]
-    },
-    {
-        "id": "9713cc4c8866a808",
-        "type": "NGSI Attribute value",
-        "z": "148c173e8eacbf9a",
-        "name": "",
-        "openapis": "9bccc41af47bb660",
-        "servicepath": "/",
-        "actionType": "read",
-        "entityId": "",
-        "entityType": "",
-        "attrName": "main",
-        "skipForwarding": "false",
-        "forcedUpdate": "false",
-        "flowControl": "false",
-        "x": 540,
-        "y": 340,
-        "wires": [
-            [
-                "2709ef4b62f184ae",
-                "92055da4bf90bf02",
-                "5ff4dad65b2d73c0",
-                "2d027a28860ab2c0"
-            ]
-        ]
-    },
-    {
-        "id": "ceb7022157ec4ace",
-        "type": "NGSI Attribute value",
-        "z": "148c173e8eacbf9a",
-        "name": "",
-        "openapis": "9bccc41af47bb660",
-        "servicepath": "/",
-        "actionType": "read",
-        "entityId": "",
-        "entityType": "",
-        "attrName": "weather",
-        "skipForwarding": "false",
-        "forcedUpdate": "false",
-        "flowControl": "false",
-        "x": 340,
-        "y": 540,
-        "wires": [
-            [
-                "b264cb08ede71671"
-            ]
-        ]
-    },
-    {
-        "id": "c71215b7ac67e683",
-        "type": "OpenWeatherMap to NGSI",
-        "z": "148c173e8eacbf9a",
-        "name": "WeatherToNGSI",
-        "x": 480,
-        "y": 80,
-        "wires": [
-            [
-                "768e66eeecc658cd",
-                "f4377ba4dfbfde65"
-            ]
-        ]
-    },
-    {
-        "id": "814f4995976e7afc",
-        "type": "delay",
-        "z": "148c173e8eacbf9a",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "3",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 1080,
-        "y": 240,
-        "wires": [
-            [
-                "ce71a82dea1fb97f"
             ]
         ]
     },
@@ -2531,7 +2050,7 @@
         ],
         "repeat": "",
         "crontab": "",
-        "once": true,
+        "once": false,
         "onceDelay": 0.1,
         "topic": "",
         "payload": "{}",
@@ -2572,225 +2091,6 @@
         ]
     },
     {
-        "id": "74baef89a2afdeb2",
-        "type": "ui_gauge",
-        "z": "e9c6344b196bfe35",
-        "name": "",
-        "group": "42598b0cf938942f",
-        "order": 4,
-        "width": 5,
-        "height": 3,
-        "gtype": "gage",
-        "title": "Temperatura",
-        "label": "°C",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "50",
-        "colors": [
-            "#1f77b4",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "diff": false,
-        "className": "",
-        "x": 1030,
-        "y": 280,
-        "wires": []
-    },
-    {
-        "id": "b5dc477e47e6b526",
-        "type": "ui_gauge",
-        "z": "e9c6344b196bfe35",
-        "name": "",
-        "group": "42598b0cf938942f",
-        "order": 5,
-        "width": 5,
-        "height": 3,
-        "gtype": "gage",
-        "title": "Umidade",
-        "label": "%",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "100",
-        "colors": [
-            "#ca3838",
-            "#00b500",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "diff": false,
-        "className": "",
-        "x": 860,
-        "y": 220,
-        "wires": []
-    },
-    {
-        "id": "99bd550cacacad5f",
-        "type": "ui_gauge",
-        "z": "e9c6344b196bfe35",
-        "name": "",
-        "group": "42598b0cf938942f",
-        "order": 3,
-        "width": 5,
-        "height": 3,
-        "gtype": "gage",
-        "title": "Sensação térmica",
-        "label": "°C",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "50",
-        "colors": [
-            "#1f77b4",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "diff": false,
-        "className": "",
-        "x": 1050,
-        "y": 340,
-        "wires": []
-    },
-    {
-        "id": "8db7413ff67d9198",
-        "type": "ui_text",
-        "z": "e9c6344b196bfe35",
-        "group": "42598b0cf938942f",
-        "order": 6,
-        "width": 6,
-        "height": 1,
-        "name": "",
-        "label": "Situação:",
-        "format": " {{value}}",
-        "layout": "col-center",
-        "className": "",
-        "x": 860,
-        "y": 400,
-        "wires": []
-    },
-    {
-        "id": "72861beacd1fd44c",
-        "type": "openweathermap",
-        "z": "e9c6344b196bfe35",
-        "name": "",
-        "wtype": "forecast",
-        "lon": "",
-        "lat": "",
-        "city": "Santa Rita do Passa Quatro",
-        "country": "Brasil",
-        "language": "pt",
-        "x": 300,
-        "y": 100,
-        "wires": [
-            [
-                "3f130cce7c1bf071"
-            ]
-        ]
-    },
-    {
-        "id": "b8a4b41bb28bf192",
-        "type": "NGSI Entity",
-        "z": "e9c6344b196bfe35",
-        "name": "Criar entidade",
-        "openapis": "9bccc41af47bb660",
-        "servicepath": "/",
-        "actionType": "upsert",
-        "entityId": "",
-        "entityType": "",
-        "attrs": "",
-        "keyValues": "false",
-        "dateModified": "false",
-        "x": 740,
-        "y": 100,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "730cd46dbf699057",
-        "type": "NGSI Entity",
-        "z": "e9c6344b196bfe35",
-        "name": "",
-        "openapis": "9bccc41af47bb660",
-        "servicepath": "/",
-        "actionType": "read",
-        "entityId": "urn:ngsi-ld:OpenWeatherMapForecast:undefined",
-        "entityType": "OpenWeatherMapForecast",
-        "attrs": "list",
-        "keyValues": "false",
-        "dateModified": "false",
-        "x": 250,
-        "y": 340,
-        "wires": [
-            [
-                "fab8a65c1638d405"
-            ]
-        ]
-    },
-    {
-        "id": "fab8a65c1638d405",
-        "type": "NGSI Attribute value",
-        "z": "e9c6344b196bfe35",
-        "name": "",
-        "openapis": "9bccc41af47bb660",
-        "servicepath": "/",
-        "actionType": "read",
-        "entityId": "",
-        "entityType": "",
-        "attrName": "list",
-        "skipForwarding": "false",
-        "forcedUpdate": "false",
-        "flowControl": "false",
-        "x": 460,
-        "y": 340,
-        "wires": [
-            [
-                "0252f9c4489d9798",
-                "1a0a66ea7842d47f",
-                "6be3768fae066be9",
-                "21623a29323ae2e7",
-                "bbe5baf0e74b1887",
-                "ad54b7ec5ec9efec",
-                "fc2ff41ae09993e5",
-                "652c216509b6e166",
-                "b945025135b49210",
-                "1ff090e23ae833b9",
-                "75f7d60091aa9927",
-                "5a83d1f31c5f405b",
-                "be63df0772967215",
-                "9ab7bb19cf8a0c31",
-                "5bdde805424b1c0a",
-                "62012dc0371ece13",
-                "40810f6c8e472922",
-                "48828fcdb1214146",
-                "f857482ae5d5d58d",
-                "85f30e630ba54290",
-                "688a305e045f3bfd",
-                "d8c663c7a33f58d8",
-                "8936d89aa7d7e418",
-                "f096b7e82acc76c4",
-                "c5833de581bbcba6"
-            ]
-        ]
-    },
-    {
-        "id": "3f130cce7c1bf071",
-        "type": "OpenWeatherMap to NGSI",
-        "z": "e9c6344b196bfe35",
-        "name": "WeatherToNGSI",
-        "x": 540,
-        "y": 100,
-        "wires": [
-            [
-                "b8a4b41bb28bf192"
-            ]
-        ]
-    },
-    {
         "id": "bbe5baf0e74b1887",
         "type": "change",
         "z": "e9c6344b196bfe35",
@@ -2818,23 +2118,6 @@
         ]
     },
     {
-        "id": "80d13eab22dbc307",
-        "type": "ui_text",
-        "z": "e9c6344b196bfe35",
-        "group": "42598b0cf938942f",
-        "order": 2,
-        "width": 6,
-        "height": 1,
-        "name": "",
-        "label": "Data:",
-        "format": " {{value}}",
-        "layout": "row-center",
-        "className": "",
-        "x": 970,
-        "y": 460,
-        "wires": []
-    },
-    {
         "id": "7395d86efbcfc153",
         "type": "inject",
         "z": "e9c6344b196bfe35",
@@ -2850,7 +2133,7 @@
         ],
         "repeat": "",
         "crontab": "",
-        "once": true,
+        "once": false,
         "onceDelay": 0.1,
         "topic": "",
         "payload": "{}",
@@ -2982,51 +2265,6 @@
         ]
     },
     {
-        "id": "6d7b49c44b4506d7",
-        "type": "ui_gauge",
-        "z": "e9c6344b196bfe35",
-        "name": "",
-        "group": "42598b0cf938942f",
-        "order": 12,
-        "width": 5,
-        "height": 3,
-        "gtype": "gage",
-        "title": "Umidade",
-        "label": "%",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "100",
-        "colors": [
-            "#ca3838",
-            "#00b500",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "diff": false,
-        "className": "",
-        "x": 860,
-        "y": 580,
-        "wires": []
-    },
-    {
-        "id": "2445819ac99b110e",
-        "type": "ui_text",
-        "z": "e9c6344b196bfe35",
-        "group": "42598b0cf938942f",
-        "order": 13,
-        "width": 6,
-        "height": 1,
-        "name": "",
-        "label": "Situação:",
-        "format": " {{value}}",
-        "layout": "col-center",
-        "className": "",
-        "x": 860,
-        "y": 760,
-        "wires": []
-    },
-    {
         "id": "1ff090e23ae833b9",
         "type": "change",
         "z": "e9c6344b196bfe35",
@@ -3052,23 +2290,6 @@
                 "3f6414e57b6ac39d"
             ]
         ]
-    },
-    {
-        "id": "955e9c7b5a4c5c2b",
-        "type": "ui_text",
-        "z": "e9c6344b196bfe35",
-        "group": "42598b0cf938942f",
-        "order": 9,
-        "width": 6,
-        "height": 1,
-        "name": "",
-        "label": "Data:",
-        "format": " {{value}}",
-        "layout": "row-center",
-        "className": "",
-        "x": 970,
-        "y": 820,
-        "wires": []
     },
     {
         "id": "90700cde45b68eb2",
@@ -3227,107 +2448,6 @@
         ]
     },
     {
-        "id": "6c5d11e1cedc3e0a",
-        "type": "ui_gauge",
-        "z": "e9c6344b196bfe35",
-        "name": "",
-        "group": "42598b0cf938942f",
-        "order": 18,
-        "width": 5,
-        "height": 3,
-        "gtype": "gage",
-        "title": "Temperatura",
-        "label": "°C",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "50",
-        "colors": [
-            "#1f77b4",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "diff": false,
-        "className": "",
-        "x": 1030,
-        "y": 1000,
-        "wires": []
-    },
-    {
-        "id": "1fe993b80fe2b76a",
-        "type": "ui_gauge",
-        "z": "e9c6344b196bfe35",
-        "name": "",
-        "group": "42598b0cf938942f",
-        "order": 19,
-        "width": 5,
-        "height": 3,
-        "gtype": "gage",
-        "title": "Umidade",
-        "label": "%",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "100",
-        "colors": [
-            "#ca3838",
-            "#00b500",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "diff": false,
-        "className": "",
-        "x": 860,
-        "y": 940,
-        "wires": []
-    },
-    {
-        "id": "9b9d9bc3a62c28d0",
-        "type": "ui_gauge",
-        "z": "e9c6344b196bfe35",
-        "name": "",
-        "group": "42598b0cf938942f",
-        "order": 17,
-        "width": 5,
-        "height": 3,
-        "gtype": "gage",
-        "title": "Sensação térmica",
-        "label": "°C",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "50",
-        "colors": [
-            "#1f77b4",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "diff": false,
-        "className": "",
-        "x": 1050,
-        "y": 1060,
-        "wires": []
-    },
-    {
-        "id": "69f7b2b02defc6bc",
-        "type": "ui_text",
-        "z": "e9c6344b196bfe35",
-        "group": "42598b0cf938942f",
-        "order": 20,
-        "width": 6,
-        "height": 1,
-        "name": "",
-        "label": "Situação:",
-        "format": " {{value}}",
-        "layout": "col-center",
-        "className": "",
-        "x": 860,
-        "y": 1120,
-        "wires": []
-    },
-    {
         "id": "5bdde805424b1c0a",
         "type": "change",
         "z": "e9c6344b196bfe35",
@@ -3353,23 +2473,6 @@
                 "379a04cee07eed66"
             ]
         ]
-    },
-    {
-        "id": "7fbc8a2c77e467cf",
-        "type": "ui_text",
-        "z": "e9c6344b196bfe35",
-        "group": "42598b0cf938942f",
-        "order": 16,
-        "width": 6,
-        "height": 1,
-        "name": "",
-        "label": "Data:",
-        "format": " {{value}}",
-        "layout": "row-center",
-        "className": "",
-        "x": 970,
-        "y": 1180,
-        "wires": []
     },
     {
         "id": "f617af44cce35f97",
@@ -3509,107 +2612,6 @@
         ]
     },
     {
-        "id": "73735147a402a156",
-        "type": "ui_gauge",
-        "z": "e9c6344b196bfe35",
-        "name": "",
-        "group": "42598b0cf938942f",
-        "order": 25,
-        "width": 5,
-        "height": 3,
-        "gtype": "gage",
-        "title": "Temperatura",
-        "label": "°C",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "50",
-        "colors": [
-            "#1f77b4",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "diff": false,
-        "className": "",
-        "x": 1030,
-        "y": 1360,
-        "wires": []
-    },
-    {
-        "id": "15ac4cc315de3b84",
-        "type": "ui_gauge",
-        "z": "e9c6344b196bfe35",
-        "name": "",
-        "group": "42598b0cf938942f",
-        "order": 26,
-        "width": 5,
-        "height": 3,
-        "gtype": "gage",
-        "title": "Umidade",
-        "label": "%",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "100",
-        "colors": [
-            "#ca3838",
-            "#00b500",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "diff": false,
-        "className": "",
-        "x": 860,
-        "y": 1300,
-        "wires": []
-    },
-    {
-        "id": "c264973a9a9edc0a",
-        "type": "ui_gauge",
-        "z": "e9c6344b196bfe35",
-        "name": "",
-        "group": "42598b0cf938942f",
-        "order": 24,
-        "width": 5,
-        "height": 3,
-        "gtype": "gage",
-        "title": "Sensação térmica",
-        "label": "°C",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "50",
-        "colors": [
-            "#1f77b4",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "diff": false,
-        "className": "",
-        "x": 1050,
-        "y": 1420,
-        "wires": []
-    },
-    {
-        "id": "56b07d62081f6ce0",
-        "type": "ui_text",
-        "z": "e9c6344b196bfe35",
-        "group": "42598b0cf938942f",
-        "order": 27,
-        "width": 6,
-        "height": 1,
-        "name": "",
-        "label": "Situação:",
-        "format": " {{value}}",
-        "layout": "col-center",
-        "className": "",
-        "x": 860,
-        "y": 1480,
-        "wires": []
-    },
-    {
         "id": "85f30e630ba54290",
         "type": "change",
         "z": "e9c6344b196bfe35",
@@ -3635,23 +2637,6 @@
                 "7c2f3dc7e25bfc34"
             ]
         ]
-    },
-    {
-        "id": "a9ae231a74d015b8",
-        "type": "ui_text",
-        "z": "e9c6344b196bfe35",
-        "group": "42598b0cf938942f",
-        "order": 23,
-        "width": 6,
-        "height": 1,
-        "name": "",
-        "label": "Data:",
-        "format": " {{value}}",
-        "layout": "row-center",
-        "className": "",
-        "x": 970,
-        "y": 1540,
-        "wires": []
     },
     {
         "id": "a798e95d226e78d1",
@@ -3791,107 +2776,6 @@
         ]
     },
     {
-        "id": "dcdf58946ffd02d4",
-        "type": "ui_gauge",
-        "z": "e9c6344b196bfe35",
-        "name": "",
-        "group": "42598b0cf938942f",
-        "order": 32,
-        "width": 5,
-        "height": 3,
-        "gtype": "gage",
-        "title": "Temperatura",
-        "label": "°C",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "50",
-        "colors": [
-            "#1f77b4",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "diff": false,
-        "className": "",
-        "x": 1030,
-        "y": 1720,
-        "wires": []
-    },
-    {
-        "id": "ad1ff42007075f23",
-        "type": "ui_gauge",
-        "z": "e9c6344b196bfe35",
-        "name": "",
-        "group": "42598b0cf938942f",
-        "order": 33,
-        "width": 5,
-        "height": 3,
-        "gtype": "gage",
-        "title": "Umidade",
-        "label": "%",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "100",
-        "colors": [
-            "#ca3838",
-            "#00b500",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "diff": false,
-        "className": "",
-        "x": 860,
-        "y": 1660,
-        "wires": []
-    },
-    {
-        "id": "d647fc87cf42f108",
-        "type": "ui_gauge",
-        "z": "e9c6344b196bfe35",
-        "name": "",
-        "group": "42598b0cf938942f",
-        "order": 31,
-        "width": 5,
-        "height": 3,
-        "gtype": "gage",
-        "title": "Sensação térmica",
-        "label": "°C",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "50",
-        "colors": [
-            "#1f77b4",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "diff": false,
-        "className": "",
-        "x": 1050,
-        "y": 1780,
-        "wires": []
-    },
-    {
-        "id": "a2ba4abc75e8dccf",
-        "type": "ui_text",
-        "z": "e9c6344b196bfe35",
-        "group": "42598b0cf938942f",
-        "order": 34,
-        "width": 6,
-        "height": 1,
-        "name": "",
-        "label": "Situação:",
-        "format": " {{value}}",
-        "layout": "col-center",
-        "className": "",
-        "x": 860,
-        "y": 1840,
-        "wires": []
-    },
-    {
         "id": "c5833de581bbcba6",
         "type": "change",
         "z": "e9c6344b196bfe35",
@@ -3917,23 +2801,6 @@
                 "bae6f940485fc62c"
             ]
         ]
-    },
-    {
-        "id": "ac427215dd682383",
-        "type": "ui_text",
-        "z": "e9c6344b196bfe35",
-        "group": "42598b0cf938942f",
-        "order": 30,
-        "width": 6,
-        "height": 1,
-        "name": "",
-        "label": "Data:",
-        "format": " {{value}}",
-        "layout": "row-center",
-        "className": "",
-        "x": 970,
-        "y": 1900,
-        "wires": []
     },
     {
         "id": "7fab6831d078463b",
@@ -4001,62 +2868,6 @@
                 "99bd550cacacad5f"
             ]
         ]
-    },
-    {
-        "id": "d7bcb87d76f12f58",
-        "type": "ui_gauge",
-        "z": "e9c6344b196bfe35",
-        "name": "",
-        "group": "42598b0cf938942f",
-        "order": 11,
-        "width": 5,
-        "height": 3,
-        "gtype": "gage",
-        "title": "Temperatura",
-        "label": "°C",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "50",
-        "colors": [
-            "#1f77b4",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "diff": false,
-        "className": "",
-        "x": 1030,
-        "y": 640,
-        "wires": []
-    },
-    {
-        "id": "478498243d512028",
-        "type": "ui_gauge",
-        "z": "e9c6344b196bfe35",
-        "name": "",
-        "group": "42598b0cf938942f",
-        "order": 10,
-        "width": 5,
-        "height": 3,
-        "gtype": "gage",
-        "title": "Sensação térmica",
-        "label": "°C",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "50",
-        "colors": [
-            "#1f77b4",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "diff": false,
-        "className": "",
-        "x": 1050,
-        "y": 700,
-        "wires": []
     },
     {
         "id": "fbb477e1a93636cc",
@@ -4207,6 +3018,732 @@
         "wires": [
             [
                 "d647fc87cf42f108"
+            ]
+        ]
+    },
+    {
+        "id": "730cd46dbf699057",
+        "type": "NGSI Entity",
+        "z": "e9c6344b196bfe35",
+        "name": "",
+        "openapis": "9bccc41af47bb660",
+        "servicepath": "/",
+        "actionType": "read",
+        "entityId": "urn:ngsi-ld:OpenWeatherMapForecast:undefined",
+        "entityType": "OpenWeatherMapForecast",
+        "attrs": "list",
+        "keyValues": "false",
+        "dateModified": "false",
+        "x": 250,
+        "y": 340,
+        "wires": [
+            [
+                "fab8a65c1638d405"
+            ]
+        ]
+    },
+    {
+        "id": "fab8a65c1638d405",
+        "type": "NGSI Attribute value",
+        "z": "e9c6344b196bfe35",
+        "name": "",
+        "openapis": "9bccc41af47bb660",
+        "servicepath": "/",
+        "actionType": "read",
+        "entityId": "",
+        "entityType": "",
+        "attrName": "list",
+        "skipForwarding": "false",
+        "forcedUpdate": "false",
+        "flowControl": "false",
+        "x": 460,
+        "y": 340,
+        "wires": [
+            [
+                "0252f9c4489d9798",
+                "1a0a66ea7842d47f",
+                "6be3768fae066be9",
+                "21623a29323ae2e7",
+                "bbe5baf0e74b1887",
+                "ad54b7ec5ec9efec",
+                "fc2ff41ae09993e5",
+                "652c216509b6e166",
+                "b945025135b49210",
+                "1ff090e23ae833b9",
+                "75f7d60091aa9927",
+                "5a83d1f31c5f405b",
+                "be63df0772967215",
+                "9ab7bb19cf8a0c31",
+                "5bdde805424b1c0a",
+                "62012dc0371ece13",
+                "40810f6c8e472922",
+                "48828fcdb1214146",
+                "f857482ae5d5d58d",
+                "85f30e630ba54290",
+                "688a305e045f3bfd",
+                "d8c663c7a33f58d8",
+                "8936d89aa7d7e418",
+                "f096b7e82acc76c4",
+                "c5833de581bbcba6"
+            ]
+        ]
+    },
+    {
+        "id": "3f130cce7c1bf071",
+        "type": "OpenWeatherMap to NGSI",
+        "z": "e9c6344b196bfe35",
+        "name": "WeatherToNGSI",
+        "x": 540,
+        "y": 100,
+        "wires": [
+            [
+                "61400ee6d6e3cc87"
+            ]
+        ]
+    },
+    {
+        "id": "8db7413ff67d9198",
+        "type": "ui_text",
+        "z": "e9c6344b196bfe35",
+        "group": "42598b0cf938942f",
+        "order": 6,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "Situação:",
+        "format": " {{value}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 860,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "80d13eab22dbc307",
+        "type": "ui_text",
+        "z": "e9c6344b196bfe35",
+        "group": "42598b0cf938942f",
+        "order": 2,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "Data:",
+        "format": " {{value}}",
+        "layout": "row-center",
+        "className": "",
+        "x": 970,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "2445819ac99b110e",
+        "type": "ui_text",
+        "z": "e9c6344b196bfe35",
+        "group": "42598b0cf938942f",
+        "order": 13,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "Situação:",
+        "format": " {{value}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 860,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "955e9c7b5a4c5c2b",
+        "type": "ui_text",
+        "z": "e9c6344b196bfe35",
+        "group": "42598b0cf938942f",
+        "order": 9,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "Data:",
+        "format": " {{value}}",
+        "layout": "row-center",
+        "className": "",
+        "x": 970,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "69f7b2b02defc6bc",
+        "type": "ui_text",
+        "z": "e9c6344b196bfe35",
+        "group": "42598b0cf938942f",
+        "order": 20,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "Situação:",
+        "format": " {{value}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 860,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "7fbc8a2c77e467cf",
+        "type": "ui_text",
+        "z": "e9c6344b196bfe35",
+        "group": "42598b0cf938942f",
+        "order": 16,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "Data:",
+        "format": " {{value}}",
+        "layout": "row-center",
+        "className": "",
+        "x": 970,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "56b07d62081f6ce0",
+        "type": "ui_text",
+        "z": "e9c6344b196bfe35",
+        "group": "42598b0cf938942f",
+        "order": 27,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "Situação:",
+        "format": " {{value}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 860,
+        "y": 1480,
+        "wires": []
+    },
+    {
+        "id": "a9ae231a74d015b8",
+        "type": "ui_text",
+        "z": "e9c6344b196bfe35",
+        "group": "42598b0cf938942f",
+        "order": 23,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "Data:",
+        "format": " {{value}}",
+        "layout": "row-center",
+        "className": "",
+        "x": 970,
+        "y": 1540,
+        "wires": []
+    },
+    {
+        "id": "a2ba4abc75e8dccf",
+        "type": "ui_text",
+        "z": "e9c6344b196bfe35",
+        "group": "42598b0cf938942f",
+        "order": 34,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "Situação:",
+        "format": " {{value}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 860,
+        "y": 1840,
+        "wires": []
+    },
+    {
+        "id": "ac427215dd682383",
+        "type": "ui_text",
+        "z": "e9c6344b196bfe35",
+        "group": "42598b0cf938942f",
+        "order": 30,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "Data:",
+        "format": " {{value}}",
+        "layout": "row-center",
+        "className": "",
+        "x": 970,
+        "y": 1900,
+        "wires": []
+    },
+    {
+        "id": "74baef89a2afdeb2",
+        "type": "ui_gauge",
+        "z": "e9c6344b196bfe35",
+        "name": "",
+        "group": "42598b0cf938942f",
+        "order": 4,
+        "width": 5,
+        "height": 3,
+        "gtype": "gage",
+        "title": "Temperatura",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#1f77b4",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1030,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "b5dc477e47e6b526",
+        "type": "ui_gauge",
+        "z": "e9c6344b196bfe35",
+        "name": "",
+        "group": "42598b0cf938942f",
+        "order": 5,
+        "width": 5,
+        "height": 3,
+        "gtype": "gage",
+        "title": "Umidade",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#ca3838",
+            "#00b500",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 860,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "99bd550cacacad5f",
+        "type": "ui_gauge",
+        "z": "e9c6344b196bfe35",
+        "name": "",
+        "group": "42598b0cf938942f",
+        "order": 3,
+        "width": 5,
+        "height": 3,
+        "gtype": "gage",
+        "title": "Sensação térmica",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#1f77b4",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1050,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "6d7b49c44b4506d7",
+        "type": "ui_gauge",
+        "z": "e9c6344b196bfe35",
+        "name": "",
+        "group": "42598b0cf938942f",
+        "order": 12,
+        "width": 5,
+        "height": 3,
+        "gtype": "gage",
+        "title": "Umidade",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#ca3838",
+            "#00b500",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 860,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "6c5d11e1cedc3e0a",
+        "type": "ui_gauge",
+        "z": "e9c6344b196bfe35",
+        "name": "",
+        "group": "42598b0cf938942f",
+        "order": 18,
+        "width": 5,
+        "height": 3,
+        "gtype": "gage",
+        "title": "Temperatura",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#1f77b4",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1030,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "1fe993b80fe2b76a",
+        "type": "ui_gauge",
+        "z": "e9c6344b196bfe35",
+        "name": "",
+        "group": "42598b0cf938942f",
+        "order": 19,
+        "width": 5,
+        "height": 3,
+        "gtype": "gage",
+        "title": "Umidade",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#ca3838",
+            "#00b500",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 860,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "9b9d9bc3a62c28d0",
+        "type": "ui_gauge",
+        "z": "e9c6344b196bfe35",
+        "name": "",
+        "group": "42598b0cf938942f",
+        "order": 17,
+        "width": 5,
+        "height": 3,
+        "gtype": "gage",
+        "title": "Sensação térmica",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#1f77b4",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1050,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "73735147a402a156",
+        "type": "ui_gauge",
+        "z": "e9c6344b196bfe35",
+        "name": "",
+        "group": "42598b0cf938942f",
+        "order": 25,
+        "width": 5,
+        "height": 3,
+        "gtype": "gage",
+        "title": "Temperatura",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#1f77b4",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1030,
+        "y": 1360,
+        "wires": []
+    },
+    {
+        "id": "15ac4cc315de3b84",
+        "type": "ui_gauge",
+        "z": "e9c6344b196bfe35",
+        "name": "",
+        "group": "42598b0cf938942f",
+        "order": 26,
+        "width": 5,
+        "height": 3,
+        "gtype": "gage",
+        "title": "Umidade",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#ca3838",
+            "#00b500",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 860,
+        "y": 1300,
+        "wires": []
+    },
+    {
+        "id": "c264973a9a9edc0a",
+        "type": "ui_gauge",
+        "z": "e9c6344b196bfe35",
+        "name": "",
+        "group": "42598b0cf938942f",
+        "order": 24,
+        "width": 5,
+        "height": 3,
+        "gtype": "gage",
+        "title": "Sensação térmica",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#1f77b4",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1050,
+        "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "dcdf58946ffd02d4",
+        "type": "ui_gauge",
+        "z": "e9c6344b196bfe35",
+        "name": "",
+        "group": "42598b0cf938942f",
+        "order": 32,
+        "width": 5,
+        "height": 3,
+        "gtype": "gage",
+        "title": "Temperatura",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#1f77b4",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1030,
+        "y": 1720,
+        "wires": []
+    },
+    {
+        "id": "ad1ff42007075f23",
+        "type": "ui_gauge",
+        "z": "e9c6344b196bfe35",
+        "name": "",
+        "group": "42598b0cf938942f",
+        "order": 33,
+        "width": 5,
+        "height": 3,
+        "gtype": "gage",
+        "title": "Umidade",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#ca3838",
+            "#00b500",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 860,
+        "y": 1660,
+        "wires": []
+    },
+    {
+        "id": "d647fc87cf42f108",
+        "type": "ui_gauge",
+        "z": "e9c6344b196bfe35",
+        "name": "",
+        "group": "42598b0cf938942f",
+        "order": 31,
+        "width": 5,
+        "height": 3,
+        "gtype": "gage",
+        "title": "Sensação térmica",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#1f77b4",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1050,
+        "y": 1780,
+        "wires": []
+    },
+    {
+        "id": "d7bcb87d76f12f58",
+        "type": "ui_gauge",
+        "z": "e9c6344b196bfe35",
+        "name": "",
+        "group": "42598b0cf938942f",
+        "order": 11,
+        "width": 5,
+        "height": 3,
+        "gtype": "gage",
+        "title": "Temperatura",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#1f77b4",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1030,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "478498243d512028",
+        "type": "ui_gauge",
+        "z": "e9c6344b196bfe35",
+        "name": "",
+        "group": "42598b0cf938942f",
+        "order": 10,
+        "width": 5,
+        "height": 3,
+        "gtype": "gage",
+        "title": "Sensação térmica",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#1f77b4",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1050,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "72861beacd1fd44c",
+        "type": "openweathermap",
+        "z": "e9c6344b196bfe35",
+        "name": "",
+        "wtype": "forecast",
+        "lon": "",
+        "lat": "",
+        "city": "Santa Rita do Passa Quatro",
+        "country": "Brasil",
+        "language": "pt",
+        "x": 300,
+        "y": 100,
+        "wires": [
+            [
+                "3f130cce7c1bf071"
+            ]
+        ]
+    },
+    {
+        "id": "68852a07457014f8",
+        "type": "debug",
+        "z": "e9c6344b196bfe35",
+        "name": "debug 50",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "61400ee6d6e3cc87",
+        "type": "NGSI Entity",
+        "z": "e9c6344b196bfe35",
+        "name": "Criar entidade",
+        "openapis": "9bccc41af47bb660",
+        "servicepath": "/",
+        "actionType": "upsert",
+        "entityId": "",
+        "entityType": "",
+        "attrs": "",
+        "keyValues": "false",
+        "dateModified": "false",
+        "x": 760,
+        "y": 100,
+        "wires": [
+            [
+                "68852a07457014f8"
             ]
         ]
     },
@@ -4364,12 +3901,12 @@
         ],
         "repeat": "",
         "crontab": "",
-        "once": true,
+        "once": false,
         "onceDelay": 0.1,
         "topic": "",
         "payload": "{}",
         "payloadType": "json",
-        "x": 200,
+        "x": 190,
         "y": 380,
         "wires": [
             [
@@ -4452,6 +3989,144 @@
                 "5df3657aae8cfd7b"
             ]
         ]
+    },
+    {
+        "id": "08acb9ef9b9a196b",
+        "type": "NGSI Entity",
+        "z": "ea538592da2e51e2",
+        "name": "Criar entidade",
+        "openapis": "9bccc41af47bb660",
+        "servicepath": "/",
+        "actionType": "create",
+        "entityId": "",
+        "entityType": "",
+        "attrs": "",
+        "keyValues": "true",
+        "dateModified": "false",
+        "x": 380,
+        "y": 60,
+        "wires": [
+            [
+                "31e2c2c9f2bff06a"
+            ]
+        ]
+    },
+    {
+        "id": "09edde87b1151caa",
+        "type": "NGSI Entity",
+        "z": "ea538592da2e51e2",
+        "name": "Ler entidade",
+        "openapis": "9bccc41af47bb660",
+        "servicepath": "/",
+        "actionType": "read",
+        "entityId": "urn:ngsi-ld:AgriProductType:HistData",
+        "entityType": "AgriProductType",
+        "attrs": "",
+        "keyValues": "true",
+        "dateModified": "false",
+        "x": 390,
+        "y": 120,
+        "wires": [
+            [
+                "3b8edefc28c4b4b9"
+            ]
+        ]
+    },
+    {
+        "id": "dc1fa2f61edf8dcf",
+        "type": "NGSI Entity",
+        "z": "ea538592da2e51e2",
+        "name": "Excluir entidade",
+        "openapis": "9bccc41af47bb660",
+        "servicepath": "/",
+        "actionType": "delete",
+        "entityId": "urn:ngsi-ld:AgriProductType:HistData",
+        "entityType": "AgriProductType",
+        "attrs": "",
+        "keyValues": "false",
+        "dateModified": "false",
+        "x": 420,
+        "y": 180,
+        "wires": [
+            [
+                "3221bff9bd14abea"
+            ]
+        ]
+    },
+    {
+        "id": "509a19c86427a95d",
+        "type": "NGSI Entity",
+        "z": "ea538592da2e51e2",
+        "name": "",
+        "openapis": "9bccc41af47bb660",
+        "servicepath": "/",
+        "actionType": "read",
+        "entityId": "urn:ngsi-ld:AgriProductType:HistData",
+        "entityType": "AgriProductType",
+        "attrs": "",
+        "keyValues": "false",
+        "dateModified": "false",
+        "x": 350,
+        "y": 380,
+        "wires": [
+            [
+                "03613652237fdf8d",
+                "4eda1b612198c8dc",
+                "689701499a0a962b",
+                "21fc1e4f402a5d85"
+            ]
+        ]
+    },
+    {
+        "id": "65e2c204b755460f",
+        "type": "ui_text",
+        "z": "ea538592da2e51e2",
+        "group": "8bcb2804d0691f25",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Fonte: INMET SP (Dados da cidade de São Carlos, SP)",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "className": "",
+        "x": 430,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "0946b58e337a1167",
+        "type": "ui_text",
+        "z": "ea538592da2e51e2",
+        "group": "8e1d1b289722c345",
+        "order": 2,
+        "width": "0",
+        "height": "0",
+        "name": "",
+        "label": "Fonte: Fundação Salvador arena",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "className": "",
+        "x": 460,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "830c6af1143a0d8e",
+        "type": "ui_text",
+        "z": "ea538592da2e51e2",
+        "group": "8e1d1b289722c345",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Fonte: (CEAGESP - Araraquara) http://dw.ceasa.gov.br/",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "className": "",
+        "x": 530,
+        "y": 660,
+        "wires": []
     },
     {
         "id": "b0459ef3cfd438e4",
@@ -4630,144 +4305,6 @@
         ]
     },
     {
-        "id": "65e2c204b755460f",
-        "type": "ui_text",
-        "z": "ea538592da2e51e2",
-        "group": "8bcb2804d0691f25",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Fonte: INMET SP (Dados da cidade de São Carlos, SP)",
-        "format": "{{msg.payload}}",
-        "layout": "row-center",
-        "className": "",
-        "x": 430,
-        "y": 540,
-        "wires": []
-    },
-    {
-        "id": "0946b58e337a1167",
-        "type": "ui_text",
-        "z": "ea538592da2e51e2",
-        "group": "8e1d1b289722c345",
-        "order": 2,
-        "width": "0",
-        "height": "0",
-        "name": "",
-        "label": "Fonte: Fundação Salvador arena",
-        "format": "{{msg.payload}}",
-        "layout": "row-center",
-        "className": "",
-        "x": 460,
-        "y": 600,
-        "wires": []
-    },
-    {
-        "id": "830c6af1143a0d8e",
-        "type": "ui_text",
-        "z": "ea538592da2e51e2",
-        "group": "8e1d1b289722c345",
-        "order": 4,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Fonte: (CEAGESP - Araraquara) http://dw.ceasa.gov.br/",
-        "format": "{{msg.payload}}",
-        "layout": "row-center",
-        "className": "",
-        "x": 530,
-        "y": 660,
-        "wires": []
-    },
-    {
-        "id": "08acb9ef9b9a196b",
-        "type": "NGSI Entity",
-        "z": "ea538592da2e51e2",
-        "name": "Criar entidade",
-        "openapis": "9bccc41af47bb660",
-        "servicepath": "/",
-        "actionType": "create",
-        "entityId": "",
-        "entityType": "",
-        "attrs": "",
-        "keyValues": "true",
-        "dateModified": "false",
-        "x": 380,
-        "y": 60,
-        "wires": [
-            [
-                "31e2c2c9f2bff06a"
-            ]
-        ]
-    },
-    {
-        "id": "09edde87b1151caa",
-        "type": "NGSI Entity",
-        "z": "ea538592da2e51e2",
-        "name": "Ler entidade",
-        "openapis": "9bccc41af47bb660",
-        "servicepath": "/",
-        "actionType": "read",
-        "entityId": "urn:ngsi-ld:AgriProductType:HistData",
-        "entityType": "AgriProductType",
-        "attrs": "",
-        "keyValues": "true",
-        "dateModified": "false",
-        "x": 390,
-        "y": 120,
-        "wires": [
-            [
-                "3b8edefc28c4b4b9"
-            ]
-        ]
-    },
-    {
-        "id": "dc1fa2f61edf8dcf",
-        "type": "NGSI Entity",
-        "z": "ea538592da2e51e2",
-        "name": "Excluir entidade",
-        "openapis": "9bccc41af47bb660",
-        "servicepath": "/",
-        "actionType": "delete",
-        "entityId": "urn:ngsi-ld:AgriProductType:HistData",
-        "entityType": "AgriProductType",
-        "attrs": "",
-        "keyValues": "false",
-        "dateModified": "false",
-        "x": 420,
-        "y": 180,
-        "wires": [
-            [
-                "3221bff9bd14abea"
-            ]
-        ]
-    },
-    {
-        "id": "509a19c86427a95d",
-        "type": "NGSI Entity",
-        "z": "ea538592da2e51e2",
-        "name": "",
-        "openapis": "9bccc41af47bb660",
-        "servicepath": "/",
-        "actionType": "read",
-        "entityId": "urn:ngsi-ld:AgriProductType:HistData",
-        "entityType": "AgriProductType",
-        "attrs": "",
-        "keyValues": "false",
-        "dateModified": "false",
-        "x": 350,
-        "y": 380,
-        "wires": [
-            [
-                "03613652237fdf8d",
-                "4eda1b612198c8dc",
-                "689701499a0a962b",
-                "21fc1e4f402a5d85"
-            ]
-        ]
-    },
-    {
         "id": "671c4de675c48e82",
         "type": "inject",
         "z": "d768a6d29d0e02d4",
@@ -4921,12 +4458,12 @@
         ],
         "repeat": "",
         "crontab": "",
-        "once": true,
+        "once": false,
         "onceDelay": 0.1,
         "topic": "",
         "payload": "{}",
         "payloadType": "json",
-        "x": 180,
+        "x": 170,
         "y": 280,
         "wires": [
             [
@@ -4969,12 +4506,12 @@
         ],
         "repeat": "",
         "crontab": "",
-        "once": true,
+        "once": false,
         "onceDelay": 0.1,
         "topic": "",
         "payload": "{}",
         "payloadType": "json",
-        "x": 180,
+        "x": 170,
         "y": 340,
         "wires": [
             [
@@ -5000,111 +4537,6 @@
                 "4c83d7ee49268878"
             ]
         ]
-    },
-    {
-        "id": "2388144b08922586",
-        "type": "ui_chart",
-        "z": "d768a6d29d0e02d4",
-        "name": "",
-        "group": "c8f1f291b85d76d5",
-        "order": 1,
-        "width": 23,
-        "height": 5,
-        "label": "",
-        "chartType": "line",
-        "legend": "true",
-        "xformat": "l",
-        "interpolate": "bezier",
-        "nodata": "no data",
-        "dot": false,
-        "ymin": "",
-        "ymax": "",
-        "removeOlder": 1,
-        "removeOlderPoints": "",
-        "removeOlderUnit": "86400",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#d62728",
-            "#2ca02c",
-            "#ff7f0e",
-            "#a4c1c9",
-            "#98df8a",
-            "#1f77b4",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "useDifferentColor": false,
-        "className": "",
-        "x": 650,
-        "y": 280,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "4c83d7ee49268878",
-        "type": "ui_chart",
-        "z": "d768a6d29d0e02d4",
-        "name": "",
-        "group": "c8f1f291b85d76d5",
-        "order": 2,
-        "width": 23,
-        "height": 5,
-        "label": "",
-        "chartType": "line",
-        "legend": "true",
-        "xformat": "l",
-        "interpolate": "bezier",
-        "nodata": "no data",
-        "dot": false,
-        "ymin": "",
-        "ymax": "",
-        "removeOlder": 1,
-        "removeOlderPoints": "",
-        "removeOlderUnit": "86400",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#ff7f0e",
-            "#2ca02c",
-            "#ff7f0e",
-            "#a4c1c9",
-            "#98df8a",
-            "#1f77b4",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "useDifferentColor": false,
-        "className": "",
-        "x": 650,
-        "y": 340,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "568745e7b4922640",
-        "type": "ui_text",
-        "z": "d768a6d29d0e02d4",
-        "group": "c8f1f291b85d76d5",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Fonte: (CEAGESP - Campinas) http://dw.ceasa.gov.br/",
-        "format": "{{msg.payload}}",
-        "layout": "row-center",
-        "className": "",
-        "x": 500,
-        "y": 400,
-        "wires": []
     },
     {
         "id": "950a192473a84e9a",
@@ -5209,6 +4641,111 @@
             [
                 "a94ca33dcc2fb401"
             ]
+        ]
+    },
+    {
+        "id": "568745e7b4922640",
+        "type": "ui_text",
+        "z": "d768a6d29d0e02d4",
+        "group": "c8f1f291b85d76d5",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Fonte: (CEAGESP - Campinas) http://dw.ceasa.gov.br/",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "className": "",
+        "x": 500,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "2388144b08922586",
+        "type": "ui_chart",
+        "z": "d768a6d29d0e02d4",
+        "name": "",
+        "group": "c8f1f291b85d76d5",
+        "order": 1,
+        "width": 23,
+        "height": 5,
+        "label": "",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "l",
+        "interpolate": "bezier",
+        "nodata": "no data",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#d62728",
+            "#2ca02c",
+            "#ff7f0e",
+            "#a4c1c9",
+            "#98df8a",
+            "#1f77b4",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 650,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4c83d7ee49268878",
+        "type": "ui_chart",
+        "z": "d768a6d29d0e02d4",
+        "name": "",
+        "group": "c8f1f291b85d76d5",
+        "order": 2,
+        "width": 23,
+        "height": 5,
+        "label": "",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "l",
+        "interpolate": "bezier",
+        "nodata": "no data",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#ff7f0e",
+            "#2ca02c",
+            "#ff7f0e",
+            "#a4c1c9",
+            "#98df8a",
+            "#1f77b4",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 650,
+        "y": 340,
+        "wires": [
+            []
         ]
     },
     {
@@ -5336,12 +4873,12 @@
         ],
         "repeat": "",
         "crontab": "",
-        "once": true,
+        "once": false,
         "onceDelay": 0.1,
         "topic": "",
         "payload": "{}",
         "payloadType": "json",
-        "x": 120,
+        "x": 110,
         "y": 220,
         "wires": [
             [
@@ -5581,12 +5118,12 @@
         ],
         "repeat": "",
         "crontab": "",
-        "once": true,
+        "once": false,
         "onceDelay": 0.1,
         "topic": "",
         "payload": "{}",
         "payloadType": "json",
-        "x": 140,
+        "x": 130,
         "y": 640,
         "wires": [
             [
@@ -5793,12 +5330,12 @@
         ],
         "repeat": "",
         "crontab": "",
-        "once": true,
+        "once": false,
         "onceDelay": 0.1,
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 140,
+        "x": 130,
         "y": 700,
         "wires": [
             [
@@ -5846,7 +5383,7 @@
         ],
         "repeat": "",
         "crontab": "",
-        "once": true,
+        "once": false,
         "onceDelay": 0.1,
         "topic": "",
         "payload": "",
@@ -5908,111 +5445,6 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 710,
-        "y": 340,
-        "wires": []
-    },
-    {
-        "id": "e043ce6c3e151604",
-        "type": "ui_chart",
-        "z": "3c14bb0afdbd62e1",
-        "name": "",
-        "group": "5e1547b4c5b09615",
-        "order": 1,
-        "width": 23,
-        "height": 5,
-        "label": "",
-        "chartType": "line",
-        "legend": "true",
-        "xformat": "l",
-        "interpolate": "bezier",
-        "nodata": "no data",
-        "dot": false,
-        "ymin": "",
-        "ymax": "",
-        "removeOlder": 1,
-        "removeOlderPoints": "",
-        "removeOlderUnit": "86400",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#d62728",
-            "#2ca02c",
-            "#ff7f0e",
-            "#a4c1c9",
-            "#98df8a",
-            "#1f77b4",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "useDifferentColor": false,
-        "className": "",
-        "x": 590,
-        "y": 220,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "d5c8c935f33b9eff",
-        "type": "ui_chart",
-        "z": "3c14bb0afdbd62e1",
-        "name": "",
-        "group": "5e1547b4c5b09615",
-        "order": 1,
-        "width": 23,
-        "height": 5,
-        "label": "",
-        "chartType": "line",
-        "legend": "true",
-        "xformat": "l",
-        "interpolate": "bezier",
-        "nodata": "no data",
-        "dot": false,
-        "ymin": "",
-        "ymax": "",
-        "removeOlder": 1,
-        "removeOlderPoints": "",
-        "removeOlderUnit": "86400",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#ff7f0e",
-            "#2ca02c",
-            "#ff7f0e",
-            "#a4c1c9",
-            "#98df8a",
-            "#1f77b4",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "useDifferentColor": false,
-        "className": "",
-        "x": 610,
-        "y": 640,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "a7c168d462b78202",
-        "type": "ui_text",
-        "z": "3c14bb0afdbd62e1",
-        "group": "5e1547b4c5b09615",
-        "order": 4,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Fonte: https://fred.stlouisfed.org/",
-        "format": "{{msg.payload}}",
-        "layout": "row-center",
-        "className": "",
-        "x": 410,
         "y": 340,
         "wires": []
     },
@@ -6224,6 +5656,111 @@
             [
                 "6a1ba0ca96b53475"
             ]
+        ]
+    },
+    {
+        "id": "a7c168d462b78202",
+        "type": "ui_text",
+        "z": "3c14bb0afdbd62e1",
+        "group": "5e1547b4c5b09615",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Fonte: https://fred.stlouisfed.org/",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "className": "",
+        "x": 410,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "e043ce6c3e151604",
+        "type": "ui_chart",
+        "z": "3c14bb0afdbd62e1",
+        "name": "",
+        "group": "5e1547b4c5b09615",
+        "order": 1,
+        "width": 23,
+        "height": 5,
+        "label": "",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "l",
+        "interpolate": "bezier",
+        "nodata": "no data",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#d62728",
+            "#2ca02c",
+            "#ff7f0e",
+            "#a4c1c9",
+            "#98df8a",
+            "#1f77b4",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 590,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d5c8c935f33b9eff",
+        "type": "ui_chart",
+        "z": "3c14bb0afdbd62e1",
+        "name": "",
+        "group": "5e1547b4c5b09615",
+        "order": 1,
+        "width": 23,
+        "height": 5,
+        "label": "",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "l",
+        "interpolate": "bezier",
+        "nodata": "no data",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#ff7f0e",
+            "#2ca02c",
+            "#ff7f0e",
+            "#a4c1c9",
+            "#98df8a",
+            "#1f77b4",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 610,
+        "y": 640,
+        "wires": [
+            []
         ]
     }
 ]
