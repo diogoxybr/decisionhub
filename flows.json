@@ -1,16 +1,16 @@
 [
     {
-        "id": "5a4975ebcc568c40",
+        "id": "148c173e8eacbf9a",
         "type": "tab",
-        "label": "Seleção",
+        "label": "Tempo real",
         "disabled": false,
         "info": "",
         "env": []
     },
     {
-        "id": "148c173e8eacbf9a",
+        "id": "5a4975ebcc568c40",
         "type": "tab",
-        "label": "Tempo real",
+        "label": "Seleção",
         "disabled": false,
         "info": "",
         "env": []
@@ -461,774 +461,6 @@
         "height": 1
     },
     {
-        "id": "6a63c4aa5cf46339",
-        "type": "function",
-        "z": "5a4975ebcc568c40",
-        "name": "% ovos",
-        "func": "if (msg.payload.good && msg.payload.bad) {\n    var valor1 = parseInt(msg.payload.good);\n    var valor2 = parseInt(msg.payload.bad);\n\n    if (!isNaN(valor1) && !isNaN(valor2)) {\n        var soma = valor1 + valor2;\n    }\n}\n\n//porcentagem ruins\nvar bad_pc = msg.valor2 || 0;\nbad_pc = (valor2 / soma) * 100;\nmsg.bad_pc = Math.round(bad_pc);\n\n//porcentagem boas\nvar good_pc = valor1 || 0;\ngood_pc = (valor1 / soma) * 100;\nmsg.good_pc = Math.round(good_pc);\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 240,
-        "y": 220,
-        "wires": [
-            [
-                "9bb4846fcdc0c53e",
-                "9834b9ff599c3e33"
-            ]
-        ]
-    },
-    {
-        "id": "0c26b6fe05404ba9",
-        "type": "inject",
-        "z": "5a4975ebcc568c40",
-        "name": "Apagar",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "{}",
-        "payloadType": "json",
-        "x": 150,
-        "y": 500,
-        "wires": [
-            [
-                "d82d641b722d2202"
-            ]
-        ]
-    },
-    {
-        "id": "f6a7e44aa7832336",
-        "type": "debug",
-        "z": "5a4975ebcc568c40",
-        "name": "debug 46",
-        "active": true,
-        "tosidebar": true,
-        "console": true,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 510,
-        "y": 500,
-        "wires": []
-    },
-    {
-        "id": "a58fa236741ec245",
-        "type": "inject",
-        "z": "5a4975ebcc568c40",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "{\"id\":\"urn:ngsi-ld:AgriFarm:1\",\"type\":\"AgriFarm\",\"name\":{\"value\":\"ETASA\"},\"description\":{\"value\":\"ESCOLA TECNICA AGROPECUARIA ENGENHEIRO SALVADOR ARENA\"},\"seeAlso\":{\"value\":[\"http://escolatecnicasalvadorarena.org.br/\"]},\"address\":{\"type\":\"PostalAddress\",\"value\":{\"addressLocality\":\"Santa Rita do Passa Quatro, SP\",\"addressCountry\":\"BR\",\"streetAddress\":\"SP-330, KM 238, CEP 13670-000\"}},\"contactPoint\":{\"type\":\"ContactPoint\",\"value\":{\"email\":\"secretaria@escolatecnicasalvadorarena.org.br\",\"telephone\":\"55 19 3584-8980\"}},\"production\":{\"type\":\"Data\",\"value\":[{\"id\":\"urn:ngsi-ld:AgriFarm:1684775831025-0\",\"Data\":\"16/07/2021\",\"Bons\":549,\"Ruins\":32,\"Total\":581},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-1\",\"Data\":\"23/07/2021\",\"Bons\":711,\"Ruins\":29,\"Total\":740},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-2\",\"Data\":\"30/07/2021\",\"Bons\":670,\"Ruins\":25,\"Total\":695},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-3\",\"Data\":\"03/08/2021\",\"Bons\":672,\"Ruins\":20,\"Total\":692},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-4\",\"Data\":\"09/08/2021\",\"Bons\":730,\"Ruins\":15,\"Total\":745}]}}",
-        "payloadType": "json",
-        "x": 150,
-        "y": 460,
-        "wires": [
-            [
-                "a6d8d42ee3c3501b"
-            ]
-        ]
-    },
-    {
-        "id": "3dd45a752c03f51e",
-        "type": "debug",
-        "z": "5a4975ebcc568c40",
-        "name": "debug 48",
-        "active": true,
-        "tosidebar": true,
-        "console": true,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 510,
-        "y": 460,
-        "wires": []
-    },
-    {
-        "id": "e2e744092724b4c3",
-        "type": "function",
-        "z": "5a4975ebcc568c40",
-        "name": "function 35",
-        "func": "// Função para formatar os dados recebidos no formato especificado\nfunction formatarDados(dados) {\n    // Obtém as linhas existentes da variável global ou do contexto de fluxo\n    var tableData = flow.get(\"tableData\") || [];\n\n    // Verifica se os dados já foram adicionados anteriormente\n    if (tableData.length === 0) {\n        // Percorre os dados recebidos\n        for (var i = 0; i < dados.length; i++) {\n            var dado = dados[i];\n\n            // Cria um objeto para a nova linha com os valores recebidos\n            var newRow = {\n                \"Id\": dado.id,\n                \"Data\": dado.Data,\n                \"Bons\": dado.Bons,\n                \"Ruins\": dado.Ruins,\n                \"Total\": dado.Total\n            };\n\n            // Adiciona a nova linha ao array de dados da tabela\n            tableData.push(newRow);\n        }\n    }\n\n    // Armazena as linhas atualizadas na variável global ou no contexto de fluxo\n    flow.set(\"tableData\", tableData);\n\n    // Define o payload da mensagem como os dados atualizados da tabela\n    msg.payload = tableData;\n\n    return msg;\n}\n\n// Obtenha os valores dos dados recebidos\nvar dadosRecebidos = msg.payload.production;\n\n// Chame a função para formatar os dados\nvar mensagemFormatada = formatarDados(dadosRecebidos);\n\nreturn mensagemFormatada;\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 610,
-        "y": 340,
-        "wires": [
-            [
-                "6a145f72e48927de"
-            ]
-        ]
-    },
-    {
-        "id": "ada16b2479fe6f25",
-        "type": "inject",
-        "z": "5a4975ebcc568c40",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "{}",
-        "payloadType": "json",
-        "x": 230,
-        "y": 340,
-        "wires": [
-            [
-                "16eb0198dc45c14b"
-            ]
-        ]
-    },
-    {
-        "id": "30fea0eed0332fb2",
-        "type": "function",
-        "z": "5a4975ebcc568c40",
-        "name": "function 36",
-        "func": "// Função para formatar os dados no formato especificado\nfunction formatarDados(dados) {\n    var dadosFormatados = {\n        \"id\": \"urn:ngsi-ld:AgriFarm:1\",\n        \"type\": \"AgriFarm\",\n        \"production\": {\n            \"type\": \"Data\",\n            \"value\": []\n        }\n    };\n\n    for (var i = 0; i < dados.length; i++) {\n        var dado = dados[i];\n\n        // Gere um ID único para cada dado inserido\n        var id = \"urn:ngsi-ld:AgriFarm:\" + (new Date()).getTime() + \"-\" + i;\n\n        var dadoFormatado = {\n            \"id\": id,\n            \"Data\": dado.Data,\n            \"Bons\": dado.Bons,\n            \"Ruins\": dado.Ruins,\n            \"Total\": dado.Total\n        };\n\n        dadosFormatados.production.value.push(dadoFormatado);\n    }\n\n    return dadosFormatados;\n}\n\n// Obtenha os valores dos dados\nvar dadosInput = msg.payload;\n\n// Chame a função para formatar os dados\nvar dadosFormatados = formatarDados(dadosInput);\n\n// Obtenha o valor atual do atributo \"production\"\nvar productionValue = flow.get(\"tableData.production.value\") || [];\n\n// Combine o valor atual com os novos dados formatados\nproductionValue = productionValue.concat(dadosFormatados.production.value);\n\n// Atualize apenas o valor do atributo \"production\"\nflow.set(\"tableData.production.value\", productionValue);\n\n// Defina os dados formatados como o payload da mensagem\nmsg.payload = dadosFormatados;\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 350,
-        "y": 400,
-        "wires": [
-            [
-                "c52fcc27eba9d501"
-            ]
-        ]
-    },
-    {
-        "id": "277a24589cab4a5c",
-        "type": "function",
-        "z": "5a4975ebcc568c40",
-        "name": "function 32",
-        "func": "// Função para formatar uma data no formato \"DD/MM/AAAA\"\nfunction formatarData(data) {\n    var dateObj = new Date(data);\n    var dia = dateObj.getDate();\n    var mes = dateObj.getMonth() + 1;\n    var ano = dateObj.getFullYear();\n\n    // Formata o dia e mês para sempre ter dois dígitos\n    dia = (dia < 10) ? '0' + dia : dia;\n    mes = (mes < 10) ? '0' + mes : mes;\n\n    var dataFormatada = dia + '/' + mes + '/' + ano;\n\n    return dataFormatada;\n}\n\n// Exemplo de uso da função\nvar dataInput = msg.payload.date;\nvar dataFormatada = formatarData(dataInput);\n\n// Obtém as linhas existentes da variável global ou do contexto de fluxo\nvar tableData = flow.get(\"tableData\") || [];\n\n// Cria um objeto para a nova linha\nvar newRow = {\n    \"Data\": dataFormatada,\n    \"Bons\": parseFloat(msg.payload.good),\n    \"Ruins\": parseFloat(msg.payload.bad),\n    \"Total\": parseFloat(msg.payload.bad) + parseFloat(msg.payload.good)\n};\n\n// Adiciona a nova linha ao array de dados da tabela\ntableData.push(newRow);\n\n// Armazena as linhas atualizadas na variável global ou no contexto de fluxo\nflow.set(\"tableData\", tableData);\n\n// Define o payload da mensagem como os dados atualizados da tabela\nmsg.payload = tableData;\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 170,
-        "y": 400,
-        "wires": [
-            [
-                "30fea0eed0332fb2"
-            ]
-        ]
-    },
-    {
-        "id": "e2a51c7e21d2e1e7",
-        "type": "function",
-        "z": "5a4975ebcc568c40",
-        "name": "function 37",
-        "func": "var input = msg.payload;\n\nvar arrData = [];\nvar arrTotal = [];\n\nfor (var i = 0; i < input.production.length; i++) {\n    var item = input.production[i];\n    arrData.push(item.Data);\n    arrTotal.push(item.Total);\n}\n\n// Função auxiliar para ordenar os dados cronologicamente\nfunction sortByDate(data, total) {\n    var sortedData = [];\n    var sortedTotal = [];\n\n    // Cria um array de objetos com os dados e o total\n    var dataWithTotal = data.map(function (value, index) {\n        var dateParts = value.split('/');\n        var day = parseInt(dateParts[0], 10);\n        var month = parseInt(dateParts[1], 10) - 1; // Subtraímos 1 para corresponder aos meses no formato Date (0-11)\n        var year = parseInt(dateParts[2], 10) + 2000; // Adicionamos 2000 para obter o ano no formato completo\n\n        return { data: new Date(year, month, day), total: total[index] };\n    });\n\n    // Ordena o array de objetos com base na propriedade \"data\"\n    dataWithTotal.sort(function (a, b) {\n        return a.data - b.data;\n    });\n\n    // Separa os dados ordenados em arrays separados\n    dataWithTotal.forEach(function (item) {\n        sortedData.push(formatarData(item.data));\n        sortedTotal.push(item.total);\n    });\n\n    return { data: sortedData, total: sortedTotal };\n}\n\n// Função auxiliar para formatar a data no formato \"DD/MM/AA\"\nfunction formatarData(data) {\n    var dia = data.getDate();\n    var mes = data.getMonth() + 1;\n    var ano = data.getFullYear().toString().substr(-2);\n\n    dia = (dia < 10) ? '0' + dia : dia;\n    mes = (mes < 10) ? '0' + mes : mes;\n\n    return dia + '/' + mes + '/' + ano;\n}\n\n// Ordena os dados cronologicamente\nvar sortedData = sortByDate(arrData, arrTotal);\n\nfunction formatData(data, total) {\n    const dataObject = [{\n        \"series\": [\"Dúzias\"],\n        \"data\": [total],\n        \"labels\": data\n    }];\n\n    return dataObject;\n}\n\nconst result = formatData(sortedData.data, sortedData.total);\nreturn { payload: result };",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 610,
-        "y": 280,
-        "wires": [
-            [
-                "f77e83b984498625"
-            ]
-        ]
-    },
-    {
-        "id": "af8a4116b921c3a4",
-        "type": "function",
-        "z": "5a4975ebcc568c40",
-        "name": "function 38",
-        "func": "var bonsTotal = 0;\nvar ruinsTotal = 0;\n\n// Verifica se a propriedade 'production' existe e é um array\nif (msg.payload.production && Array.isArray(msg.payload.production)) {\n    // Percorre cada item no array 'production'\n    msg.payload.production.forEach(function (item) {\n        bonsTotal += item.Bons || 0;\n        ruinsTotal += item.Ruins || 0;\n    });\n}\n\n// Calcula as porcentagens\nvar total = bonsTotal + ruinsTotal;\nvar bonsPc = Math.floor((bonsTotal / total) * 100);\nvar ruinsPc = Math.floor((ruinsTotal / total) * 100);\n\n// Atualiza a payload com os resultados\nmsg.payload.bons = Math.floor(bonsTotal);\nmsg.payload.ruins = Math.floor(ruinsTotal);\nmsg.payload.total = Math.floor(total);\nmsg.payload.bons_pc = bonsPc;\nmsg.payload.ruins_pc = ruinsPc;\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 550,
-        "y": 120,
-        "wires": [
-            [
-                "883997de3548f60f",
-                "7508b0d2707ff2a4",
-                "ddf4e2ed36b1e975",
-                "b7b501af8d966eae",
-                "2550832b6db8a2ae"
-            ]
-        ]
-    },
-    {
-        "id": "e0f46b1477d960e3",
-        "type": "debug",
-        "z": "5a4975ebcc568c40",
-        "name": "debug 49",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 740,
-        "y": 420,
-        "wires": []
-    },
-    {
-        "id": "16eb0198dc45c14b",
-        "type": "NGSI Entity",
-        "z": "5a4975ebcc568c40",
-        "name": "Ler entidade",
-        "openapis": "9bccc41af47bb660",
-        "servicepath": "/",
-        "actionType": "read",
-        "entityId": "urn:ngsi-ld:AgriFarm:1",
-        "entityType": "AgriFarm",
-        "attrs": "production",
-        "keyValues": "true",
-        "dateModified": "false",
-        "x": 390,
-        "y": 340,
-        "wires": [
-            [
-                "e2e744092724b4c3",
-                "e2a51c7e21d2e1e7",
-                "af8a4116b921c3a4",
-                "e0f46b1477d960e3"
-            ]
-        ]
-    },
-    {
-        "id": "d82d641b722d2202",
-        "type": "NGSI Entity",
-        "z": "5a4975ebcc568c40",
-        "name": "Excluir entidade",
-        "openapis": "9bccc41af47bb660",
-        "servicepath": "/",
-        "actionType": "delete",
-        "entityId": "urn:ngsi-ld:AgriFarm:1",
-        "entityType": "AgriFarm",
-        "attrs": "",
-        "keyValues": "false",
-        "dateModified": "false",
-        "x": 320,
-        "y": 500,
-        "wires": [
-            [
-                "f6a7e44aa7832336"
-            ]
-        ]
-    },
-    {
-        "id": "a6d8d42ee3c3501b",
-        "type": "NGSI Entity",
-        "z": "5a4975ebcc568c40",
-        "name": "Criar entidade",
-        "openapis": "9bccc41af47bb660",
-        "servicepath": "/",
-        "actionType": "upsert",
-        "entityId": "",
-        "entityType": "",
-        "attrs": "",
-        "keyValues": "false",
-        "dateModified": "false",
-        "x": 320,
-        "y": 460,
-        "wires": [
-            [
-                "3dd45a752c03f51e",
-                "d73ba755a72e7b99"
-            ]
-        ]
-    },
-    {
-        "id": "c52fcc27eba9d501",
-        "type": "NGSI Entity",
-        "z": "5a4975ebcc568c40",
-        "name": "",
-        "openapis": "9bccc41af47bb660",
-        "servicepath": "/",
-        "actionType": "upsert",
-        "entityId": "",
-        "entityType": "",
-        "attrs": "",
-        "keyValues": "false",
-        "dateModified": "false",
-        "x": 530,
-        "y": 400,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "d73ba755a72e7b99",
-        "type": "ui_form",
-        "z": "5a4975ebcc568c40",
-        "name": "",
-        "label": "",
-        "group": "a36d8b353b5ac62a",
-        "order": 1,
-        "width": 7,
-        "height": 4,
-        "options": [
-            {
-                "label": "Data",
-                "value": "date",
-                "type": "date",
-                "required": true,
-                "rows": null
-            },
-            {
-                "label": "Bons",
-                "value": "good",
-                "type": "text",
-                "required": true,
-                "rows": null
-            },
-            {
-                "label": "Ruins",
-                "value": "bad",
-                "type": "text",
-                "required": true,
-                "rows": null
-            }
-        ],
-        "formValue": {
-            "date": "",
-            "good": "",
-            "bad": ""
-        },
-        "payload": "",
-        "submit": "Enviar",
-        "cancel": "Cancelar",
-        "topic": "topic",
-        "topicType": "msg",
-        "splitLayout": false,
-        "className": "",
-        "x": 110,
-        "y": 280,
-        "wires": [
-            [
-                "6a145f72e48927de",
-                "277a24589cab4a5c",
-                "16eb0198dc45c14b",
-                "6a63c4aa5cf46339"
-            ]
-        ]
-    },
-    {
-        "id": "7572d7a139697137",
-        "type": "ui_form",
-        "z": "5a4975ebcc568c40",
-        "d": true,
-        "name": "",
-        "label": "Excluir um registro de produção",
-        "group": "3cdf104460b09eaf",
-        "order": 2,
-        "width": "7",
-        "height": "1",
-        "options": [
-            {
-                "label": "Identificador",
-                "value": "id",
-                "type": "number",
-                "required": true,
-                "rows": null
-            }
-        ],
-        "formValue": {
-            "id": ""
-        },
-        "payload": "",
-        "submit": "Enviar",
-        "cancel": "Cancelar",
-        "topic": "topic",
-        "topicType": "msg",
-        "splitLayout": false,
-        "className": "",
-        "x": 170,
-        "y": 600,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "2550832b6db8a2ae",
-        "type": "ui_text",
-        "z": "5a4975ebcc568c40",
-        "group": "cad099844726e2c2",
-        "order": 1,
-        "width": 7,
-        "height": 1,
-        "name": "",
-        "label": "Total de ovos produzidos",
-        "format": "{{msg.payload.total}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 810,
-        "y": 200,
-        "wires": []
-    },
-    {
-        "id": "b7b501af8d966eae",
-        "type": "ui_text",
-        "z": "5a4975ebcc568c40",
-        "group": "cad099844726e2c2",
-        "order": 5,
-        "width": 7,
-        "height": 1,
-        "name": "",
-        "label": "Total de ovos ruins",
-        "format": "{{msg.payload.ruins}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 790,
-        "y": 160,
-        "wires": []
-    },
-    {
-        "id": "ddf4e2ed36b1e975",
-        "type": "ui_text",
-        "z": "5a4975ebcc568c40",
-        "group": "cad099844726e2c2",
-        "order": 4,
-        "width": 7,
-        "height": 1,
-        "name": "",
-        "label": "Total de ovos bons",
-        "format": "{{msg.payload.bons}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 790,
-        "y": 120,
-        "wires": []
-    },
-    {
-        "id": "9bb4846fcdc0c53e",
-        "type": "ui_gauge",
-        "z": "5a4975ebcc568c40",
-        "name": "",
-        "group": "a36d8b353b5ac62a",
-        "order": 3,
-        "width": 7,
-        "height": 4,
-        "gtype": "gage",
-        "title": "% Ovos ruins",
-        "label": "%",
-        "format": "{{bad_pc}}",
-        "min": 0,
-        "max": "100",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "diff": false,
-        "className": "",
-        "x": 530,
-        "y": 200,
-        "wires": []
-    },
-    {
-        "id": "9834b9ff599c3e33",
-        "type": "ui_gauge",
-        "z": "5a4975ebcc568c40",
-        "name": "",
-        "group": "a36d8b353b5ac62a",
-        "order": 2,
-        "width": 7,
-        "height": 4,
-        "gtype": "gage",
-        "title": "% Ovos bons",
-        "label": "%",
-        "format": "{{good_pc}}",
-        "min": 0,
-        "max": "100",
-        "colors": [
-            "#ca3838",
-            "#e6e600",
-            "#00b500"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "diff": false,
-        "className": "",
-        "x": 530,
-        "y": 240,
-        "wires": []
-    },
-    {
-        "id": "883997de3548f60f",
-        "type": "ui_gauge",
-        "z": "5a4975ebcc568c40",
-        "name": "",
-        "group": "cad099844726e2c2",
-        "order": 2,
-        "width": 7,
-        "height": 4,
-        "gtype": "gage",
-        "title": "% Ovos bons",
-        "label": "%",
-        "format": "{{msg.payload.bons_pc}}",
-        "min": 0,
-        "max": "100",
-        "colors": [
-            "#ca3838",
-            "#e6e600",
-            "#00b500"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "diff": false,
-        "className": "",
-        "x": 770,
-        "y": 20,
-        "wires": []
-    },
-    {
-        "id": "7508b0d2707ff2a4",
-        "type": "ui_gauge",
-        "z": "5a4975ebcc568c40",
-        "name": "",
-        "group": "cad099844726e2c2",
-        "order": 3,
-        "width": 7,
-        "height": 4,
-        "gtype": "gage",
-        "title": "% Ovos ruins",
-        "label": "%",
-        "format": "{{msg.payload.ruins_pc}}",
-        "min": 0,
-        "max": "100",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "diff": false,
-        "className": "",
-        "x": 770,
-        "y": 60,
-        "wires": []
-    },
-    {
-        "id": "f77e83b984498625",
-        "type": "ui_chart",
-        "z": "5a4975ebcc568c40",
-        "name": "",
-        "group": "5c3af32dfbbc6bd9",
-        "order": 1,
-        "width": 21,
-        "height": 5,
-        "label": "",
-        "chartType": "line",
-        "legend": "false",
-        "xformat": "auto",
-        "interpolate": "bezier",
-        "nodata": "Sem dados",
-        "dot": true,
-        "ymin": "",
-        "ymax": "",
-        "removeOlder": 1,
-        "removeOlderPoints": "",
-        "removeOlderUnit": "3600",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#1f77b4",
-            "#aec7e8",
-            "#ff7f0e",
-            "#2ca02c",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "useDifferentColor": false,
-        "className": "",
-        "x": 750,
-        "y": 280,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "6a145f72e48927de",
-        "type": "ui_table",
-        "z": "5a4975ebcc568c40",
-        "group": "3cdf104460b09eaf",
-        "name": "",
-        "order": 1,
-        "width": "21",
-        "height": "5",
-        "columns": [
-            {
-                "field": "id",
-                "title": "Identificador",
-                "width": "",
-                "align": "center",
-                "formatter": "plaintext",
-                "formatterParams": {
-                    "target": "_blank"
-                }
-            },
-            {
-                "field": "Data",
-                "title": "Data",
-                "width": "",
-                "align": "center",
-                "formatter": "plaintext",
-                "formatterParams": {
-                    "target": "_blank"
-                }
-            },
-            {
-                "field": "Bons",
-                "title": "Ovos bons",
-                "width": "",
-                "align": "center",
-                "formatter": "plaintext",
-                "formatterParams": {
-                    "target": "_blank"
-                }
-            },
-            {
-                "field": "Ruins",
-                "title": "Ovos ruins",
-                "width": "",
-                "align": "center",
-                "formatter": "plaintext",
-                "formatterParams": {
-                    "target": "_blank"
-                }
-            },
-            {
-                "field": "Total",
-                "title": "Total",
-                "width": "",
-                "align": "center",
-                "formatter": "plaintext",
-                "formatterParams": {
-                    "target": "_blank"
-                }
-            }
-        ],
-        "outputs": 0,
-        "cts": false,
-        "x": 370,
-        "y": 280,
-        "wires": []
-    },
-    {
-        "id": "f5faf96a5e36b219",
-        "type": "inject",
-        "z": "5a4975ebcc568c40",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 120,
-        "y": 660,
-        "wires": [
-            [
-                "050199a148fc025c"
-            ]
-        ]
-    },
-    {
-        "id": "2de52abb8b776671",
-        "type": "debug",
-        "z": "5a4975ebcc568c40",
-        "name": "debug 51",
-        "active": true,
-        "tosidebar": true,
-        "console": true,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 670,
-        "y": 660,
-        "wires": []
-    },
-    {
-        "id": "050199a148fc025c",
-        "type": "FIWARE version",
-        "z": "5a4975ebcc568c40",
-        "name": "",
-        "openapis": "9bccc41af47bb660",
-        "x": 320,
-        "y": 660,
-        "wires": [
-            [
-                "2de52abb8b776671"
-            ]
-        ]
-    },
-    {
         "id": "f4377ba4dfbfde65",
         "type": "debug",
         "z": "148c173e8eacbf9a",
@@ -1250,7 +482,7 @@
         "type": "debug",
         "z": "148c173e8eacbf9a",
         "name": "debug 19",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": true,
         "tostatus": false,
@@ -1435,7 +667,7 @@
         ],
         "repeat": "",
         "crontab": "",
-        "once": false,
+        "once": true,
         "onceDelay": 0.1,
         "topic": "",
         "payload": "{}",
@@ -1934,6 +1166,786 @@
         ]
     },
     {
+        "id": "6a63c4aa5cf46339",
+        "type": "function",
+        "z": "5a4975ebcc568c40",
+        "name": "% ovos",
+        "func": "if (msg.payload.good && msg.payload.bad) {\n    var valor1 = parseInt(msg.payload.good);\n    var valor2 = parseInt(msg.payload.bad);\n\n    if (!isNaN(valor1) && !isNaN(valor2)) {\n        var soma = valor1 + valor2;\n    }\n}\n\n//porcentagem ruins\nvar bad_pc = msg.valor2 || 0;\nbad_pc = (valor2 / soma) * 100;\nmsg.bad_pc = Math.round(bad_pc);\n\n//porcentagem boas\nvar good_pc = valor1 || 0;\ngood_pc = (valor1 / soma) * 100;\nmsg.good_pc = Math.round(good_pc);\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 240,
+        "y": 220,
+        "wires": [
+            [
+                "9bb4846fcdc0c53e",
+                "9834b9ff599c3e33"
+            ]
+        ]
+    },
+    {
+        "id": "0c26b6fe05404ba9",
+        "type": "inject",
+        "z": "5a4975ebcc568c40",
+        "name": "Apagar",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{}",
+        "payloadType": "json",
+        "x": 150,
+        "y": 500,
+        "wires": [
+            [
+                "d82d641b722d2202"
+            ]
+        ]
+    },
+    {
+        "id": "f6a7e44aa7832336",
+        "type": "debug",
+        "z": "5a4975ebcc568c40",
+        "name": "debug 46",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 510,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "a58fa236741ec245",
+        "type": "inject",
+        "z": "5a4975ebcc568c40",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"id\":\"urn:ngsi-ld:AgriFarm:1\",\"type\":\"AgriFarm\",\"name\":{\"value\":\"ETASA\"},\"description\":{\"value\":\"ESCOLA TECNICA AGROPECUARIA ENGENHEIRO SALVADOR ARENA\"},\"seeAlso\":{\"value\":[\"http://escolatecnicasalvadorarena.org.br/\"]},\"address\":{\"type\":\"PostalAddress\",\"value\":{\"addressLocality\":\"Santa Rita do Passa Quatro, SP\",\"addressCountry\":\"BR\",\"streetAddress\":\"SP-330, KM 238, CEP 13670-000\"}},\"contactPoint\":{\"type\":\"ContactPoint\",\"value\":{\"email\":\"secretaria@escolatecnicasalvadorarena.org.br\",\"telephone\":\"55 19 3584-8980\"}},\"production\":{\"type\":\"Data\",\"value\":[{\"id\":\"urn:ngsi-ld:AgriFarm:1684775831025-0\",\"Data\":\"16/07/2021\",\"Bons\":549,\"Ruins\":32,\"Total\":581},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-1\",\"Data\":\"23/07/2021\",\"Bons\":711,\"Ruins\":29,\"Total\":740},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-2\",\"Data\":\"30/07/2021\",\"Bons\":670,\"Ruins\":25,\"Total\":695},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-3\",\"Data\":\"03/08/2021\",\"Bons\":672,\"Ruins\":20,\"Total\":692},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-4\",\"Data\":\"09/08/2021\",\"Bons\":730,\"Ruins\":15,\"Total\":745}]}}",
+        "payloadType": "json",
+        "x": 150,
+        "y": 460,
+        "wires": [
+            [
+                "a6d8d42ee3c3501b"
+            ]
+        ]
+    },
+    {
+        "id": "3dd45a752c03f51e",
+        "type": "debug",
+        "z": "5a4975ebcc568c40",
+        "name": "debug 48",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 510,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "e2e744092724b4c3",
+        "type": "function",
+        "z": "5a4975ebcc568c40",
+        "name": "function 35",
+        "func": "// Função para formatar os dados recebidos no formato especificado\nfunction formatarDados(dados) {\n    // Obtém as linhas existentes da variável global ou do contexto de fluxo\n    var tableData = flow.get(\"tableData\") || [];\n\n    // Verifica se os dados já foram adicionados anteriormente\n    if (tableData.length === 0) {\n        // Percorre os dados recebidos\n        for (var i = 0; i < dados.length; i++) {\n            var dado = dados[i];\n\n            // Cria um objeto para a nova linha com os valores recebidos\n            var newRow = {\n                \"Id\": dado.id,\n                \"Data\": dado.Data,\n                \"Bons\": dado.Bons,\n                \"Ruins\": dado.Ruins,\n                \"Total\": dado.Total\n            };\n\n            // Adiciona a nova linha ao array de dados da tabela\n            tableData.push(newRow);\n        }\n    }\n\n    // Armazena as linhas atualizadas na variável global ou no contexto de fluxo\n    flow.set(\"tableData\", tableData);\n\n    // Define o payload da mensagem como os dados atualizados da tabela\n    msg.payload = tableData;\n\n    return msg;\n}\n\n// Obtenha os valores dos dados recebidos\nvar dadosRecebidos = msg.payload.production;\n\n// Chame a função para formatar os dados\nvar mensagemFormatada = formatarDados(dadosRecebidos);\n\nreturn mensagemFormatada;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 340,
+        "wires": [
+            [
+                "6a145f72e48927de"
+            ]
+        ]
+    },
+    {
+        "id": "ada16b2479fe6f25",
+        "type": "inject",
+        "z": "5a4975ebcc568c40",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{}",
+        "payloadType": "json",
+        "x": 230,
+        "y": 340,
+        "wires": [
+            [
+                "16eb0198dc45c14b"
+            ]
+        ]
+    },
+    {
+        "id": "30fea0eed0332fb2",
+        "type": "function",
+        "z": "5a4975ebcc568c40",
+        "name": "function 36",
+        "func": "// Função para formatar os dados no formato especificado\nfunction formatarDados(dados) {\n    var dadosFormatados = {\n        \"id\": \"urn:ngsi-ld:AgriFarm:1\",\n        \"type\": \"AgriFarm\",\n        \"production\": {\n            \"type\": \"Data\",\n            \"value\": []\n        }\n    };\n\n    for (var i = 0; i < dados.length; i++) {\n        var dado = dados[i];\n\n        // Gere um ID único para cada dado inserido\n        var id = \"urn:ngsi-ld:AgriFarm:\" + (new Date()).getTime() + \"-\" + i;\n\n        var dadoFormatado = {\n            \"id\": id,\n            \"Data\": dado.Data,\n            \"Bons\": dado.Bons,\n            \"Ruins\": dado.Ruins,\n            \"Total\": dado.Total\n        };\n\n        dadosFormatados.production.value.push(dadoFormatado);\n    }\n\n    return dadosFormatados;\n}\n\n// Obtenha os valores dos dados\nvar dadosInput = msg.payload;\n\n// Chame a função para formatar os dados\nvar dadosFormatados = formatarDados(dadosInput);\n\n// Obtenha o valor atual do atributo \"production\"\nvar productionValue = flow.get(\"tableData.production.value\") || [];\n\n// Combine o valor atual com os novos dados formatados\nproductionValue = productionValue.concat(dadosFormatados.production.value);\n\n// Atualize apenas o valor do atributo \"production\"\nflow.set(\"tableData.production.value\", productionValue);\n\n// Defina os dados formatados como o payload da mensagem\nmsg.payload = dadosFormatados;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 400,
+        "wires": [
+            [
+                "c52fcc27eba9d501"
+            ]
+        ]
+    },
+    {
+        "id": "277a24589cab4a5c",
+        "type": "function",
+        "z": "5a4975ebcc568c40",
+        "name": "function 32",
+        "func": "// Função para formatar uma data no formato \"DD/MM/AAAA\"\nfunction formatarData(data) {\n    var dateObj = new Date(data);\n    var dia = dateObj.getDate();\n    var mes = dateObj.getMonth() + 1;\n    var ano = dateObj.getFullYear();\n\n    // Formata o dia e mês para sempre ter dois dígitos\n    dia = (dia < 10) ? '0' + dia : dia;\n    mes = (mes < 10) ? '0' + mes : mes;\n\n    var dataFormatada = dia + '/' + mes + '/' + ano;\n\n    return dataFormatada;\n}\n\n// Exemplo de uso da função\nvar dataInput = msg.payload.date;\nvar dataFormatada = formatarData(dataInput);\n\n// Obtém as linhas existentes da variável global ou do contexto de fluxo\nvar tableData = flow.get(\"tableData\") || [];\n\n// Cria um objeto para a nova linha\nvar newRow = {\n    \"Data\": dataFormatada,\n    \"Bons\": parseFloat(msg.payload.good),\n    \"Ruins\": parseFloat(msg.payload.bad),\n    \"Total\": parseFloat(msg.payload.bad) + parseFloat(msg.payload.good)\n};\n\n// Adiciona a nova linha ao array de dados da tabela\ntableData.push(newRow);\n\n// Armazena as linhas atualizadas na variável global ou no contexto de fluxo\nflow.set(\"tableData\", tableData);\n\n// Define o payload da mensagem como os dados atualizados da tabela\nmsg.payload = tableData;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 170,
+        "y": 400,
+        "wires": [
+            [
+                "30fea0eed0332fb2"
+            ]
+        ]
+    },
+    {
+        "id": "e2a51c7e21d2e1e7",
+        "type": "function",
+        "z": "5a4975ebcc568c40",
+        "name": "function 37",
+        "func": "var input = msg.payload;\n\nvar arrData = [];\nvar arrTotal = [];\n\nfor (var i = 0; i < input.production.length; i++) {\n    var item = input.production[i];\n    arrData.push(item.Data);\n    arrTotal.push(item.Total);\n}\n\n// Função auxiliar para ordenar os dados cronologicamente\nfunction sortByDate(data, total) {\n    var sortedData = [];\n    var sortedTotal = [];\n\n    // Cria um array de objetos com os dados e o total\n    var dataWithTotal = data.map(function (value, index) {\n        var dateParts = value.split('/');\n        var day = parseInt(dateParts[0], 10);\n        var month = parseInt(dateParts[1], 10) - 1; // Subtraímos 1 para corresponder aos meses no formato Date (0-11)\n        var year = parseInt(dateParts[2], 10) + 2000; // Adicionamos 2000 para obter o ano no formato completo\n\n        return { data: new Date(year, month, day), total: total[index] };\n    });\n\n    // Ordena o array de objetos com base na propriedade \"data\"\n    dataWithTotal.sort(function (a, b) {\n        return a.data - b.data;\n    });\n\n    // Separa os dados ordenados em arrays separados\n    dataWithTotal.forEach(function (item) {\n        sortedData.push(formatarData(item.data));\n        sortedTotal.push(item.total);\n    });\n\n    return { data: sortedData, total: sortedTotal };\n}\n\n// Função auxiliar para formatar a data no formato \"DD/MM/AA\"\nfunction formatarData(data) {\n    var dia = data.getDate();\n    var mes = data.getMonth() + 1;\n    var ano = data.getFullYear().toString().substr(-2);\n\n    dia = (dia < 10) ? '0' + dia : dia;\n    mes = (mes < 10) ? '0' + mes : mes;\n\n    return dia + '/' + mes + '/' + ano;\n}\n\n// Ordena os dados cronologicamente\nvar sortedData = sortByDate(arrData, arrTotal);\n\nfunction formatData(data, total) {\n    const dataObject = [{\n        \"series\": [\"Dúzias\"],\n        \"data\": [total],\n        \"labels\": data\n    }];\n\n    return dataObject;\n}\n\nconst result = formatData(sortedData.data, sortedData.total);\nreturn { payload: result };",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 280,
+        "wires": [
+            [
+                "f77e83b984498625"
+            ]
+        ]
+    },
+    {
+        "id": "af8a4116b921c3a4",
+        "type": "function",
+        "z": "5a4975ebcc568c40",
+        "name": "function 38",
+        "func": "var bonsTotal = 0;\nvar ruinsTotal = 0;\n\n// Verifica se a propriedade 'production' existe e é um array\nif (msg.payload.production && Array.isArray(msg.payload.production)) {\n    // Percorre cada item no array 'production'\n    msg.payload.production.forEach(function (item) {\n        bonsTotal += item.Bons || 0;\n        ruinsTotal += item.Ruins || 0;\n    });\n}\n\n// Calcula as porcentagens\nvar total = bonsTotal + ruinsTotal;\nvar bonsPc = Math.floor((bonsTotal / total) * 100);\nvar ruinsPc = Math.floor((ruinsTotal / total) * 100);\n\n// Atualiza a payload com os resultados\nmsg.payload.bons = Math.floor(bonsTotal);\nmsg.payload.ruins = Math.floor(ruinsTotal);\nmsg.payload.total = Math.floor(total);\nmsg.payload.bons_pc = bonsPc;\nmsg.payload.ruins_pc = ruinsPc;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 120,
+        "wires": [
+            [
+                "883997de3548f60f",
+                "7508b0d2707ff2a4",
+                "ddf4e2ed36b1e975",
+                "b7b501af8d966eae",
+                "2550832b6db8a2ae"
+            ]
+        ]
+    },
+    {
+        "id": "e0f46b1477d960e3",
+        "type": "debug",
+        "z": "5a4975ebcc568c40",
+        "name": "debug 49",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "16eb0198dc45c14b",
+        "type": "NGSI Entity",
+        "z": "5a4975ebcc568c40",
+        "name": "Ler entidade",
+        "openapis": "9bccc41af47bb660",
+        "servicepath": "/",
+        "actionType": "read",
+        "entityId": "urn:ngsi-ld:AgriFarm:1",
+        "entityType": "AgriFarm",
+        "attrs": "production",
+        "keyValues": "true",
+        "dateModified": "false",
+        "x": 390,
+        "y": 340,
+        "wires": [
+            [
+                "e2e744092724b4c3",
+                "e2a51c7e21d2e1e7",
+                "af8a4116b921c3a4",
+                "e0f46b1477d960e3"
+            ]
+        ]
+    },
+    {
+        "id": "d82d641b722d2202",
+        "type": "NGSI Entity",
+        "z": "5a4975ebcc568c40",
+        "name": "Excluir entidade",
+        "openapis": "9bccc41af47bb660",
+        "servicepath": "/",
+        "actionType": "delete",
+        "entityId": "urn:ngsi-ld:AgriFarm:1",
+        "entityType": "AgriFarm",
+        "attrs": "",
+        "keyValues": "false",
+        "dateModified": "false",
+        "x": 320,
+        "y": 500,
+        "wires": [
+            [
+                "f6a7e44aa7832336"
+            ]
+        ]
+    },
+    {
+        "id": "a6d8d42ee3c3501b",
+        "type": "NGSI Entity",
+        "z": "5a4975ebcc568c40",
+        "name": "Criar entidade",
+        "openapis": "9bccc41af47bb660",
+        "servicepath": "/",
+        "actionType": "upsert",
+        "entityId": "",
+        "entityType": "",
+        "attrs": "",
+        "keyValues": "false",
+        "dateModified": "false",
+        "x": 320,
+        "y": 460,
+        "wires": [
+            [
+                "3dd45a752c03f51e",
+                "d73ba755a72e7b99"
+            ]
+        ]
+    },
+    {
+        "id": "c52fcc27eba9d501",
+        "type": "NGSI Entity",
+        "z": "5a4975ebcc568c40",
+        "name": "",
+        "openapis": "9bccc41af47bb660",
+        "servicepath": "/",
+        "actionType": "upsert",
+        "entityId": "",
+        "entityType": "",
+        "attrs": "",
+        "keyValues": "false",
+        "dateModified": "false",
+        "x": 530,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d73ba755a72e7b99",
+        "type": "ui_form",
+        "z": "5a4975ebcc568c40",
+        "name": "",
+        "label": "",
+        "group": "a36d8b353b5ac62a",
+        "order": 1,
+        "width": 7,
+        "height": 4,
+        "options": [
+            {
+                "label": "Data",
+                "value": "date",
+                "type": "date",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Bons (Dz)",
+                "value": "good",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Ruins (Dz)",
+                "value": "bad",
+                "type": "text",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "date": "",
+            "good": "",
+            "bad": ""
+        },
+        "payload": "",
+        "submit": "Enviar",
+        "cancel": "Cancelar",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": false,
+        "className": "",
+        "x": 110,
+        "y": 280,
+        "wires": [
+            [
+                "6a145f72e48927de",
+                "277a24589cab4a5c",
+                "16eb0198dc45c14b",
+                "6a63c4aa5cf46339"
+            ]
+        ]
+    },
+    {
+        "id": "7572d7a139697137",
+        "type": "ui_form",
+        "z": "5a4975ebcc568c40",
+        "d": true,
+        "name": "",
+        "label": "Excluir um registro de produção",
+        "group": "3cdf104460b09eaf",
+        "order": 2,
+        "width": "7",
+        "height": "1",
+        "options": [
+            {
+                "label": "Identificador",
+                "value": "id",
+                "type": "number",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "id": ""
+        },
+        "payload": "",
+        "submit": "Enviar",
+        "cancel": "Cancelar",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": false,
+        "className": "",
+        "x": 170,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2550832b6db8a2ae",
+        "type": "ui_text",
+        "z": "5a4975ebcc568c40",
+        "group": "cad099844726e2c2",
+        "order": 1,
+        "width": 7,
+        "height": 1,
+        "name": "",
+        "label": "Total de ovos produzidos (Dz)",
+        "format": "{{msg.payload.total}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 830,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "b7b501af8d966eae",
+        "type": "ui_text",
+        "z": "5a4975ebcc568c40",
+        "group": "cad099844726e2c2",
+        "order": 5,
+        "width": 7,
+        "height": 1,
+        "name": "",
+        "label": "Total de ovos ruins (Dz)",
+        "format": "{{msg.payload.ruins}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 810,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "ddf4e2ed36b1e975",
+        "type": "ui_text",
+        "z": "5a4975ebcc568c40",
+        "group": "cad099844726e2c2",
+        "order": 4,
+        "width": 7,
+        "height": 1,
+        "name": "",
+        "label": "Total de ovos bons (Dz)",
+        "format": "{{msg.payload.bons}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 810,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "9bb4846fcdc0c53e",
+        "type": "ui_gauge",
+        "z": "5a4975ebcc568c40",
+        "name": "",
+        "group": "a36d8b353b5ac62a",
+        "order": 3,
+        "width": 7,
+        "height": 4,
+        "gtype": "gage",
+        "title": "% Ovos ruins",
+        "label": "%",
+        "format": "{{bad_pc}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 530,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "9834b9ff599c3e33",
+        "type": "ui_gauge",
+        "z": "5a4975ebcc568c40",
+        "name": "",
+        "group": "a36d8b353b5ac62a",
+        "order": 2,
+        "width": 7,
+        "height": 4,
+        "gtype": "gage",
+        "title": "% Ovos bons",
+        "label": "%",
+        "format": "{{good_pc}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#ca3838",
+            "#e6e600",
+            "#00b500"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 530,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "883997de3548f60f",
+        "type": "ui_gauge",
+        "z": "5a4975ebcc568c40",
+        "name": "",
+        "group": "cad099844726e2c2",
+        "order": 2,
+        "width": 7,
+        "height": 4,
+        "gtype": "gage",
+        "title": "% Ovos bons",
+        "label": "%",
+        "format": "{{msg.payload.bons_pc}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#ca3838",
+            "#e6e600",
+            "#00b500"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 770,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "7508b0d2707ff2a4",
+        "type": "ui_gauge",
+        "z": "5a4975ebcc568c40",
+        "name": "",
+        "group": "cad099844726e2c2",
+        "order": 3,
+        "width": 7,
+        "height": 4,
+        "gtype": "gage",
+        "title": "% Ovos ruins",
+        "label": "%",
+        "format": "{{msg.payload.ruins_pc}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 770,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "f77e83b984498625",
+        "type": "ui_chart",
+        "z": "5a4975ebcc568c40",
+        "name": "",
+        "group": "5c3af32dfbbc6bd9",
+        "order": 1,
+        "width": 21,
+        "height": 5,
+        "label": "",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "auto",
+        "interpolate": "bezier",
+        "nodata": "Sem dados",
+        "dot": true,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 750,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6a145f72e48927de",
+        "type": "ui_table",
+        "z": "5a4975ebcc568c40",
+        "group": "3cdf104460b09eaf",
+        "name": "",
+        "order": 1,
+        "width": "21",
+        "height": "5",
+        "columns": [
+            {
+                "field": "id",
+                "title": "Identificador",
+                "width": "",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "Data",
+                "title": "Data",
+                "width": "",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "Bons",
+                "title": "Ovos bons (Dz)",
+                "width": "",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "Ruins",
+                "title": "Ovos ruins (Dz)",
+                "width": "",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "Total",
+                "title": "Total (Dz)",
+                "width": "",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            }
+        ],
+        "outputs": 0,
+        "cts": false,
+        "x": 370,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "f5faf96a5e36b219",
+        "type": "inject",
+        "z": "5a4975ebcc568c40",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 660,
+        "wires": [
+            [
+                "050199a148fc025c"
+            ]
+        ]
+    },
+    {
+        "id": "2de52abb8b776671",
+        "type": "debug",
+        "z": "5a4975ebcc568c40",
+        "name": "debug 51",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 670,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "050199a148fc025c",
+        "type": "FIWARE version",
+        "z": "5a4975ebcc568c40",
+        "name": "",
+        "openapis": "9bccc41af47bb660",
+        "x": 320,
+        "y": 660,
+        "wires": [
+            [
+                "2de52abb8b776671"
+            ]
+        ]
+    },
+    {
         "id": "0252f9c4489d9798",
         "type": "change",
         "z": "e9c6344b196bfe35",
@@ -2050,7 +2062,7 @@
         ],
         "repeat": "",
         "crontab": "",
-        "once": false,
+        "once": true,
         "onceDelay": 0.1,
         "topic": "",
         "payload": "{}",
@@ -2133,7 +2145,7 @@
         ],
         "repeat": "",
         "crontab": "",
-        "once": false,
+        "once": true,
         "onceDelay": 0.1,
         "topic": "",
         "payload": "{}",
@@ -3715,7 +3727,7 @@
         "type": "debug",
         "z": "e9c6344b196bfe35",
         "name": "debug 50",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -3723,7 +3735,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 920,
-        "y": 120,
+        "y": 100,
         "wires": []
     },
     {
