@@ -177,18 +177,9 @@
     {
         "id": "d06c7024e6938db6",
         "type": "ui_tab",
-        "name": "FSA Temp e Umid",
+        "name": "ETASA dados",
         "icon": "show_chart",
         "order": 4,
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "a7d23cd996ba7867",
-        "type": "ui_tab",
-        "name": "FSA Produção",
-        "icon": "show_chart",
-        "order": 3,
         "disabled": false,
         "hidden": false
     },
@@ -204,7 +195,7 @@
     {
         "id": "43174ed033fbc86e",
         "type": "ui_tab",
-        "name": "Nacional",
+        "name": "Cotação Nacional",
         "icon": "show_chart",
         "order": 5,
         "disabled": false,
@@ -213,7 +204,7 @@
     {
         "id": "c43e1d3993da57ea",
         "type": "ui_tab",
-        "name": "Internacional",
+        "name": "Cotação Internacional",
         "icon": "show_chart",
         "order": 6,
         "disabled": false,
@@ -227,17 +218,6 @@
         "order": 1,
         "disp": true,
         "width": "21",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "8bcb2804d0691f25",
-        "type": "ui_group",
-        "name": "Group 1",
-        "tab": "d06c7024e6938db6",
-        "order": 2,
-        "disp": false,
-        "width": "23",
         "collapse": false,
         "className": ""
     },
@@ -269,7 +249,7 @@
         "name": "Gráfico de produção cadastrada",
         "tab": "1026f58dc258542c",
         "order": 4,
-        "disp": true,
+        "disp": false,
         "width": "21",
         "collapse": false,
         "className": ""
@@ -278,7 +258,7 @@
         "id": "8e1d1b289722c345",
         "type": "ui_group",
         "name": "produção e preço semanais",
-        "tab": "a7d23cd996ba7867",
+        "tab": "d06c7024e6938db6",
         "order": 1,
         "disp": false,
         "width": "23",
@@ -461,6 +441,76 @@
         "height": 1
     },
     {
+        "id": "61c38c1798c70a9b",
+        "type": "ui_spacer",
+        "z": "5a4975ebcc568c40",
+        "name": "spacer",
+        "group": "cad099844726e2c2",
+        "order": 6,
+        "width": 7,
+        "height": 1
+    },
+    {
+        "id": "91e0d2df20c28b5c",
+        "type": "ui_spacer",
+        "z": "5a4975ebcc568c40",
+        "name": "spacer",
+        "group": "a36d8b353b5ac62a",
+        "order": 4,
+        "width": 7,
+        "height": 1
+    },
+    {
+        "id": "43e6403ddbdb4a80",
+        "type": "ui_spacer",
+        "z": "5a4975ebcc568c40",
+        "name": "spacer",
+        "group": "a36d8b353b5ac62a",
+        "order": 5,
+        "width": 7,
+        "height": 1
+    },
+    {
+        "id": "2340f379695d3db8",
+        "type": "ui_spacer",
+        "z": "5a4975ebcc568c40",
+        "name": "spacer",
+        "group": "a36d8b353b5ac62a",
+        "order": 6,
+        "width": 7,
+        "height": 1
+    },
+    {
+        "id": "1dc1331145e4cc70",
+        "type": "ui_spacer",
+        "z": "5a4975ebcc568c40",
+        "name": "spacer",
+        "group": "3cdf104460b09eaf",
+        "order": 3,
+        "width": 14,
+        "height": 1
+    },
+    {
+        "id": "a06b2fd83eda90fa",
+        "type": "ui_spacer",
+        "z": "5a4975ebcc568c40",
+        "name": "spacer",
+        "group": "5c3af32dfbbc6bd9",
+        "order": 3,
+        "width": 21,
+        "height": 1
+    },
+    {
+        "id": "c9b398dc5178f6e0",
+        "type": "ui_spacer",
+        "z": "5a4975ebcc568c40",
+        "name": "spacer",
+        "group": "5c3af32dfbbc6bd9",
+        "order": 6,
+        "width": 21,
+        "height": 1
+    },
+    {
         "id": "f4377ba4dfbfde65",
         "type": "debug",
         "z": "148c173e8eacbf9a",
@@ -473,7 +523,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 510,
+        "x": 530,
         "y": 140,
         "wires": []
     },
@@ -1250,7 +1300,7 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "{\"id\":\"urn:ngsi-ld:AgriFarm:1\",\"type\":\"AgriFarm\",\"name\":{\"value\":\"ETASA\"},\"description\":{\"value\":\"ESCOLA TECNICA AGROPECUARIA ENGENHEIRO SALVADOR ARENA\"},\"seeAlso\":{\"value\":[\"http://escolatecnicasalvadorarena.org.br/\"]},\"address\":{\"type\":\"PostalAddress\",\"value\":{\"addressLocality\":\"Santa Rita do Passa Quatro, SP\",\"addressCountry\":\"BR\",\"streetAddress\":\"SP-330, KM 238, CEP 13670-000\"}},\"contactPoint\":{\"type\":\"ContactPoint\",\"value\":{\"email\":\"secretaria@escolatecnicasalvadorarena.org.br\",\"telephone\":\"55 19 3584-8980\"}},\"production\":{\"type\":\"Data\",\"value\":[{\"id\":\"urn:ngsi-ld:AgriFarm:1684775831025-0\",\"Data\":\"16/07/2021\",\"Bons\":549,\"Ruins\":32,\"Total\":581},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-1\",\"Data\":\"23/07/2021\",\"Bons\":711,\"Ruins\":29,\"Total\":740},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-2\",\"Data\":\"30/07/2021\",\"Bons\":670,\"Ruins\":25,\"Total\":695},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-3\",\"Data\":\"03/08/2021\",\"Bons\":672,\"Ruins\":20,\"Total\":692},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-4\",\"Data\":\"09/08/2021\",\"Bons\":730,\"Ruins\":15,\"Total\":745}]}}",
+        "payload": "{\"id\":\"urn:ngsi-ld:AgriFarm:1\",\"type\":\"AgriFarm\",\"name\":{\"value\":\"ETASA\"},\"description\":{\"value\":\"ESCOLA TECNICA AGROPECUARIA ENGENHEIRO SALVADOR ARENA\"},\"seeAlso\":{\"value\":[\"http://escolatecnicasalvadorarena.org.br/\"]},\"address\":{\"type\":\"PostalAddress\",\"value\":{\"addressLocality\":\"Santa Rita do Passa Quatro, SP\",\"addressCountry\":\"BR\",\"streetAddress\":\"SP-330, KM 238, CEP 13670-000\"}},\"contactPoint\":{\"type\":\"ContactPoint\",\"value\":{\"email\":\"secretaria@escolatecnicasalvadorarena.org.br\",\"telephone\":\"55 19 3584-8980\"}},\"production\":{\"type\":\"Data\",\"value\":[{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-0\",\"Data\":\"16/07/2021\",\"Bons\":549,\"Ruins\":32,\"Total\":581},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-1\",\"Data\":\"23/07/2021\",\"Bons\":711,\"Ruins\":29,\"Total\":740},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-2\",\"Data\":\"30/07/2021\",\"Bons\":670.5,\"Ruins\":24.5,\"Total\":695},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-3\",\"Data\":\"03/08/2021\",\"Bons\":672.5,\"Ruins\":19.5,\"Total\":692},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-4\",\"Data\":\"09/08/2021\",\"Bons\":730,\"Ruins\":15,\"Total\":745},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-5\",\"Data\":\"17/08/2021\",\"Bons\":775,\"Ruins\":11,\"Total\":786},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-6\",\"Data\":\"24/08/2021\",\"Bons\":780,\"Ruins\":15,\"Total\":795},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-7\",\"Data\":\"31/08/2021\",\"Bons\":784,\"Ruins\":12,\"Total\":796},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-8\",\"Data\":\"08/09/2021\",\"Bons\":891,\"Ruins\":18,\"Total\":909},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-9\",\"Data\":\"14/09/2021\",\"Bons\":674,\"Ruins\":16,\"Total\":690},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-10\",\"Data\":\"20/09/2021\",\"Bons\":790,\"Ruins\":10,\"Total\":800},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-11\",\"Data\":\"27/09/2021\",\"Bons\":790,\"Ruins\":7,\"Total\":797},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-12\",\"Data\":\"05/10/2021\",\"Bons\":757,\"Ruins\":10,\"Total\":767},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-13\",\"Data\":\"14/10/2021\",\"Bons\":975,\"Ruins\":17,\"Total\":992},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-14\",\"Data\":\"19/10/2021\",\"Bons\":540,\"Ruins\":12,\"Total\":552},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-15\",\"Data\":\"26/10/2021\",\"Bons\":759,\"Ruins\":8,\"Total\":767},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-16\",\"Data\":\"03/11/2021\",\"Bons\":860,\"Ruins\":13,\"Total\":873},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-17\",\"Data\":\"09/11/2021\",\"Bons\":630,\"Ruins\":7,\"Total\":637},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-18\",\"Data\":\"16/11/2021\",\"Bons\":725,\"Ruins\":5,\"Total\":730},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-19\",\"Data\":\"23/11/2021\",\"Bons\":742,\"Ruins\":5,\"Total\":747},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-20\",\"Data\":\"30/11/2021\",\"Bons\":755,\"Ruins\":5,\"Total\":760},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-21\",\"Data\":\"07/12/2021\",\"Bons\":750,\"Ruins\":10,\"Total\":760},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-22\",\"Data\":\"14/12/2021\",\"Bons\":760,\"Ruins\":7,\"Total\":767},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-23\",\"Data\":\"20/12/2021\",\"Bons\":750,\"Ruins\":10,\"Total\":760},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-24\",\"Data\":\"28/12/2021\",\"Bons\":764,\"Ruins\":8,\"Total\":772},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-25\",\"Data\":\"04/01/2022\",\"Bons\":761,\"Ruins\":11.5,\"Total\":772.5},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-26\",\"Data\":\"11/01/2022\",\"Bons\":758,\"Ruins\":7,\"Total\":765},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-27\",\"Data\":\"18/01/2022\",\"Bons\":753,\"Ruins\":14.5,\"Total\":767.5},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-28\",\"Data\":\"25/01/2022\",\"Bons\":760,\"Ruins\":10,\"Total\":770},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-29\",\"Data\":\"01/02/2022\",\"Bons\":766.5,\"Ruins\":6,\"Total\":772.5},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-30\",\"Data\":\"08/02/2022\",\"Bons\":760,\"Ruins\":5,\"Total\":765},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-31\",\"Data\":\"15/02/2022\",\"Bons\":768.5,\"Ruins\":4,\"Total\":772.5},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-32\",\"Data\":\"22/02/2022\",\"Bons\":764,\"Ruins\":6,\"Total\":770},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-33\",\"Data\":\"04/03/2022\",\"Bons\":1080,\"Ruins\":12.5,\"Total\":1092.5},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-34\",\"Data\":\"08/03/2022\",\"Bons\":430,\"Ruins\":2.5,\"Total\":432.5},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-35\",\"Data\":\"15/03/2022\",\"Bons\":440,\"Ruins\":2,\"Total\":442},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-36\",\"Data\":\"22/03/2022\",\"Bons\":495,\"Ruins\":3.5,\"Total\":498.5},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-37\",\"Data\":\"29/03/2022\",\"Bons\":530,\"Ruins\":3,\"Total\":533},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-38\",\"Data\":\"05/04/2022\",\"Bons\":520,\"Ruins\":4,\"Total\":524},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-39\",\"Data\":\"12/04/2022\",\"Bons\":539,\"Ruins\":3,\"Total\":542},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-40\",\"Data\":\"19/04/2022\",\"Bons\":520,\"Ruins\":2,\"Total\":522},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-41\",\"Data\":\"26/04/2022\",\"Bons\":525,\"Ruins\":2,\"Total\":527},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-42\",\"Data\":\"03/05/2022\",\"Bons\":510,\"Ruins\":1,\"Total\":511},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-43\",\"Data\":\"10/05/2022\",\"Bons\":525,\"Ruins\":2.5,\"Total\":527.5},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-44\",\"Data\":\"17/05/2022\",\"Bons\":520,\"Ruins\":3.5,\"Total\":523.5},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-45\",\"Data\":\"24/05/2022\",\"Bons\":540,\"Ruins\":4,\"Total\":544},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-46\",\"Data\":\"31/05/2022\",\"Bons\":550,\"Ruins\":4,\"Total\":554},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-47\",\"Data\":\"07/06/2022\",\"Bons\":712,\"Ruins\":4.3,\"Total\":716.3},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-48\",\"Data\":\"14/06/2022\",\"Bons\":709,\"Ruins\":5,\"Total\":714},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-49\",\"Data\":\"20/06/2022\",\"Bons\":700.5,\"Ruins\":5.5,\"Total\":706},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-50\",\"Data\":\"27/06/2022\",\"Bons\":687.25,\"Ruins\":8,\"Total\":695.25},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-51\",\"Data\":\"05/07/2022\",\"Bons\":675.5,\"Ruins\":11.5,\"Total\":687},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-52\",\"Data\":\"11/07/2022\",\"Bons\":680,\"Ruins\":15,\"Total\":695},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-53\",\"Data\":\"20/07/2022\",\"Bons\":680,\"Ruins\":11,\"Total\":691},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-54\",\"Data\":\"25/07/2022\",\"Bons\":685,\"Ruins\":6,\"Total\":691},{\"id\":\"urn:ngsi-ld:AgriFarm:1684784725909-55\",\"Data\":\"02/08/2022\",\"Bons\":675.5,\"Ruins\":7.5,\"Total\":683}]}}",
         "payloadType": "json",
         "x": 150,
         "y": 460,
@@ -1282,46 +1332,18 @@
         "type": "function",
         "z": "5a4975ebcc568c40",
         "name": "function 35",
-        "func": "// Função para formatar os dados recebidos no formato especificado\nfunction formatarDados(dados) {\n    // Obtém as linhas existentes da variável global ou do contexto de fluxo\n    var tableData = flow.get(\"tableData\") || [];\n\n    // Verifica se os dados já foram adicionados anteriormente\n    if (tableData.length === 0) {\n        // Percorre os dados recebidos\n        for (var i = 0; i < dados.length; i++) {\n            var dado = dados[i];\n\n            // Cria um objeto para a nova linha com os valores recebidos\n            var newRow = {\n                \"Id\": dado.id,\n                \"Data\": dado.Data,\n                \"Bons\": dado.Bons,\n                \"Ruins\": dado.Ruins,\n                \"Total\": dado.Total\n            };\n\n            // Adiciona a nova linha ao array de dados da tabela\n            tableData.push(newRow);\n        }\n    }\n\n    // Armazena as linhas atualizadas na variável global ou no contexto de fluxo\n    flow.set(\"tableData\", tableData);\n\n    // Define o payload da mensagem como os dados atualizados da tabela\n    msg.payload = tableData;\n\n    return msg;\n}\n\n// Obtenha os valores dos dados recebidos\nvar dadosRecebidos = msg.payload.production;\n\n// Chame a função para formatar os dados\nvar mensagemFormatada = formatarDados(dadosRecebidos);\n\nreturn mensagemFormatada;\n",
+        "func": "// Função para formatar os dados recebidos no formato especificado\nfunction formatarDados(dados) {\n    // Obtém as linhas existentes da variável global ou do contexto de fluxo\n    var tableData = flow.get(\"tableData\") || [];\n\n    // Limpa a tabela existente\n    tableData = [];\n\n    // Percorre os dados recebidos\n    for (var i = 0; i < dados.length; i++) {\n        var dado = dados[i];\n\n        // Cria um objeto para a nova linha com os valores recebidos\n        var newRow = {\n            \"Id\": dado.id,\n            \"Data\": dado.Data,\n            \"Bons\": dado.Bons,\n            \"Ruins\": dado.Ruins,\n            \"Total\": dado.Total\n        };\n\n        // Adiciona a nova linha ao array de dados da tabela\n        tableData.push(newRow);\n    }\n\n    // Armazena as linhas atualizadas na variável global ou no contexto de fluxo\n    flow.set(\"tableData\", tableData);\n\n    // Define o payload da mensagem como os dados atualizados da tabela\n    msg.payload = tableData;\n\n    return msg;\n}\n\n// Obtenha os valores dos dados recebidos\nvar dadosRecebidos = msg.payload.production;\n\n// Chame a função para formatar os dados\nvar mensagemFormatada = formatarDados(dadosRecebidos);\n\nreturn mensagemFormatada;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 610,
+        "x": 630,
         "y": 340,
         "wires": [
             [
-                "6a145f72e48927de"
-            ]
-        ]
-    },
-    {
-        "id": "ada16b2479fe6f25",
-        "type": "inject",
-        "z": "5a4975ebcc568c40",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "1",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "{}",
-        "payloadType": "json",
-        "x": 230,
-        "y": 340,
-        "wires": [
-            [
-                "16eb0198dc45c14b"
+                "6a145f72e48927de",
+                "b949edc845948e33"
             ]
         ]
     },
@@ -1368,14 +1390,14 @@
         "type": "function",
         "z": "5a4975ebcc568c40",
         "name": "function 37",
-        "func": "var input = msg.payload;\n\nvar arrData = [];\nvar arrTotal = [];\n\nfor (var i = 0; i < input.production.length; i++) {\n    var item = input.production[i];\n    arrData.push(item.Data);\n    arrTotal.push(item.Total);\n}\n\n// Função auxiliar para ordenar os dados cronologicamente\nfunction sortByDate(data, total) {\n    var sortedData = [];\n    var sortedTotal = [];\n\n    // Cria um array de objetos com os dados e o total\n    var dataWithTotal = data.map(function (value, index) {\n        var dateParts = value.split('/');\n        var day = parseInt(dateParts[0], 10);\n        var month = parseInt(dateParts[1], 10) - 1; // Subtraímos 1 para corresponder aos meses no formato Date (0-11)\n        var year = parseInt(dateParts[2], 10) + 2000; // Adicionamos 2000 para obter o ano no formato completo\n\n        return { data: new Date(year, month, day), total: total[index] };\n    });\n\n    // Ordena o array de objetos com base na propriedade \"data\"\n    dataWithTotal.sort(function (a, b) {\n        return a.data - b.data;\n    });\n\n    // Separa os dados ordenados em arrays separados\n    dataWithTotal.forEach(function (item) {\n        sortedData.push(formatarData(item.data));\n        sortedTotal.push(item.total);\n    });\n\n    return { data: sortedData, total: sortedTotal };\n}\n\n// Função auxiliar para formatar a data no formato \"DD/MM/AA\"\nfunction formatarData(data) {\n    var dia = data.getDate();\n    var mes = data.getMonth() + 1;\n    var ano = data.getFullYear().toString().substr(-2);\n\n    dia = (dia < 10) ? '0' + dia : dia;\n    mes = (mes < 10) ? '0' + mes : mes;\n\n    return dia + '/' + mes + '/' + ano;\n}\n\n// Ordena os dados cronologicamente\nvar sortedData = sortByDate(arrData, arrTotal);\n\nfunction formatData(data, total) {\n    const dataObject = [{\n        \"series\": [\"Dúzias\"],\n        \"data\": [total],\n        \"labels\": data\n    }];\n\n    return dataObject;\n}\n\nconst result = formatData(sortedData.data, sortedData.total);\nreturn { payload: result };",
+        "func": "var input = msg.payload;\n\nvar arrData = [];\nvar arrTotal = [];\n\nfor (var i = 0; i < input.production.length; i++) {\n    var item = input.production[i];\n    arrData.push(item.Data);\n    arrTotal.push(item.Total);\n}\n\n// Função auxiliar para ordenar os dados cronologicamente\nfunction sortByDate(data, total) {\n    var sortedData = [];\n    var sortedTotal = [];\n\n    // Cria um array de objetos com os dados e o total\n    var dataWithTotal = data.map(function (value, index) {\n        var dateParts = value.split('/');\n        var day = parseInt(dateParts[0], 10);\n        var month = parseInt(dateParts[1], 10) - 1; // Subtraímos 1 para corresponder aos meses no formato Date (0-11)\n        var year = parseInt(dateParts[2], 10) + 2000; // Adicionamos 2000 para obter o ano no formato completo\n\n        return { data: new Date(year, month, day), total: total[index] };\n    });\n\n    // Ordena o array de objetos com base na propriedade \"data\"\n    dataWithTotal.sort(function (a, b) {\n        return a.data - b.data;\n    });\n\n    // Separa os dados ordenados em arrays separados\n    dataWithTotal.forEach(function (item) {\n        sortedData.push(formatarData(item.data));\n        sortedTotal.push(item.total);\n    });\n\n    return { data: sortedData, total: sortedTotal };\n}\n\n// Função auxiliar para formatar a data no formato \"DD/MM/AA\"\nfunction formatarData(data) {\n    var dia = data.getDate();\n    var mes = data.getMonth() + 1;\n    var ano = data.getFullYear().toString().substr(-2);\n\n    dia = (dia < 10) ? '0' + dia : dia;\n    mes = (mes < 10) ? '0' + mes : mes;\n\n    return dia + '/' + mes + '/' + ano;\n}\n\n// Ordena os dados cronologicamente\nvar sortedData = sortByDate(arrData, arrTotal);\n\nfunction formatData(data, total) {\n    const dataObject = [{\n        \"series\": [\"Produzidos (Dz)\"],\n        \"data\": [total],\n        \"labels\": data\n    }];\n\n    return dataObject;\n}\n\nconst result = formatData(sortedData.data, sortedData.total);\nreturn { payload: result };",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 610,
-        "y": 280,
+        "x": 990,
+        "y": 260,
         "wires": [
             [
                 "f77e83b984498625"
@@ -1441,7 +1463,9 @@
                 "e2e744092724b4c3",
                 "e2a51c7e21d2e1e7",
                 "af8a4116b921c3a4",
-                "e0f46b1477d960e3"
+                "e0f46b1477d960e3",
+                "3522e236c00ff658",
+                "604cd866f6af5213"
             ]
         ]
     },
@@ -1516,7 +1540,7 @@
         "group": "a36d8b353b5ac62a",
         "order": 1,
         "width": 7,
-        "height": 4,
+        "height": 1,
         "options": [
             {
                 "label": "Data",
@@ -1572,8 +1596,8 @@
         "label": "Excluir um registro de produção",
         "group": "3cdf104460b09eaf",
         "order": 2,
-        "width": "7",
-        "height": "1",
+        "width": 7,
+        "height": 1,
         "options": [
             {
                 "label": "Identificador",
@@ -1668,7 +1692,7 @@
         "z": "5a4975ebcc568c40",
         "name": "",
         "group": "a36d8b353b5ac62a",
-        "order": 3,
+        "order": 2,
         "width": 7,
         "height": 4,
         "gtype": "gage",
@@ -1696,7 +1720,7 @@
         "z": "5a4975ebcc568c40",
         "name": "",
         "group": "a36d8b353b5ac62a",
-        "order": 2,
+        "order": 3,
         "width": 7,
         "height": 4,
         "gtype": "gage",
@@ -1780,7 +1804,7 @@
         "z": "5a4975ebcc568c40",
         "name": "",
         "group": "5c3af32dfbbc6bd9",
-        "order": 1,
+        "order": 2,
         "width": 21,
         "height": 5,
         "label": "",
@@ -1812,8 +1836,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 750,
-        "y": 280,
+        "x": 1130,
+        "y": 260,
         "wires": [
             []
         ]
@@ -1825,8 +1849,8 @@
         "group": "3cdf104460b09eaf",
         "name": "",
         "order": 1,
-        "width": "21",
-        "height": "5",
+        "width": 21,
+        "height": 5,
         "columns": [
             {
                 "field": "id",
@@ -1942,6 +1966,310 @@
         "wires": [
             [
                 "2de52abb8b776671"
+            ]
+        ]
+    },
+    {
+        "id": "b949edc845948e33",
+        "type": "debug",
+        "z": "5a4975ebcc568c40",
+        "name": "debug 52",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 780,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "9702703ddf8de5fb",
+        "type": "inject",
+        "z": "5a4975ebcc568c40",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{}",
+        "payloadType": "json",
+        "x": 210,
+        "y": 340,
+        "wires": [
+            [
+                "16eb0198dc45c14b"
+            ]
+        ]
+    },
+    {
+        "id": "3522e236c00ff658",
+        "type": "function",
+        "z": "5a4975ebcc568c40",
+        "name": "function 39",
+        "func": "var input = msg.payload;\n\nvar arrData = [];\nvar arrRuins = [];\n\nfor (var i = 0; i < input.production.length; i++) {\n    var item = input.production[i];\n    arrData.push(item.Data);\n    arrRuins.push(item.Ruins);\n}\n\n// Função auxiliar para ordenar os dados cronologicamente\nfunction sortByDate(data, ruins) {\n    var sortedData = [];\n    var sortedRuins = [];\n\n    // Cria um array de objetos com os dados e o total de ruins\n    var dataWithRuins = data.map(function (value, index) {\n        var dateParts = value.split('/');\n        var day = parseInt(dateParts[0], 10);\n        var month = parseInt(dateParts[1], 10) - 1; // Subtraímos 1 para corresponder aos meses no formato Date (0-11)\n        var year = parseInt(dateParts[2], 10) + 2000; // Adicionamos 2000 para obter o ano no formato completo\n\n        return { data: new Date(year, month, day), ruins: ruins[index] };\n    });\n\n    // Ordena o array de objetos com base na propriedade \"data\"\n    dataWithRuins.sort(function (a, b) {\n        return a.data - b.data;\n    });\n\n    // Separa os dados ordenados em arrays separados\n    dataWithRuins.forEach(function (item) {\n        sortedData.push(formatarData(item.data));\n        sortedRuins.push(item.ruins);\n    });\n\n    return { data: sortedData, ruins: sortedRuins };\n}\n\n// Função auxiliar para formatar a data no formato \"DD/MM/AA\"\nfunction formatarData(data) {\n    var dia = data.getDate();\n    var mes = data.getMonth() + 1;\n    var ano = data.getFullYear().toString().substr(-2);\n\n    dia = (dia < 10) ? '0' + dia : dia;\n    mes = (mes < 10) ? '0' + mes : mes;\n\n    return dia + '/' + mes + '/' + ano;\n}\n\n// Ordena os dados cronologicamente\nvar sortedData = sortByDate(arrData, arrRuins);\n\nfunction formatData(data, ruins) {\n    const dataObject = [{\n        \"series\": [\"Ruins (Dz)\"],\n        \"data\": [ruins],\n        \"labels\": data\n    }];\n\n    return dataObject;\n}\n\nconst result = formatData(sortedData.data, sortedData.ruins);\nreturn { payload: result };",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 990,
+        "y": 300,
+        "wires": [
+            [
+                "aea958d4d243e1bd"
+            ]
+        ]
+    },
+    {
+        "id": "aea958d4d243e1bd",
+        "type": "ui_chart",
+        "z": "5a4975ebcc568c40",
+        "name": "",
+        "group": "5c3af32dfbbc6bd9",
+        "order": 8,
+        "width": 21,
+        "height": 5,
+        "label": "",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "auto",
+        "interpolate": "bezier",
+        "nodata": "Sem dados",
+        "dot": true,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#d62728",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1130,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "caff553054b529fa",
+        "type": "ui_chart",
+        "z": "5a4975ebcc568c40",
+        "name": "",
+        "group": "5c3af32dfbbc6bd9",
+        "order": 5,
+        "width": 21,
+        "height": 5,
+        "label": "",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "auto",
+        "interpolate": "bezier",
+        "nodata": "Sem dados",
+        "dot": true,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#2ca02c",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1130,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "604cd866f6af5213",
+        "type": "function",
+        "z": "5a4975ebcc568c40",
+        "name": "function 40",
+        "func": "var input = msg.payload;\n\nvar arrData = [];\nvar arrBons = [];\n\nfor (var i = 0; i < input.production.length; i++) {\n    var item = input.production[i];\n    arrData.push(item.Data);\n    arrBons.push(item.Bons);\n}\n\n// Função auxiliar para ordenar os dados cronologicamente\nfunction sortByDate(data, bons) {\n    var sortedData = [];\n    var sortedBons = [];\n\n    // Cria um array de objetos com os dados e o total de bons\n    var dataWithBons = data.map(function (value, index) {\n        var dateParts = value.split('/');\n        var day = parseInt(dateParts[0], 10);\n        var month = parseInt(dateParts[1], 10) - 1; // Subtraímos 1 para corresponder aos meses no formato Date (0-11)\n        var year = parseInt(dateParts[2], 10) + 2000; // Adicionamos 2000 para obter o ano no formato completo\n\n        return { data: new Date(year, month, day), bons: bons[index] };\n    });\n\n    // Ordena o array de objetos com base na propriedade \"data\"\n    dataWithBons.sort(function (a, b) {\n        return a.data - b.data;\n    });\n\n    // Separa os dados ordenados em arrays separados\n    dataWithBons.forEach(function (item) {\n        sortedData.push(formatarData(item.data));\n        sortedBons.push(item.bons);\n    });\n\n    return { data: sortedData, bons: sortedBons };\n}\n\n// Função auxiliar para formatar a data no formato \"DD/MM/AA\"\nfunction formatarData(data) {\n    var dia = data.getDate();\n    var mes = data.getMonth() + 1;\n    var ano = data.getFullYear().toString().substr(-2);\n\n    dia = (dia < 10) ? '0' + dia : dia;\n    mes = (mes < 10) ? '0' + mes : mes;\n\n    return dia + '/' + mes + '/' + ano;\n}\n\n// Ordena os dados cronologicamente\nvar sortedData = sortByDate(arrData, arrBons);\n\nfunction formatData(data, bons) {\n    const dataObject = [{\n        \"series\": [\"Bons\"],\n        \"data\": [bons],\n        \"labels\": data\n    }];\n\n    return dataObject;\n}\n\nconst result = formatData(sortedData.data, sortedData.bons);\nreturn { payload: result };",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 990,
+        "y": 340,
+        "wires": [
+            [
+                "caff553054b529fa"
+            ]
+        ]
+    },
+    {
+        "id": "452ea0297e21c338",
+        "type": "ui_text",
+        "z": "5a4975ebcc568c40",
+        "group": "5c3af32dfbbc6bd9",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Gráfico de produção total",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 1310,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "9e1c5e922b03a7cd",
+        "type": "ui_text",
+        "z": "5a4975ebcc568c40",
+        "group": "5c3af32dfbbc6bd9",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Gráfico de ovos Ruins",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 1300,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "21d13f2588c69ecf",
+        "type": "ui_text",
+        "z": "5a4975ebcc568c40",
+        "group": "5c3af32dfbbc6bd9",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Gráfico de ovos Bons",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 1300,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "ba55211f49be6041",
+        "type": "debug",
+        "z": "5a4975ebcc568c40",
+        "name": "debug 53",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 790,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "a90fc179b04fa4b9",
+        "type": "inject",
+        "z": "5a4975ebcc568c40",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{}",
+        "payloadType": "json",
+        "x": 370,
+        "y": 560,
+        "wires": [
+            [
+                "9a0275492d32f18f"
+            ]
+        ]
+    },
+    {
+        "id": "9a0275492d32f18f",
+        "type": "NGSI Attribute",
+        "z": "5a4975ebcc568c40",
+        "name": "",
+        "openapis": "9bccc41af47bb660",
+        "servicepath": "/",
+        "actionType": "read",
+        "entityId": "urn:ngsi-ld:AgriFarm:1",
+        "entityType": "AgriFarm",
+        "attrName": "payload[0]",
+        "metadata": "",
+        "skipForwarding": "false",
+        "overrideMetadata": "false",
+        "forcedUpdate": "false",
+        "flowControl": "false",
+        "x": 560,
+        "y": 560,
+        "wires": [
+            [
+                "ba55211f49be6041"
             ]
         ]
     },
@@ -4093,7 +4421,7 @@
         "id": "65e2c204b755460f",
         "type": "ui_text",
         "z": "ea538592da2e51e2",
-        "group": "8bcb2804d0691f25",
+        "group": "8e1d1b289722c345",
         "order": 3,
         "width": 0,
         "height": 0,
@@ -4111,7 +4439,7 @@
         "type": "ui_text",
         "z": "ea538592da2e51e2",
         "group": "8e1d1b289722c345",
-        "order": 2,
+        "order": 7,
         "width": "0",
         "height": "0",
         "name": "",
@@ -4128,7 +4456,7 @@
         "type": "ui_text",
         "z": "ea538592da2e51e2",
         "group": "8e1d1b289722c345",
-        "order": 4,
+        "order": 5,
         "width": 0,
         "height": 0,
         "name": "",
@@ -4145,7 +4473,7 @@
         "type": "ui_chart",
         "z": "ea538592da2e51e2",
         "name": "",
-        "group": "8bcb2804d0691f25",
+        "group": "8e1d1b289722c345",
         "order": 1,
         "width": 23,
         "height": 5,
@@ -4190,7 +4518,7 @@
         "z": "ea538592da2e51e2",
         "name": "",
         "group": "8e1d1b289722c345",
-        "order": 3,
+        "order": 4,
         "width": 23,
         "height": 5,
         "label": "",
@@ -4234,7 +4562,7 @@
         "z": "ea538592da2e51e2",
         "name": "",
         "group": "8e1d1b289722c345",
-        "order": 1,
+        "order": 6,
         "width": 23,
         "height": 5,
         "label": "",
@@ -4277,7 +4605,7 @@
         "type": "ui_chart",
         "z": "ea538592da2e51e2",
         "name": "",
-        "group": "8bcb2804d0691f25",
+        "group": "8e1d1b289722c345",
         "order": 2,
         "width": 23,
         "height": 5,
@@ -4773,7 +5101,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 710,
+        "x": 690,
         "y": 100,
         "wires": []
     },
@@ -5467,7 +5795,7 @@
         "name": "Criar entidade",
         "openapis": "9bccc41af47bb660",
         "servicepath": "/",
-        "actionType": "create",
+        "actionType": "upsert",
         "entityId": "",
         "entityType": "",
         "attrs": "",
@@ -5551,7 +5879,7 @@
         "name": "Criar entidade",
         "openapis": "9bccc41af47bb660",
         "servicepath": "/",
-        "actionType": "create",
+        "actionType": "upsert",
         "entityId": "",
         "entityType": "",
         "attrs": "",
